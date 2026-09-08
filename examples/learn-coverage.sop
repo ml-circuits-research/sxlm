@@ -1,0 +1,43 @@
+@v0 kernel.value.record "required" "array" "available" "array"
+@v1 kernel.value.record "op" "kernel.seq.difference"
+@v2 kernel.value.record "op" "kernel.seq.count"
+@v3 kernel.value.record "op" "kernel.value.equal"
+@v4 kernel.seq.make item $v1 item $v2 item $v3
+@v5 kernel.seq.make item 0
+@v6 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v7 kernel.seq.make item "a"
+@v8 kernel.seq.make item "a" item "b"
+@v9 kernel.value.record "required" $v7 "available" $v8
+@v10 kernel.value.record "input" $v9 "output" true
+@v11 kernel.seq.make item "a" item "b"
+@v12 kernel.seq.make item "a"
+@v13 kernel.value.record "required" $v11 "available" $v12
+@v14 kernel.value.record "input" $v13 "output" false
+@v15 kernel.seq.make
+@v16 kernel.seq.make item "c"
+@v17 kernel.value.record "required" $v15 "available" $v16
+@v18 kernel.value.record "input" $v17 "output" true
+@v19 kernel.seq.make item "d"
+@v20 kernel.seq.make
+@v21 kernel.value.record "required" $v19 "available" $v20
+@v22 kernel.value.record "input" $v21 "output" false
+@v23 kernel.seq.make item "b" item "a"
+@v24 kernel.seq.make item "a" item "b"
+@v25 kernel.value.record "required" $v23 "available" $v24
+@v26 kernel.value.record "input" $v25 "output" true
+@v27 kernel.seq.make item "c" item "c"
+@v28 kernel.seq.make item "c"
+@v29 kernel.value.record "required" $v27 "available" $v28
+@v30 kernel.value.record "input" $v29 "output" true
+@v31 kernel.seq.make item "a" item "c"
+@v32 kernel.seq.make item "a" item "b"
+@v33 kernel.value.record "required" $v31 "available" $v32
+@v34 kernel.value.record "input" $v33 "output" false
+@v35 kernel.seq.make item "d" item "d"
+@v36 kernel.seq.make item "d"
+@v37 kernel.value.record "required" $v35 "available" $v36
+@v38 kernel.value.record "input" $v37 "output" true
+@v39 kernel.seq.make item $v10 item $v14 item $v18 item $v22 item $v26 item $v30 item $v34 item $v38
+@v40 kernel.value.record "kind" "agent-authored-teacher-examples" "qualification" "Supervision for a reusable finite-set method. These examples and the local evaluator were authored in the same project; they are not independent external validation."
+@v41 kernel.value.record "id" "learned.coverage" "inputs" $v0 "output" "boolean" "library" $v4 "constants" $v5 "limits" $v6 "examples" $v39 "origin" $v40
+@output result $v41

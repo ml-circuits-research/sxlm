@@ -1,0 +1,3 @@
+@input with object
+@result data.string value "unknown"
+@output result $result

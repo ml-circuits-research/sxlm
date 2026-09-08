@@ -1,0 +1,689 @@
+@v0 kernel.value.record "kind" "agent-authored-semantic-adapters" "status" "not-yet-learned" "purpose" "Remove semantic result projection and rendering control from host JavaScript; adapters still need synthesis/learning receipts."
+@v1 kernel.value.record "value" "object"
+@v2 kernel.seq.make item "term"
+@v3 kernel.value.record "$get" $v2
+@v4 kernel.seq.make item "state"
+@v5 kernel.value.record "$get" $v4
+@v6 kernel.seq.make item "term"
+@v7 kernel.value.record "$get" $v6
+@v8 kernel.seq.make item $v7 item "_:"
+@v9 kernel.value.record "$startsWith" $v8
+@v10 kernel.seq.make item "term"
+@v11 kernel.value.record "$get" $v10
+@v12 kernel.seq.make item $v11 item "?"
+@v13 kernel.value.record "$startsWith" $v12
+@v14 kernel.seq.make item $v9 item $v13
+@v15 kernel.value.record "$or" $v14
+@v16 kernel.seq.make
+@v17 kernel.value.record "$get" $v16
+@v18 kernel.seq.make item "state" item "facts"
+@v19 kernel.seq.make
+@v20 kernel.value.record "value" $v17 "path" $v18 "fallback" $v19
+@v21 kernel.value.record "$path" $v20
+@v22 kernel.seq.make item "item" item "atom" item "terms"
+@v23 kernel.value.record "$get" $v22
+@v24 kernel.value.record "$length" $v23
+@v25 kernel.seq.make item $v24 item 1
+@v26 kernel.value.record "$eq" $v25
+@v27 kernel.seq.make item "item" item "atom" item "terms"
+@v28 kernel.value.record "$get" $v27
+@v29 kernel.value.record "value" $v28 "index" 0 "fallback" null
+@v30 kernel.value.record "$at" $v29
+@v31 kernel.seq.make item "term"
+@v32 kernel.value.record "$get" $v31
+@v33 kernel.seq.make item $v30 item $v32
+@v34 kernel.value.record "$eq" $v33
+@v35 kernel.seq.make
+@v36 kernel.value.record "$get" $v35
+@v37 kernel.seq.make item "item" item "atom" item "negative"
+@v38 kernel.value.record "value" $v36 "path" $v37 "fallback" false
+@v39 kernel.value.record "$path" $v38
+@v40 kernel.value.record "$not" $v39
+@v41 kernel.seq.make item $v26 item $v34 item $v40
+@v42 kernel.value.record "$and" $v41
+@v43 kernel.value.record "items" $v21 "test" $v42
+@v44 kernel.value.record "$filter" $v43
+@v45 kernel.value.record
+@v46 kernel.value.record "value" $v44 "index" 0 "fallback" $v45
+@v47 kernel.value.record "$at" $v46
+@v48 kernel.seq.make item "atom" item "predicate"
+@v49 kernel.value.record "value" $v47 "path" $v48 "fallback" ""
+@v50 kernel.value.record "$path" $v49
+@v51 kernel.value.record "term" $v3 "state" $v5 "anonymous" $v15 "type" $v50
+@v52 kernel.value.record "ref" "$value"
+@v53 kernel.value.record "template" $v51 "environment" $v52 "scope" ""
+@v54 kernel.value.record "id" "context.term" "op" "data.template" "args" $v53
+@v55 kernel.value.record "ref" "context.term"
+@v56 kernel.value.record "value" $v55
+@v57 kernel.value.record "id" "context" "op" "data.object" "args" $v56
+@v58 kernel.seq.make item "type"
+@v59 kernel.value.record "$get" $v58
+@v60 kernel.seq.make item "state" item "labels"
+@v61 kernel.value.record "$get" $v60
+@v62 kernel.seq.make item "term"
+@v63 kernel.value.record "$get" $v62
+@v64 kernel.seq.make item $v63
+@v65 kernel.seq.make item "term"
+@v66 kernel.value.record "$get" $v65
+@v67 kernel.value.record "value" $v61 "path" $v64 "fallback" $v66
+@v68 kernel.value.record "$path" $v67
+@v69 kernel.value.record "type" $v59 "name" $v68
+@v70 kernel.value.record "values" $v69
+@v71 kernel.value.record "ref" "context"
+@v72 kernel.value.record "template" $v70 "environment" $v71 "scope" ""
+@v73 kernel.value.record "id" "values.term" "op" "data.template" "args" $v72
+@v74 kernel.value.record "ref" "values.term"
+@v75 kernel.value.record "value" $v74
+@v76 kernel.value.record "id" "values" "op" "data.object" "args" $v75
+@v77 kernel.seq.make item "anonymous"
+@v78 kernel.value.record "$get" $v77
+@v79 kernel.seq.make item "type"
+@v80 kernel.value.record "$get" $v79
+@v81 kernel.seq.make item $v80 item ""
+@v82 kernel.value.record "$eq" $v81
+@v83 kernel.value.record "test" $v82 "then" "unknown" "else" "typed"
+@v84 kernel.value.record "$if" $v83
+@v85 kernel.value.record "test" $v78 "then" $v84 "else" "named"
+@v86 kernel.value.record "$if" $v85
+@v87 kernel.value.record "ref" "context"
+@v88 kernel.value.record "template" $v86 "environment" $v87 "scope" ""
+@v89 kernel.value.record "id" "mode" "op" "data.template" "args" $v88
+@v90 kernel.value.record "ref" "mode"
+@v91 kernel.value.record "typed" "learned.expression.label.typed" "unknown" "learned.expression.label.unknown" "named" "learned.expression.label.named"
+@v92 kernel.value.record "selector" $v90 "cases" $v91 "otherwise" "learned.expression.label.unknown"
+@v93 kernel.value.record "ref" "values"
+@v94 kernel.value.record "value" $v93
+@v95 kernel.value.record "id" "wording" "choose" $v92 "args" $v94
+@v96 kernel.seq.make item $v54 item $v57 item $v73 item $v76 item $v89 item $v95
+@v97 kernel.value.record "ref" "wording"
+@v98 kernel.value.record "kind" "agent-authored-semantic-adapter" "status" "requires-learning-derivation" "contract" "Semantic projection and circuit composition; not claimed induced."
+@v99 kernel.value.record "schema" "sxlm.circuit.v1" "id" "render.label" "inputs" $v1 "nodes" $v96 "output" $v97 "provenance" $v98
+@v100 kernel.value.record "value" "object"
+@v101 kernel.seq.make item "atom" item "terms"
+@v102 kernel.value.record "$get" $v101
+@v103 kernel.value.record "$length" $v102
+@v104 kernel.seq.make
+@v105 kernel.value.record "$get" $v104
+@v106 kernel.seq.make item "atom" item "negative"
+@v107 kernel.value.record "value" $v105 "path" $v106 "fallback" false
+@v108 kernel.value.record "$path" $v107
+@v109 kernel.value.record "arity" $v103 "negative" $v108
+@v110 kernel.value.record "input" $v109
+@v111 kernel.value.record "ref" "$value"
+@v112 kernel.value.record "template" $v110 "environment" $v111 "scope" ""
+@v113 kernel.value.record "id" "features.term" "op" "data.template" "args" $v112
+@v114 kernel.value.record "ref" "features.term"
+@v115 kernel.value.record "value" $v114
+@v116 kernel.value.record "id" "features" "op" "data.object" "args" $v115
+@v117 kernel.value.record "ref" "features"
+@v118 kernel.value.record "value" $v117
+@v119 kernel.value.record "id" "form" "call" "learned.dispatch.atom" "args" $v118
+@v120 kernel.seq.make item "atom" item "terms"
+@v121 kernel.value.record "$get" $v120
+@v122 kernel.value.record "value" $v121 "index" 0 "fallback" ""
+@v123 kernel.value.record "$at" $v122
+@v124 kernel.seq.make item "state"
+@v125 kernel.value.record "$get" $v124
+@v126 kernel.value.record "term" $v123 "state" $v125
+@v127 kernel.value.record "ref" "$value"
+@v128 kernel.value.record "template" $v126 "environment" $v127 "scope" ""
+@v129 kernel.value.record "id" "subject.input.term" "op" "data.template" "args" $v128
+@v130 kernel.value.record "ref" "subject.input.term"
+@v131 kernel.value.record "value" $v130
+@v132 kernel.value.record "id" "subject.input" "op" "data.object" "args" $v131
+@v133 kernel.value.record "ref" "subject.input"
+@v134 kernel.value.record "value" $v133
+@v135 kernel.value.record "id" "subject" "call" "render.label" "args" $v134
+@v136 kernel.seq.make item "atom" item "terms"
+@v137 kernel.value.record "$get" $v136
+@v138 kernel.value.record "value" $v137 "index" 1 "fallback" ""
+@v139 kernel.value.record "$at" $v138
+@v140 kernel.seq.make item "state"
+@v141 kernel.value.record "$get" $v140
+@v142 kernel.value.record "term" $v139 "state" $v141
+@v143 kernel.value.record "ref" "$value"
+@v144 kernel.value.record "template" $v142 "environment" $v143 "scope" ""
+@v145 kernel.value.record "id" "object.input.term" "op" "data.template" "args" $v144
+@v146 kernel.value.record "ref" "object.input.term"
+@v147 kernel.value.record "value" $v146
+@v148 kernel.value.record "id" "object.input" "op" "data.object" "args" $v147
+@v149 kernel.value.record "ref" "object.input"
+@v150 kernel.value.record "value" $v149
+@v151 kernel.value.record "id" "object" "call" "render.label" "args" $v150
+@v152 kernel.seq.make
+@v153 kernel.value.record "$get" $v152
+@v154 kernel.value.record "ref" "$value"
+@v155 kernel.value.record "template" $v153 "environment" $v154 "scope" ""
+@v156 kernel.value.record "id" "base.term" "op" "data.template" "args" $v155
+@v157 kernel.value.record "ref" "base.term"
+@v158 kernel.value.record "value" $v157
+@v159 kernel.value.record "id" "base" "op" "data.object" "args" $v158
+@v160 kernel.value.record "ref" "base"
+@v161 kernel.value.record "ref" "form"
+@v162 kernel.value.record "record" $v160 "key" "form" "value" $v161
+@v163 kernel.value.record "id" "with.form" "op" "data.attach" "args" $v162
+@v164 kernel.value.record "ref" "with.form"
+@v165 kernel.value.record "ref" "subject"
+@v166 kernel.value.record "record" $v164 "key" "subject" "value" $v165
+@v167 kernel.value.record "id" "with.subject" "op" "data.attach" "args" $v166
+@v168 kernel.value.record "ref" "with.subject"
+@v169 kernel.value.record "ref" "object"
+@v170 kernel.value.record "record" $v168 "key" "object" "value" $v169
+@v171 kernel.value.record "id" "with.object" "op" "data.attach" "args" $v170
+@v172 kernel.seq.make item "atom" item "predicate"
+@v173 kernel.value.record "$get" $v172
+@v174 kernel.seq.make item "form"
+@v175 kernel.value.record "$get" $v174
+@v176 kernel.value.record "predicate" $v173 "form" $v175
+@v177 kernel.value.record "input" $v176
+@v178 kernel.value.record "ref" "with.object"
+@v179 kernel.value.record "template" $v177 "environment" $v178 "scope" ""
+@v180 kernel.value.record "id" "lexical.input.term" "op" "data.template" "args" $v179
+@v181 kernel.value.record "ref" "lexical.input.term"
+@v182 kernel.value.record "value" $v181
+@v183 kernel.value.record "id" "lexical.input" "op" "data.object" "args" $v182
+@v184 kernel.value.record "ref" "lexical.input"
+@v185 kernel.value.record "value" $v184
+@v186 kernel.value.record "id" "lexical" "call" "learned.dispatch.lexical" "args" $v185
+@v187 kernel.value.record "ref" "with.object"
+@v188 kernel.value.record "ref" "lexical"
+@v189 kernel.value.record "record" $v187 "key" "lexical" "value" $v188
+@v190 kernel.value.record "id" "with.lexical" "op" "data.attach" "args" $v189
+@v191 kernel.seq.make item "subject"
+@v192 kernel.value.record "$get" $v191
+@v193 kernel.seq.make item "object"
+@v194 kernel.value.record "$get" $v193
+@v195 kernel.seq.make item "lexical"
+@v196 kernel.value.record "$get" $v195
+@v197 kernel.seq.make item $v196 item ""
+@v198 kernel.value.record "$eq" $v197
+@v199 kernel.seq.make item "atom" item "predicate"
+@v200 kernel.value.record "$get" $v199
+@v201 kernel.value.record "value" $v200 "from" "_" "to" " "
+@v202 kernel.value.record "$replace" $v201
+@v203 kernel.seq.make item "lexical"
+@v204 kernel.value.record "$get" $v203
+@v205 kernel.value.record "test" $v198 "then" $v202 "else" $v204
+@v206 kernel.value.record "$if" $v205
+@v207 kernel.value.record "subject" $v192 "object" $v194 "predicate" $v206
+@v208 kernel.value.record "values" $v207
+@v209 kernel.value.record "ref" "with.lexical"
+@v210 kernel.value.record "template" $v208 "environment" $v209 "scope" ""
+@v211 kernel.value.record "id" "values.term" "op" "data.template" "args" $v210
+@v212 kernel.value.record "ref" "values.term"
+@v213 kernel.value.record "value" $v212
+@v214 kernel.value.record "id" "values" "op" "data.object" "args" $v213
+@v215 kernel.value.record "ref" "form"
+@v216 kernel.value.record "atom.unary" "learned.expression.atom.unary" "atom.binary" "learned.expression.atom.binary" "atom.negativeUnary" "learned.expression.atom.negativeUnary" "atom.negativeBinary" "learned.expression.atom.negativeBinary"
+@v217 kernel.value.record "selector" $v215 "cases" $v216 "otherwise" "learned.expression.atom.unknown"
+@v218 kernel.value.record "ref" "values"
+@v219 kernel.value.record "value" $v218
+@v220 kernel.value.record "id" "wording" "choose" $v217 "args" $v219
+@v221 kernel.value.record "ref" "with.lexical"
+@v222 kernel.value.record "ref" "wording"
+@v223 kernel.value.record "record" $v221 "key" "wording" "value" $v222
+@v224 kernel.value.record "id" "with.wording" "op" "data.attach" "args" $v223
+@v225 kernel.seq.make
+@v226 kernel.value.record "$get" $v225
+@v227 kernel.seq.make item "atom" item "context"
+@v228 kernel.value.record "value" $v226 "path" $v227 "fallback" ""
+@v229 kernel.value.record "$path" $v228
+@v230 kernel.seq.make item $v229 item ""
+@v231 kernel.value.record "$eq" $v230
+@v232 kernel.seq.make
+@v233 kernel.value.record "$get" $v232
+@v234 kernel.seq.make item "atom" item "context"
+@v235 kernel.value.record "value" $v233 "path" $v234 "fallback" ""
+@v236 kernel.value.record "$path" $v235
+@v237 kernel.seq.make item $v236 item "world"
+@v238 kernel.value.record "$eq" $v237
+@v239 kernel.seq.make item $v231 item $v238
+@v240 kernel.value.record "$or" $v239
+@v241 kernel.value.record "test" $v240 "then" "plain" "else" "scoped"
+@v242 kernel.value.record "$if" $v241
+@v243 kernel.value.record "ref" "with.wording"
+@v244 kernel.value.record "template" $v242 "environment" $v243 "scope" ""
+@v245 kernel.value.record "id" "context.mode" "op" "data.template" "args" $v244
+@v246 kernel.seq.make item "wording"
+@v247 kernel.value.record "$get" $v246
+@v248 kernel.seq.make
+@v249 kernel.value.record "$get" $v248
+@v250 kernel.seq.make item "atom" item "context"
+@v251 kernel.value.record "value" $v249 "path" $v250 "fallback" ""
+@v252 kernel.value.record "$path" $v251
+@v253 kernel.seq.make item "wording"
+@v254 kernel.value.record "$get" $v253
+@v255 kernel.value.record "answer" $v247 "context" $v252 "text" $v254
+@v256 kernel.value.record "values" $v255
+@v257 kernel.value.record "ref" "with.wording"
+@v258 kernel.value.record "template" $v256 "environment" $v257 "scope" ""
+@v259 kernel.value.record "id" "context.values.term" "op" "data.template" "args" $v258
+@v260 kernel.value.record "ref" "context.values.term"
+@v261 kernel.value.record "value" $v260
+@v262 kernel.value.record "id" "context.values" "op" "data.object" "args" $v261
+@v263 kernel.value.record "ref" "context.mode"
+@v264 kernel.value.record "plain" "learned.expression.text.identity" "scoped" "learned.expression.atom.context"
+@v265 kernel.value.record "selector" $v263 "cases" $v264 "otherwise" "learned.expression.text.identity"
+@v266 kernel.value.record "ref" "context.values"
+@v267 kernel.value.record "value" $v266
+@v268 kernel.value.record "id" "context.wording" "choose" $v265 "args" $v267
+@v269 kernel.seq.make item $v113 item $v116 item $v119 item $v129 item $v132 item $v135 item $v145 item $v148 item $v151 item $v156 item $v159 item $v163 item $v167 item $v171 item $v180 item $v183 item $v186 item $v190 item $v211 item $v214 item $v220 item $v224 item $v245 item $v259 item $v262 item $v268
+@v270 kernel.value.record "ref" "context.wording"
+@v271 kernel.value.record "kind" "agent-authored-semantic-adapter" "status" "requires-learning-derivation" "contract" "Semantic projection and circuit composition; not claimed induced."
+@v272 kernel.value.record "schema" "sxlm.circuit.v1" "id" "render.atom" "inputs" $v100 "nodes" $v269 "output" $v270 "provenance" $v271
+@v273 kernel.value.record "value" "object"
+@v274 kernel.seq.make
+@v275 kernel.value.record "$get" $v274
+@v276 kernel.value.record "ref" "$value"
+@v277 kernel.value.record "template" $v275 "environment" $v276 "scope" ""
+@v278 kernel.value.record "id" "base.term" "op" "data.template" "args" $v277
+@v279 kernel.value.record "ref" "base.term"
+@v280 kernel.value.record "value" $v279
+@v281 kernel.value.record "id" "base" "op" "data.object" "args" $v280
+@v282 kernel.seq.make item "answer" item "kind"
+@v283 kernel.value.record "$get" $v282
+@v284 kernel.seq.make item "answer" item "status"
+@v285 kernel.value.record "$get" $v284
+@v286 kernel.seq.make
+@v287 kernel.value.record "$get" $v286
+@v288 kernel.seq.make item "answer" item "truth"
+@v289 kernel.value.record "value" $v287 "path" $v288 "fallback" null
+@v290 kernel.value.record "$path" $v289
+@v291 kernel.value.record "kind" $v283 "status" $v285 "truth" $v290
+@v292 kernel.value.record "input" $v291
+@v293 kernel.value.record "ref" "$value"
+@v294 kernel.value.record "template" $v292 "environment" $v293 "scope" ""
+@v295 kernel.value.record "id" "features.term" "op" "data.template" "args" $v294
+@v296 kernel.value.record "ref" "features.term"
+@v297 kernel.value.record "value" $v296
+@v298 kernel.value.record "id" "features" "op" "data.object" "args" $v297
+@v299 kernel.value.record "ref" "features"
+@v300 kernel.value.record "value" $v299
+@v301 kernel.value.record "id" "choice" "call" "learned.dispatch.answer" "args" $v300
+@v302 kernel.seq.make
+@v303 kernel.value.record "$get" $v302
+@v304 kernel.seq.make item "answer" item "task" item "patterns"
+@v305 kernel.seq.make
+@v306 kernel.value.record "value" $v303 "path" $v304 "fallback" $v305
+@v307 kernel.value.record "$path" $v306
+@v308 kernel.seq.make
+@v309 kernel.value.record "predicate" "" "terms" $v308 "negative" false "context" "world"
+@v310 kernel.value.record "value" $v307 "index" -1 "fallback" $v309
+@v311 kernel.value.record "$at" $v310
+@v312 kernel.seq.make
+@v313 kernel.value.record "$get" $v312
+@v314 kernel.seq.make item "answer" item "witness"
+@v315 kernel.value.record
+@v316 kernel.value.record "value" $v313 "path" $v314 "fallback" $v315
+@v317 kernel.value.record "$path" $v316
+@v318 kernel.value.record "value" $v311 "bindings" $v317
+@v319 kernel.value.record "$substitute" $v318
+@v320 kernel.seq.make item "state"
+@v321 kernel.value.record "$get" $v320
+@v322 kernel.value.record "atom" $v319 "state" $v321
+@v323 kernel.value.record "ref" "$value"
+@v324 kernel.value.record "template" $v322 "environment" $v323 "scope" ""
+@v325 kernel.value.record "id" "main.input.term" "op" "data.template" "args" $v324
+@v326 kernel.value.record "ref" "main.input.term"
+@v327 kernel.value.record "value" $v326
+@v328 kernel.value.record "id" "main.input" "op" "data.object" "args" $v327
+@v329 kernel.value.record "ref" "main.input"
+@v330 kernel.value.record "value" $v329
+@v331 kernel.value.record "id" "proposition" "call" "render.atom" "args" $v330
+@v332 kernel.seq.make item "atom"
+@v333 kernel.value.record "$get" $v332
+@v334 kernel.seq.make
+@v335 kernel.value.record "$get" $v334
+@v336 kernel.seq.make item "atom" item "negative"
+@v337 kernel.value.record "value" $v335 "path" $v336 "fallback" false
+@v338 kernel.value.record "$path" $v337
+@v339 kernel.value.record "$not" $v338
+@v340 kernel.value.record "negative" $v339
+@v341 kernel.seq.make item $v333 item $v340
+@v342 kernel.value.record "$merge" $v341
+@v343 kernel.seq.make item "state"
+@v344 kernel.value.record "$get" $v343
+@v345 kernel.value.record "atom" $v342 "state" $v344
+@v346 kernel.value.record "ref" "main.input"
+@v347 kernel.value.record "template" $v345 "environment" $v346 "scope" ""
+@v348 kernel.value.record "id" "negative.input.term" "op" "data.template" "args" $v347
+@v349 kernel.value.record "ref" "negative.input.term"
+@v350 kernel.value.record "value" $v349
+@v351 kernel.value.record "id" "negative.input" "op" "data.object" "args" $v350
+@v352 kernel.value.record "ref" "negative.input"
+@v353 kernel.value.record "value" $v352
+@v354 kernel.value.record "id" "counterproposition" "call" "render.atom" "args" $v353
+@v355 kernel.seq.make
+@v356 kernel.value.record "$get" $v355
+@v357 kernel.seq.make item "answer" item "task" item "owner"
+@v358 kernel.value.record "value" $v356 "path" $v357 "fallback" ""
+@v359 kernel.value.record "$path" $v358
+@v360 kernel.seq.make item "state"
+@v361 kernel.value.record "$get" $v360
+@v362 kernel.value.record "term" $v359 "state" $v361
+@v363 kernel.value.record "ref" "$value"
+@v364 kernel.value.record "template" $v362 "environment" $v363 "scope" ""
+@v365 kernel.value.record "id" "owner.input.term" "op" "data.template" "args" $v364
+@v366 kernel.value.record "ref" "owner.input.term"
+@v367 kernel.value.record "value" $v366
+@v368 kernel.value.record "id" "owner.input" "op" "data.object" "args" $v367
+@v369 kernel.value.record "ref" "owner.input"
+@v370 kernel.value.record "value" $v369
+@v371 kernel.value.record "id" "owner" "call" "render.label" "args" $v370
+@v372 kernel.seq.make
+@v373 kernel.value.record "$get" $v372
+@v374 kernel.seq.make item "answer" item "task" item "item"
+@v375 kernel.value.record "value" $v373 "path" $v374 "fallback" ""
+@v376 kernel.value.record "$path" $v375
+@v377 kernel.value.record "item" $v376
+@v378 kernel.value.record "input" $v377
+@v379 kernel.value.record "ref" "$value"
+@v380 kernel.value.record "template" $v378 "environment" $v379 "scope" ""
+@v381 kernel.value.record "id" "item.input.term" "op" "data.template" "args" $v380
+@v382 kernel.value.record "ref" "item.input.term"
+@v383 kernel.value.record "value" $v382
+@v384 kernel.value.record "id" "item.input" "op" "data.object" "args" $v383
+@v385 kernel.value.record "ref" "item.input"
+@v386 kernel.value.record "value" $v385
+@v387 kernel.value.record "id" "item" "call" "learned.dispatch.quantity" "args" $v386
+@v388 kernel.seq.make
+@v389 kernel.value.record "$get" $v388
+@v390 kernel.seq.make item "answer" item "reason"
+@v391 kernel.value.record "value" $v389 "path" $v390 "fallback" ""
+@v392 kernel.value.record "$path" $v391
+@v393 kernel.value.record "reason" $v392
+@v394 kernel.value.record "input" $v393
+@v395 kernel.value.record "ref" "$value"
+@v396 kernel.value.record "template" $v394 "environment" $v395 "scope" ""
+@v397 kernel.value.record "id" "reason.input.term" "op" "data.template" "args" $v396
+@v398 kernel.value.record "ref" "reason.input.term"
+@v399 kernel.value.record "value" $v398
+@v400 kernel.value.record "id" "reason.input" "op" "data.object" "args" $v399
+@v401 kernel.value.record "ref" "reason.input"
+@v402 kernel.value.record "value" $v401
+@v403 kernel.value.record "id" "reason" "call" "learned.dispatch.reason" "args" $v402
+@v404 kernel.seq.make
+@v405 kernel.value.record "$get" $v404
+@v406 kernel.seq.make item "answer" item "values"
+@v407 kernel.seq.make
+@v408 kernel.value.record "value" $v405 "path" $v406 "fallback" $v407
+@v409 kernel.value.record "$path" $v408
+@v410 kernel.seq.make item "item"
+@v411 kernel.value.record "$get" $v410
+@v412 kernel.seq.make item "state"
+@v413 kernel.value.record "$get" $v412
+@v414 kernel.value.record "term" $v411 "state" $v413
+@v415 kernel.value.record "items" $v409 "template" $v414
+@v416 kernel.value.record "$map" $v415
+@v417 kernel.value.record "ref" "$value"
+@v418 kernel.value.record "template" $v416 "environment" $v417 "scope" ""
+@v419 kernel.value.record "id" "list.input" "op" "data.template" "args" $v418
+@v420 kernel.value.record "ref" "list.input"
+@v421 kernel.value.record
+@v422 kernel.value.record "id" "answers" "map" "render.label" "item" "value" "items" $v420 "args" $v421
+@v423 kernel.value.record "ref" "base"
+@v424 kernel.value.record "ref" "proposition"
+@v425 kernel.value.record "record" $v423 "key" "proposition" "value" $v424
+@v426 kernel.value.record "id" "with.proposition" "op" "data.attach" "args" $v425
+@v427 kernel.value.record "ref" "with.proposition"
+@v428 kernel.value.record "ref" "counterproposition"
+@v429 kernel.value.record "record" $v427 "key" "counterproposition" "value" $v428
+@v430 kernel.value.record "id" "with.counterproposition" "op" "data.attach" "args" $v429
+@v431 kernel.value.record "ref" "with.counterproposition"
+@v432 kernel.value.record "ref" "owner"
+@v433 kernel.value.record "record" $v431 "key" "owner" "value" $v432
+@v434 kernel.value.record "id" "with.owner" "op" "data.attach" "args" $v433
+@v435 kernel.value.record "ref" "with.owner"
+@v436 kernel.value.record "ref" "item"
+@v437 kernel.value.record "record" $v435 "key" "item" "value" $v436
+@v438 kernel.value.record "id" "with.item" "op" "data.attach" "args" $v437
+@v439 kernel.value.record "ref" "with.item"
+@v440 kernel.value.record "ref" "reason"
+@v441 kernel.value.record "record" $v439 "key" "reason" "value" $v440
+@v442 kernel.value.record "id" "with.reason" "op" "data.attach" "args" $v441
+@v443 kernel.value.record "ref" "with.reason"
+@v444 kernel.value.record "ref" "answers"
+@v445 kernel.value.record "record" $v443 "key" "answers" "value" $v444
+@v446 kernel.value.record "id" "with.answers" "op" "data.attach" "args" $v445
+@v447 kernel.seq.make item "proposition"
+@v448 kernel.value.record "$get" $v447
+@v449 kernel.seq.make item "counterproposition"
+@v450 kernel.value.record "$get" $v449
+@v451 kernel.seq.make item "owner"
+@v452 kernel.value.record "$get" $v451
+@v453 kernel.seq.make item "item"
+@v454 kernel.value.record "$get" $v453
+@v455 kernel.seq.make item $v454 item ""
+@v456 kernel.value.record "$eq" $v455
+@v457 kernel.seq.make
+@v458 kernel.value.record "$get" $v457
+@v459 kernel.seq.make item "answer" item "task" item "item"
+@v460 kernel.value.record "value" $v458 "path" $v459 "fallback" ""
+@v461 kernel.value.record "$path" $v460
+@v462 kernel.seq.make item "item"
+@v463 kernel.value.record "$get" $v462
+@v464 kernel.value.record "test" $v456 "then" $v461 "else" $v463
+@v465 kernel.value.record "$if" $v464
+@v466 kernel.seq.make item "reason"
+@v467 kernel.value.record "$get" $v466
+@v468 kernel.seq.make item $v467 item ""
+@v469 kernel.value.record "$eq" $v468
+@v470 kernel.seq.make
+@v471 kernel.value.record "$get" $v470
+@v472 kernel.seq.make item "answer" item "reason"
+@v473 kernel.value.record "value" $v471 "path" $v472 "fallback" ""
+@v474 kernel.value.record "$path" $v473
+@v475 kernel.seq.make item "reason"
+@v476 kernel.value.record "$get" $v475
+@v477 kernel.value.record "test" $v469 "then" $v474 "else" $v476
+@v478 kernel.value.record "$if" $v477
+@v479 kernel.seq.make item "answers"
+@v480 kernel.value.record "$get" $v479
+@v481 kernel.value.record "values" $v480 "separator" ", "
+@v482 kernel.value.record "$join" $v481
+@v483 kernel.seq.make
+@v484 kernel.value.record "$get" $v483
+@v485 kernel.seq.make item "answer" item "value"
+@v486 kernel.value.record "value" $v484 "path" $v485 "fallback" ""
+@v487 kernel.value.record "$path" $v486
+@v488 kernel.seq.make
+@v489 kernel.value.record "$get" $v488
+@v490 kernel.seq.make item "answer" item "facts"
+@v491 kernel.value.record "value" $v489 "path" $v490 "fallback" 0
+@v492 kernel.value.record "$path" $v491
+@v493 kernel.seq.make
+@v494 kernel.value.record "$get" $v493
+@v495 kernel.seq.make item "answer" item "rules"
+@v496 kernel.value.record "value" $v494 "path" $v495 "fallback" 0
+@v497 kernel.value.record "$path" $v496
+@v498 kernel.seq.make
+@v499 kernel.value.record "$get" $v498
+@v500 kernel.seq.make item "answer" item "events"
+@v501 kernel.value.record "value" $v499 "path" $v500 "fallback" 0
+@v502 kernel.value.record "$path" $v501
+@v503 kernel.value.record "proposition" $v448 "counterproposition" $v450 "owner" $v452 "item" $v465 "reason" $v478 "answers" $v482 "value" $v487 "facts" $v492 "rules" $v497 "events" $v502
+@v504 kernel.value.record "values" $v503
+@v505 kernel.value.record "ref" "with.answers"
+@v506 kernel.value.record "template" $v504 "environment" $v505 "scope" ""
+@v507 kernel.value.record "id" "values.term" "op" "data.template" "args" $v506
+@v508 kernel.value.record "ref" "values.term"
+@v509 kernel.value.record "value" $v508
+@v510 kernel.value.record "id" "values" "op" "data.object" "args" $v509
+@v511 kernel.value.record "ref" "choice"
+@v512 kernel.value.record "message.acknowledged" "learned.expression.message.acknowledged" "message.arithmetic.answered" "learned.expression.message.arithmetic.answered" "message.quantity.answered" "learned.expression.message.quantity.answered" "message.quantity.unknown" "learned.expression.message.quantity.unknown" "message.select.answered" "learned.expression.message.select.answered" "message.select.unknown" "learned.expression.message.select.unknown" "message.truth.both" "learned.expression.message.truth.both" "message.truth.false" "learned.expression.message.truth.false" "message.truth.true" "learned.expression.message.truth.true" "message.truth.unknown" "learned.expression.message.truth.unknown" "message.unsupported" "learned.expression.message.unsupported"
+@v513 kernel.value.record "selector" $v511 "cases" $v512 "otherwise" "learned.expression.message.unsupported"
+@v514 kernel.value.record "ref" "values"
+@v515 kernel.value.record "value" $v514
+@v516 kernel.value.record "id" "wording" "choose" $v513 "args" $v515
+@v517 kernel.value.record "ref" "with.answers"
+@v518 kernel.value.record "ref" "wording"
+@v519 kernel.value.record "record" $v517 "key" "wording" "value" $v518
+@v520 kernel.value.record "id" "with.wording" "op" "data.attach" "args" $v519
+@v521 kernel.seq.make
+@v522 kernel.value.record "$get" $v521
+@v523 kernel.seq.make item "answer" item "gaps"
+@v524 kernel.seq.make
+@v525 kernel.value.record "value" $v522 "path" $v523 "fallback" $v524
+@v526 kernel.value.record "$path" $v525
+@v527 kernel.value.record "$length" $v526
+@v528 kernel.seq.make item $v527 item 0
+@v529 kernel.value.record "$eq" $v528
+@v530 kernel.value.record "$not" $v529
+@v531 kernel.seq.make item "answer" item "status"
+@v532 kernel.value.record "$get" $v531
+@v533 kernel.seq.make item $v532 item "unsupported"
+@v534 kernel.value.record "$eq" $v533
+@v535 kernel.value.record "$not" $v534
+@v536 kernel.seq.make item $v530 item $v535
+@v537 kernel.value.record "$and" $v536
+@v538 kernel.value.record "test" $v537 "then" "conditional" "else" "plain"
+@v539 kernel.value.record "$if" $v538
+@v540 kernel.value.record "ref" "with.wording"
+@v541 kernel.value.record "template" $v539 "environment" $v540 "scope" ""
+@v542 kernel.value.record "id" "coverage.mode" "op" "data.template" "args" $v541
+@v543 kernel.seq.make item "wording"
+@v544 kernel.value.record "$get" $v543
+@v545 kernel.value.record "answer" $v544
+@v546 kernel.value.record "values" $v545
+@v547 kernel.value.record "ref" "with.wording"
+@v548 kernel.value.record "template" $v546 "environment" $v547 "scope" ""
+@v549 kernel.value.record "id" "coverage.values.term" "op" "data.template" "args" $v548
+@v550 kernel.value.record "ref" "coverage.values.term"
+@v551 kernel.value.record "value" $v550
+@v552 kernel.value.record "id" "coverage.values" "op" "data.object" "args" $v551
+@v553 kernel.value.record "ref" "coverage.mode"
+@v554 kernel.value.record "conditional" "learned.expression.message.incomplete" "plain" "learned.expression.text.identity"
+@v555 kernel.value.record "selector" $v553 "cases" $v554 "otherwise" "learned.expression.text.identity"
+@v556 kernel.value.record "ref" "coverage.values"
+@v557 kernel.value.record "value" $v556
+@v558 kernel.value.record "id" "final.wording" "choose" $v555 "args" $v557
+@v559 kernel.value.record "ref" "with.wording"
+@v560 kernel.value.record "ref" "final.wording"
+@v561 kernel.value.record "record" $v559 "key" "text" "value" $v560
+@v562 kernel.value.record "id" "with.final.wording" "op" "data.attach" "args" $v561
+@v563 kernel.seq.make item "answer"
+@v564 kernel.value.record "$get" $v563
+@v565 kernel.seq.make item "text"
+@v566 kernel.value.record "$get" $v565
+@v567 kernel.value.record "text" $v566
+@v568 kernel.seq.make item $v564 item $v567
+@v569 kernel.value.record "$merge" $v568
+@v570 kernel.value.record "ref" "with.final.wording"
+@v571 kernel.value.record "template" $v569 "environment" $v570 "scope" ""
+@v572 kernel.value.record "id" "result" "op" "data.template" "args" $v571
+@v573 kernel.seq.make item $v278 item $v281 item $v295 item $v298 item $v301 item $v325 item $v328 item $v331 item $v348 item $v351 item $v354 item $v365 item $v368 item $v371 item $v381 item $v384 item $v387 item $v397 item $v400 item $v403 item $v419 item $v422 item $v426 item $v430 item $v434 item $v438 item $v442 item $v446 item $v507 item $v510 item $v516 item $v520 item $v542 item $v549 item $v552 item $v558 item $v562 item $v572
+@v574 kernel.value.record "ref" "result"
+@v575 kernel.value.record "kind" "agent-authored-semantic-adapter" "status" "requires-learning-derivation" "contract" "Semantic projection and circuit composition; not claimed induced."
+@v576 kernel.value.record "schema" "sxlm.circuit.v1" "id" "render.answer" "inputs" $v273 "nodes" $v573 "output" $v574 "provenance" $v575
+@v577 kernel.value.record "value" "object"
+@v578 kernel.seq.make item "answers"
+@v579 kernel.value.record "$get" $v578
+@v580 kernel.seq.make item "item"
+@v581 kernel.value.record "$get" $v580
+@v582 kernel.seq.make item "state"
+@v583 kernel.value.record "$get" $v582
+@v584 kernel.seq.make item "state" item "labels"
+@v585 kernel.value.record "$get" $v584
+@v586 kernel.seq.make item "document" item "labels"
+@v587 kernel.value.record "$get" $v586
+@v588 kernel.seq.make item $v585 item $v587
+@v589 kernel.value.record "$merge" $v588
+@v590 kernel.value.record "labels" $v589
+@v591 kernel.seq.make item $v583 item $v590
+@v592 kernel.value.record "$merge" $v591
+@v593 kernel.value.record "answer" $v581 "state" $v592
+@v594 kernel.value.record "items" $v579 "template" $v593
+@v595 kernel.value.record "$map" $v594
+@v596 kernel.value.record "ref" "$value"
+@v597 kernel.value.record "template" $v595 "environment" $v596 "scope" ""
+@v598 kernel.value.record "id" "items" "op" "data.template" "args" $v597
+@v599 kernel.value.record "ref" "items"
+@v600 kernel.value.record
+@v601 kernel.value.record "id" "rendered" "map" "render.answer" "item" "value" "items" $v599 "args" $v600
+@v602 kernel.seq.make
+@v603 kernel.value.record "$get" $v602
+@v604 kernel.value.record "ref" "$value"
+@v605 kernel.value.record "template" $v603 "environment" $v604 "scope" ""
+@v606 kernel.value.record "id" "base.term" "op" "data.template" "args" $v605
+@v607 kernel.value.record "ref" "base.term"
+@v608 kernel.value.record "value" $v607
+@v609 kernel.value.record "id" "base" "op" "data.object" "args" $v608
+@v610 kernel.value.record "ref" "base"
+@v611 kernel.value.record "ref" "rendered"
+@v612 kernel.value.record "record" $v610 "key" "rendered" "value" $v611
+@v613 kernel.value.record "id" "with.answers" "op" "data.attach" "args" $v612
+@v614 kernel.seq.make
+@v615 kernel.value.record "$get" $v614
+@v616 kernel.seq.make item "rendered"
+@v617 kernel.value.record "$get" $v616
+@v618 kernel.seq.make item "rendered"
+@v619 kernel.value.record "$get" $v618
+@v620 kernel.seq.make item "item" item "text"
+@v621 kernel.value.record "$get" $v620
+@v622 kernel.value.record "items" $v619 "template" $v621
+@v623 kernel.value.record "$map" $v622
+@v624 kernel.value.record "values" $v623 "separator" "\n"
+@v625 kernel.value.record "$join" $v624
+@v626 kernel.seq.make item "rendered"
+@v627 kernel.value.record "$get" $v626
+@v628 kernel.value.record
+@v629 kernel.value.record "value" $v627 "index" -1 "fallback" $v628
+@v630 kernel.value.record "$at" $v629
+@v631 kernel.seq.make item "status"
+@v632 kernel.value.record "value" $v630 "path" $v631 "fallback" "unsupported"
+@v633 kernel.value.record "$path" $v632
+@v634 kernel.value.record "answers" $v617 "text" $v625 "status" $v633
+@v635 kernel.seq.make item $v615 item $v634
+@v636 kernel.value.record "$merge" $v635
+@v637 kernel.value.record "ref" "with.answers"
+@v638 kernel.value.record "template" $v636 "environment" $v637 "scope" ""
+@v639 kernel.value.record "id" "result" "op" "data.template" "args" $v638
+@v640 kernel.seq.make item $v598 item $v601 item $v606 item $v609 item $v613 item $v639
+@v641 kernel.value.record "ref" "result"
+@v642 kernel.value.record "kind" "agent-authored-semantic-adapter" "status" "requires-learning-derivation" "contract" "Semantic projection and circuit composition; not claimed induced."
+@v643 kernel.value.record "schema" "sxlm.circuit.v1" "id" "render.interpretation" "inputs" $v577 "nodes" $v640 "output" $v641 "provenance" $v642
+@v644 kernel.value.record "value" "object"
+@v645 kernel.seq.make item "status"
+@v646 kernel.value.record "$get" $v645
+@v647 kernel.seq.make item $v646 item "unknown"
+@v648 kernel.value.record "$eq" $v647
+@v649 kernel.value.record "test" $v648 "then" "missing" "else" "available"
+@v650 kernel.value.record "$if" $v649
+@v651 kernel.value.record "ref" "$value"
+@v652 kernel.value.record "template" $v650 "environment" $v651 "scope" ""
+@v653 kernel.value.record "id" "mode" "op" "data.template" "args" $v652
+@v654 kernel.seq.make item "text"
+@v655 kernel.value.record "$get" $v654
+@v656 kernel.value.record "answer" $v655
+@v657 kernel.value.record "values" $v656
+@v658 kernel.value.record "ref" "$value"
+@v659 kernel.value.record "template" $v657 "environment" $v658 "scope" ""
+@v660 kernel.value.record "id" "values.term" "op" "data.template" "args" $v659
+@v661 kernel.value.record "ref" "values.term"
+@v662 kernel.value.record "value" $v661
+@v663 kernel.value.record "id" "values" "op" "data.object" "args" $v662
+@v664 kernel.value.record "ref" "mode"
+@v665 kernel.value.record "missing" "learned.expression.message.completion.unknown" "available" "learned.expression.text.identity"
+@v666 kernel.value.record "selector" $v664 "cases" $v665 "otherwise" "learned.expression.message.completion.unknown"
+@v667 kernel.value.record "ref" "values"
+@v668 kernel.value.record "value" $v667
+@v669 kernel.value.record "id" "wording" "choose" $v666 "args" $v668
+@v670 kernel.seq.make
+@v671 kernel.value.record "$get" $v670
+@v672 kernel.value.record "ref" "$value"
+@v673 kernel.value.record "template" $v671 "environment" $v672 "scope" ""
+@v674 kernel.value.record "id" "base.term" "op" "data.template" "args" $v673
+@v675 kernel.value.record "ref" "base.term"
+@v676 kernel.value.record "value" $v675
+@v677 kernel.value.record "id" "base" "op" "data.object" "args" $v676
+@v678 kernel.value.record "ref" "base"
+@v679 kernel.value.record "ref" "wording"
+@v680 kernel.value.record "record" $v678 "key" "text" "value" $v679
+@v681 kernel.value.record "id" "with.wording" "op" "data.attach" "args" $v680
+@v682 kernel.seq.make item $v653 item $v660 item $v663 item $v669 item $v674 item $v677 item $v681
+@v683 kernel.value.record "ref" "with.wording"
+@v684 kernel.value.record "kind" "agent-authored-semantic-adapter" "status" "requires-learning-derivation" "contract" "Semantic projection and circuit composition; not claimed induced."
+@v685 kernel.value.record "schema" "sxlm.circuit.v1" "id" "render.completion" "inputs" $v644 "nodes" $v682 "output" $v683 "provenance" $v684
+@v686 kernel.seq.make item $v99 item $v272 item $v576 item $v643 item $v685
+@v687 kernel.value.record "schema" "sxlm.circuit-proposal.v1" "provenance" $v0 "circuits" $v686
+@output result $v687

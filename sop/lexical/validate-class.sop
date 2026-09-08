@@ -1,0 +1,17 @@
+@input item any
+@input with object
+@value0 kernel.value.get value $item key "value" fallback null
+@value data.object value $value0
+@pattern0 kernel.value.get value $value key "pattern" fallback null
+@pattern data.string value $pattern0
+@patternCheck kernel.text.matchClass text "" pattern $pattern
+@case0 kernel.value.get value $value key "caseSensitive" fallback false
+@case data.boolean value $case0
+@preserve0 kernel.value.get value $value key "preserveCase" fallback false
+@preserve data.boolean value $preserve0
+@empty kernel.seq.empty
+@excluded0 kernel.value.get value $value key "excludeCategories" fallback $empty
+@excluded data.array value $excluded0
+@checked kernel.flow.map items $excluded circuit "lexical.category" with $with
+@out data.boolean value true
+@output result $out

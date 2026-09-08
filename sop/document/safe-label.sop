@@ -1,0 +1,8 @@
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@item kernel.value.get value $with key "item" fallback null
+@key kernel.value.get value $item key "value" fallback null
+@label kernel.value.get value $state key $key fallback null
+@missing kernel.value.equal left $label right null
+@result kernel.flow.choose condition $missing then "document.add-label" else "document.keep-labels" with $with
+@output result $result

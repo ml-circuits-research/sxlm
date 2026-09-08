@@ -1,0 +1,14 @@
+@v0 kernel.value.record "left" "any" "right" "any"
+@v1 kernel.value.record
+@v2 kernel.value.record "kind" "op" "name" "kernel.seq.difference" "inputs" $v0 "output" "array" "bind" $v1 "identity" "9ab10db8b399c80c94aecdef734ceabe6444864e1cd36a6335622e2f78ce736e"
+@v3 kernel.value.record "items" "any"
+@v4 kernel.value.record
+@v5 kernel.value.record "kind" "op" "name" "kernel.seq.count" "inputs" $v3 "output" "number" "bind" $v4 "identity" "faf54cfa207eabdfbd7ee8c39986efcd81e2833335c05bbe74ab44c1e9d19963"
+@v6 kernel.value.record "left" "any" "right" "any"
+@v7 kernel.value.record
+@v8 kernel.value.record "kind" "op" "name" "kernel.value.equal" "inputs" $v6 "output" "boolean" "bind" $v7 "identity" "b665eba680588b8107208a96b14b7273822edf5e17655d1c9966694894ab41e6"
+@v9 kernel.seq.make item $v2 item $v5 item $v8
+@v10 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v11 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "faf9b52b730b3c758441825b5d87e8185ca8acb0c53ce370a314e25ecdfdadc3" "trainingHash" "65e29f1566519d74470659f70c7def1782f84e438721b2cb92696089abc973e0" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v9 "limits" $v10 "evaluated" 211 "rejected" 119 "pruned" 75 "retained" 19 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 3 "graphNodes" 3 "circuitHash" "0e6c383da9921eb2aad8ff5c2167d5154c85a0e1fa65dc1c12e1daeb33db5325" "fit" 8
+@v12 kernel.value.record "schema" "sxlm.planning-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v11 "trainingHash" "faf9b52b730b3c758441825b5d87e8185ca8acb0c53ce370a314e25ecdfdadc3" "qualification" "Search and action policy execute in SOP. Set coverage is induced from typed examples and reused in goals/preconditions. Policy bodies remain authored; witness verification does not prove cost optimality."
+@output result $v12

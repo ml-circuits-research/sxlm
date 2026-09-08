@@ -1,0 +1,2 @@
+@v0 kernel.value.record "schema" "sxlm.text-migration.v1" "authoredPolicies" 6 "sourceHash" "42e082a943b2f102913720735cbe279136a923af5dbd414e922d1a39083cf542" "qualification" "Segmentation executes in SOP and is shared with offline learning. Token boundaries, word extraction and Earley scheduling remain native."
+@output result $v0

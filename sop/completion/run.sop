@@ -1,0 +1,36 @@
+@input prefix string
+@input config object
+@input options object
+@length kernel.seq.count items $prefix
+@validPrefix kernel.number.between value $length minimum 0 maximum 10000 integer true
+@prefixChecked0 kernel.value.require condition $validPrefix message "Invalid completion request" value $prefix
+@prefixChecked data.string value $prefixChecked0
+@maxTokens kernel.value.get value $options key "maxTokens" fallback 30
+@validLimit kernel.number.between value $maxTokens minimum 1 maximum 200 integer true
+@limit0 kernel.value.require condition $validLimit message "Invalid completion request" value $maxTokens
+@limit data.number value $limit0
+@prefixItems lexical.tokenize text $prefixChecked
+@prefixTokens kernel.seq.pluck items $prefixItems key "value"
+@context0 kernel.value.get value $options key "context" fallback ""
+@context data.string value $context0
+@contextLength kernel.seq.count items $context
+@noContext kernel.value.equal left $contextLength right 0
+@contextArgs kernel.value.record context $context
+@observations kernel.flow.choose condition $noContext then "sequence.empty" else "completion.context-source" with $contextArgs
+@emptyArgs kernel.value.record
+@memory completion.sources with $emptyArgs
+@sources kernel.seq.concat left $observations right $memory
+@maximum completion.context-limit with $emptyArgs
+@segmentation kernel.value.get value $config key "segmentation" fallback null
+@boundaries kernel.value.get value $segmentation key "boundaries" fallback null
+@minimum kernel.value.get value $config key "minimumContext" fallback 1
+@attachLeft kernel.value.get value $config key "attachLeft" fallback null
+@args kernel.value.record prefix $prefix prefixTokens $prefixTokens limit $limit boundaries $boundaries minimum $minimum maximum $maximum attachLeft $attachLeft
+@scanned kernel.flow.map items $sources circuit "completion.scan-source" with $args
+@candidates kernel.seq.flat items $scanned
+@candidateCount kernel.seq.count items $candidates
+@none kernel.value.equal left $candidateCount right 0
+@extra kernel.value.record candidates $candidates
+@arguments kernel.value.merge left $args right $extra
+@result kernel.flow.choose condition $none then "completion.decode" else "completion.attested" with $arguments
+@output result $result

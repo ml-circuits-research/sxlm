@@ -1,0 +1,20 @@
+@input with object
+@prefixTokens kernel.value.get value $with key "prefixTokens" fallback null
+@empty kernel.seq.make
+@initial kernel.value.record tokens $prefixTokens generated $empty decisions $empty stopped false
+@limit0 kernel.value.get value $with key "limit" fallback null
+@limit data.number value $limit0
+@range kernel.seq.range count $limit
+@state kernel.flow.fold items $range seed $initial circuit "completion.step" with $with
+@generated kernel.value.get value $state key "generated" fallback null
+@decisions kernel.value.get value $state key "decisions" fallback null
+@fragments kernel.flow.map items $generated circuit "completion.render-token" with $with
+@continuation kernel.text.join items $fragments separator ""
+@prefix0 kernel.value.get value $with key "prefix" fallback null
+@prefix data.string value $prefix0
+@text kernel.text.concat left $prefix right $continuation
+@count kernel.seq.count items $generated
+@missing kernel.value.equal left $count right 0
+@status kernel.flow.choose condition $missing then "completion.unknown" else "completion.answered" with $with
+@result kernel.value.record kind "completion" status $status method "sequence-model" text $text continuation $continuation decisions $decisions evidence $empty grounding "distributional-pattern" truth "not-evaluated"
+@output result $result

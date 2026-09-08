@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: completion executes SOP and preserves the historical source and frequency contracts
+ok 1 - completion executes SOP and preserves the historical source and frequency contracts
+  ---
+  duration_ms: 550.080793
+  type: 'test'
+  ...
+# Subtest: source evidence preserves UTF-16 offsets, ties and alternative order
+ok 2 - source evidence preserves UTF-16 offsets, ties and alternative order
+  ---
+  duration_ms: 154.137675
+  type: 'test'
+  ...
+# Subtest: independent sequence providers add observed counts without native retraining
+ok 3 - independent sequence providers add observed counts without native retraining
+  ---
+  duration_ms: 121.842765
+  type: 'test'
+  ...
+# Subtest: learned circuits alone carry source and sequence competence; ablation removes both
+ok 4 - learned circuits alone carry source and sequence competence; ablation removes both
+  ---
+  duration_ms: 343.402926
+  type: 'test'
+  ...
+# Subtest: compiled observation pages support unrelated nested values and arbitrary safe field names
+ok 5 - compiled observation pages support unrelated nested values and arbitrary safe field names
+  ---
+  duration_ms: 117.682534
+  type: 'test'
+  ...
+# Subtest: finite-function learning rejects conflicts and lazily retrieves exact observed values
+ok 6 - finite-function learning rejects conflicts and lazily retrieves exact observed values
+  ---
+  duration_ms: 54.278778
+  type: 'test'
+  ...
+# Subtest: provider linking preserves order, hashes dependencies and checks contracts and size
+ok 7 - provider linking preserves order, hashes dependencies and checks contracts and size
+  ---
+  duration_ms: 1.737958
+  type: 'test'
+  ...
+# Subtest: sequence find preserves a matching null value instead of replacing it with a fallback
+ok 8 - sequence find preserves a matching null value instead of replacing it with a fallback
+  ---
+  duration_ms: 0.562161
+  type: 'test'
+  ...
+# Subtest: a sequence learning tag cannot certify changed SOP, wiring or missing training evidence
+ok 9 - a sequence learning tag cannot certify changed SOP, wiring or missing training evidence
+  ---
+  duration_ms: 777.05339
+  type: 'test'
+  ...
+# Subtest: sequence candidates pass the offline CLI learning and promotion loop with parent checks
+ok 10 - sequence candidates pass the offline CLI learning and promotion loop with parent checks
+  ---
+  duration_ms: 29910.999169
+  type: 'test'
+  ...
+# Subtest: generic collection contracts validate singleton collation and explicit slice bounds
+ok 11 - generic collection contracts validate singleton collation and explicit slice bounds
+  ---
+  duration_ms: 1.372332
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 32308.431502

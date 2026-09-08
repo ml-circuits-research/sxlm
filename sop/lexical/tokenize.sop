@@ -1,0 +1,5 @@
+@input text string
+@tokens kernel.text.tokens text $text
+@empty kernel.value.empty
+@out kernel.flow.map items $tokens circuit "lexical.token" with $empty
+@output result $out

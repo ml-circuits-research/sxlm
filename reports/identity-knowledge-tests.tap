@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: execution identity preserves observable property order and signed zero
+ok 1 - execution identity preserves observable property order and signed zero
+  ---
+  duration_ms: 5.435202
+  type: 'test'
+  ...
+# Subtest: literal execution order changes program and pack identities
+ok 2 - literal execution order changes program and pack identities
+  ---
+  duration_ms: 1.214768
+  type: 'test'
+  ...
+# Subtest: canonical circuit encoding is stable across equivalent record orders
+ok 3 - canonical circuit encoding is stable across equivalent record orders
+  ---
+  duration_ms: 1.380015
+  type: 'test'
+  ...
+# Subtest: installed model and executable registries cannot change under their identities
+ok 4 - installed model and executable registries cannot change under their identities
+  ---
+  duration_ms: 305.338616
+  type: 'test'
+  ...
+# Subtest: fresh processes bind actual native code and reject snapshots after a host revision
+ok 5 - fresh processes bind actual native code and reject snapshots after a host revision
+  ---
+  duration_ms: 1088.998805
+  type: 'test'
+  ...
+# Subtest: a source edit cannot relabel already loaded modules as a fresh model
+ok 6 - a source edit cannot relabel already loaded modules as a fresh model
+  ---
+  duration_ms: 553.181052
+  type: 'test'
+  ...
+# Subtest: the sealed loader profile rejects new dynamic or multiline imports
+ok 7 - the sealed loader profile rejects new dynamic or multiline imports
+  ---
+  duration_ms: 91.522608
+  type: 'test'
+  ...
+# Subtest: persistent theory and text have one circuit authority with explicit authored provenance
+ok 8 - persistent theory and text have one circuit authority with explicit authored provenance
+  ---
+  duration_ms: 298.548822
+  type: 'test'
+  ...
+# Subtest: theory ablation removes entailment and reinstalling restores it without host changes
+ok 9 - theory ablation removes entailment and reinstalling restores it without host changes
+  ---
+  duration_ms: 1018.272387
+  type: 'test'
+  ...
+# Subtest: compiled theory transfers across bindings and supplied rule chains with checked evidence
+ok 10 - compiled theory transfers across bindings and supplied rule chains with checked evidence
+  ---
+  duration_ms: 1484.453822
+  type: 'test'
+  ...
+# Subtest: theory validates at both compilation and execution, including raw constructor proposals
+ok 11 - theory validates at both compilation and execution, including raw constructor proposals
+  ---
+  duration_ms: 332.677009
+  type: 'test'
+  ...
+# Subtest: text configuration is reused by tasks and changes through circuit replacement
+ok 12 - text configuration is reused by tasks and changes through circuit replacement
+  ---
+  duration_ms: 370.559851
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3622.143664

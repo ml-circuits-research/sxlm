@@ -1,0 +1,9 @@
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@stateObject data.object value $state
+@item kernel.value.get value $with key "item" fallback null
+@key kernel.value.get value $item key "value" fallback null
+@keyString data.string value $key
+@label kernel.value.get value $item key "text" fallback null
+@result data.attach record $stateObject key $keyString value $label
+@output result $result

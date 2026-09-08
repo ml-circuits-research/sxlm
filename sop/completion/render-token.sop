@@ -1,0 +1,7 @@
+@input item any
+@input with object
+@attach kernel.value.get value $with key "attachLeft" fallback null
+@left kernel.seq.includes items $attach value $item
+@args kernel.value.record token $item
+@result kernel.flow.choose condition $left then "completion.attach" else "completion.space" with $args
+@output result $result

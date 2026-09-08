@@ -1,0 +1,23 @@
+@v0 kernel.value.record "id" "summary.content" "sourceHash" "40557156cc84894f3e453856260961c70afc463b4dff7a5efde81dd8286a2fa0"
+@v1 kernel.value.record "id" "summary.evidence" "sourceHash" "76eac82eb4c0a78bf157627d8d4d891a48a37fbd93376248325ac28d00f1500d"
+@v2 kernel.value.record "id" "summary.frequency" "sourceHash" "0a497436f7ddd6bf18abd5a782b02582c3113d77dc268e2e2efe4189f6004571"
+@v3 kernel.value.record "id" "summary.jaccard" "sourceHash" "ddef154cab1fd1c62e10b966df98cbf846267fc508f512ac9b52515d5ac9a655"
+@v4 kernel.value.record "id" "summary.lead" "sourceHash" "54bad87127c224d9e864cecf4dc722b08ca67b636bb56ac6aecf8bdbc24ed974"
+@v5 kernel.value.record "id" "summary.marginal" "sourceHash" "d0e2ee5af2506d80cf6cc4590d86046b0e296cce352340b929c98dcf578a6e2c"
+@v6 kernel.value.record "id" "summary.run" "sourceHash" "e8718a4b7a55d9bcf1469ebc3fe8d8eb79157ed09336f63539bade0744e9ac76"
+@v7 kernel.value.record "id" "summary.score" "sourceHash" "3349aa43904b84aa4d78655d230c62915c291413374ac47e8947829e3fecd6de"
+@v8 kernel.value.record "id" "summary.similarity" "sourceHash" "edd9f917b7d7c0aae1374c217ca6dbc7a707d531c377e2d168e7380b7ef93cb0"
+@v9 kernel.value.record "id" "summary.step" "sourceHash" "fbef6fa57ef371953d7d1fac7103e68fc77c08cc292097b011364531afb91a7e"
+@v10 kernel.value.record "id" "summary.tokens" "sourceHash" "9cc8e83c342e45a27febb4627c589dfe8a1989f384a0d1c49a8b5728158ab429"
+@v11 kernel.value.record "id" "summary.unique" "sourceHash" "304440904f3299429a599a8cbe254a85fb65aa87393cc5df8e2127c4cdb521a0"
+@v12 kernel.value.record "id" "summary.zero" "sourceHash" "5eaf0729545efe61b7d38f7acdbd6e48c8e4a2d0df2f9271c86c7646a4d1a60b"
+@v13 kernel.value.record "id" "learned.summary.score" "sourceHash" "d2a9c4327a565f694012b855be9407a2d06f60f75a1a7096071b003613c71ed1"
+@v14 kernel.seq.make item $v0 item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10 item $v11 item $v12 item $v13
+@v15 kernel.seq.make item "centrality" item "focus" item "lead"
+@v16 kernel.seq.make item -2.22044604925e-16 item 1 item 10 item 0.7
+@v17 kernel.value.record "kind" "agent-supervised-migration" "source" "test/reference/text-v1.mjs" "independent" false "qualification" "Distillation of the authored score rule; not independent evidence of summary quality."
+@v18 kernel.value.record "hash" "41b420bb12a94bebbe41139945224f7d7e0d91b83d4c3337968dc775efe7f8eb" "origin" $v17
+@v19 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-affine-induction" "algorithm" "full-rank-affine-v1" "trainingHash" "0f21885011cd7d21aa13648c08ec7f0da5ba829b7f9e5653097207e1d1ef01c4" "trainingCount" 8 "features" $v15 "coefficients" $v16 "maxResidual" 2.220446049250313e-16 "hypothesisClass" "affine functions over the supplied scalar features" "curriculum" $v18
+@v20 kernel.value.record "schema" "sxlm.sop-migration.v1" "modules" $v14 "nativeSummaryRemoved" true "learnedScoring" $v19 "qualification" "Selection policies remain authored; the numeric score is induced from annotated observations. Its teacher shares the original implementation origin; independent quality evidence is still required."
+@output result $v20
+

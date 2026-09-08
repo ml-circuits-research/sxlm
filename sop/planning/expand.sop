@@ -1,0 +1,13 @@
+@input with object
+@state0 kernel.value.get value $with key "state" fallback null
+@state data.object value $state0
+@node0 kernel.value.get value $with key "node" fallback null
+@node data.object value $node0
+@config kernel.value.get value $with key "config" fallback null
+@actions0 kernel.value.get value $config key "actions" fallback null
+@actions data.array value $actions0
+@agenda0 kernel.value.get value $state key "agenda" fallback null
+@agenda data.array value $agenda0
+@expanded kernel.flow.fold items $actions circuit "planning.offer" seed $agenda with $node
+@result data.attach record $state key "agenda" value $expanded
+@output result $result

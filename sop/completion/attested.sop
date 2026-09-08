@@ -1,0 +1,16 @@
+@input with object
+@candidates kernel.value.get value $with key "candidates" fallback null
+@unique kernel.seq.uniqueBy items $candidates key "continuation"
+@first kernel.value.get value $unique key 0 fallback null
+@continuation0 kernel.value.get value $first key "continuation" fallback null
+@continuation data.string value $continuation0
+@prefix0 kernel.value.get value $with key "prefix" fallback null
+@prefix data.string value $prefix0
+@text kernel.text.concat left $prefix right $continuation
+@rest kernel.seq.slice items $unique start 1 end 5
+@alternatives kernel.flow.map items $rest circuit "completion.alternative" with $with
+@evidence0 kernel.value.get value $first key "evidence" fallback null
+@evidence kernel.seq.make item $evidence0
+@source kernel.value.get value $first key "source" fallback null
+@result kernel.value.record kind "completion" status "answered" method "source-continuation" text $text continuation $continuation alternatives $alternatives evidence $evidence source $source grounding "attested-text" truth "not-evaluated"
+@output result $result

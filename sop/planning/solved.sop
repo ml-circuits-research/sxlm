@@ -1,0 +1,12 @@
+@input with object
+@state0 kernel.value.get value $with key "state" fallback null
+@state data.object value $state0
+@node kernel.value.get value $with key "node" fallback null
+@steps kernel.value.get value $node key "steps" fallback null
+@cost kernel.value.get value $node key "cost" fallback null
+@explored kernel.value.get value $state key "explored" fallback null
+@assumptions kernel.seq.make item "The supplied finite action model is complete for this plan."
+@answer kernel.value.record status "solved" steps $steps cost $cost explored $explored assumptions $assumptions
+@marked data.attach record $state key "solved" value true
+@result data.attach record $marked key "result" value $answer
+@output result $result

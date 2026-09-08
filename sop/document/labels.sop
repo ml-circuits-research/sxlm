@@ -1,0 +1,7 @@
+@input state object
+@input item any
+@input with object
+@labels kernel.value.get value $item key "labels" fallback null
+@labelObject data.object value $labels
+@result kernel.value.merge left $labelObject right $state
+@output result $result

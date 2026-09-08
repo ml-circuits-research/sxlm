@@ -1,0 +1,8 @@
+@input value object
+@state state.initial value $value
+@empty kernel.value.empty
+@theory knowledge.theory with $empty
+@rules kernel.flow.fold items $theory circuit "theory.install" seed $state with $empty
+@facts knowledge.facts with $empty
+@result kernel.flow.fold items $facts circuit "theory.install-fact" seed $rules with $empty
+@output result $result

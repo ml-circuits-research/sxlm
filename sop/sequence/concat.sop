@@ -1,0 +1,5 @@
+@input state array
+@input item array
+@input with object
+@result kernel.seq.concat left $state right $item
+@output result $result

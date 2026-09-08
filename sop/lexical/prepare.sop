@@ -1,0 +1,15 @@
+@input with object
+@empty kernel.seq.empty
+@raw kernel.value.get value $with key "lexicon" fallback $empty
+@lexicon data.array value $raw
+@rows kernel.flow.map items $lexicon circuit "lexical.entry" with $with
+@groups kernel.seq.group items $rows key "key"
+@pairs kernel.flow.map items $groups circuit "lexical.group" with $with
+@index kernel.value.fromPairs items $pairs
+@none kernel.value.empty
+@classes0 kernel.value.get value $with key "classes" fallback $none
+@classes data.object value $classes0
+@entries kernel.value.entries value $classes
+@checks kernel.flow.map items $entries circuit "lexical.validate-class" with $with
+@out kernel.value.record lexicon $index classes $classes
+@output result $out

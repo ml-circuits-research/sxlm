@@ -1,0 +1,7 @@
+@v0 kernel.value.record "trainingTexts" 4 "modules" 79 "sequencePackBytes" 132517 "installedBootstrapBytes" 981464
+@v1 kernel.value.record "observations" 100 "modules" 34 "sopBytes" 32538 "artifactBytes" 43392 "generationMs" 8.717239999999997 "compilationMs" 22.964180999999996 "coldLookupMs" 3.6239130000000017 "coldNodes" 104 "executedModules" 9 "warmMeanMs" 0.11012049999999932
+@v2 kernel.value.record "observations" 1000 "modules" 258 "sopBytes" 313535 "artifactBytes" 400290 "generationMs" 25.838685000000012 "compilationMs" 125.545627 "coldLookupMs" 2.607077000000004 "coldNodes" 137 "executedModules" 12 "warmMeanMs" 0.20398519999999962
+@v3 kernel.value.record "observations" 10000 "modules" 4098 "sopBytes" 3460240 "artifactBytes" 4737340 "generationMs" 244.14836099999997 "compilationMs" 1284.9831210000002 "coldLookupMs" 1.1046279999998205 "coldNodes" 121 "executedModules" 16 "warmMeanMs" 1.7773005000000013
+@v4 kernel.seq.make item $v1 item $v2 item $v3
+@v5 kernel.value.record "schema" "sxlm.sequence-representation.v1" "node" "v24.9.0" "icu" "77.1" "trainingHash" "57b9fc53782f1f42e9bc64c58147ead176ac5dc0eaf7242b332744f24515dc44" "bootstrap" $v0 "lookupScaling" $v4 "qualification" "Synthetic finite-function lookup, not language generalization or end-to-end large-corpus completion. Source-continuation search still scans its supplied sources. Warm numbers include assertion overhead and are not performance guarantees."
+@output result $v5

@@ -1,0 +1,24 @@
+@input with object
+@agenda0 kernel.value.get value $with key "agenda" fallback null
+@agenda data.array value $agenda0
+@action kernel.value.get value $with key "action" fallback null
+@node kernel.value.get value $with key "node" fallback null
+@state kernel.value.get value $node key "state" fallback null
+@remove kernel.value.get value $action key "remove" fallback null
+@add kernel.value.get value $action key "add" fallback null
+@retained kernel.seq.difference left $state right $remove
+@added kernel.seq.concat left $retained right $add
+@nextState kernel.seq.unique items $added
+@cost0 kernel.value.get value $node key "cost" fallback null
+@cost data.number value $cost0
+@actionCost0 kernel.value.get value $action key "cost" fallback null
+@actionCost data.number value $actionCost0
+@nextCost kernel.number.binary operation "add" left $cost right $actionCost
+@steps0 kernel.value.get value $node key "steps" fallback null
+@steps data.array value $steps0
+@id kernel.value.get value $action key "id" fallback null
+@nextSteps kernel.seq.append items $steps value $id
+@length kernel.seq.count items $nextSteps
+@nextNode kernel.value.record state $nextState cost $nextCost length $length steps $nextSteps
+@result kernel.seq.append items $agenda value $nextNode
+@output result $result

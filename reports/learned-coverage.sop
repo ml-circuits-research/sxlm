@@ -1,0 +1,74 @@
+@module source0 chars 272
+@input required array
+@input available array
+@n0 primitive "kernel.seq.difference" bind left $required right $available
+@n1 primitive "kernel.seq.difference" bind left $required right $n0
+@n2 primitive "kernel.value.equal" bind left $required right $n1
+@output result $n2
+
+@end
+@v0 kernel.value.record "kind" "supervised-program-synthesis" "parentModel" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "algorithm" "typed-observational-search-v1" "specificationHash" "91fe677f44e8677f7d526142abd3a745a7c7a106d1a33e041f342790db7caea5"
+@v1 kernel.value.record "id" "english-bootstrap" "hash" "f501b1b2804c21cbd1c2ccd20fa1283a2e8690d8d0503c7ab9825a0adc5f2318"
+@v2 kernel.seq.make item $v1
+@v3 kernel.value.record "kind" "supervised-program-synthesis"
+@v4 kernel.value.record "left" "any" "right" "any"
+@v5 kernel.value.record
+@v6 kernel.value.record "kind" "op" "name" "kernel.seq.difference" "inputs" $v4 "output" "array" "bind" $v5 "identity" "9ab10db8b399c80c94aecdef734ceabe6444864e1cd36a6335622e2f78ce736e"
+@v7 kernel.value.record "items" "any"
+@v8 kernel.value.record
+@v9 kernel.value.record "kind" "op" "name" "kernel.seq.count" "inputs" $v7 "output" "number" "bind" $v8 "identity" "faf54cfa207eabdfbd7ee8c39986efcd81e2833335c05bbe74ab44c1e9d19963"
+@v10 kernel.value.record "left" "any" "right" "any"
+@v11 kernel.value.record
+@v12 kernel.value.record "kind" "op" "name" "kernel.value.equal" "inputs" $v10 "output" "boolean" "bind" $v11 "identity" "b665eba680588b8107208a96b14b7273822edf5e17655d1c9966694894ab41e6"
+@v13 kernel.seq.make item $v6 item $v9 item $v12
+@v14 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v15 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "91fe677f44e8677f7d526142abd3a745a7c7a106d1a33e041f342790db7caea5" "trainingHash" "65e29f1566519d74470659f70c7def1782f84e438721b2cb92696089abc973e0" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v13 "limits" $v14 "evaluated" 211 "rejected" 119 "pruned" 75 "retained" 19 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 3 "graphNodes" 3 "circuitHash" "616bf7f3d89cd5eec9addc78133ba732f4e82ed15ae8db89d098523612262774" "fit" 8
+@v16 kernel.value.record "printer" "typed-graph-to-sop-v1"
+@v17 kernel.value.record "id" "learned.coverage" "source" &source0 "provenance" $v3 "learning" $v15 "compilation" $v16
+@v18 kernel.seq.make item $v17
+@v19 kernel.value.record "required" "array" "available" "array"
+@v20 kernel.value.record "op" "kernel.seq.difference"
+@v21 kernel.value.record "op" "kernel.seq.count"
+@v22 kernel.value.record "op" "kernel.value.equal"
+@v23 kernel.seq.make item $v20 item $v21 item $v22
+@v24 kernel.seq.make item 0
+@v25 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v26 kernel.seq.make item "a"
+@v27 kernel.seq.make item "a" item "b"
+@v28 kernel.value.record "required" $v26 "available" $v27
+@v29 kernel.value.record "input" $v28 "output" true
+@v30 kernel.seq.make item "a" item "b"
+@v31 kernel.seq.make item "a"
+@v32 kernel.value.record "required" $v30 "available" $v31
+@v33 kernel.value.record "input" $v32 "output" false
+@v34 kernel.seq.make
+@v35 kernel.seq.make item "c"
+@v36 kernel.value.record "required" $v34 "available" $v35
+@v37 kernel.value.record "input" $v36 "output" true
+@v38 kernel.seq.make item "d"
+@v39 kernel.seq.make
+@v40 kernel.value.record "required" $v38 "available" $v39
+@v41 kernel.value.record "input" $v40 "output" false
+@v42 kernel.seq.make item "b" item "a"
+@v43 kernel.seq.make item "a" item "b"
+@v44 kernel.value.record "required" $v42 "available" $v43
+@v45 kernel.value.record "input" $v44 "output" true
+@v46 kernel.seq.make item "c" item "c"
+@v47 kernel.seq.make item "c"
+@v48 kernel.value.record "required" $v46 "available" $v47
+@v49 kernel.value.record "input" $v48 "output" true
+@v50 kernel.seq.make item "a" item "c"
+@v51 kernel.seq.make item "a" item "b"
+@v52 kernel.value.record "required" $v50 "available" $v51
+@v53 kernel.value.record "input" $v52 "output" false
+@v54 kernel.seq.make item "d" item "d"
+@v55 kernel.seq.make item "d"
+@v56 kernel.value.record "required" $v54 "available" $v55
+@v57 kernel.value.record "input" $v56 "output" true
+@v58 kernel.seq.make item $v29 item $v33 item $v37 item $v41 item $v45 item $v49 item $v53 item $v57
+@v59 kernel.value.record "kind" "agent-authored-teacher-examples" "qualification" "Supervision for a reusable finite-set method. These examples and the local evaluator were authored in the same project; they are not independent external validation."
+@v60 kernel.value.record "id" "learned.coverage" "inputs" $v19 "output" "boolean" "library" $v23 "constants" $v24 "limits" $v25 "examples" $v58 "origin" $v59
+@v61 kernel.value.record "schema" "sxlm.training.v1" "algorithm" "typed-observational-search-v1" "specification" $v60
+@v62 kernel.seq.make
+@v63 kernel.value.record "schema" "sxlm.pack.v1" "id" "learned.coverage" "version" "1.0.0" "provenance" $v0 "dependencies" $v2 "sop" $v18 "training" $v61 "evaluations" $v62
+@output result $v63

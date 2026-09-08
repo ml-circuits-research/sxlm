@@ -1,0 +1,17 @@
+@input problem object
+@input options object
+@config planning.problem with $problem
+@initial kernel.value.get value $config key "initial" fallback null
+@steps kernel.seq.empty
+@node kernel.value.record state $initial cost 0 length 0 steps $steps
+@agenda kernel.seq.make item $node
+@best kernel.value.empty
+@result kernel.value.empty
+@start kernel.value.record agenda $agenda best $best explored 0 solved false result $result
+@bound0 kernel.value.get value $options key "maxIterations" fallback 10000
+@bound data.number value $bound0
+@searched iterate "planning.step" while "planning.continue" state "state" seed $start limit $bound bind with $config
+@solved0 kernel.value.get value $searched key "solved" fallback null
+@solved data.boolean value $solved0
+@answer kernel.flow.choose condition $solved then "planning.finished" else "planning.exhausted" with $searched
+@output result $answer

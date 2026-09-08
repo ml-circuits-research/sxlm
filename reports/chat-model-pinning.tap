@@ -1,0 +1,12 @@
+✔ document circuits change a durable conversation while preserving prior observations and source evidence (31924.938811ms)
+✔ document jobs queue, cancel before launch and persist executable failures without activation (232.892006ms)
+✔ document uploads preserve UTF-8 bytes beyond the structured request limit and resume idempotently (14.171709ms)
+✔ conversation transcripts persist their model-bound snapshots with ordered pagination (7.980255ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33063.988246

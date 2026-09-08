@@ -1,0 +1,27 @@
+@input state object
+@input item object
+@input with object
+@proposal kernel.value.get value $item key "rule" fallback null
+@ruleObject data.object value $proposal
+@rule kernel.relation.validateRule rule $ruleObject
+@pack kernel.value.get value $item key "pack" fallback null
+@packName data.string value $pack
+@text kernel.value.encode value $rule
+@hash kernel.value.hash value $text
+@source kernel.value.record id $hash text $text pack $packName
+@oldSources kernel.value.get value $state key "sources" fallback null
+@sourceList data.array value $oldSources
+@ids kernel.seq.pluck items $sourceList key "id"
+@present kernel.seq.includes items $ids value $hash
+@sourceArgs kernel.value.record sources $sourceList source $source
+@sources kernel.flow.choose condition $present then "theory.keep-sources" else "theory.add-source" with $sourceArgs
+@length kernel.seq.count items $text
+@evidence kernel.value.record source $hash start 0 end $length
+@fields kernel.value.record id $hash evidence $evidence
+@installed kernel.value.merge left $rule right $fields
+@oldRules kernel.value.get value $state key "rules" fallback null
+@ruleList data.array value $oldRules
+@rules kernel.seq.append items $ruleList value $installed
+@changes kernel.value.record sources $sources rules $rules
+@result kernel.value.merge left $state right $changes
+@output result $result

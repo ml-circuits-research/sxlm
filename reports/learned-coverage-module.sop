@@ -1,0 +1,6 @@
+@input required array
+@input available array
+@n0 primitive "kernel.seq.difference" bind left $required right $available
+@n1 primitive "kernel.seq.difference" bind left $required right $n0
+@n2 primitive "kernel.value.equal" bind left $required right $n1
+@output result $n2

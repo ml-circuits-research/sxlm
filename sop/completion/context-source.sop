@@ -1,0 +1,7 @@
+@input with object
+@text0 kernel.value.get value $with key "context" fallback null
+@text data.string value $text0
+@id kernel.value.hash value $text
+@source kernel.value.record id $id text $text
+@result kernel.seq.make item $source
+@output result $result

@@ -1,0 +1,5 @@
+@v0 kernel.seq.make item "A symbolic model represents knowledge as explicit facts and rules. It can explain an answer by showing the evidence and the inference steps." item "A reliable learning loop proposes an abstraction, checks its behavior, and promotes it only after independent evaluation." item "The robot inspected the sensor. The sensor reported a fault. The engineer replaced the sensor and tested the device." item "The purpose of a summary is to preserve the important information in a shorter text. Source evidence makes the selected statements inspectable."
+@v1 kernel.seq.make item "." item "!" item "?"
+@v2 kernel.value.record "kind" "agent-supervised-migration" "source" "earlier authored bootstrap corpus" "independent" false
+@v3 kernel.value.record "texts" $v0 "order" 4 "boundaries" $v1 "id" "bootstrap-sequence" "origin" $v2
+@output result $v3

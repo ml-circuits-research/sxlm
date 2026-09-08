@@ -1,0 +1,15 @@
+@input item any
+@input with object
+@selected kernel.value.get value $with key "selected" fallback null
+@content kernel.value.get value $item key "content" fallback null
+@args kernel.value.record content $content
+@similarities kernel.flow.map items $selected circuit "summary.similarity" with $args
+@max kernel.seq.max items $similarities initial 0
+@weight0 kernel.value.get value $with key "redundancy" fallback null
+@weight data.number value $weight0
+@penalty kernel.number.binary operation "multiply" left $weight right $max
+@score0 kernel.value.get value $item key "score" fallback null
+@score data.number value $score0
+@adjusted kernel.number.binary operation "subtract" left $score right $penalty
+@result kernel.value.record original $item adjusted $adjusted
+@output result $result

@@ -1,0 +1,3 @@
+@v0 kernel.seq.make
+@v1 kernel.value.record "model" "ad7501e06d2907468ad93fa97b4427b1b7b329eba74d1d945ab640da20de594e" "preparationMs" 367.102904 "validationMs" 26958.640646 "accepted" true "gates" 5 "regressionsIntroduced" $v0
+@output result $v1

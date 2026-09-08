@@ -1,0 +1,3 @@
+@input with object
+@zero kernel.number.binary operation "add" left 0 right 0
+@output result $zero

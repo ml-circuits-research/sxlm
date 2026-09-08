@@ -1,0 +1,6 @@
+@input with object
+@steps kernel.seq.empty
+@explored kernel.value.get value $with key "explored" fallback null
+@assumptions kernel.seq.make item "Only the supplied actions were searched."
+@result kernel.value.record status "unreachable-in-model" steps $steps explored $explored assumptions $assumptions
+@output result $result

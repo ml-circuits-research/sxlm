@@ -1,0 +1,18 @@
+@v0 kernel.value.record "title" "Relative clauses + evidence" "text" "Every pilot who owns a bird is careful. Mira is a pilot. Mira owns a bird. Is Mira careful?"
+@v1 kernel.value.record "title" "Join across three entities" "text" "If X mentors Y and Y mentors Z, then X helps Z. Arin mentors Bela. Bela mentors Cyra. Does Arin help Cyra?"
+@v2 kernel.value.record "title" "Quantities + intermediate questions" "text" "Mira has 8 apples. How many apples does Mira have? Mira gives 3 apples to Theo. How many apples does Mira have?"
+@v3 kernel.value.record "title" "Belief is not a world fact" "text" "Mira believes that Theo is a pilot. Is Theo a pilot? Does Mira believe that Theo is a pilot?"
+@v4 kernel.value.record "title" "Contradictory evidence" "text" "Every robot is careful. No robot is careful. Delta is a robot. Is Delta careful?"
+@v5 kernel.value.record "title" "Unsupported event invalidates a quantity" "text" "Mira has 8 apples. Mira destroys three apples. How many apples does Mira have?"
+@v6 kernel.value.record "title" "Fresh vocabulary" "text" "Every glorp who owns a dax is luminous. Zora is a glorp. Zora owns a dax. Is Zora luminous?"
+@v7 kernel.value.record "title" "An unsolved language challenge" "text" "Pico is owned by Mira. Does Mira own Pico?"
+@v8 kernel.seq.make item $v0 item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7
+@v9 kernel.value.record "title" "An incident report" "text" "The deployment was paused after the pressure sensor failed its calibration test. The engineer inspected the sensor and found a damaged connector. The team replaced the connector and repeated the calibration. The second test passed. Production has not resumed because an independent inspection is still pending." "focus" "deployment production inspection" "sentences" 3
+@v10 kernel.value.record "title" "A decision with a caveat" "text" "The team evaluated three storage designs. The first design was fast but lost data during a power failure. The second design preserved every acknowledged write. The third design was simpler but exceeded the latency budget. The team selected the second design. The selection is provisional until the recovery test is repeated on the target hardware." "focus" "selected provisional" "sentences" 2
+@v11 kernel.seq.make item $v9 item $v10
+@v12 kernel.value.record "title" "Continue from learned text" "text" "A symbolic model" "context" ""
+@v13 kernel.value.record "title" "Continue from supplied context" "text" "The cobalt robot" "context" "The cobalt robot inspects the reactor. The copper robot inspects the bridge."
+@v14 kernel.value.record "title" "An unsupported prefix" "text" "An interstellar parliament" "context" ""
+@v15 kernel.seq.make item $v12 item $v13 item $v14
+@v16 kernel.value.record "reason" $v8 "summarize" $v11 "complete" $v15
+@output result $v16

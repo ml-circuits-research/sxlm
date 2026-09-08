@@ -1,0 +1,12 @@
+@v0 kernel.value.record "truth" "true" "gaps" 0 "proof" true
+@v1 kernel.value.record "id" "learn-unseen-noun" "text" "Nara is certified as a navigator. Is Nara a navigator?" "expect" $v0
+@v2 kernel.value.record "truth" "true" "gaps" 0 "proof" true
+@v3 kernel.value.record "id" "learn-relative-composition" "text" "Every robot who is certified as a navigator is trusted. Nara is a robot. Nara is certified as a navigator. Is Nara trusted?" "expect" $v2
+@v4 kernel.value.record "truth" "true" "gaps" 0 "proof" true
+@v5 kernel.value.record "id" "learn-rule-conclusion" "text" "Every robot is certified as a navigator. Nara is a robot. Is Nara a navigator?" "expect" $v4
+@v6 kernel.value.record "truth" "unknown" "gaps" 0
+@v7 kernel.value.record "id" "learn-join-guard" "text" "Every robot who is certified as a navigator is trusted. Nara is a robot. Theo is certified as a navigator. Is Nara trusted?" "expect" $v6
+@v8 kernel.value.record "truth" "unknown" "gaps" 0
+@v9 kernel.value.record "id" "learn-context-isolation" "text" "Mira believes that Theo is certified as a navigator. Is Theo a navigator?" "expect" $v8
+@v10 kernel.seq.make item $v1 item $v3 item $v5 item $v7 item $v9
+@output result $v10

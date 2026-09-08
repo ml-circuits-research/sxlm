@@ -1,0 +1,12 @@
+@v0 kernel.value.record "4" "N"
+@v1 kernel.seq.make item "?subject"
+@v2 kernel.value.record "predicate" "pilot" "terms" $v1 "context" "world" "negative" false
+@v3 kernel.seq.make item $v2
+@v4 kernel.value.record "text" "is certified as a pilot" "meaning" $v3
+@v5 kernel.seq.make item "?subject"
+@v6 kernel.value.record "predicate" "medic" "terms" $v5 "context" "world" "negative" false
+@v7 kernel.seq.make item $v6
+@v8 kernel.value.record "text" "is certified as a medic" "meaning" $v7
+@v9 kernel.seq.make item $v4 item $v8
+@v10 kernel.value.record "id" "learned-certification" "category" "VP" "slotCategories" $v0 "examples" $v9
+@output result $v10

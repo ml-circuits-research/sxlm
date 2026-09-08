@@ -1,0 +1,23 @@
+✖ document circuits change a durable conversation while preserving prior observations and source evidence (31397.731266ms)
+✔ an unavailable coding executable produces a persisted failure without activating knowledge (207.866199ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32497.343959
+
+✖ failing tests:
+
+test at test/chat-integration.test.mjs:16:1
+✖ document circuits change a durable conversation while preserving prior observations and source evidence (31397.731266ms)
+  Error: Document candidate introduced regressions: wh-subject
+      at check (file:///home/salboaie/work/sllm/sxlm/src/kernel/data.mjs:68:67)
+      at validateDocumentCandidate (file:///home/salboaie/work/sllm/sxlm/src/chat/jobs.mjs:114:3)
+      at TestContext.<anonymous> (file:///home/salboaie/work/sllm/sxlm/test/chat-integration.test.mjs:31:21)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)

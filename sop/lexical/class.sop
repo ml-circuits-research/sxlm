@@ -1,0 +1,26 @@
+@input with object
+@symbol kernel.value.get value $with key "symbol" fallback null
+@name kernel.value.get value $symbol key "class" fallback null
+@knowledge kernel.value.get value $with key "knowledge" fallback null
+@classes kernel.value.get value $knowledge key "classes" fallback null
+@class0 kernel.value.get value $classes key $name fallback null
+@class data.object value $class0
+@pattern0 kernel.value.get value $class key "pattern" fallback null
+@pattern data.string value $pattern0
+@case0 kernel.value.get value $class key "caseSensitive" fallback false
+@case data.boolean value $case0
+@text kernel.flow.choose condition $case then "lexical.raw" else "lexical.folded" with $with
+@matches kernel.text.matchClass text $text pattern $pattern
+@empty kernel.seq.empty
+@excluded0 kernel.value.get value $class key "excludeCategories" fallback $empty
+@excluded data.array value $excluded0
+@blocks kernel.flow.map items $excluded circuit "lexical.excluded" with $with
+@blocked kernel.seq.includes items $blocks value true
+@allowed kernel.boolean.not value $blocked
+@accept kernel.boolean.and left $matches right $allowed
+@preserve0 kernel.value.get value $class key "preserveCase" fallback false
+@preserve data.boolean value $preserve0
+@value kernel.flow.choose condition $preserve then "lexical.raw" else "lexical.folded" with $with
+@args kernel.value.record value $value
+@out kernel.flow.choose condition $accept then "lexical.accept" else "lexical.empty" with $args
+@output result $out

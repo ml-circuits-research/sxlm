@@ -1,0 +1,4 @@
+@input item any
+@input with object
+@unique kernel.seq.unique items $item
+@output result $unique

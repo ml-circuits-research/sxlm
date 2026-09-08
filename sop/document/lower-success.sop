@@ -1,0 +1,5 @@
+@input with object
+@attempt kernel.value.get value $with key "attempt" fallback null
+@value kernel.value.get value $attempt key "value" fallback null
+@result kernel.value.record ok true instructions $value
+@output result $result

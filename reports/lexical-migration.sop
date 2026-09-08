@@ -1,0 +1,11 @@
+@v0 kernel.value.record "text" "string" "form" "string"
+@v1 kernel.value.record
+@v2 kernel.value.record "kind" "op" "name" "kernel.text.normalize" "inputs" $v0 "output" "string" "bind" $v1 "identity" "7805a60e95ac1b17c1280e78b35f426713269cd177ec4205d76bb2ac5ae10b63"
+@v3 kernel.value.record "text" "string" "mode" "string"
+@v4 kernel.value.record
+@v5 kernel.value.record "kind" "op" "name" "kernel.text.case" "inputs" $v3 "output" "string" "bind" $v4 "identity" "0d63aab64eb9d004a1e6c4b8f37aa4273b4c8cfc7326110bf2fa5400524e2beb"
+@v6 kernel.seq.make item $v2 item $v5
+@v7 kernel.value.record "applications" 2 "candidates" 10000 "representatives" 1000 "milliseconds" 10000
+@v8 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "trainingHash" "3a95e810383b2677965b7ee330ca01bec86f89d606fb78dd595b7e10ca267133" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v6 "limits" $v7 "evaluated" 179 "rejected" 140 "pruned" 26 "retained" 17 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 2 "graphNodes" 2 "circuitHash" "50e141fd4d49beeb0ee6359c2ad1fb051b38fe60b07bb87df4ef28e5fdbba79d" "fit" 8
+@v9 kernel.value.record "schema" "sxlm.lexical-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v8 "trainingHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "qualification" "Terminal selection, lexicon indexing, class exclusions and case policy execute in SOP. Normalization composition is synthesized. Native token boundaries and Earley scheduling remain; authored lexical policy is not relabeled as learned."
+@output result $v9

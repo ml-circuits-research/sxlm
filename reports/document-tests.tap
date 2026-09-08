@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: SOP document policy preserves historical interpretation, scopes, source spans and coverage
+ok 1 - SOP document policy preserves historical interpretation, scopes, source spans and coverage
+  ---
+  duration_ms: 716.624939
+  type: 'test'
+  ...
+# Subtest: unparsed, ambiguous and invalid semantic results become explicit SOP gaps
+ok 2 - unparsed, ambiguous and invalid semantic results become explicit SOP gaps
+  ---
+  duration_ms: 442.835953
+  type: 'test'
+  ...
+# Subtest: grammar proposals execute as circuit knowledge and removal of wiring removes their competence
+ok 3 - grammar proposals execute as circuit knowledge and removal of wiring removes their competence
+  ---
+  duration_ms: 1533.812948
+  type: 'test'
+  ...
+# Subtest: changing document interpretation policy changes SOP content, not the host implementation
+ok 4 - changing document interpretation policy changes SOP content, not the host implementation
+  ---
+  duration_ms: 165.910134
+  type: 'test'
+  ...
+# Subtest: attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure
+ok 5 - attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure
+  ---
+  duration_ms: 1.707646
+  type: 'test'
+  ...
+# Subtest: runtime inspection cannot mutate programs, primitive contracts or cached answers
+ok 6 - runtime inspection cannot mutate programs, primitive contracts or cached answers
+  ---
+  duration_ms: 1.601346
+  type: 'test'
+  ...
+# Subtest: grammar indexes are immutable views with normalized and collision-free lexical identity
+ok 7 - grammar indexes are immutable views with normalized and collision-free lexical identity
+  ---
+  duration_ms: 1.1524
+  type: 'test'
+  ...
+# Subtest: prototype-like text remains in source evidence without unsafe label keys
+ok 8 - prototype-like text remains in source evidence without unsafe label keys
+  ---
+  duration_ms: 204.185098
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3468.880827

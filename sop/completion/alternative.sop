@@ -1,0 +1,8 @@
+@input item any
+@input with object
+@prefix0 kernel.value.get value $with key "prefix" fallback null
+@prefix data.string value $prefix0
+@continuation0 kernel.value.get value $item key "continuation" fallback null
+@continuation data.string value $continuation0
+@result kernel.text.concat left $prefix right $continuation
+@output result $result

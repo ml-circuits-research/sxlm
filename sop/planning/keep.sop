@@ -1,0 +1,4 @@
+@input with object
+@raw kernel.value.get value $with key "state" fallback null
+@state data.object value $raw
+@output result $state

@@ -1,0 +1,3 @@
+@v0 kernel.value.record "schema" "sxlm.document-migration.v1" "grammarHash" "1b34bce391195a2c77ac67c6a7c415112489d5925a32e6597e36f51552894d86" "sourceHash" "adee3e7849aba9cebceed5b7548a111a519cc6779a20b5b41c5045f780f80f50" "authoredPolicies" 19 "compiledKnowledgeModules" 40 "qualification" "Grammar knowledge is reconstructed by circuits. The Earley mechanism remains native and requires further review; source compilation is not a learning derivation."
+@output result $v0
+

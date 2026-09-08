@@ -1,0 +1,57 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { encodeSOP, decodeSOP } from './reference/src/kernel/sop-data.mjs';
+import { digest, check } from './reference/src/kernel/data.mjs';
+import { validateAtom, validateRule } from './reference/src/semantics/logic.mjs';
+import { compileKnowledge, compileTheoryKnowledge } from './reference/src/learning/knowledge.mjs';
+import { compileGrammarKnowledge } from './reference/src/learning/grammar.mjs';
+import { compilePhraseKnowledge } from './reference/src/learning/phrases.mjs';
+import { SymbolicModel } from './reference/src/model.mjs';
+import { readPack } from './reference/src/learning/packs.mjs';
+
+// This file is copied into a coding-agent workspace. It is never imported by inference.
+export function compileDocument({ facts = [], rules = [], phrases = [], grammar, sop = [], limitations = [] }) {
+  const packet = decodeSOP(readFileSync('packet.sop'));
+  const prefix = 'document.' + packet.job.replaceAll('-', '');
+  const origin = { kind: 'agent-authored-document-interpretation', parentModel: packet.parentModel,
+    documentHash: packet.document.hash, extractionHash: packet.extraction.textHash, job: packet.job,
+    qualification: 'Coding-agent interpretations compiled into SOP; source spans establish attribution, not semantic correctness.' };
+  const evidence = item => {
+    check(Number.isSafeInteger(item.chunk) && item.chunk >= 0 && item.chunk < packet.document.chunks, 'Invalid source chunk');
+    const endChunk = item.endChunk ?? item.chunk;
+    check(Number.isSafeInteger(endChunk) && endChunk >= item.chunk && endChunk < packet.document.chunks && endChunk - item.chunk < 8, 'Invalid source window');
+    let text = '';
+    for (let index = item.chunk; index <= endChunk; index++) text += readFileSync(`source/chunk-${index}.txt`, 'utf8');
+    check(Number.isSafeInteger(item.start) && Number.isSafeInteger(item.end) && item.start >= 0 && item.end > item.start && item.end <= text.length, 'Invalid source span');
+    const source = { id: digest(text), text, pack: packet.document.name, startChunk: item.chunk, endChunk, documentHash: packet.document.hash, extractionHash: packet.extraction.textHash };
+    return { source, evidence: { source: source.id, start: item.start, end: item.end } };
+  };
+  const values = facts.map(item => {
+    validateAtom(item.atom, { ground: true });
+    return { atom: item.atom, ...evidence(item) };
+  });
+  const memory = compileKnowledge(values, { id: prefix + '.facts', origin });
+  const theory = compileTheoryKnowledge(rules.map(item => {
+    validateRule(item.rule);
+    return { ...item.rule, teaching: evidence(item) };
+  }), { id: prefix + '.rules', origin, sourceName: packet.document.name });
+  const language = grammar ? compileGrammarKnowledge(grammar, { id: prefix + '.grammar', origin }) : { sop: [], providers: {} };
+  let lexical = { sop: [], providers: {} };
+  if (phrases.length) {
+    const parent = new SymbolicModel({ packs: packet.manifests.map((_, index) => readPack(
+      `reference/packs/${index === 0 ? 'english-bootstrap' : `extension-${index}`}.sop`)) });
+    check(parent.resources.hash === packet.parentModel, 'Phrase tokenizer requires the exact parent model');
+    lexical = compilePhraseKnowledge(phrases, { id: prefix + '.phrases', origin,
+      tokenize: text => parent.grammar.tokenize(text) });
+  }
+  const pack = { schema: 'sxlm.pack.v1', id: prefix, version: '1', provenance: origin,
+    dependencies: packet.manifests.map(({ id, hash }) => ({ id, hash })),
+    sop: [...memory.sop, ...theory.sop, ...language.sop, ...lexical.sop, ...sop.map(module => ({ ...module, provenance: origin }))],
+    providers: { 'fact-fragments': [prefix + '.facts'], ...theory.providers,
+      'grammar-fragments': [...(language.providers['grammar-fragments'] ?? []),
+        ...(lexical.providers['grammar-fragments'] ?? [])] },
+    training: { schema: 'sxlm.document-teaching.v1', document: packet.document,
+      facts, rules, phrases, ...(grammar ? { grammar } : {}), sop, limitations,
+      qualification: 'Authored supervision. No independent semantic validation or induction claim.' } };
+  writeFileSync('candidate.sop', encodeSOP(pack));
+  return pack;
+}

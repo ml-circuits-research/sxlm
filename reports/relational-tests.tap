@@ -1,0 +1,11 @@
+✔ relational language composes user rules, relative restrictions, selection and declared order axioms (30283.512819ms)
+✔ a supplied relation meaning transfers through the same construction without new native or sentence rules (5380.213895ms)
+✔ theory ablation removes relational chains but preserves direct observations and transactional limits (4053.28811ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 42052.740978

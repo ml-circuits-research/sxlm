@@ -1,0 +1,7 @@
+@input state array
+@input item array
+@input with object
+@both kernel.seq.concat left $state right $item
+@groups kernel.seq.group items $both key "token"
+@result kernel.flow.map items $groups circuit "sequence.count-row" with $with
+@output result $result

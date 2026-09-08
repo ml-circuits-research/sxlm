@@ -1,0 +1,20 @@
+@input item any
+@input with object
+@text0 kernel.value.get value $item key "text" fallback null
+@text data.string value $text0
+@tokens lexical.tokenize text $text
+@values kernel.seq.pluck items $tokens key "value"
+@prefix kernel.value.get value $with key "prefixTokens" fallback null
+@size kernel.seq.count items $prefix
+@total kernel.seq.count items $tokens
+@nonempty kernel.number.between value $size minimum 1 maximum 10000 integer true
+@comparison kernel.value.compare left $total right $size
+@more kernel.value.equal left $comparison right 1
+@validSize kernel.boolean.and left $nonempty right $more
+@head kernel.seq.slice items $values start 0 end $size
+@equal kernel.value.equal left $head right $prefix
+@matches kernel.boolean.and left $validSize right $equal
+@fields kernel.value.record span $item tokens $tokens size $size total $total
+@args kernel.value.merge left $with right $fields
+@result kernel.flow.choose condition $matches then "completion.extract-span" else "sequence.empty" with $args
+@output result $result

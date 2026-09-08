@@ -1,0 +1,171 @@
+@module source0 chars 164
+@input text string
+@n0 primitive "kernel.text.normalize" bind text $text form "NFKC"
+@n1 primitive "kernel.text.case" bind text $n0 mode "lower"
+@output result $n1
+
+@end
+
+@module source1 chars 280
+@input item any
+@input with object
+@record data.object value $item
+@text0 kernel.value.get value $item key "text" fallback null
+@text data.string value $text0
+@value learned.lexical.normalize text $text
+@out data.attach record $record key "value" value $value
+@output result $out
+
+@end
+
+@module source2 chars 174
+@input text string
+@tokens kernel.text.tokens text $text
+@empty kernel.value.empty
+@out kernel.flow.map items $tokens circuit "lexical.token" with $empty
+@output result $out
+
+@end
+
+@module source3 chars 137
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@result data.object value $state
+@output result $result
+
+@end
+
+@module source4 chars 136
+@input with object
+@spans kernel.value.get value $with key "spans" fallback null
+@result data.array value $spans
+@output result $result
+
+@end
+
+@module source5 chars 248
+@input with object
+@spans0 kernel.value.get value $with key "spans" fallback null
+@spans data.array value $spans0
+@span kernel.value.get value $with key "span" fallback null
+@result kernel.seq.append items $spans value $span
+@output result $result
+
+@end
+
+@module source6 chars 1980
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@config kernel.value.get value $with key "config" fallback null
+@token kernel.value.get value $with key "token" fallback null
+@boundary0 kernel.value.get value $with key "boundary" fallback null
+@boundary data.boolean value $boundary0
+@keep kernel.value.get value $config key "keep" fallback null
+@surface kernel.value.get value $token key "text" fallback null
+@retained kernel.seq.includes items $keep value $surface
+@notRetained kernel.boolean.not value $retained
+@drop kernel.boolean.and left $boundary right $notRetained
+@key kernel.value.booleanLabel value $drop
+@tokenStart kernel.value.get value $token key "start" fallback null
+@tokenEnd kernel.value.get value $token key "end" fallback null
+@ends kernel.value.record "true" $tokenStart "false" $tokenEnd
+@end0 kernel.value.get value $ends key $key fallback null
+@end data.number value $end0
+@start0 kernel.value.get value $state key "start" fallback null
+@start data.number value $start0
+@text0 kernel.value.get value $config key "text" fallback null
+@text data.string value $text0
+@raw kernel.text.slice text $text start $start end $end
+@leftTrimmed kernel.text.trimStart text $raw
+@rawLength kernel.seq.count items $raw
+@trimmedLength kernel.seq.count items $leftTrimmed
+@offset kernel.number.binary operation "subtract" left $rawLength right $trimmedLength
+@begin kernel.number.binary operation "add" left $start right $offset
+@content kernel.text.trim text $leftTrimmed
+@span kernel.value.record text $content start $begin end $tokenEnd
+@spans0 kernel.value.get value $state key "spans" fallback null
+@spans data.array value $spans0
+@empty kernel.value.equal left $trimmedLength right 0
+@args kernel.value.record span $span spans $spans
+@outputSpans kernel.flow.choose condition $empty then "text.segment-empty" else "text.segment-append" with $args
+@result kernel.value.record start $tokenEnd spans $outputSpans
+@output result $result
+
+@end
+
+@module source7 chars 857
+@input state object
+@input item any
+@input with object
+@token kernel.value.get value $item key "value" fallback null
+@surface kernel.value.get value $token key "text" fallback null
+@boundaries kernel.value.get value $with key "boundaries" fallback null
+@boundary kernel.seq.includes items $boundaries value $surface
+@index kernel.value.get value $item key "index" fallback null
+@last kernel.value.get value $with key "last" fallback null
+@final kernel.value.equal left $index right $last
+@notBoundary kernel.boolean.not value $boundary
+@notFinal kernel.boolean.not value $final
+@continue kernel.boolean.and left $notBoundary right $notFinal
+@args kernel.value.record state $state token $token config $with boundary $boundary
+@result kernel.flow.choose condition $continue then "text.segment-open" else "text.segment-close" with $args
+@output result $result
+
+@end
+
+@module source8 chars 607
+@input text string
+@input boundaries array
+@input keep array
+@tokens lexical.tokenize text $text
+@count kernel.seq.count items $tokens
+@last kernel.number.binary operation "subtract" left $count right 1
+@indexed kernel.seq.index items $tokens
+@empty kernel.seq.empty
+@seed kernel.value.record start 0 spans $empty
+@config kernel.value.record text $text boundaries $boundaries keep $keep last $last
+@state kernel.flow.fold items $indexed circuit "text.segment-step" seed $seed with $config
+@spans kernel.value.get value $state key "spans" fallback null
+@result data.array value $spans
+@output result $result
+
+@end
+@v0 kernel.seq.make item "A symbolic model represents knowledge as explicit facts and rules. It can explain an answer by showing the evidence and the inference steps." item "A reliable learning loop proposes an abstraction, checks its behavior, and promotes it only after independent evaluation." item "The robot inspected the sensor. The sensor reported a fault. The engineer replaced the sensor and tested the device." item "The purpose of a summary is to preserve the important information in a shorter text. Source evidence makes the selected statements inspectable."
+@v1 kernel.seq.make item "." item "!" item "?"
+@v2 kernel.value.record "kind" "agent-supervised-migration" "source" "earlier authored bootstrap corpus" "independent" false
+@v3 kernel.value.record "tokenize" "lexical.tokenize" "segment" "text.segment"
+@v4 kernel.value.record "kind" "supervised-program-synthesis"
+@v5 kernel.value.record "text" "string" "form" "string"
+@v6 kernel.value.record
+@v7 kernel.value.record "kind" "op" "name" "kernel.text.normalize" "inputs" $v5 "output" "string" "bind" $v6 "identity" "7805a60e95ac1b17c1280e78b35f426713269cd177ec4205d76bb2ac5ae10b63"
+@v8 kernel.value.record "text" "string" "mode" "string"
+@v9 kernel.value.record
+@v10 kernel.value.record "kind" "op" "name" "kernel.text.case" "inputs" $v8 "output" "string" "bind" $v9 "identity" "0d63aab64eb9d004a1e6c4b8f37aa4273b4c8cfc7326110bf2fa5400524e2beb"
+@v11 kernel.seq.make item $v7 item $v10
+@v12 kernel.value.record "applications" 2 "candidates" 10000 "representatives" 1000 "milliseconds" 10000
+@v13 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "trainingHash" "3a95e810383b2677965b7ee330ca01bec86f89d606fb78dd595b7e10ca267133" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v11 "limits" $v12 "evaluated" 179 "rejected" 140 "pruned" 26 "retained" 17 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 2 "graphNodes" 2 "circuitHash" "50e141fd4d49beeb0ee6359c2ad1fb051b38fe60b07bb87df4ef28e5fdbba79d" "fit" 8
+@v14 kernel.value.record "printer" "typed-graph-to-sop-v1"
+@v15 kernel.value.record "id" "learned.lexical.normalize" "source" &source0 "provenance" $v4 "learning" $v13 "compilation" $v14
+@v16 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/lexical/token.sop" "qualification" "Lexical policy migration; compilation is not induction."
+@v17 kernel.value.record "id" "lexical.token" "source" &source1 "provenance" $v16
+@v18 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/lexical/tokenize.sop" "qualification" "Lexical policy migration; compilation is not induction."
+@v19 kernel.value.record "id" "lexical.tokenize" "source" &source2 "provenance" $v18
+@v20 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/text/segment-open.sop" "qualification" "Segmentation policy migration; authored policy is not induced by compilation."
+@v21 kernel.value.record "id" "text.segment-open" "source" &source3 "provenance" $v20
+@v22 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/text/segment-empty.sop" "qualification" "Segmentation policy migration; authored policy is not induced by compilation."
+@v23 kernel.value.record "id" "text.segment-empty" "source" &source4 "provenance" $v22
+@v24 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/text/segment-append.sop" "qualification" "Segmentation policy migration; authored policy is not induced by compilation."
+@v25 kernel.value.record "id" "text.segment-append" "source" &source5 "provenance" $v24
+@v26 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/text/segment-close.sop" "qualification" "Segmentation policy migration; authored policy is not induced by compilation."
+@v27 kernel.value.record "id" "text.segment-close" "source" &source6 "provenance" $v26
+@v28 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/text/segment-step.sop" "qualification" "Segmentation policy migration; authored policy is not induced by compilation."
+@v29 kernel.value.record "id" "text.segment-step" "source" &source7 "provenance" $v28
+@v30 kernel.value.record "kind" "agent-authored-sop-policy" "source" "sop/text/segment.sop" "qualification" "Segmentation policy migration; authored policy is not induced by compilation."
+@v31 kernel.value.record "id" "text.segment" "source" &source8 "provenance" $v30
+@v32 kernel.seq.make item $v15 item $v17 item $v19 item $v21 item $v23 item $v25 item $v27 item $v29 item $v31
+@v33 kernel.value.record "schema" "sxlm.text-policy.v1" "entrypoints" $v3 "sop" $v32
+@v34 kernel.value.record "texts" $v0 "order" 4 "boundaries" $v1 "parentModel" null "origin" $v2 "textPolicy" $v33
+@v35 kernel.value.record "schema" "sxlm.training.v1" "algorithm" "sequence-pack-v1" "packId" "bootstrap-sequence" "specification" $v34
+@v36 kernel.value.record "schema" "sxlm.completion-migration.v1" "sourceHash" "4634dde9a58dbbf5585bff9386056d0482c985c6a0a462e8eae2ae1aa317e38d" "authoredPolicies" 27 "learnedModules" 81 "training" $v35 "qualification" "Frequencies are induced, sources and parameters are remembered, and the strategy remains authored. All three provenance classes execute through SOP."
+@output result $v36
+

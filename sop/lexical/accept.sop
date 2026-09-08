@@ -1,0 +1,4 @@
+@input with object
+@value kernel.value.get value $with key "value" fallback null
+@out kernel.seq.make item $value
+@output result $out

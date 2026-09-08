@@ -1,0 +1,26 @@
+@input state object
+@input with object
+@agenda kernel.value.get value $state key "agenda" fallback null
+@byLength kernel.seq.sort items $agenda key "length" descending false
+@ordered kernel.seq.sort items $byLength key "cost" descending false
+@first kernel.seq.probe items $ordered index 0
+@node kernel.value.get value $first key "value" fallback null
+@size kernel.seq.count items $ordered
+@rest kernel.seq.slice items $ordered start 1 end $size
+@remaining data.attach record $state key "agenda" value $rest
+@values0 kernel.value.get value $node key "state" fallback null
+@values data.array value $values0
+@sorted kernel.text.sort items $values
+@key kernel.value.hash value $sorted
+@best kernel.value.get value $state key "best" fallback null
+@cost kernel.value.get value $node key "cost" fallback null
+@previous kernel.value.get value $best key $key fallback -1
+@absent kernel.value.equal left $previous right -1
+@known kernel.boolean.not value $absent
+@order kernel.value.compare left $previous right $cost
+@improving kernel.value.equal left $order right 1
+@dominated kernel.boolean.not value $improving
+@skip kernel.boolean.and left $known right $dominated
+@args kernel.value.record state $remaining node $node config $with key $key
+@result kernel.flow.choose condition $skip then "planning.keep" else "planning.visit" with $args
+@output result $result

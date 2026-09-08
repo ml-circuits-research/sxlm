@@ -1,0 +1,13 @@
+@input item any
+@input with object
+@token kernel.value.get value $with key "token" fallback null
+@value kernel.value.get value $token key "value" fallback null
+@parts kernel.seq.make item $item item $value
+@key kernel.value.encode value $parts
+@knowledge kernel.value.get value $with key "knowledge" fallback null
+@index kernel.value.get value $knowledge key "lexicon" fallback null
+@path kernel.seq.make item $key
+@entry kernel.value.probe value $index path $path
+@found0 kernel.value.get value $entry key "found" fallback false
+@out data.boolean value $found0
+@output result $out

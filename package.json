@@ -1,0 +1,44 @@
+{
+  "name": "sxlm",
+  "version": "0.1.0",
+  "description": "An independent, evidence-carrying symbolic language kernel",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "sxlm": "./bin/sxlm.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./kernel": "./src/kernel/circuit.mjs"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 --test-reporter=tap test/*.test.mjs",
+    "eval": "node eval/run.mjs",
+    "demo": "node bin/sxlm.mjs demo",
+    "start": "node bin/sxlm.mjs serve",
+    "check": "npm test && npm run eval",
+    "test:browser": "node scripts/browser-smoke.mjs",
+    "test:standalone": "node scripts/check-independence.mjs",
+    "test:rebuild": "node scripts/check-rebuild.mjs",
+    "learn:realization": "node scripts/learn-realization.mjs",
+    "check:learning": "node scripts/learn-realization.mjs --check && node scripts/build-semantics.mjs --check && node scripts/build-sop.mjs --check && node scripts/build-completion.mjs --check && node scripts/build-document.mjs --check && node scripts/build-knowledge.mjs --check && node scripts/build-expressions.mjs --check && node scripts/build-planning.mjs --check && node scripts/build-lexical.mjs --check && node scripts/build-text.mjs --check && node scripts/build-elementary.mjs --check",
+    "audit:vision": "node scripts/audit-vision.mjs",
+    "build:sop": "node scripts/build-sop.mjs",
+    "build:semantics": "node scripts/build-semantics.mjs",
+    "build:completion": "node scripts/build-completion.mjs",
+    "build:document": "node scripts/build-document.mjs",
+    "build:knowledge": "node scripts/build-knowledge.mjs",
+    "build:expressions": "node scripts/build-expressions.mjs",
+    "build:planning": "node scripts/build-planning.mjs",
+    "build:model": "node scripts/build-model.mjs",
+    "build:text": "node scripts/build-text.mjs",
+    "build:lexical": "node scripts/build-lexical.mjs",
+    "docs": "node scripts/serve-docs.mjs",
+    "docs:build": "node scripts/docs/link-terms.mjs && node scripts/build-docs.mjs",
+    "docs:check": "node scripts/check-docs.mjs",
+    "build:elementary": "node scripts/build-elementary.mjs"
+  }
+}

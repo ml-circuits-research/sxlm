@@ -1,0 +1,4 @@
+@input with object
+@sources kernel.value.get value $with key "sources" fallback null
+@result data.array value $sources
+@output result $result

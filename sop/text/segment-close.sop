@@ -1,0 +1,36 @@
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@config kernel.value.get value $with key "config" fallback null
+@token kernel.value.get value $with key "token" fallback null
+@boundary0 kernel.value.get value $with key "boundary" fallback null
+@boundary data.boolean value $boundary0
+@keep kernel.value.get value $config key "keep" fallback null
+@surface kernel.value.get value $token key "text" fallback null
+@retained kernel.seq.includes items $keep value $surface
+@notRetained kernel.boolean.not value $retained
+@drop kernel.boolean.and left $boundary right $notRetained
+@key kernel.value.booleanLabel value $drop
+@tokenStart kernel.value.get value $token key "start" fallback null
+@tokenEnd kernel.value.get value $token key "end" fallback null
+@ends kernel.value.record "true" $tokenStart "false" $tokenEnd
+@end0 kernel.value.get value $ends key $key fallback null
+@end data.number value $end0
+@start0 kernel.value.get value $state key "start" fallback null
+@start data.number value $start0
+@text0 kernel.value.get value $config key "text" fallback null
+@text data.string value $text0
+@raw kernel.text.slice text $text start $start end $end
+@leftTrimmed kernel.text.trimStart text $raw
+@rawLength kernel.seq.count items $raw
+@trimmedLength kernel.seq.count items $leftTrimmed
+@offset kernel.number.binary operation "subtract" left $rawLength right $trimmedLength
+@begin kernel.number.binary operation "add" left $start right $offset
+@content kernel.text.trim text $leftTrimmed
+@span kernel.value.record text $content start $begin end $tokenEnd
+@spans0 kernel.value.get value $state key "spans" fallback null
+@spans data.array value $spans0
+@empty kernel.value.equal left $trimmedLength right 0
+@args kernel.value.record span $span spans $spans
+@outputSpans kernel.flow.choose condition $empty then "text.segment-empty" else "text.segment-append" with $args
+@result kernel.value.record start $tokenEnd spans $outputSpans
+@output result $result

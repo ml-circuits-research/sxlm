@@ -1,0 +1,23 @@
+@input with object
+@rawInitial kernel.value.get value $with key "initial" fallback null
+@initial data.array value $rawInitial
+@rawGoals kernel.value.get value $with key "goals" fallback null
+@goals data.array value $rawGoals
+@rawActions kernel.value.get value $with key "actions" fallback null
+@actions data.array value $rawActions
+@count kernel.seq.count items $actions
+@bounded kernel.number.between value $count minimum 0 maximum 1000 integer true
+@checked kernel.value.require condition $bounded message "Too many actions" value $actions
+@boundedActions data.array value $checked
+@empty kernel.value.empty
+@initialKeys kernel.flow.map items $initial circuit "planning.atom-key" with $empty
+@state kernel.seq.unique items $initialKeys
+@goalKeys kernel.flow.map items $goals circuit "planning.atom-key" with $empty
+@operators kernel.flow.map items $boundedActions circuit "planning.action" with $empty
+@ids kernel.seq.pluck items $operators key "id"
+@unique kernel.seq.unique items $ids
+@uniqueCount kernel.seq.count items $unique
+@distinct kernel.value.equal left $uniqueCount right $count
+@verified kernel.value.require condition $distinct message "Duplicate action ID" value $operators
+@result kernel.value.record initial $state goals $goalKeys actions $verified
+@output result $result

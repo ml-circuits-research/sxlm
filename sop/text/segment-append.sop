@@ -1,0 +1,6 @@
+@input with object
+@spans0 kernel.value.get value $with key "spans" fallback null
+@spans data.array value $spans0
+@span kernel.value.get value $with key "span" fallback null
+@result kernel.seq.append items $spans value $span
+@output result $result

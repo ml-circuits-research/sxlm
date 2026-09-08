@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SXLM · Symbolic Workbench</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" type="module"></script></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="SXLM home"><span class="logo">S<span>✳</span></span><span>SXLM<small>SYMBOLIC WORKBENCH</small></span></a>
+  <div class="nav-label">WORKSPACE</div>
+  <nav aria-label="Tasks">
+    <button class="nav-item" data-task="chat"><span>◌</span> Chat <kbd>00</kbd></button>
+    <button class="nav-item active" data-task="reason"><span>◇</span> Reason <kbd>01</kbd></button>
+    <button class="nav-item" data-task="summarize"><span>≋</span> Summarize <kbd>02</kbd></button>
+    <button class="nav-item" data-task="complete"><span>↳</span> Complete <kbd>03</kbd></button>
+    <div class="nav-label">DEVELOPMENT</div>
+    <button class="nav-item" data-task="learn"><span>⌘</span> Learning lab <kbd>04</kbd></button>
+    <button class="nav-item" data-task="evaluate"><span>▥</span> Evaluation <kbd>05</kbd></button>
+  </nav>
+  <div class="sidebar-foot"><span class="live-dot"></span> Local execution<div id="model-id">Loading model…</div><p>Explicit knowledge.<br>Inspectable computation.</p></div>
+</aside>
+<main>
+  <header class="topbar"><div><span class="crumb">WORKSPACE</span><span class="slash">/</span><span id="current-task">Reason</span></div><span class="version">KERNEL v0.1 <span class="live-dot"></span></span></header>
+  <section class="heading"><div><div class="eyebrow" id="eyebrow">LANGUAGE → CIRCUITS → EVIDENCE</div><h1 id="page-title">Reason with what you know.</h1><p id="page-description">Supply facts, rules and a question. Inspect the interpretation and the proof behind the answer.</p></div><div class="model-stats"><strong id="circuit-count">—</strong><span>installed circuit modules</span><small id="pack-count">— installed packs</small></div></section>
+  <div id="architecture-status" class="notice" hidden></div>
+  <div id="error" role="alert" hidden></div>
+  <section id="task-workspace" class="workspace">
+    <div class="panel input-panel">
+      <div class="panel-heading"><h2 id="input-label">Input</h2><span class="tag">ENGLISH</span></div>
+      <label class="field-label" for="examples">Try an example</label><select id="examples"></select>
+      <label class="field-label" for="prompt" id="prompt-label">Facts, rules & question</label><textarea id="prompt" spellcheck="false" rows="10" aria-describedby="input-note"></textarea>
+      <div id="summary-options" hidden><label class="field-label" for="focus">Focus (optional)</label><input id="focus" placeholder="What information matters most?"><label class="field-label" for="sentence-count">Summary sentences</label><input id="sentence-count" type="number" min="1" max="30" value="3"></div>
+      <div id="completion-options" hidden><label class="field-label" for="context">Source context (optional)</label><textarea id="context" rows="4" placeholder="Provide text whose continuation you want to reuse."></textarea></div>
+      <div class="input-footer"><label id="session-control" class="checkbox"><input id="remember" type="checkbox"> Keep context between turns</label><button id="reset" class="text-button">Clear context</button></div>
+      <button id="run" class="primary">Run reasoning <span>↗</span></button><p class="hint" id="input-note">English coverage comes from the installed grammar pack. Unsupported or ambiguous constructions are surfaced explicitly.</p>
+    </div>
+    <div class="output-column">
+      <div class="panel answer-panel"><div class="panel-heading"><h2>Response</h2><span id="run-state" class="tag neutral">READY</span></div><div id="answer" aria-live="polite"><p class="placeholder">A clear answer.<br><span>A visible path to it.</span></p></div><div id="answer-metadata" class="pills"></div></div>
+      <div class="panel inspect-panel"><div class="inspect-tabs" role="tablist" aria-label="Inspect result"><button class="selected" data-inspect="evidence" role="tab">Evidence</button><button data-inspect="interpretation" role="tab">Interpretation</button><button data-inspect="trace" role="tab">Execution</button><button id="download" class="text-button" disabled>↓ SOP</button></div><div id="inspection"><div class="empty-state">Run a task to inspect its evidence and execution.</div></div></div>
+    </div>
+  </section>
+  <section id="chat-workspace" class="chat-shell" hidden>
+    <div class="conversation-header"><div class="chat-avatar" aria-hidden="true">S</div><div class="conversation-heading"><label class="sr-only" for="chat-select">Conversation</label><select id="chat-select" aria-label="Conversation"></select><span id="chat-presence">Ready to talk</span></div><button id="chat-new" class="chat-icon" aria-label="New conversation" title="New conversation">＋</button></div>
+    <div id="chat-messages" role="log" aria-label="Conversation" aria-live="polite"></div>
+    <div id="chat-attachment-status" class="attachment-status" role="status" hidden></div>
+    <details id="chat-processing" class="chat-processing" hidden><summary>Processing details</summary><div id="chat-processing-detail"></div></details>
+    <div class="chat-composer"><button id="chat-attach" type="button" class="chat-icon attach-button" title="Attach a document" aria-label="Attach a document">＋</button><input id="chat-file" type="file" hidden accept=".txt,.md,.markdown,.csv,.tsv,.html,.htm,.xml,.pdf,.docx,.pptx,.xlsx,.png,.jpg,.jpeg,.tif,.tiff,.webp,.bmp"><label class="sr-only" for="chat-message">Message</label><textarea id="chat-message" rows="1" placeholder="Message" spellcheck="false"></textarea><button id="chat-send" class="chat-send" aria-label="Send message" title="Send message">➤</button></div>
+    <p class="chat-caption">Attach a document, wait for it to be ready, then ask about it.</p>
+  </section>
+  <section id="learn-workspace" hidden>
+    <div class="notice">Teach a construction, then test its reuse. The example teaches <code>is certified as a {type}</code> from two annotated phrases. Independent checks exercise new vocabulary, relative clauses and belief scope.</div>
+    <div class="workspace"><div class="panel input-panel"><div class="panel-heading"><h2>Teacher examples</h2><span class="tag">STRUCTURAL INDUCTION</span></div><label for="training-spec" class="field-label">Target category + annotated examples</label><textarea id="training-spec" class="code-input" rows="19" spellcheck="false"></textarea><details><summary>Evaluator-owned transfer checks</summary><textarea id="training-gates" class="code-input" rows="12" aria-label="Promotion gates"></textarea></details><button id="learn-run" class="primary">Induce & evaluate <span>↗</span></button><p class="hint">The candidate is inert SOP. Activation affects this workbench process; CLI promotion provides persistent versioning.</p></div><div class="output-column"><div class="panel answer-panel"><div class="panel-heading"><h2>Learning result</h2><span id="learning-state" class="tag neutral">READY</span></div><div id="learning-result" class="empty-state">The evaluator compares the parent model and candidate on the same independent cases.</div><button id="activate" class="primary" hidden>Activate validated pack <span>↗</span></button></div><div class="panel"><div class="panel-heading"><h2>What changes</h2></div><p class="body-copy">One grammar production and one semantic circuit become part of the language model. Existing syntax composes with the new construction. The kernel stays unchanged.</p><details><summary>Inspect the candidate artifact</summary><pre id="candidate-sop">No candidate yet.</pre></details></div></div></div>
+  </section>
+  <section id="eval-workspace" hidden><div class="notice">Repository evaluations measure explicit contracts and structural transfer. They are not an external benchmark of unrestricted language understanding. Challenge failures are reported separately.</div><button id="eval-run" class="primary compact">Run evaluation suite <span>↗</span></button><div id="eval-result" class="evaluation-grid"></div></section>
+  <footer>Local symbolic inference · Codex-assisted document training · <a href="/vision.md">Theory, invariants and remaining architecture requirements</a></footer>
+</main>
+</body></html>

@@ -1,0 +1,11 @@
+@input state object
+@input with object
+@agenda kernel.value.get value $state key "agenda" fallback null
+@count kernel.seq.count items $agenda
+@empty kernel.value.equal left $count right 0
+@hasWork kernel.boolean.not value $empty
+@rawSolved kernel.value.get value $state key "solved" fallback null
+@solved data.boolean value $rawSolved
+@pending kernel.boolean.not value $solved
+@result kernel.boolean.and left $hasWork right $pending
+@output result $result

@@ -1,0 +1,12 @@
+@input item any
+@input with object
+@text0 kernel.value.get value $item key "text" fallback null
+@text data.string value $text0
+@bounds0 kernel.value.get value $with key "boundaries" fallback null
+@bounds data.array value $bounds0
+@spans text.segment text $text boundaries $bounds keep $bounds
+@source kernel.value.record source $item
+@args kernel.value.merge left $with right $source
+@rows kernel.flow.map items $spans circuit "completion.scan-span" with $args
+@result kernel.seq.flat items $rows
+@output result $result

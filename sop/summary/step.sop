@@ -1,0 +1,17 @@
+@input state object
+@input item any
+@input with object
+@remaining kernel.value.get value $state key "remaining" fallback null
+@selected0 kernel.value.get value $state key "selected" fallback null
+@selected data.array value $selected0
+@redundancy kernel.value.get value $with key "redundancy" fallback null
+@args kernel.value.record selected $selected redundancy $redundancy
+@adjusted kernel.flow.map items $remaining circuit "summary.marginal" with $args
+@ranked kernel.seq.sort items $adjusted key "adjusted" descending true
+@first kernel.value.get value $ranked key 0 fallback null
+@chosen kernel.value.get value $first key "original" fallback null
+@index kernel.value.get value $chosen key "index" fallback null
+@nextRemaining kernel.seq.without items $remaining key "index" value $index
+@nextSelected kernel.seq.append items $selected value $chosen
+@result kernel.value.record remaining $nextRemaining selected $nextSelected
+@output result $result

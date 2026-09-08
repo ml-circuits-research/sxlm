@@ -1,0 +1,6 @@
+@input item any
+@input with object
+@left kernel.value.get value $item key "content" fallback null
+@right kernel.value.get value $with key "content" fallback null
+@score summary.jaccard left $left right $right
+@output result $score

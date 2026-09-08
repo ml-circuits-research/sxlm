@@ -1,0 +1,5 @@
+@input state number
+@input item number
+@input with object
+@result kernel.number.binary operation "max" left $state right $item
+@output result $result

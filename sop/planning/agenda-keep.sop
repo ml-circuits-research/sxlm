@@ -1,0 +1,4 @@
+@input with object
+@raw kernel.value.get value $with key "agenda" fallback null
+@agenda data.array value $raw
+@output result $agenda

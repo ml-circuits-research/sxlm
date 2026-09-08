@@ -1,0 +1,27 @@
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@options kernel.value.get value $with key "options" fallback null
+@search kernel.value.get value $with key "search" fallback null
+@distribution kernel.value.get value $search key "distribution" fallback null
+@ordered kernel.seq.collate items $distribution key "token" locale "en"
+@ranked kernel.seq.sort items $ordered key "count" descending true
+@first kernel.value.get value $ranked key 0 fallback null
+@token kernel.value.get value $first key "token" fallback null
+@count kernel.value.get value $first key "count" fallback null
+@counts kernel.seq.pluck items $distribution key "count"
+@total kernel.seq.sum items $counts
+@size kernel.value.get value $search key "contextLength" fallback null
+@decision kernel.value.record contextLength $size token $token count $count total $total
+@tokens0 kernel.value.get value $state key "tokens" fallback null
+@tokens data.array value $tokens0
+@generated0 kernel.value.get value $state key "generated" fallback null
+@generated data.array value $generated0
+@decisions0 kernel.value.get value $state key "decisions" fallback null
+@decisions data.array value $decisions0
+@nextTokens kernel.seq.append items $tokens value $token
+@nextGenerated kernel.seq.append items $generated value $token
+@nextDecisions kernel.seq.append items $decisions value $decision
+@boundaries kernel.value.get value $options key "boundaries" fallback null
+@stop kernel.seq.includes items $boundaries value $token
+@result kernel.value.record tokens $nextTokens generated $nextGenerated decisions $nextDecisions stopped $stop
+@output result $result

@@ -1,0 +1,5 @@
+@input value any
+@valueObject data.object value $value
+@lowered document.lower value $valueObject
+@result data.array value $lowered
+@output result $result

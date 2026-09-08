@@ -1,0 +1,5 @@
+@input with object
+@token kernel.value.get value $with key "token" fallback null
+@text0 kernel.value.get value $token key "text" fallback null
+@out data.string value $text0
+@output result $out

@@ -1,0 +1,4 @@
+@v0 kernel.seq.make item "simple default chat" item "restored document conversation" item "desktop layout" item "mobile layout" item "earlier messages preserve exact order without duplicates"
+@v1 kernel.seq.make item "chat-layout-desktop.png" item "chat-layout-mobile.png"
+@v2 kernel.value.record "schema" "sxlm.chat-browser.v1" "passed" true "liveCodex" false "chat" "82343310-f3d8-498d-92cf-c296e2278c8a" "checks" $v0 "screenshots" $v1
+@output result $v2

@@ -1,0 +1,16 @@
+✔ elementary supervision reproduces exact SOP, remains optional, and has no native dependency changes (2025.792399ms)
+✔ elementary language composes over categories, bindings, source facts and new user rules (37667.68348ms)
+✔ source-backed chains have checked multi-step certificates and exact evidence spans (871.435458ms)
+✔ theory ablation removes a new structural inference and restoration recovers it (2746.450784ms)
+✔ cycle questions reuse a supplied branching graph without assuming a single or exhaustive answer (5496.220613ms)
+✔ new knowledge persists across model-bound turns and strict resource failure preserves state (1499.645909ms)
+✔ compiler rejects unsupported provenance and unsafe facts instead of manufacturing evidence (371.884076ms)
+✔ ordinary school conversation gaps remain exposed and are not counted as capability successes (2254.801497ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55096.343068

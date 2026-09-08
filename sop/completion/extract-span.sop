@@ -1,0 +1,31 @@
+@input with object
+@tokens kernel.value.get value $with key "tokens" fallback null
+@size0 kernel.value.get value $with key "size" fallback null
+@size data.number value $size0
+@total0 kernel.value.get value $with key "total" fallback null
+@total data.number value $total0
+@limit0 kernel.value.get value $with key "limit" fallback null
+@limit data.number value $limit0
+@past kernel.number.binary operation "add" left $size right $limit
+@endCount kernel.number.binary operation "min" left $total right $past
+@endIndex kernel.number.binary operation "subtract" left $endCount right 1
+@startIndex kernel.number.binary operation "subtract" left $size right 1
+@startToken kernel.value.get value $tokens key $startIndex fallback null
+@endToken kernel.value.get value $tokens key $endIndex fallback null
+@start0 kernel.value.get value $startToken key "end" fallback null
+@start data.number value $start0
+@end0 kernel.value.get value $endToken key "end" fallback null
+@end data.number value $end0
+@span kernel.value.get value $with key "span" fallback null
+@text0 kernel.value.get value $span key "text" fallback null
+@text data.string value $text0
+@continuation kernel.text.slice text $text start $start end $end
+@source kernel.value.get value $with key "source" fallback null
+@sourceId kernel.value.get value $source key "id" fallback null
+@spanStart0 kernel.value.get value $span key "start" fallback null
+@spanStart data.number value $spanStart0
+@sourceEnd kernel.number.binary operation "add" left $spanStart right $end
+@evidence kernel.value.record source $sourceId start $spanStart end $sourceEnd
+@candidate kernel.value.record continuation $continuation evidence $evidence source $source
+@result kernel.seq.make item $candidate
+@output result $result

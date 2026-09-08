@@ -1,0 +1,16 @@
+@input state object
+@input item any
+@input with object
+@token kernel.value.get value $item key "value" fallback null
+@surface kernel.value.get value $token key "text" fallback null
+@boundaries kernel.value.get value $with key "boundaries" fallback null
+@boundary kernel.seq.includes items $boundaries value $surface
+@index kernel.value.get value $item key "index" fallback null
+@last kernel.value.get value $with key "last" fallback null
+@final kernel.value.equal left $index right $last
+@notBoundary kernel.boolean.not value $boundary
+@notFinal kernel.boolean.not value $final
+@continue kernel.boolean.and left $notBoundary right $notFinal
+@args kernel.value.record state $state token $token config $with boundary $boundary
+@result kernel.flow.choose condition $continue then "text.segment-open" else "text.segment-close" with $args
+@output result $result

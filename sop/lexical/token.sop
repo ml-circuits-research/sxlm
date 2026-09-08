@@ -1,0 +1,8 @@
+@input item any
+@input with object
+@record data.object value $item
+@text0 kernel.value.get value $item key "text" fallback null
+@text data.string value $text0
+@value learned.lexical.normalize text $text
+@out data.attach record $record key "value" value $value
+@output result $out

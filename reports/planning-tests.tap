@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: SOP planning agrees with the historical search and an independent exhaustive cost oracle
+ok 1 - SOP planning agrees with the historical search and an independent exhaustive cost oracle
+  ---
+  duration_ms: 2283.427307
+  type: 'test'
+  ...
+# Subtest: priority, ties, zero cycles, deletion, precondition conjunctions and signed scopes compose
+ok 2 - priority, ties, zero cycles, deletion, precondition conjunctions and signed scopes compose
+  ---
+  duration_ms: 1091.184108
+  type: 'test'
+  ...
+# Subtest: invalid declarations and resource exhaustion cannot become a completed planning result
+ok 3 - invalid declarations and resource exhaustion cannot become a completed planning result
+  ---
+  duration_ms: 923.428501
+  type: 'test'
+  ...
+# Subtest: formal witness replay rejects forgery independently of the search policy
+ok 4 - formal witness replay rejects forgery independently of the search policy
+  ---
+  duration_ms: 1602.938727
+  type: 'test'
+  ...
+# Subtest: learned coverage is reused for planning, ablation loses capability and restoration recovers it
+ok 5 - learned coverage is reused for planning, ablation loses capability and restoration recovers it
+  ---
+  duration_ms: 2719.147769
+  type: 'test'
+  ...
+# Subtest: planning derivations bind deployed source and teacher evidence without relabeling authored policy
+ok 6 - planning derivations bind deployed source and teacher evidence without relabeling authored policy
+  ---
+  duration_ms: 7290.934928
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16095.719074

@@ -1,0 +1,8 @@
+@input item any
+@input with object
+@token kernel.value.get value $item key "key" fallback null
+@items kernel.value.get value $item key "items" fallback null
+@counts kernel.seq.pluck items $items key "count"
+@total kernel.seq.sum items $counts
+@result kernel.value.record token $token count $total
+@output result $result

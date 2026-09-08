@@ -1,0 +1,5 @@
+@v0 kernel.seq.make item "provenance"
+@v1 kernel.seq.make
+@v2 kernel.seq.make
+@v3 kernel.value.record "changedFields" $v0 "changedCircuits" $v1 "removedCircuits" $v2
+@output result $v3

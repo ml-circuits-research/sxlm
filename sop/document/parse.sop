@@ -1,0 +1,11 @@
+@input text string
+@input revision number
+@empty kernel.value.empty
+@grammar language.grammar with $empty
+@config kernel.value.get value $grammar key "segmentation" fallback null
+@configObject data.object value $config
+@start kernel.value.get value $grammar key "start" fallback null
+@startString data.string value $start
+@scope kernel.value.scalarText value $revision
+@result document.run text $text scope $scope config $configObject start $startString
+@output result $result

@@ -1,0 +1,11 @@
+@input item any
+@input with object
+@surface0 kernel.value.get value $item key "surface" fallback null
+@surface data.string value $surface0
+@normal learned.lexical.normalize text $surface
+@category kernel.value.get value $item key "category" fallback null
+@parts kernel.seq.make item $category item $normal
+@key kernel.value.encode value $parts
+@value kernel.value.get value $item key "value" fallback null
+@out kernel.value.record key $key value $value
+@output result $out

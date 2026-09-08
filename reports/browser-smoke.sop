@@ -1,0 +1,5 @@
+@v0 kernel.seq.make item "architecture completion status" item "reasoning" item "extractive summary" item "context completion" item "construction induction" item "validated activation" item "learned composition" item "evaluation view" item "desktop overflow" item "mobile overflow" item "no JavaScript exceptions"
+@v1 kernel.seq.make item "ui-desktop.png" item "ui-mobile.png"
+@v2 kernel.value.record "schema" "sxlm.browser-smoke.v1" "passed" true "checks" $v0 "screenshots" $v1
+@output result $v2
+

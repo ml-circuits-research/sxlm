@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: guarded iteration preserves typed state, early termination and explicit bounds in cold/warm runs
+ok 1 - guarded iteration preserves typed state, early termination and explicit bounds in cold/warm runs
+  ---
+  duration_ms: 11.650822
+  type: 'test'
+  ...
+# Subtest: termination is not assumed at the bound and attempt cannot swallow resource exhaustion
+ok 2 - termination is not assumed at the bound and attempt cannot swallow resource exhaustion
+  ---
+  duration_ms: 3.432821
+  type: 'test'
+  ...
+# Subtest: iteration admits sequence/string states without task-specific host branches
+ok 3 - iteration admits sequence/string states without task-specific host branches
+  ---
+  duration_ms: 2.950071
+  type: 'test'
+  ...
+# Subtest: iteration compilation rejects inconsistent guard, state, limit and binding contracts
+ok 4 - iteration compilation rejects inconsistent guard, state, limit and binding contracts
+  ---
+  duration_ms: 1.850752
+  type: 'test'
+  ...
+# Subtest: guard dependency contents participate in caller identity and graph printing preserves iteration
+ok 5 - guard dependency contents participate in caller identity and graph printing preserves iteration
+  ---
+  duration_ms: 4.73601
+  type: 'test'
+  ...
+# Subtest: impure guards prevent aggregate caching and immutable records flow between iterations
+ok 6 - impure guards prevent aggregate caching and immutable records flow between iterations
+  ---
+  duration_ms: 1.117058
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 91.749596

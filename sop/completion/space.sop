@@ -1,0 +1,5 @@
+@input with object
+@token0 kernel.value.get value $with key "token" fallback null
+@token data.string value $token0
+@result kernel.text.concat left " " right $token
+@output result $result

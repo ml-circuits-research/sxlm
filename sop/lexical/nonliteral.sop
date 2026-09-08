@@ -1,0 +1,8 @@
+@input with object
+@symbol kernel.value.get value $with key "symbol" fallback null
+@path kernel.seq.make item "lex"
+@lex kernel.value.probe value $symbol path $path
+@found0 kernel.value.get value $lex key "found" fallback false
+@found data.boolean value $found0
+@out kernel.flow.choose condition $found then "lexical.lookup" else "lexical.class" with $with
+@output result $out

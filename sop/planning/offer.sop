@@ -1,0 +1,12 @@
+@input state array
+@input item any
+@input with object
+@action data.object value $item
+@required0 kernel.value.get value $action key "requires" fallback null
+@required data.array value $required0
+@available0 kernel.value.get value $with key "state" fallback null
+@available data.array value $available0
+@applicable learned.set.coverage required $required available $available
+@args kernel.value.record agenda $state action $action node $with
+@result kernel.flow.choose condition $applicable then "planning.enqueue" else "planning.agenda-keep" with $args
+@output result $result

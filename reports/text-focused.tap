@@ -1,0 +1,37 @@
+✔ SOP document policy preserves historical interpretation, scopes, source spans and coverage (5942.813211ms)
+✔ unparsed, ambiguous and invalid semantic results become explicit SOP gaps (1448.849523ms)
+✔ grammar proposals execute as circuit knowledge and removal of wiring removes their competence (4476.912447ms)
+✔ changing document interpretation policy changes SOP content, not the host implementation (687.578107ms)
+✔ attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure (2.419479ms)
+✔ runtime inspection cannot mutate programs, primitive contracts or cached answers (1.25814ms)
+✔ grammar indexes are immutable views with normalized and collision-free lexical identity (131.62516ms)
+✔ prototype-like text remains in source evidence without unsafe label keys (350.39792ms)
+✔ HTTP workbench serves the module UI and executes all natural-language tasks (3898.042901ms)
+✔ CLI text, SOP, summary and completion flags behave correctly (4654.845455ms)
+✔ unparsed questions do not taint persistent state or hide behind an earlier answer (1657.835276ms)
+✔ long derivations verify through a DAG even when the display tree is truncated (3356.95925ms)
+✔ generic Unicode primitives expose explicit operations, validate requests and charge work (7.872978ms)
+✔ restricted character membership agrees with independent finite-string predicates (129.632767ms)
+✔ SOP terminal policy preserves lookup alternatives, class exclusion, case choices and source spans (349.373892ms)
+✔ a synthesized normalization composition transfers and affects parsing without native changes (2915.906177ms)
+✔ lexical callbacks are explicit, pure and typed; invalid token evidence is rejected (149.645253ms)
+✔ lexical audit requires matching source and training evidence and keeps authored policy unverified (5503.993278ms)
+✔ SOP graph compilation supports sharing, forward references and scalar strings as inert data (7.048839ms)
+✔ SOP rejects cycles, unbound wires, executable literals and malformed arguments (2.22371ms)
+✔ SOP branches preserve laziness, typed contracts and dependency content identity (5.994149ms)
+✔ the active summary runs its strategy in SOP with no native task shortcut (905.805328ms)
+✔ SOP selection preserves source spans and the historical policy across lengths, ties and focus changes (1992.352025ms)
+✔ a source-only SOP strategy update changes behavior while preserving the primitive registry (1365.795942ms)
+✔ affine supervision induces a reusable SOP program over unrelated feature names (3.456428ms)
+✔ the learned summary score is necessary, reproducible and transfers to new feature bindings (1385.396079ms)
+✔ ordinary document lengths fit the default circuit budget while explicit limits still stop selection (1058.031535ms)
+✔ ablating the learned scoring rule loses focus selection on an unseen document (1342.454212ms)
+✔ a learned SOP receipt cannot certify changed program content (3427.800059ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 48585.454696

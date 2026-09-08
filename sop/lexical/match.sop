@@ -1,0 +1,10 @@
+@input symbol object
+@input token object
+@input knowledge object
+@literal kernel.value.probe value $symbol path $path
+@path kernel.seq.make item "literal"
+@found0 kernel.value.get value $literal key "found" fallback false
+@found data.boolean value $found0
+@args kernel.value.record symbol $symbol token $token knowledge $knowledge
+@out kernel.flow.choose condition $found then "lexical.literal" else "lexical.nonliteral" with $args
+@output result $out

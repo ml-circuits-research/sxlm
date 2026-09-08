@@ -1,0 +1,4 @@
+@input item any
+@input with object
+@out data.string value $item
+@output result $out

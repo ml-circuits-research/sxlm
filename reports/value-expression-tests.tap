@@ -1,0 +1,25 @@
+✔ all retired operator families lower to one graph VM with differential value checks (114.686207ms)
+✔ lazy branches, boolean short circuits and defaults preserve failure boundaries (12.69888ms)
+✔ nested iteration preserves source scope and variable shadowing (3.924304ms)
+✔ categorical fusion is compact and preserves equality and fallback behavior (7.773386ms)
+✔ compiled iteration and branches respect budgets and reject malformed values (8.930745ms)
+✔ the active library cannot execute expression objects or install the retired opcode (794.794204ms)
+✔ construction induction preserves expression-shaped constants as inert semantic data (1196.067768ms)
+✔ the JSON boundary rejects accessors and hidden or extra properties without invoking them (1.140526ms)
+✔ the VM owns its input snapshot and never freezes a caller or an external native result (2.723154ms)
+✔ returned values and cache inspection cannot mutate cached results (2.081932ms)
+✔ immutable sharing and hash memoization trust only recursively owned values (0.52277ms)
+✔ cached subtree heights cannot bypass the nesting limit when shared deeper (0.931138ms)
+✔ structural probes preserve falsy values, discriminate absence and ignore inherited keys (4.901259ms)
+✔ record and JSON conversions retain ordinary data and observable property order (2.428978ms)
+✔ text operations are literal mechanisms with no regex or executable formatting (1.461731ms)
+✔ scoped names are deterministic and rational arithmetic rejects coercion and undefined operations (2.072922ms)
+✔ structural traversal consumes caller work budgets (0.434839ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2241.504602

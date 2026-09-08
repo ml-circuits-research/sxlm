@@ -1,0 +1,22 @@
+✔ completion executes SOP and preserves the historical source and frequency contracts (1097.693535ms)
+✔ source evidence preserves UTF-16 offsets, ties and alternative order (829.286724ms)
+✔ independent sequence providers add observed counts without native retraining (687.796299ms)
+✔ learned circuits alone carry source and sequence competence; ablation removes both (1664.24603ms)
+✔ compiled observation pages support unrelated nested values and arbitrary safe field names (229.9392ms)
+✔ finite-function learning rejects conflicts and lazily retrieves exact observed values (103.067583ms)
+✔ provider linking preserves order, hashes dependencies and checks contracts and size (1.939727ms)
+✔ sequence find preserves a matching null value instead of replacing it with a fallback (0.548121ms)
+✔ a sequence learning tag cannot certify changed SOP, wiring or missing training evidence (8541.787244ms)
+✔ sequence candidates pass the offline CLI learning and promotion loop with parent checks (59127.973039ms)
+✔ generic collection contracts validate singleton collation and explicit slice bounds (1.684803ms)
+✔ phrase compilation preserves exact values, prefixes and ambiguity under the parent lexical policy (1207.4212ms)
+✔ shared lexical prefixes compose in new structures and reduce flat recognition work (3513.025249ms)
+✔ phrase compilation requires supplied tokenization and inert lexical meanings (0.420869ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78730.024837

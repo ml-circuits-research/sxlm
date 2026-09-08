@@ -1,0 +1,24 @@
+@input item any
+@input with object
+@index0 kernel.value.get value $item key "index" fallback null
+@index data.number value $index0
+@span kernel.value.get value $item key "value" fallback null
+@allContent kernel.value.get value $with key "content" fallback null
+@content kernel.value.get value $allContent key $index fallback null
+@histogram kernel.value.get value $with key "histogram" fallback null
+@hargs kernel.value.record histogram $histogram
+@values kernel.flow.map items $content circuit "summary.frequency" with $hargs
+@sum kernel.seq.sum items $values
+@n kernel.seq.count items $content
+@root kernel.number.unary operation "sqrt" value $n
+@denominator kernel.number.binary operation "max" left 1 right $root
+@centrality kernel.number.binary operation "divide" left $sum right $denominator
+@focus kernel.value.get value $with key "focus" fallback null
+@overlap summary.jaccard left $content right $focus
+@first kernel.value.equal left $index right 0
+@leadargs kernel.value.record amount 1
+@lead kernel.flow.choose condition $first then "summary.lead" else "summary.zero" with $leadargs
+@features kernel.value.record centrality $centrality lead $lead focus $overlap
+@score learned.summary.score with $features
+@result kernel.value.record index $index span $span content $content score $score
+@output result $result

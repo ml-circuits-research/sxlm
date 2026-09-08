@@ -1,0 +1,59 @@
+@v0 kernel.seq.make item "package.json"
+@v1 kernel.seq.make item ".agents" item ".claude" item "ploinky-skills-manifest.json"
+@v2 kernel.value.record "passed" 189 "failed" 0 "log" "reports/current-tests.tap"
+@v3 kernel.value.record "passed" 28 "total" 28
+@v4 kernel.value.record "passed" 12 "total" 12
+@v5 kernel.value.record "passed" 60 "total" 60
+@v6 kernel.value.record "passed" 64 "total" 64
+@v7 kernel.value.record "passed" 16 "total" 16
+@v8 kernel.value.record "passed" 0 "total" 8
+@v9 kernel.value.record "before" 0 "after" 5 "total" 5 "regressionsIntroduced" 0
+@v10 kernel.value.record "conformance" $v3 "composition" $v4 "metamorphic" $v5 "planning" $v6 "normalization" $v7 "challenges" $v8 "learning" $v9
+@v11 kernel.value.record "before" 0 "after" 71 "reuse" 71 "ablation" 0 "weakPromotionRejected" true "unchangedRuntime" true
+@v12 kernel.seq.make
+@v13 kernel.seq.make item "alpha"
+@v14 kernel.seq.make item "alpha"
+@v15 kernel.value.record "before" $v12 "after" $v13 "restored" $v14
+@v16 kernel.value.record "before" 1 "after" 16 "restored" 16 "parserReuse" $v15 "unchangedRuntime" true
+@v17 kernel.value.record "left" "any" "right" "any"
+@v18 kernel.value.record
+@v19 kernel.value.record "kind" "op" "name" "kernel.seq.difference" "inputs" $v17 "output" "array" "bind" $v18 "identity" "9ab10db8b399c80c94aecdef734ceabe6444864e1cd36a6335622e2f78ce736e"
+@v20 kernel.value.record "items" "any"
+@v21 kernel.value.record
+@v22 kernel.value.record "kind" "op" "name" "kernel.seq.count" "inputs" $v20 "output" "number" "bind" $v21 "identity" "faf54cfa207eabdfbd7ee8c39986efcd81e2833335c05bbe74ab44c1e9d19963"
+@v23 kernel.value.record "left" "any" "right" "any"
+@v24 kernel.value.record
+@v25 kernel.value.record "kind" "op" "name" "kernel.value.equal" "inputs" $v23 "output" "boolean" "bind" $v24 "identity" "b665eba680588b8107208a96b14b7273822edf5e17655d1c9966694894ab41e6"
+@v26 kernel.seq.make item $v19 item $v22 item $v25
+@v27 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v28 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "faf9b52b730b3c758441825b5d87e8185ca8acb0c53ce370a314e25ecdfdadc3" "trainingHash" "65e29f1566519d74470659f70c7def1782f84e438721b2cb92696089abc973e0" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v26 "limits" $v27 "evaluated" 211 "rejected" 119 "pruned" 75 "retained" 19 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 3 "graphNodes" 3 "circuitHash" "0e6c383da9921eb2aad8ff5c2167d5154c85a0e1fa65dc1c12e1daeb33db5325" "fit" 8
+@v29 kernel.seq.make
+@v30 kernel.value.record "schema" "sxlm.planning-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v28 "trainingHash" "faf9b52b730b3c758441825b5d87e8185ca8acb0c53ce370a314e25ecdfdadc3" "qualification" "Search and action policy execute in SOP. Set coverage is induced from typed examples and reused in goals/preconditions. Policy bodies remain authored; witness verification does not prove cost optimality." "policyReplay" true "methodReplay" true "nativePlanningRemoved" true "compilerOutsideRuntime" true "obsoleteModules" $v29
+@v31 kernel.value.record "text" "string" "form" "string"
+@v32 kernel.value.record
+@v33 kernel.value.record "kind" "op" "name" "kernel.text.normalize" "inputs" $v31 "output" "string" "bind" $v32 "identity" "7805a60e95ac1b17c1280e78b35f426713269cd177ec4205d76bb2ac5ae10b63"
+@v34 kernel.value.record "text" "string" "mode" "string"
+@v35 kernel.value.record
+@v36 kernel.value.record "kind" "op" "name" "kernel.text.case" "inputs" $v34 "output" "string" "bind" $v35 "identity" "0d63aab64eb9d004a1e6c4b8f37aa4273b4c8cfc7326110bf2fa5400524e2beb"
+@v37 kernel.seq.make item $v33 item $v36
+@v38 kernel.value.record "applications" 2 "candidates" 10000 "representatives" 1000 "milliseconds" 10000
+@v39 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "trainingHash" "3a95e810383b2677965b7ee330ca01bec86f89d606fb78dd595b7e10ca267133" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v37 "limits" $v38 "evaluated" 179 "rejected" 140 "pruned" 26 "retained" 17 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 2 "graphNodes" 2 "circuitHash" "50e141fd4d49beeb0ee6359c2ad1fb051b38fe60b07bb87df4ef28e5fdbba79d" "fit" 8
+@v40 kernel.seq.make
+@v41 kernel.value.record "schema" "sxlm.lexical-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v39 "trainingHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "qualification" "Terminal selection, lexicon indexing, class exclusions and case policy execute in SOP. Normalization composition is synthesized. Native token boundaries and Earley scheduling remain; authored lexical policy is not relabeled as learned." "policyReplay" true "methodReplay" true "entrypointBindings" true "compilerOutsideRuntime" true "nativeTokenBoundariesRemain" true "nativeChartSchedulingRemains" true "obsoleteModules" $v40
+@v42 kernel.value.record "passed" true "stages" 10
+@v43 kernel.value.record "passed" true "modules" 98 "localReferences" 515 "report" "reports/independence.sop"
+@v44 kernel.value.record "passed" true "checks" 11 "desktopAndMobileInspected" true
+@v45 kernel.value.record "chapters" 14 "specifications" 12 "wikiEntries" 36 "browserChecks" 25 "deterministicBuild" true "isolatedReplay" true "report" "reports/documentation.sop" "url" "http://127.0.0.1:3211/docs/"
+@v46 kernel.value.record "pid" 2665979 "url" "http://127.0.0.1:3210" "transport" "application/sop"
+@v47 kernel.seq.make item "small-general-kernel" item "knowledge-only-in-circuits" item "all-competence-learned"
+@v48 kernel.value.record "complete" false "remaining" $v47 "nativeOperations" 83 "privilegedFiles" 19 "privilegedBytes" 92421 "reproducedFragments" 288 "unverifiedModules" 561
+@v49 kernel.value.record "nodes" 91734 "steps" 27611 "tokens" 256 "terminalCacheHits" 20 "facts" 19 "matches" 190 "milliseconds" 2213.16
+@v50 kernel.value.record "task" "nineteen-node-proof" "cache" true "metrics" $v49 "checkedNodes" 19
+@v51 kernel.value.record "nodes" 92800 "steps" 28953 "tokens" 256 "facts" 19 "matches" 190 "milliseconds" 695.75
+@v52 kernel.value.record "task" "nineteen-node-proof" "cache" false "metrics" $v51 "checkedNodes" 19
+@v53 kernel.value.record "nodes" 9644 "tokens" 400 "steps" 7604 "milliseconds" 219.52
+@v54 kernel.value.record "task" "twenty-sentence-summary" "cache" false "metrics" $v53
+@v55 kernel.seq.make item $v50 item $v52 item $v54
+@v56 kernel.value.record "schema" "sxlm.text-policy-verification.v1" "authoredPolicies" 6 "sourceHash" "42e082a943b2f102913720735cbe279136a923af5dbd414e922d1a39083cf542" "qualification" "Authored segmentation and captured learning-policy identity. Historical agreement and policy-use checks do not establish induced segmentation or broad language competence." "nativeSegmentationRemoved" true "policyReplay" true "compilerOutsideRuntime" true "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "segmentationComparisons" 736 "tests" 5 "measurements" $v55
+@v57 kernel.value.record "schema" "sxlm.verification.v3" "generated" "2026-09-08T14:03:04.880Z" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "codeAndKnowledgeHash" "f0c501c5987dc6707256162e5a341b6b455a109aa1d4e293a644b20658f3c19f" "files" 279 "format" "SOP source modules and constructor documents" "jsonInfrastructureFiles" $v0 "excludedAgentInfrastructure" $v1 "sourceModules" 844 "installedModules" 849 "maxInstalledGraphNodes" 163 "noGraphObjectPacks" true "tests" $v2 "evaluation" $v10 "programLearning" $v11 "lexicalLearning" $v16 "planning" $v30 "lexical" $v41 "rebuild" $v42 "standalone" $v43 "browser" $v44 "documentation" $v45 "demo" $v46 "architecture" $v48 "qualification" "Recorded tests and capability checks pass for this exact runtime and model. Ten ordered build stages and an isolated full evaluation reproduce; documentation and browser checks pass. Native token boundaries, word extraction and chart scheduling, 561 modules without reproduced derivations, and 0/8 open-language challenges keep the architectural objective incomplete. Quoted SOP text policies are inert learning evidence; JavaScript wire values and transient compiler graphs are not JSON interchange. Documentation and build tooling changes were verified separately and do not alter runtime/model identity." "text" $v56
+@output result $v57

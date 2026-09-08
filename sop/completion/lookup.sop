@@ -1,0 +1,13 @@
+@input with object
+@options kernel.value.get value $with key "options" fallback null
+@tokens kernel.value.get value $options key "tokens" fallback null
+@total kernel.seq.count items $tokens
+@size0 kernel.value.get value $with key "size" fallback null
+@size data.number value $size0
+@start kernel.number.binary operation "subtract" left $total right $size
+@context kernel.seq.slice items $tokens start $start end $total
+@key kernel.value.encode value $context
+@arguments kernel.value.record key $key
+@distribution completion.distribution with $arguments
+@result kernel.value.record distribution $distribution contextLength $size
+@output result $result

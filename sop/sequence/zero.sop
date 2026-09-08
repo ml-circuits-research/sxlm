@@ -1,0 +1,3 @@
+@input with object
+@result data.number value 0
+@output result $result

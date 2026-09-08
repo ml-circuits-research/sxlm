@@ -1,0 +1,38 @@
+@input state object
+@input item object
+@input with object
+@empty kernel.value.empty
+@list kernel.seq.empty
+@oldStart kernel.value.get value $state key "start" fallback null
+@newStart kernel.value.get value $item key "start" fallback $oldStart
+@noStart kernel.value.equal left $oldStart right null
+@sameStart kernel.value.equal left $oldStart right $newStart
+@startChoices kernel.seq.make item $noStart item $sameStart
+@startOK kernel.seq.includes items $startChoices value true
+@checkedStart kernel.value.require condition $startOK message "An extension cannot replace the grammar entry point" value $item
+@oldSeg kernel.value.get value $state key "segmentation" fallback null
+@newSeg kernel.value.get value $item key "segmentation" fallback null
+@noOldSeg kernel.value.equal left $oldSeg right null
+@noNewSeg kernel.value.equal left $newSeg right null
+@segChoices kernel.seq.make item $noOldSeg item $noNewSeg
+@segOK kernel.seq.includes items $segChoices value true
+@checkedSeg kernel.value.require condition $segOK message "An extension cannot replace segmentation" value $checkedStart
+@oldClasses kernel.value.get value $state key "classes" fallback $empty
+@newClasses kernel.value.get value $item key "classes" fallback $empty
+@classObject data.object value $newClasses
+@classEntries kernel.value.entries value $classObject
+@classArgs kernel.value.record classes $oldClasses
+@classChecks kernel.flow.map items $classEntries circuit "grammar.class-check" with $classArgs
+@oldClassObject data.object value $oldClasses
+@classes kernel.value.merge left $oldClassObject right $classObject
+@oldProductions kernel.value.get value $state key "productions" fallback $list
+@newProductions kernel.value.get value $item key "productions" fallback $list
+@productions kernel.seq.concat left $oldProductions right $newProductions
+@oldLexicon kernel.value.get value $state key "lexicon" fallback $list
+@newLexicon kernel.value.get value $item key "lexicon" fallback $list
+@lexicon kernel.seq.concat left $oldLexicon right $newLexicon
+@checkedItem data.object value $checkedSeg
+@base kernel.value.merge left $state right $checkedItem
+@fields kernel.value.record productions $productions lexicon $lexicon classes $classes
+@result kernel.value.merge left $base right $fields
+@output result $result

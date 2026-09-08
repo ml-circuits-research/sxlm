@@ -1,0 +1,20 @@
+@v0 kernel.value.record "kind" "agent-supervised-migration" "source" "test/reference/text-v1.mjs" "independent" false "qualification" "Distillation of the authored score rule; not independent evidence of summary quality."
+@v1 kernel.value.record "centrality" 1 "lead" 0 "focus" 0
+@v2 kernel.value.record "input" $v1 "output" 1
+@v3 kernel.value.record "centrality" 2 "lead" 0 "focus" 0
+@v4 kernel.value.record "input" $v3 "output" 2
+@v5 kernel.value.record "centrality" 3 "lead" 1 "focus" 0
+@v6 kernel.value.record "input" $v5 "output" 3.7
+@v7 kernel.value.record "centrality" 0.5 "lead" 0 "focus" 0.1
+@v8 kernel.value.record "input" $v7 "output" 1.5
+@v9 kernel.value.record "centrality" 2 "lead" 1 "focus" 0.2
+@v10 kernel.value.record "input" $v9 "output" 4.7
+@v11 kernel.value.record "centrality" 4 "lead" 0 "focus" 0.5
+@v12 kernel.value.record "input" $v11 "output" 9
+@v13 kernel.value.record "centrality" 0 "lead" 1 "focus" 0
+@v14 kernel.value.record "input" $v13 "output" 0.7
+@v15 kernel.value.record "centrality" 1.5 "lead" 1 "focus" 0.3
+@v16 kernel.value.record "input" $v15 "output" 5.2
+@v17 kernel.seq.make item $v2 item $v4 item $v6 item $v8 item $v10 item $v12 item $v14 item $v16
+@v18 kernel.value.record "schema" "sxlm.curriculum.v1" "origin" $v0 "examples" $v17
+@output result $v18

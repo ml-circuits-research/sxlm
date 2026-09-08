@@ -1,0 +1,23 @@
+@input with object
+@state0 kernel.value.get value $with key "state" fallback null
+@state data.object value $state0
+@node kernel.value.get value $with key "node" fallback null
+@config kernel.value.get value $with key "config" fallback null
+@best0 kernel.value.get value $state key "best" fallback null
+@best data.object value $best0
+@key0 kernel.value.get value $with key "key" fallback null
+@key data.string value $key0
+@cost kernel.value.get value $node key "cost" fallback null
+@nextBest data.attach record $best key $key value $cost
+@entries kernel.value.entries value $nextBest
+@explored kernel.seq.count items $entries
+@withBest data.attach record $state key "best" value $nextBest
+@nextState data.attach record $withBest key "explored" value $explored
+@goals0 kernel.value.get value $config key "goals" fallback null
+@goals data.array value $goals0
+@available0 kernel.value.get value $node key "state" fallback null
+@available data.array value $available0
+@found learned.set.coverage required $goals available $available
+@args kernel.value.record state $nextState node $node config $config
+@result kernel.flow.choose condition $found then "planning.solved" else "planning.expand" with $args
+@output result $result

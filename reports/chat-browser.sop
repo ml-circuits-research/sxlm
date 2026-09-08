@@ -1,0 +1,4 @@
+@v0 kernel.seq.make item "simple default chat" item "unknown before document" item "DOCX attachment" item "real Codex job" item "automatic activation" item "document-grounded answer" item "desktop layout" item "mobile layout"
+@v1 kernel.seq.make item "chat-desktop.png" item "chat-mobile.png"
+@v2 kernel.value.record "schema" "sxlm.chat-browser.v1" "passed" true "liveCodex" true "chat" "82343310-f3d8-498d-92cf-c296e2278c8a" "checks" $v0 "screenshots" $v1
+@output result $v2

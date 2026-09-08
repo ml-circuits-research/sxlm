@@ -1,0 +1,10 @@
+@input left any
+@input right any
+@intersection kernel.seq.intersection left $left right $right
+@both kernel.seq.concat left $left right $right
+@union kernel.seq.unique items $both
+@n kernel.seq.count items $intersection
+@d kernel.seq.count items $union
+@denominator kernel.number.binary operation "max" left 1 right $d
+@result kernel.number.binary operation "divide" left $n right $denominator
+@output result $result

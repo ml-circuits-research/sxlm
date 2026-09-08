@@ -1,0 +1,10 @@
+@input with object
+@parsed kernel.value.get value $with key "parsed" fallback null
+@alternatives kernel.value.get value $parsed key "alternatives" fallback null
+@value kernel.value.get value $alternatives key 0 fallback null
+@attempt kernel.flow.attempt circuit "document.lower-array" value $value
+@ok kernel.value.get value $attempt key "ok" fallback false
+@success data.boolean value $ok
+@args kernel.value.record attempt $attempt
+@result kernel.flow.choose condition $success then "document.lower-success" else "document.lower-failure" with $args
+@output result $result

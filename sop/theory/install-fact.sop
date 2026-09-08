@@ -1,0 +1,18 @@
+@input state object
+@input item object
+@input with object
+@rawAtom kernel.value.get value $item key "atom" fallback null
+@atomObject data.object value $rawAtom
+@atom primitive "relation.validateAtom" bind atom $atomObject ground true
+@evidence kernel.value.get value $item key "evidence" fallback null
+@source kernel.value.get value $item key "source" fallback null
+@record kernel.value.record atom $atom evidence $evidence
+@oldFacts kernel.value.get value $state key "facts" fallback null
+@factsArray data.array value $oldFacts
+@facts kernel.seq.append items $factsArray value $record
+@oldSources kernel.value.get value $state key "sources" fallback null
+@sourcesArray data.array value $oldSources
+@sources kernel.seq.append items $sourcesArray value $source
+@changes kernel.value.record facts $facts sources $sources
+@result kernel.value.merge left $state right $changes
+@output result $result

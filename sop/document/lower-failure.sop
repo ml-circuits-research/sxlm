@@ -1,0 +1,8 @@
+@input with object
+@attempt kernel.value.get value $with key "attempt" fallback null
+@error kernel.value.get value $attempt key "error" fallback null
+@message kernel.value.get value $error key "message" fallback null
+@messageText data.string value $message
+@reason kernel.text.concat left "invalid-semantics: " right $messageText
+@result kernel.value.record ok false reason $reason
+@output result $result

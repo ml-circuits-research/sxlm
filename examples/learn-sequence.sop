@@ -1,0 +1,5 @@
+@v0 kernel.seq.make item "Bright tessera rotates smoothly."
+@v1 kernel.seq.make item "." item "!" item "?"
+@v2 kernel.value.record "kind" "authored-workflow-demonstration" "qualification" "This small teaching fixture demonstrates offline sequence induction, not broad language generalization."
+@v3 kernel.value.record "id" "tessera-sequences" "texts" $v0 "order" 4 "boundaries" $v1 "origin" $v2
+@output result $v3

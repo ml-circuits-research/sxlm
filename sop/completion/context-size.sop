@@ -1,0 +1,7 @@
+@input item any
+@input with object
+@i data.number value $item
+@minimum0 kernel.value.get value $with key "minimum" fallback null
+@minimum data.number value $minimum0
+@size kernel.number.binary operation "add" left $i right $minimum
+@output result $size

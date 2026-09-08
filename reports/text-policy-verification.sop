@@ -1,0 +1,9 @@
+@v0 kernel.value.record "nodes" 91734 "steps" 27611 "tokens" 256 "terminalCacheHits" 20 "facts" 19 "matches" 190 "milliseconds" 2213.16
+@v1 kernel.value.record "task" "nineteen-node-proof" "cache" true "metrics" $v0 "checkedNodes" 19
+@v2 kernel.value.record "nodes" 92800 "steps" 28953 "tokens" 256 "facts" 19 "matches" 190 "milliseconds" 695.75
+@v3 kernel.value.record "task" "nineteen-node-proof" "cache" false "metrics" $v2 "checkedNodes" 19
+@v4 kernel.value.record "nodes" 9644 "tokens" 400 "steps" 7604 "milliseconds" 219.52
+@v5 kernel.value.record "task" "twenty-sentence-summary" "cache" false "metrics" $v4
+@v6 kernel.seq.make item $v1 item $v3 item $v5
+@v7 kernel.value.record "schema" "sxlm.text-policy-verification.v1" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "segmentationComparisons" 736 "tests" 5 "measurements" $v6 "qualification" "Authored segmentation and captured learning-policy identity. Historical agreement and policy-use checks do not establish induced segmentation or broad language competence."
+@output result $v7

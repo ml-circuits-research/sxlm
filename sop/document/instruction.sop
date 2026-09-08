@@ -1,0 +1,5 @@
+@input item any
+@input with object
+@instruction data.object value $item
+@result kernel.value.merge left $instruction right $with
+@output result $result

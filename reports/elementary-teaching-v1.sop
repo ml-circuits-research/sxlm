@@ -1,0 +1,1094 @@
+@module source0 chars 461
+@input children array
+@input scope string
+@rawSubject kernel.value.get value $children key 2 fallback null
+@subject data.object value $rawSubject
+@term kernel.value.get value $subject key "term" fallback null
+@rawConstraints kernel.value.get value $subject key "constraints" fallback null
+@constraints data.array value $rawConstraints
+@args kernel.value.record term $term constraints $constraints
+@result elementary.definition with $args
+@output result $result
+
+@end
+
+@module source1 chars 257
+@input children array
+@input scope string
+@term kernel.value.get value $children key 3 fallback null
+@constraints kernel.seq.empty
+@args kernel.value.record term $term constraints $constraints
+@result elementary.definition with $args
+@output result $result
+
+@end
+
+@module source2 chars 553
+@input with object
+@term kernel.value.get value $with key "term" fallback null
+@rawConstraints kernel.value.get value $with key "constraints" fallback null
+@constraints data.array value $rawConstraints
+@terms kernel.seq.make item $term item "?answer"
+@atom kernel.value.record predicate "kind" terms $terms negative false context "world"
+@patterns kernel.seq.append items $constraints value $atom
+@query kernel.value.record kind "select" variable "?answer" patterns $patterns
+@result kernel.value.record kind "query" query $query
+@output result $result
+
+@end
+
+@module source3 chars 765
+@input children array
+@input scope string
+@unit kernel.value.get value $children key 2 fallback null
+@rawSubject kernel.value.get value $children key 5 fallback null
+@subject data.object value $rawSubject
+@term kernel.value.get value $subject key "term" fallback null
+@rawConstraints kernel.value.get value $subject key "constraints" fallback null
+@constraints data.array value $rawConstraints
+@terms kernel.seq.make item $term item $unit item "?answer"
+@atom kernel.value.record predicate "measure_count" terms $terms negative false context "world"
+@patterns kernel.seq.append items $constraints value $atom
+@query kernel.value.record kind "select" variable "?answer" patterns $patterns
+@result kernel.value.record kind "query" query $query
+@output result $result
+
+@end
+
+@module source4 chars 509
+@input children array
+@input scope string
+@unit kernel.value.get value $children key 2 fallback null
+@term kernel.value.get value $children key 6 fallback null
+@terms kernel.seq.make item $term item $unit item "?answer"
+@atom kernel.value.record predicate "measure_count" terms $terms negative false context "world"
+@patterns kernel.seq.make item $atom
+@query kernel.value.record kind "select" variable "?answer" patterns $patterns
+@result kernel.value.record kind "query" query $query
+@output result $result
+
+@end
+
+@module source5 chars 104
+@input children array
+@input scope string
+@result data.string value "capital_of"
+@output result $result
+
+@end
+@v0 kernel.value.record "kind" "agent-authored-source-supervision" "independent" false "qualification" "Curated and formalized by a coding agent. Compilation preserves this supervision; no autonomous induction or child-level conversation is claimed."
+@v1 kernel.value.record "id" "vertebrates" "publisher" "National Park Service" "title" "Vertebrate Fossils" "url" "https://www.nps.gov/subjects/fossils/vertebrate-fossils.htm" "support" "Vertebrates are animals with backbones, including mammals, birds, reptiles, amphibians and fish." "accessed" "2026-09-08"
+@v2 kernel.value.record "id" "dolphins" "publisher" "NOAA" "title" "Are dolphins fish?" "url" "https://oceanservice.noaa.gov/facts/dolphin.html" "support" "Dolphins are mammals and are not fish." "accessed" "2026-09-08"
+@v3 kernel.value.record "id" "invertebrates" "publisher" "National Park Service" "title" "Invertebrates" "url" "https://www.nps.gov/grca/learn/nature/invertebrates.htm" "support" "Insects and spiders are invertebrates. Adult insects have six legs." "accessed" "2026-09-08"
+@v4 kernel.value.record "id" "plants" "publisher" "National Park Service" "title" "Explore Plants by Form" "url" "https://www.nps.gov/dena/learn/nature/plants-by-form.htm" "support" "Trees and shrubs are plant forms; conifers are cone-producing plants." "accessed" "2026-09-08"
+@v5 kernel.value.record "id" "planets" "publisher" "NASA" "title" "About the Planets" "url" "https://science.nasa.gov/solar-system/planets/" "support" "The eight named solar-system planets include four inner terrestrial planets; Pluto is a dwarf planet." "accessed" "2026-09-08"
+@v6 kernel.value.record "id" "sun" "publisher" "NASA" "title" "Sun Facts" "url" "https://science.nasa.gov/sun/facts/" "support" "The Sun is the star of our solar system." "accessed" "2026-09-08"
+@v7 kernel.value.record "id" "orbits" "publisher" "NASA" "title" "Our Solar System" "url" "https://science.nasa.gov/resource/our-solar-system-2/" "support" "The eight listed planets orbit the Sun; the Moon orbits Earth. The dated moon census on this page is not used." "accessed" "2026-09-08"
+@v8 kernel.value.record "id" "water" "publisher" "United States Geological Survey" "title" "Water cycle" "url" "https://www.usgs.gov/water-science-school/water-cycle" "support" "Water occurs as liquid water, solid ice and gaseous water vapor." "accessed" "2026-09-08"
+@v9 kernel.value.record "id" "geometry" "publisher" "Common Core State Standards Initiative" "title" "Grade 3 Geometry" "url" "https://www.thecorestandards.org/Math/Content/3/G/" "support" "Squares, rectangles and rhombuses belong to the quadrilateral category." "accessed" "2026-09-08"
+@v10 kernel.value.record "id" "shapes" "publisher" "Maths Is Fun" "title" "Quadrilaterals" "url" "https://www.mathsisfun.com/quadrilaterals.html" "support" "Inclusive Euclidean plane definitions: a square is a rectangle and a rhombus; quadrilaterals are polygons." "accessed" "2026-09-08"
+@v11 kernel.value.record "id" "units" "publisher" "BIPM" "title" "SI base units" "url" "https://www.bipm.org/en/measurement-units/si-base-units" "support" "The second, metre and kilogram measure time, length and mass respectively." "accessed" "2026-09-08"
+@v12 kernel.value.record "id" "time" "publisher" "NIST" "title" "Units Outside the SI" "url" "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-5-units-outside-si" "support" "The duration units minute, hour and day equal 60 seconds, 60 minutes and 24 hours. Civil-clock anomalies are outside these duration definitions." "accessed" "2026-09-08"
+@v13 kernel.value.record "id" "chair" "publisher" "Smithsonian Institution" "title" "Chair" "url" "https://americanhistory.si.edu/collections/object/nmah_317224" "support" "The collection classifies a chair as furniture. This supports the lexical category; not every chair shares this specimen material." "accessed" "2026-09-08"
+@v14 kernel.value.record "id" "spoon" "publisher" "Smithsonian Institution" "title" "Synoptic Series of Objects" "url" "https://repository.si.edu/bitstream/handle/10088/15221/USNMP-60_2404_1922.pdf" "support" "A spoon is a utensil. No historical-cultural ranking in the source is used." "accessed" "2026-09-08"
+@v15 kernel.value.record "id" "france" "publisher" "European Union" "title" "France: EU country" "url" "https://european-union.europa.eu/principles-countries-history/eu-countries/france_en" "support" "France is a country with Paris as its capital. No claim that all French territory is in Europe is encoded." "accessed" "2026-09-08"
+@v16 kernel.value.record "id" "italy" "publisher" "European Union" "title" "Italy: EU country" "url" "https://european-union.europa.eu/principles-countries-history/eu-countries/italy_en" "support" "Italy is a country with Rome as its capital." "accessed" "2026-09-08"
+@v17 kernel.seq.make item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10 item $v11 item $v12 item $v13 item $v14 item $v15 item $v16
+@v18 kernel.seq.make item "animal classification" item "plant classification" item "solar system" item "water states" item "plane shapes" item "duration and measurement" item "everyday object categories" item "countries and capitals"
+@v19 kernel.seq.make item "A finite introductory vocabulary, not a complete school curriculum." item "Rules describe explicit taxonomic categories, not default abilities or living status. No universal bird-flight or mammal-live-birth rule is supplied." item "General conversation, pronouns, flexible paraphrases, temporal change and unrestricted why/how explanations are not learned by these data." item "Unit counts are declared exact duration facts, not a general unit-conversion solver." item "What-is answers select supported category names. They are not free-form generated definitions." item "Category definitions and instance classification share an explicit kind relation. The vocabulary separates category constants from ordinary named examples by teaching convention, not a general higher-order type system." item "Source citations support the authored claims; the formal proof checker verifies entailment and spans, not external source truth." item "The optional initializer is explicit and must be used through a model-bound session snapshot until a shared fact-fragments bootstrap linkage is installed." item "Geography includes two countries and their capitals. It does not claim worldwide coverage or political-border reasoning."
+@v20 kernel.seq.make item "mammal" item "vertebrate"
+@v21 kernel.value.record "predicate" "kind" "terms" $v20 "negative" false "context" "world"
+@v22 kernel.seq.make item "vertebrates"
+@v23 kernel.value.record "id" "definition.mammal.vertebrate" "statement" "The category mammal is a kind of vertebrate." "atom" $v21 "citations" $v22
+@v24 kernel.seq.make item "bird" item "vertebrate"
+@v25 kernel.value.record "predicate" "kind" "terms" $v24 "negative" false "context" "world"
+@v26 kernel.seq.make item "vertebrates"
+@v27 kernel.value.record "id" "definition.bird.vertebrate" "statement" "The category bird is a kind of vertebrate." "atom" $v25 "citations" $v26
+@v28 kernel.seq.make item "reptile" item "vertebrate"
+@v29 kernel.value.record "predicate" "kind" "terms" $v28 "negative" false "context" "world"
+@v30 kernel.seq.make item "vertebrates"
+@v31 kernel.value.record "id" "definition.reptile.vertebrate" "statement" "The category reptile is a kind of vertebrate." "atom" $v29 "citations" $v30
+@v32 kernel.seq.make item "amphibian" item "vertebrate"
+@v33 kernel.value.record "predicate" "kind" "terms" $v32 "negative" false "context" "world"
+@v34 kernel.seq.make item "vertebrates"
+@v35 kernel.value.record "id" "definition.amphibian.vertebrate" "statement" "The category amphibian is a kind of vertebrate." "atom" $v33 "citations" $v34
+@v36 kernel.seq.make item "fish" item "vertebrate"
+@v37 kernel.value.record "predicate" "kind" "terms" $v36 "negative" false "context" "world"
+@v38 kernel.seq.make item "vertebrates"
+@v39 kernel.value.record "id" "definition.fish.vertebrate" "statement" "The category fish is a kind of vertebrate." "atom" $v37 "citations" $v38
+@v40 kernel.seq.make item "vertebrate" item "animal"
+@v41 kernel.value.record "predicate" "kind" "terms" $v40 "negative" false "context" "world"
+@v42 kernel.seq.make item "vertebrates"
+@v43 kernel.value.record "id" "definition.vertebrate.animal" "statement" "The category vertebrate is a kind of animal." "atom" $v41 "citations" $v42
+@v44 kernel.seq.make item "dolphin" item "mammal"
+@v45 kernel.value.record "predicate" "kind" "terms" $v44 "negative" false "context" "world"
+@v46 kernel.seq.make item "dolphins"
+@v47 kernel.value.record "id" "definition.dolphin.mammal" "statement" "The category dolphin is a kind of mammal." "atom" $v45 "citations" $v46
+@v48 kernel.seq.make item "insect" item "invertebrate"
+@v49 kernel.value.record "predicate" "kind" "terms" $v48 "negative" false "context" "world"
+@v50 kernel.seq.make item "invertebrates"
+@v51 kernel.value.record "id" "definition.insect.invertebrate" "statement" "The category insect is a kind of invertebrate." "atom" $v49 "citations" $v50
+@v52 kernel.seq.make item "spider" item "invertebrate"
+@v53 kernel.value.record "predicate" "kind" "terms" $v52 "negative" false "context" "world"
+@v54 kernel.seq.make item "invertebrates"
+@v55 kernel.value.record "id" "definition.spider.invertebrate" "statement" "The category spider is a kind of invertebrate." "atom" $v53 "citations" $v54
+@v56 kernel.seq.make item "invertebrate" item "animal"
+@v57 kernel.value.record "predicate" "kind" "terms" $v56 "negative" false "context" "world"
+@v58 kernel.seq.make item "invertebrates"
+@v59 kernel.value.record "id" "definition.invertebrate.animal" "statement" "The category invertebrate is a kind of animal." "atom" $v57 "citations" $v58
+@v60 kernel.seq.make item "tree" item "plant"
+@v61 kernel.value.record "predicate" "kind" "terms" $v60 "negative" false "context" "world"
+@v62 kernel.seq.make item "plants"
+@v63 kernel.value.record "id" "definition.tree.plant" "statement" "The category tree is a kind of plant." "atom" $v61 "citations" $v62
+@v64 kernel.seq.make item "shrub" item "plant"
+@v65 kernel.value.record "predicate" "kind" "terms" $v64 "negative" false "context" "world"
+@v66 kernel.seq.make item "plants"
+@v67 kernel.value.record "id" "definition.shrub.plant" "statement" "The category shrub is a kind of plant." "atom" $v65 "citations" $v66
+@v68 kernel.seq.make item "conifer" item "plant"
+@v69 kernel.value.record "predicate" "kind" "terms" $v68 "negative" false "context" "world"
+@v70 kernel.seq.make item "plants"
+@v71 kernel.value.record "id" "definition.conifer.plant" "statement" "The category conifer is a kind of plant." "atom" $v69 "citations" $v70
+@v72 kernel.seq.make item "square" item "rectangle"
+@v73 kernel.value.record "predicate" "kind" "terms" $v72 "negative" false "context" "world"
+@v74 kernel.seq.make item "shapes"
+@v75 kernel.value.record "id" "definition.square.rectangle" "statement" "The category square is a kind of rectangle." "atom" $v73 "citations" $v74
+@v76 kernel.seq.make item "square" item "rhombus"
+@v77 kernel.value.record "predicate" "kind" "terms" $v76 "negative" false "context" "world"
+@v78 kernel.seq.make item "shapes"
+@v79 kernel.value.record "id" "definition.square.rhombus" "statement" "The category square is a kind of rhombus." "atom" $v77 "citations" $v78
+@v80 kernel.seq.make item "rectangle" item "quadrilateral"
+@v81 kernel.value.record "predicate" "kind" "terms" $v80 "negative" false "context" "world"
+@v82 kernel.seq.make item "geometry"
+@v83 kernel.value.record "id" "definition.rectangle.quadrilateral" "statement" "The category rectangle is a kind of quadrilateral." "atom" $v81 "citations" $v82
+@v84 kernel.seq.make item "rhombus" item "quadrilateral"
+@v85 kernel.value.record "predicate" "kind" "terms" $v84 "negative" false "context" "world"
+@v86 kernel.seq.make item "geometry"
+@v87 kernel.value.record "id" "definition.rhombus.quadrilateral" "statement" "The category rhombus is a kind of quadrilateral." "atom" $v85 "citations" $v86
+@v88 kernel.seq.make item "quadrilateral" item "polygon"
+@v89 kernel.value.record "predicate" "kind" "terms" $v88 "negative" false "context" "world"
+@v90 kernel.seq.make item "shapes"
+@v91 kernel.value.record "id" "definition.quadrilateral.polygon" "statement" "The category quadrilateral is a kind of polygon." "atom" $v89 "citations" $v90
+@v92 kernel.seq.make item "triangle" item "polygon"
+@v93 kernel.value.record "predicate" "kind" "terms" $v92 "negative" false "context" "world"
+@v94 kernel.seq.make item "shapes"
+@v95 kernel.value.record "id" "definition.triangle.polygon" "statement" "The category triangle is a kind of polygon." "atom" $v93 "citations" $v94
+@v96 kernel.seq.make item "polygon" item "shape"
+@v97 kernel.value.record "predicate" "kind" "terms" $v96 "negative" false "context" "world"
+@v98 kernel.seq.make item "shapes"
+@v99 kernel.value.record "id" "definition.polygon.shape" "statement" "The category polygon is a kind of shape." "atom" $v97 "citations" $v98
+@v100 kernel.seq.make item "terrestrial-planet" item "planet"
+@v101 kernel.value.record "predicate" "kind" "terms" $v100 "negative" false "context" "world"
+@v102 kernel.seq.make item "planets"
+@v103 kernel.value.record "id" "definition.terrestrial-planet.planet" "statement" "The category terrestrial-planet is a kind of planet." "atom" $v101 "citations" $v102
+@v104 kernel.seq.make item "solar-planet" item "planet"
+@v105 kernel.value.record "predicate" "kind" "terms" $v104 "negative" false "context" "world"
+@v106 kernel.seq.make item "planets"
+@v107 kernel.value.record "id" "definition.solar-planet.planet" "statement" "The category solar-planet is a kind of planet." "atom" $v105 "citations" $v106
+@v108 kernel.seq.make item "chair" item "furniture"
+@v109 kernel.value.record "predicate" "kind" "terms" $v108 "negative" false "context" "world"
+@v110 kernel.seq.make item "chair"
+@v111 kernel.value.record "id" "definition.chair.furniture" "statement" "The category chair is a kind of furniture." "atom" $v109 "citations" $v110
+@v112 kernel.seq.make item "spoon" item "utensil"
+@v113 kernel.value.record "predicate" "kind" "terms" $v112 "negative" false "context" "world"
+@v114 kernel.seq.make item "spoon"
+@v115 kernel.value.record "id" "definition.spoon.utensil" "statement" "The category spoon is a kind of utensil." "atom" $v113 "citations" $v114
+@v116 kernel.seq.make item "mercury"
+@v117 kernel.value.record "predicate" "solar-planet" "terms" $v116 "negative" false "context" "world"
+@v118 kernel.seq.make item "planets"
+@v119 kernel.value.record "id" "space.mercury" "statement" "mercury is a planet of our solar system." "atom" $v117 "citations" $v118
+@v120 kernel.seq.make item "venus"
+@v121 kernel.value.record "predicate" "solar-planet" "terms" $v120 "negative" false "context" "world"
+@v122 kernel.seq.make item "planets"
+@v123 kernel.value.record "id" "space.venus" "statement" "venus is a planet of our solar system." "atom" $v121 "citations" $v122
+@v124 kernel.seq.make item "earth"
+@v125 kernel.value.record "predicate" "solar-planet" "terms" $v124 "negative" false "context" "world"
+@v126 kernel.seq.make item "planets"
+@v127 kernel.value.record "id" "space.earth" "statement" "earth is a planet of our solar system." "atom" $v125 "citations" $v126
+@v128 kernel.seq.make item "mars"
+@v129 kernel.value.record "predicate" "solar-planet" "terms" $v128 "negative" false "context" "world"
+@v130 kernel.seq.make item "planets"
+@v131 kernel.value.record "id" "space.mars" "statement" "mars is a planet of our solar system." "atom" $v129 "citations" $v130
+@v132 kernel.seq.make item "jupiter"
+@v133 kernel.value.record "predicate" "solar-planet" "terms" $v132 "negative" false "context" "world"
+@v134 kernel.seq.make item "planets"
+@v135 kernel.value.record "id" "space.jupiter" "statement" "jupiter is a planet of our solar system." "atom" $v133 "citations" $v134
+@v136 kernel.seq.make item "saturn"
+@v137 kernel.value.record "predicate" "solar-planet" "terms" $v136 "negative" false "context" "world"
+@v138 kernel.seq.make item "planets"
+@v139 kernel.value.record "id" "space.saturn" "statement" "saturn is a planet of our solar system." "atom" $v137 "citations" $v138
+@v140 kernel.seq.make item "uranus"
+@v141 kernel.value.record "predicate" "solar-planet" "terms" $v140 "negative" false "context" "world"
+@v142 kernel.seq.make item "planets"
+@v143 kernel.value.record "id" "space.uranus" "statement" "uranus is a planet of our solar system." "atom" $v141 "citations" $v142
+@v144 kernel.seq.make item "neptune"
+@v145 kernel.value.record "predicate" "solar-planet" "terms" $v144 "negative" false "context" "world"
+@v146 kernel.seq.make item "planets"
+@v147 kernel.value.record "id" "space.neptune" "statement" "neptune is a planet of our solar system." "atom" $v145 "citations" $v146
+@v148 kernel.seq.make item "mercury"
+@v149 kernel.value.record "predicate" "terrestrial-planet" "terms" $v148 "negative" false "context" "world"
+@v150 kernel.seq.make item "planets"
+@v151 kernel.value.record "id" "space.mercury.terrestrial" "statement" "mercury is a terrestrial planet." "atom" $v149 "citations" $v150
+@v152 kernel.seq.make item "venus"
+@v153 kernel.value.record "predicate" "terrestrial-planet" "terms" $v152 "negative" false "context" "world"
+@v154 kernel.seq.make item "planets"
+@v155 kernel.value.record "id" "space.venus.terrestrial" "statement" "venus is a terrestrial planet." "atom" $v153 "citations" $v154
+@v156 kernel.seq.make item "earth"
+@v157 kernel.value.record "predicate" "terrestrial-planet" "terms" $v156 "negative" false "context" "world"
+@v158 kernel.seq.make item "planets"
+@v159 kernel.value.record "id" "space.earth.terrestrial" "statement" "earth is a terrestrial planet." "atom" $v157 "citations" $v158
+@v160 kernel.seq.make item "mars"
+@v161 kernel.value.record "predicate" "terrestrial-planet" "terms" $v160 "negative" false "context" "world"
+@v162 kernel.seq.make item "planets"
+@v163 kernel.value.record "id" "space.mars.terrestrial" "statement" "mars is a terrestrial planet." "atom" $v161 "citations" $v162
+@v164 kernel.seq.make item "sun"
+@v165 kernel.value.record "predicate" "star" "terms" $v164 "negative" false "context" "world"
+@v166 kernel.seq.make item "sun"
+@v167 kernel.value.record "id" "space.sun" "statement" "The Sun is a star." "atom" $v165 "citations" $v166
+@v168 kernel.seq.make item "moon"
+@v169 kernel.value.record "predicate" "satellite" "terms" $v168 "negative" false "context" "world"
+@v170 kernel.seq.make item "orbits"
+@v171 kernel.value.record "id" "space.moon" "statement" "The Moon is a natural satellite." "atom" $v169 "citations" $v170
+@v172 kernel.seq.make item "moon" item "earth"
+@v173 kernel.value.record "predicate" "orbit" "terms" $v172 "negative" false "context" "world"
+@v174 kernel.seq.make item "orbits"
+@v175 kernel.value.record "id" "space.moon.orbit" "statement" "The Moon orbits Earth." "atom" $v173 "citations" $v174
+@v176 kernel.seq.make item "pluto"
+@v177 kernel.value.record "predicate" "dwarf-planet" "terms" $v176 "negative" false "context" "world"
+@v178 kernel.seq.make item "planets"
+@v179 kernel.value.record "id" "space.pluto" "statement" "Pluto is a dwarf planet." "atom" $v177 "citations" $v178
+@v180 kernel.seq.make item "pluto"
+@v181 kernel.value.record "predicate" "planet" "terms" $v180 "negative" true "context" "world"
+@v182 kernel.seq.make item "planets"
+@v183 kernel.value.record "id" "space.pluto.not-planet" "statement" "Under the cited solar-system classification, Pluto is not one of the eight planets." "atom" $v181 "citations" $v182
+@v184 kernel.seq.make item "ice" item "solid"
+@v185 kernel.value.record "predicate" "kind" "terms" $v184 "negative" false "context" "world"
+@v186 kernel.seq.make item "water"
+@v187 kernel.value.record "id" "water.ice" "statement" "ice names water in the solid state." "atom" $v185 "citations" $v186
+@v188 kernel.seq.make item "water-vapor" item "gas"
+@v189 kernel.value.record "predicate" "kind" "terms" $v188 "negative" false "context" "world"
+@v190 kernel.seq.make item "water"
+@v191 kernel.value.record "id" "water.water-vapor" "statement" "water-vapor names water in the gas state." "atom" $v189 "citations" $v190
+@v192 kernel.seq.make item "liquid-water" item "liquid"
+@v193 kernel.value.record "predicate" "kind" "terms" $v192 "negative" false "context" "world"
+@v194 kernel.seq.make item "water"
+@v195 kernel.value.record "id" "water.liquid" "statement" "Liquid water is a liquid." "atom" $v193 "citations" $v194
+@v196 kernel.seq.make item "second" item "time"
+@v197 kernel.value.record "predicate" "measure" "terms" $v196 "negative" false "context" "world"
+@v198 kernel.seq.make item "units"
+@v199 kernel.value.record "id" "units.second" "statement" "second is a unit of time." "atom" $v197 "citations" $v198
+@v200 kernel.seq.make item "second" item "unit"
+@v201 kernel.value.record "predicate" "kind" "terms" $v200 "negative" false "context" "world"
+@v202 kernel.seq.make item "units"
+@v203 kernel.value.record "id" "units.second.kind" "statement" "second is a unit." "atom" $v201 "citations" $v202
+@v204 kernel.seq.make item "metre" item "length"
+@v205 kernel.value.record "predicate" "measure" "terms" $v204 "negative" false "context" "world"
+@v206 kernel.seq.make item "units"
+@v207 kernel.value.record "id" "units.metre" "statement" "metre is a unit of length." "atom" $v205 "citations" $v206
+@v208 kernel.seq.make item "metre" item "unit"
+@v209 kernel.value.record "predicate" "kind" "terms" $v208 "negative" false "context" "world"
+@v210 kernel.seq.make item "units"
+@v211 kernel.value.record "id" "units.metre.kind" "statement" "metre is a unit." "atom" $v209 "citations" $v210
+@v212 kernel.seq.make item "kilogram" item "mass"
+@v213 kernel.value.record "predicate" "measure" "terms" $v212 "negative" false "context" "world"
+@v214 kernel.seq.make item "units"
+@v215 kernel.value.record "id" "units.kilogram" "statement" "kilogram is a unit of mass." "atom" $v213 "citations" $v214
+@v216 kernel.seq.make item "kilogram" item "unit"
+@v217 kernel.value.record "predicate" "kind" "terms" $v216 "negative" false "context" "world"
+@v218 kernel.seq.make item "units"
+@v219 kernel.value.record "id" "units.kilogram.kind" "statement" "kilogram is a unit." "atom" $v217 "citations" $v218
+@v220 kernel.seq.make item "minute" item "second" item "60"
+@v221 kernel.value.record "predicate" "measure_count" "terms" $v220 "negative" false "context" "world"
+@v222 kernel.seq.make item "time"
+@v223 kernel.value.record "id" "time.minute" "statement" "The duration unit minute contains 60 second units." "atom" $v221 "citations" $v222
+@v224 kernel.seq.make item "minute" item "unit"
+@v225 kernel.value.record "predicate" "kind" "terms" $v224 "negative" false "context" "world"
+@v226 kernel.seq.make item "time"
+@v227 kernel.value.record "id" "time.minute.kind" "statement" "minute is a unit of duration." "atom" $v225 "citations" $v226
+@v228 kernel.seq.make item "minute" item "time"
+@v229 kernel.value.record "predicate" "measure" "terms" $v228 "negative" false "context" "world"
+@v230 kernel.seq.make item "time"
+@v231 kernel.value.record "id" "time.minute.measure" "statement" "minute measures time." "atom" $v229 "citations" $v230
+@v232 kernel.seq.make item "hour" item "minute" item "60"
+@v233 kernel.value.record "predicate" "measure_count" "terms" $v232 "negative" false "context" "world"
+@v234 kernel.seq.make item "time"
+@v235 kernel.value.record "id" "time.hour" "statement" "The duration unit hour contains 60 minute units." "atom" $v233 "citations" $v234
+@v236 kernel.seq.make item "hour" item "unit"
+@v237 kernel.value.record "predicate" "kind" "terms" $v236 "negative" false "context" "world"
+@v238 kernel.seq.make item "time"
+@v239 kernel.value.record "id" "time.hour.kind" "statement" "hour is a unit of duration." "atom" $v237 "citations" $v238
+@v240 kernel.seq.make item "hour" item "time"
+@v241 kernel.value.record "predicate" "measure" "terms" $v240 "negative" false "context" "world"
+@v242 kernel.seq.make item "time"
+@v243 kernel.value.record "id" "time.hour.measure" "statement" "hour measures time." "atom" $v241 "citations" $v242
+@v244 kernel.seq.make item "day" item "hour" item "24"
+@v245 kernel.value.record "predicate" "measure_count" "terms" $v244 "negative" false "context" "world"
+@v246 kernel.seq.make item "time"
+@v247 kernel.value.record "id" "time.day" "statement" "The duration unit day contains 24 hour units." "atom" $v245 "citations" $v246
+@v248 kernel.seq.make item "day" item "unit"
+@v249 kernel.value.record "predicate" "kind" "terms" $v248 "negative" false "context" "world"
+@v250 kernel.seq.make item "time"
+@v251 kernel.value.record "id" "time.day.kind" "statement" "day is a unit of duration." "atom" $v249 "citations" $v250
+@v252 kernel.seq.make item "day" item "time"
+@v253 kernel.value.record "predicate" "measure" "terms" $v252 "negative" false "context" "world"
+@v254 kernel.seq.make item "time"
+@v255 kernel.value.record "id" "time.day.measure" "statement" "day measures time." "atom" $v253 "citations" $v254
+@v256 kernel.seq.make item "triangle" item "side" item "3"
+@v257 kernel.value.record "predicate" "measure_count" "terms" $v256 "negative" false "context" "world"
+@v258 kernel.seq.make item "shapes"
+@v259 kernel.value.record "id" "geometry.triangle.sides" "statement" "triangle has 3 sides." "atom" $v257 "citations" $v258
+@v260 kernel.seq.make item "quadrilateral" item "side" item "4"
+@v261 kernel.value.record "predicate" "measure_count" "terms" $v260 "negative" false "context" "world"
+@v262 kernel.seq.make item "shapes"
+@v263 kernel.value.record "id" "geometry.quadrilateral.sides" "statement" "quadrilateral has 4 sides." "atom" $v261 "citations" $v262
+@v264 kernel.seq.make item "ice"
+@v265 kernel.value.record "predicate" "solid" "terms" $v264 "negative" false "context" "world"
+@v266 kernel.seq.make item "water"
+@v267 kernel.value.record "id" "water.ice.state" "statement" "ice denotes water in the solid state." "atom" $v265 "citations" $v266
+@v268 kernel.seq.make item "water-vapor"
+@v269 kernel.value.record "predicate" "gas" "terms" $v268 "negative" false "context" "world"
+@v270 kernel.seq.make item "water"
+@v271 kernel.value.record "id" "water.water-vapor.state" "statement" "water-vapor denotes water in the gas state." "atom" $v269 "citations" $v270
+@v272 kernel.seq.make item "liquid-water"
+@v273 kernel.value.record "predicate" "liquid" "terms" $v272 "negative" false "context" "world"
+@v274 kernel.seq.make item "water"
+@v275 kernel.value.record "id" "water.liquid-water.state" "statement" "liquid-water denotes water in the liquid state." "atom" $v273 "citations" $v274
+@v276 kernel.seq.make item "france"
+@v277 kernel.value.record "predicate" "country" "terms" $v276 "negative" false "context" "world"
+@v278 kernel.seq.make item "france"
+@v279 kernel.value.record "id" "geography.france" "statement" "france is a country." "atom" $v277 "citations" $v278
+@v280 kernel.seq.make item "paris" item "france"
+@v281 kernel.value.record "predicate" "capital_of" "terms" $v280 "negative" false "context" "world"
+@v282 kernel.seq.make item "france"
+@v283 kernel.value.record "id" "geography.paris" "statement" "paris is the capital of france." "atom" $v281 "citations" $v282
+@v284 kernel.seq.make item "italy"
+@v285 kernel.value.record "predicate" "country" "terms" $v284 "negative" false "context" "world"
+@v286 kernel.seq.make item "italy"
+@v287 kernel.value.record "id" "geography.italy" "statement" "italy is a country." "atom" $v285 "citations" $v286
+@v288 kernel.seq.make item "rome" item "italy"
+@v289 kernel.value.record "predicate" "capital_of" "terms" $v288 "negative" false "context" "world"
+@v290 kernel.seq.make item "italy"
+@v291 kernel.value.record "id" "geography.rome" "statement" "rome is the capital of italy." "atom" $v289 "citations" $v290
+@v292 kernel.seq.make item $v23 item $v27 item $v31 item $v35 item $v39 item $v43 item $v47 item $v51 item $v55 item $v59 item $v63 item $v67 item $v71 item $v75 item $v79 item $v83 item $v87 item $v91 item $v95 item $v99 item $v103 item $v107 item $v111 item $v115 item $v119 item $v123 item $v127 item $v131 item $v135 item $v139 item $v143 item $v147 item $v151 item $v155 item $v159 item $v163 item $v167 item $v171 item $v175 item $v179 item $v183 item $v187 item $v191 item $v195 item $v199 item $v203 item $v207 item $v211 item $v215 item $v219 item $v223 item $v227 item $v231 item $v235 item $v239 item $v243 item $v247 item $v251 item $v255 item $v259 item $v263 item $v267 item $v271 item $v275 item $v279 item $v283 item $v287 item $v291
+@v293 kernel.seq.make item "?x"
+@v294 kernel.value.record "predicate" "mammal" "terms" $v293 "negative" false "context" "world"
+@v295 kernel.seq.make item $v294
+@v296 kernel.seq.make item "?x"
+@v297 kernel.value.record "predicate" "vertebrate" "terms" $v296 "negative" false "context" "world"
+@v298 kernel.value.record "body" $v295 "head" $v297
+@v299 kernel.seq.make item "vertebrates"
+@v300 kernel.value.record "id" "taxonomy.mammal.vertebrate" "statement" "Every mammal is a vertebrate." "rule" $v298 "citations" $v299
+@v301 kernel.seq.make item "?x"
+@v302 kernel.value.record "predicate" "bird" "terms" $v301 "negative" false "context" "world"
+@v303 kernel.seq.make item $v302
+@v304 kernel.seq.make item "?x"
+@v305 kernel.value.record "predicate" "vertebrate" "terms" $v304 "negative" false "context" "world"
+@v306 kernel.value.record "body" $v303 "head" $v305
+@v307 kernel.seq.make item "vertebrates"
+@v308 kernel.value.record "id" "taxonomy.bird.vertebrate" "statement" "Every bird is a vertebrate." "rule" $v306 "citations" $v307
+@v309 kernel.seq.make item "?x"
+@v310 kernel.value.record "predicate" "reptile" "terms" $v309 "negative" false "context" "world"
+@v311 kernel.seq.make item $v310
+@v312 kernel.seq.make item "?x"
+@v313 kernel.value.record "predicate" "vertebrate" "terms" $v312 "negative" false "context" "world"
+@v314 kernel.value.record "body" $v311 "head" $v313
+@v315 kernel.seq.make item "vertebrates"
+@v316 kernel.value.record "id" "taxonomy.reptile.vertebrate" "statement" "Every reptile is a vertebrate." "rule" $v314 "citations" $v315
+@v317 kernel.seq.make item "?x"
+@v318 kernel.value.record "predicate" "amphibian" "terms" $v317 "negative" false "context" "world"
+@v319 kernel.seq.make item $v318
+@v320 kernel.seq.make item "?x"
+@v321 kernel.value.record "predicate" "vertebrate" "terms" $v320 "negative" false "context" "world"
+@v322 kernel.value.record "body" $v319 "head" $v321
+@v323 kernel.seq.make item "vertebrates"
+@v324 kernel.value.record "id" "taxonomy.amphibian.vertebrate" "statement" "Every amphibian is a vertebrate." "rule" $v322 "citations" $v323
+@v325 kernel.seq.make item "?x"
+@v326 kernel.value.record "predicate" "fish" "terms" $v325 "negative" false "context" "world"
+@v327 kernel.seq.make item $v326
+@v328 kernel.seq.make item "?x"
+@v329 kernel.value.record "predicate" "vertebrate" "terms" $v328 "negative" false "context" "world"
+@v330 kernel.value.record "body" $v327 "head" $v329
+@v331 kernel.seq.make item "vertebrates"
+@v332 kernel.value.record "id" "taxonomy.fish.vertebrate" "statement" "Every fish is a vertebrate." "rule" $v330 "citations" $v331
+@v333 kernel.seq.make item "?x"
+@v334 kernel.value.record "predicate" "vertebrate" "terms" $v333 "negative" false "context" "world"
+@v335 kernel.seq.make item $v334
+@v336 kernel.seq.make item "?x"
+@v337 kernel.value.record "predicate" "animal" "terms" $v336 "negative" false "context" "world"
+@v338 kernel.value.record "body" $v335 "head" $v337
+@v339 kernel.seq.make item "vertebrates"
+@v340 kernel.value.record "id" "taxonomy.vertebrate.animal" "statement" "Every vertebrate is a animal." "rule" $v338 "citations" $v339
+@v341 kernel.seq.make item "?x"
+@v342 kernel.value.record "predicate" "dolphin" "terms" $v341 "negative" false "context" "world"
+@v343 kernel.seq.make item $v342
+@v344 kernel.seq.make item "?x"
+@v345 kernel.value.record "predicate" "mammal" "terms" $v344 "negative" false "context" "world"
+@v346 kernel.value.record "body" $v343 "head" $v345
+@v347 kernel.seq.make item "dolphins"
+@v348 kernel.value.record "id" "taxonomy.dolphin.mammal" "statement" "Every dolphin is a mammal." "rule" $v346 "citations" $v347
+@v349 kernel.seq.make item "?x"
+@v350 kernel.value.record "predicate" "insect" "terms" $v349 "negative" false "context" "world"
+@v351 kernel.seq.make item $v350
+@v352 kernel.seq.make item "?x"
+@v353 kernel.value.record "predicate" "invertebrate" "terms" $v352 "negative" false "context" "world"
+@v354 kernel.value.record "body" $v351 "head" $v353
+@v355 kernel.seq.make item "invertebrates"
+@v356 kernel.value.record "id" "taxonomy.insect.invertebrate" "statement" "Every insect is a invertebrate." "rule" $v354 "citations" $v355
+@v357 kernel.seq.make item "?x"
+@v358 kernel.value.record "predicate" "spider" "terms" $v357 "negative" false "context" "world"
+@v359 kernel.seq.make item $v358
+@v360 kernel.seq.make item "?x"
+@v361 kernel.value.record "predicate" "invertebrate" "terms" $v360 "negative" false "context" "world"
+@v362 kernel.value.record "body" $v359 "head" $v361
+@v363 kernel.seq.make item "invertebrates"
+@v364 kernel.value.record "id" "taxonomy.spider.invertebrate" "statement" "Every spider is a invertebrate." "rule" $v362 "citations" $v363
+@v365 kernel.seq.make item "?x"
+@v366 kernel.value.record "predicate" "invertebrate" "terms" $v365 "negative" false "context" "world"
+@v367 kernel.seq.make item $v366
+@v368 kernel.seq.make item "?x"
+@v369 kernel.value.record "predicate" "animal" "terms" $v368 "negative" false "context" "world"
+@v370 kernel.value.record "body" $v367 "head" $v369
+@v371 kernel.seq.make item "invertebrates"
+@v372 kernel.value.record "id" "taxonomy.invertebrate.animal" "statement" "Every invertebrate is a animal." "rule" $v370 "citations" $v371
+@v373 kernel.seq.make item "?x"
+@v374 kernel.value.record "predicate" "tree" "terms" $v373 "negative" false "context" "world"
+@v375 kernel.seq.make item $v374
+@v376 kernel.seq.make item "?x"
+@v377 kernel.value.record "predicate" "plant" "terms" $v376 "negative" false "context" "world"
+@v378 kernel.value.record "body" $v375 "head" $v377
+@v379 kernel.seq.make item "plants"
+@v380 kernel.value.record "id" "taxonomy.tree.plant" "statement" "Every tree is a plant." "rule" $v378 "citations" $v379
+@v381 kernel.seq.make item "?x"
+@v382 kernel.value.record "predicate" "shrub" "terms" $v381 "negative" false "context" "world"
+@v383 kernel.seq.make item $v382
+@v384 kernel.seq.make item "?x"
+@v385 kernel.value.record "predicate" "plant" "terms" $v384 "negative" false "context" "world"
+@v386 kernel.value.record "body" $v383 "head" $v385
+@v387 kernel.seq.make item "plants"
+@v388 kernel.value.record "id" "taxonomy.shrub.plant" "statement" "Every shrub is a plant." "rule" $v386 "citations" $v387
+@v389 kernel.seq.make item "?x"
+@v390 kernel.value.record "predicate" "conifer" "terms" $v389 "negative" false "context" "world"
+@v391 kernel.seq.make item $v390
+@v392 kernel.seq.make item "?x"
+@v393 kernel.value.record "predicate" "plant" "terms" $v392 "negative" false "context" "world"
+@v394 kernel.value.record "body" $v391 "head" $v393
+@v395 kernel.seq.make item "plants"
+@v396 kernel.value.record "id" "taxonomy.conifer.plant" "statement" "Every conifer is a plant." "rule" $v394 "citations" $v395
+@v397 kernel.seq.make item "?x"
+@v398 kernel.value.record "predicate" "square" "terms" $v397 "negative" false "context" "world"
+@v399 kernel.seq.make item $v398
+@v400 kernel.seq.make item "?x"
+@v401 kernel.value.record "predicate" "rectangle" "terms" $v400 "negative" false "context" "world"
+@v402 kernel.value.record "body" $v399 "head" $v401
+@v403 kernel.seq.make item "shapes"
+@v404 kernel.value.record "id" "taxonomy.square.rectangle" "statement" "Every square is a rectangle." "rule" $v402 "citations" $v403
+@v405 kernel.seq.make item "?x"
+@v406 kernel.value.record "predicate" "square" "terms" $v405 "negative" false "context" "world"
+@v407 kernel.seq.make item $v406
+@v408 kernel.seq.make item "?x"
+@v409 kernel.value.record "predicate" "rhombus" "terms" $v408 "negative" false "context" "world"
+@v410 kernel.value.record "body" $v407 "head" $v409
+@v411 kernel.seq.make item "shapes"
+@v412 kernel.value.record "id" "taxonomy.square.rhombus" "statement" "Every square is a rhombus." "rule" $v410 "citations" $v411
+@v413 kernel.seq.make item "?x"
+@v414 kernel.value.record "predicate" "rectangle" "terms" $v413 "negative" false "context" "world"
+@v415 kernel.seq.make item $v414
+@v416 kernel.seq.make item "?x"
+@v417 kernel.value.record "predicate" "quadrilateral" "terms" $v416 "negative" false "context" "world"
+@v418 kernel.value.record "body" $v415 "head" $v417
+@v419 kernel.seq.make item "geometry"
+@v420 kernel.value.record "id" "taxonomy.rectangle.quadrilateral" "statement" "Every rectangle is a quadrilateral." "rule" $v418 "citations" $v419
+@v421 kernel.seq.make item "?x"
+@v422 kernel.value.record "predicate" "rhombus" "terms" $v421 "negative" false "context" "world"
+@v423 kernel.seq.make item $v422
+@v424 kernel.seq.make item "?x"
+@v425 kernel.value.record "predicate" "quadrilateral" "terms" $v424 "negative" false "context" "world"
+@v426 kernel.value.record "body" $v423 "head" $v425
+@v427 kernel.seq.make item "geometry"
+@v428 kernel.value.record "id" "taxonomy.rhombus.quadrilateral" "statement" "Every rhombus is a quadrilateral." "rule" $v426 "citations" $v427
+@v429 kernel.seq.make item "?x"
+@v430 kernel.value.record "predicate" "quadrilateral" "terms" $v429 "negative" false "context" "world"
+@v431 kernel.seq.make item $v430
+@v432 kernel.seq.make item "?x"
+@v433 kernel.value.record "predicate" "polygon" "terms" $v432 "negative" false "context" "world"
+@v434 kernel.value.record "body" $v431 "head" $v433
+@v435 kernel.seq.make item "shapes"
+@v436 kernel.value.record "id" "taxonomy.quadrilateral.polygon" "statement" "Every quadrilateral is a polygon." "rule" $v434 "citations" $v435
+@v437 kernel.seq.make item "?x"
+@v438 kernel.value.record "predicate" "triangle" "terms" $v437 "negative" false "context" "world"
+@v439 kernel.seq.make item $v438
+@v440 kernel.seq.make item "?x"
+@v441 kernel.value.record "predicate" "polygon" "terms" $v440 "negative" false "context" "world"
+@v442 kernel.value.record "body" $v439 "head" $v441
+@v443 kernel.seq.make item "shapes"
+@v444 kernel.value.record "id" "taxonomy.triangle.polygon" "statement" "Every triangle is a polygon." "rule" $v442 "citations" $v443
+@v445 kernel.seq.make item "?x"
+@v446 kernel.value.record "predicate" "polygon" "terms" $v445 "negative" false "context" "world"
+@v447 kernel.seq.make item $v446
+@v448 kernel.seq.make item "?x"
+@v449 kernel.value.record "predicate" "shape" "terms" $v448 "negative" false "context" "world"
+@v450 kernel.value.record "body" $v447 "head" $v449
+@v451 kernel.seq.make item "shapes"
+@v452 kernel.value.record "id" "taxonomy.polygon.shape" "statement" "Every polygon is a shape." "rule" $v450 "citations" $v451
+@v453 kernel.seq.make item "?x"
+@v454 kernel.value.record "predicate" "terrestrial-planet" "terms" $v453 "negative" false "context" "world"
+@v455 kernel.seq.make item $v454
+@v456 kernel.seq.make item "?x"
+@v457 kernel.value.record "predicate" "planet" "terms" $v456 "negative" false "context" "world"
+@v458 kernel.value.record "body" $v455 "head" $v457
+@v459 kernel.seq.make item "planets"
+@v460 kernel.value.record "id" "taxonomy.terrestrial-planet.planet" "statement" "Every terrestrial-planet is a planet." "rule" $v458 "citations" $v459
+@v461 kernel.seq.make item "?x"
+@v462 kernel.value.record "predicate" "solar-planet" "terms" $v461 "negative" false "context" "world"
+@v463 kernel.seq.make item $v462
+@v464 kernel.seq.make item "?x"
+@v465 kernel.value.record "predicate" "planet" "terms" $v464 "negative" false "context" "world"
+@v466 kernel.value.record "body" $v463 "head" $v465
+@v467 kernel.seq.make item "planets"
+@v468 kernel.value.record "id" "taxonomy.solar-planet.planet" "statement" "Every solar-planet is a planet." "rule" $v466 "citations" $v467
+@v469 kernel.seq.make item "?x"
+@v470 kernel.value.record "predicate" "chair" "terms" $v469 "negative" false "context" "world"
+@v471 kernel.seq.make item $v470
+@v472 kernel.seq.make item "?x"
+@v473 kernel.value.record "predicate" "furniture" "terms" $v472 "negative" false "context" "world"
+@v474 kernel.value.record "body" $v471 "head" $v473
+@v475 kernel.seq.make item "chair"
+@v476 kernel.value.record "id" "taxonomy.chair.furniture" "statement" "Every chair is a furniture." "rule" $v474 "citations" $v475
+@v477 kernel.seq.make item "?x"
+@v478 kernel.value.record "predicate" "spoon" "terms" $v477 "negative" false "context" "world"
+@v479 kernel.seq.make item $v478
+@v480 kernel.seq.make item "?x"
+@v481 kernel.value.record "predicate" "utensil" "terms" $v480 "negative" false "context" "world"
+@v482 kernel.value.record "body" $v479 "head" $v481
+@v483 kernel.seq.make item "spoon"
+@v484 kernel.value.record "id" "taxonomy.spoon.utensil" "statement" "Every spoon is a utensil." "rule" $v482 "citations" $v483
+@v485 kernel.seq.make item "?x"
+@v486 kernel.value.record "predicate" "mammal" "terms" $v485 "negative" false "context" "world"
+@v487 kernel.seq.make item $v486
+@v488 kernel.seq.make item "?x" item "mammal"
+@v489 kernel.value.record "predicate" "kind" "terms" $v488 "negative" false "context" "world"
+@v490 kernel.value.record "body" $v487 "head" $v489
+@v491 kernel.seq.make item "vertebrates"
+@v492 kernel.value.record "id" "classification.mammal" "statement" "An instance of mammal can be described by that category." "rule" $v490 "citations" $v491
+@v493 kernel.seq.make item "?x"
+@v494 kernel.value.record "predicate" "vertebrate" "terms" $v493 "negative" false "context" "world"
+@v495 kernel.seq.make item $v494
+@v496 kernel.seq.make item "?x" item "vertebrate"
+@v497 kernel.value.record "predicate" "kind" "terms" $v496 "negative" false "context" "world"
+@v498 kernel.value.record "body" $v495 "head" $v497
+@v499 kernel.seq.make item "vertebrates"
+@v500 kernel.value.record "id" "classification.vertebrate" "statement" "An instance of vertebrate can be described by that category." "rule" $v498 "citations" $v499
+@v501 kernel.seq.make item "?x"
+@v502 kernel.value.record "predicate" "bird" "terms" $v501 "negative" false "context" "world"
+@v503 kernel.seq.make item $v502
+@v504 kernel.seq.make item "?x" item "bird"
+@v505 kernel.value.record "predicate" "kind" "terms" $v504 "negative" false "context" "world"
+@v506 kernel.value.record "body" $v503 "head" $v505
+@v507 kernel.seq.make item "vertebrates"
+@v508 kernel.value.record "id" "classification.bird" "statement" "An instance of bird can be described by that category." "rule" $v506 "citations" $v507
+@v509 kernel.seq.make item "?x"
+@v510 kernel.value.record "predicate" "reptile" "terms" $v509 "negative" false "context" "world"
+@v511 kernel.seq.make item $v510
+@v512 kernel.seq.make item "?x" item "reptile"
+@v513 kernel.value.record "predicate" "kind" "terms" $v512 "negative" false "context" "world"
+@v514 kernel.value.record "body" $v511 "head" $v513
+@v515 kernel.seq.make item "vertebrates"
+@v516 kernel.value.record "id" "classification.reptile" "statement" "An instance of reptile can be described by that category." "rule" $v514 "citations" $v515
+@v517 kernel.seq.make item "?x"
+@v518 kernel.value.record "predicate" "amphibian" "terms" $v517 "negative" false "context" "world"
+@v519 kernel.seq.make item $v518
+@v520 kernel.seq.make item "?x" item "amphibian"
+@v521 kernel.value.record "predicate" "kind" "terms" $v520 "negative" false "context" "world"
+@v522 kernel.value.record "body" $v519 "head" $v521
+@v523 kernel.seq.make item "vertebrates"
+@v524 kernel.value.record "id" "classification.amphibian" "statement" "An instance of amphibian can be described by that category." "rule" $v522 "citations" $v523
+@v525 kernel.seq.make item "?x"
+@v526 kernel.value.record "predicate" "fish" "terms" $v525 "negative" false "context" "world"
+@v527 kernel.seq.make item $v526
+@v528 kernel.seq.make item "?x" item "fish"
+@v529 kernel.value.record "predicate" "kind" "terms" $v528 "negative" false "context" "world"
+@v530 kernel.value.record "body" $v527 "head" $v529
+@v531 kernel.seq.make item "vertebrates"
+@v532 kernel.value.record "id" "classification.fish" "statement" "An instance of fish can be described by that category." "rule" $v530 "citations" $v531
+@v533 kernel.seq.make item "?x"
+@v534 kernel.value.record "predicate" "animal" "terms" $v533 "negative" false "context" "world"
+@v535 kernel.seq.make item $v534
+@v536 kernel.seq.make item "?x" item "animal"
+@v537 kernel.value.record "predicate" "kind" "terms" $v536 "negative" false "context" "world"
+@v538 kernel.value.record "body" $v535 "head" $v537
+@v539 kernel.seq.make item "vertebrates"
+@v540 kernel.value.record "id" "classification.animal" "statement" "An instance of animal can be described by that category." "rule" $v538 "citations" $v539
+@v541 kernel.seq.make item "?x"
+@v542 kernel.value.record "predicate" "dolphin" "terms" $v541 "negative" false "context" "world"
+@v543 kernel.seq.make item $v542
+@v544 kernel.seq.make item "?x" item "dolphin"
+@v545 kernel.value.record "predicate" "kind" "terms" $v544 "negative" false "context" "world"
+@v546 kernel.value.record "body" $v543 "head" $v545
+@v547 kernel.seq.make item "dolphins"
+@v548 kernel.value.record "id" "classification.dolphin" "statement" "An instance of dolphin can be described by that category." "rule" $v546 "citations" $v547
+@v549 kernel.seq.make item "?x"
+@v550 kernel.value.record "predicate" "insect" "terms" $v549 "negative" false "context" "world"
+@v551 kernel.seq.make item $v550
+@v552 kernel.seq.make item "?x" item "insect"
+@v553 kernel.value.record "predicate" "kind" "terms" $v552 "negative" false "context" "world"
+@v554 kernel.value.record "body" $v551 "head" $v553
+@v555 kernel.seq.make item "invertebrates"
+@v556 kernel.value.record "id" "classification.insect" "statement" "An instance of insect can be described by that category." "rule" $v554 "citations" $v555
+@v557 kernel.seq.make item "?x"
+@v558 kernel.value.record "predicate" "invertebrate" "terms" $v557 "negative" false "context" "world"
+@v559 kernel.seq.make item $v558
+@v560 kernel.seq.make item "?x" item "invertebrate"
+@v561 kernel.value.record "predicate" "kind" "terms" $v560 "negative" false "context" "world"
+@v562 kernel.value.record "body" $v559 "head" $v561
+@v563 kernel.seq.make item "invertebrates"
+@v564 kernel.value.record "id" "classification.invertebrate" "statement" "An instance of invertebrate can be described by that category." "rule" $v562 "citations" $v563
+@v565 kernel.seq.make item "?x"
+@v566 kernel.value.record "predicate" "spider" "terms" $v565 "negative" false "context" "world"
+@v567 kernel.seq.make item $v566
+@v568 kernel.seq.make item "?x" item "spider"
+@v569 kernel.value.record "predicate" "kind" "terms" $v568 "negative" false "context" "world"
+@v570 kernel.value.record "body" $v567 "head" $v569
+@v571 kernel.seq.make item "invertebrates"
+@v572 kernel.value.record "id" "classification.spider" "statement" "An instance of spider can be described by that category." "rule" $v570 "citations" $v571
+@v573 kernel.seq.make item "?x"
+@v574 kernel.value.record "predicate" "tree" "terms" $v573 "negative" false "context" "world"
+@v575 kernel.seq.make item $v574
+@v576 kernel.seq.make item "?x" item "tree"
+@v577 kernel.value.record "predicate" "kind" "terms" $v576 "negative" false "context" "world"
+@v578 kernel.value.record "body" $v575 "head" $v577
+@v579 kernel.seq.make item "plants"
+@v580 kernel.value.record "id" "classification.tree" "statement" "An instance of tree can be described by that category." "rule" $v578 "citations" $v579
+@v581 kernel.seq.make item "?x"
+@v582 kernel.value.record "predicate" "plant" "terms" $v581 "negative" false "context" "world"
+@v583 kernel.seq.make item $v582
+@v584 kernel.seq.make item "?x" item "plant"
+@v585 kernel.value.record "predicate" "kind" "terms" $v584 "negative" false "context" "world"
+@v586 kernel.value.record "body" $v583 "head" $v585
+@v587 kernel.seq.make item "plants"
+@v588 kernel.value.record "id" "classification.plant" "statement" "An instance of plant can be described by that category." "rule" $v586 "citations" $v587
+@v589 kernel.seq.make item "?x"
+@v590 kernel.value.record "predicate" "shrub" "terms" $v589 "negative" false "context" "world"
+@v591 kernel.seq.make item $v590
+@v592 kernel.seq.make item "?x" item "shrub"
+@v593 kernel.value.record "predicate" "kind" "terms" $v592 "negative" false "context" "world"
+@v594 kernel.value.record "body" $v591 "head" $v593
+@v595 kernel.seq.make item "plants"
+@v596 kernel.value.record "id" "classification.shrub" "statement" "An instance of shrub can be described by that category." "rule" $v594 "citations" $v595
+@v597 kernel.seq.make item "?x"
+@v598 kernel.value.record "predicate" "conifer" "terms" $v597 "negative" false "context" "world"
+@v599 kernel.seq.make item $v598
+@v600 kernel.seq.make item "?x" item "conifer"
+@v601 kernel.value.record "predicate" "kind" "terms" $v600 "negative" false "context" "world"
+@v602 kernel.value.record "body" $v599 "head" $v601
+@v603 kernel.seq.make item "plants"
+@v604 kernel.value.record "id" "classification.conifer" "statement" "An instance of conifer can be described by that category." "rule" $v602 "citations" $v603
+@v605 kernel.seq.make item "?x"
+@v606 kernel.value.record "predicate" "square" "terms" $v605 "negative" false "context" "world"
+@v607 kernel.seq.make item $v606
+@v608 kernel.seq.make item "?x" item "square"
+@v609 kernel.value.record "predicate" "kind" "terms" $v608 "negative" false "context" "world"
+@v610 kernel.value.record "body" $v607 "head" $v609
+@v611 kernel.seq.make item "shapes"
+@v612 kernel.value.record "id" "classification.square" "statement" "An instance of square can be described by that category." "rule" $v610 "citations" $v611
+@v613 kernel.seq.make item "?x"
+@v614 kernel.value.record "predicate" "rectangle" "terms" $v613 "negative" false "context" "world"
+@v615 kernel.seq.make item $v614
+@v616 kernel.seq.make item "?x" item "rectangle"
+@v617 kernel.value.record "predicate" "kind" "terms" $v616 "negative" false "context" "world"
+@v618 kernel.value.record "body" $v615 "head" $v617
+@v619 kernel.seq.make item "geometry"
+@v620 kernel.value.record "id" "classification.rectangle" "statement" "An instance of rectangle can be described by that category." "rule" $v618 "citations" $v619
+@v621 kernel.seq.make item "?x"
+@v622 kernel.value.record "predicate" "rhombus" "terms" $v621 "negative" false "context" "world"
+@v623 kernel.seq.make item $v622
+@v624 kernel.seq.make item "?x" item "rhombus"
+@v625 kernel.value.record "predicate" "kind" "terms" $v624 "negative" false "context" "world"
+@v626 kernel.value.record "body" $v623 "head" $v625
+@v627 kernel.seq.make item "geometry"
+@v628 kernel.value.record "id" "classification.rhombus" "statement" "An instance of rhombus can be described by that category." "rule" $v626 "citations" $v627
+@v629 kernel.seq.make item "?x"
+@v630 kernel.value.record "predicate" "quadrilateral" "terms" $v629 "negative" false "context" "world"
+@v631 kernel.seq.make item $v630
+@v632 kernel.seq.make item "?x" item "quadrilateral"
+@v633 kernel.value.record "predicate" "kind" "terms" $v632 "negative" false "context" "world"
+@v634 kernel.value.record "body" $v631 "head" $v633
+@v635 kernel.seq.make item "shapes"
+@v636 kernel.value.record "id" "classification.quadrilateral" "statement" "An instance of quadrilateral can be described by that category." "rule" $v634 "citations" $v635
+@v637 kernel.seq.make item "?x"
+@v638 kernel.value.record "predicate" "polygon" "terms" $v637 "negative" false "context" "world"
+@v639 kernel.seq.make item $v638
+@v640 kernel.seq.make item "?x" item "polygon"
+@v641 kernel.value.record "predicate" "kind" "terms" $v640 "negative" false "context" "world"
+@v642 kernel.value.record "body" $v639 "head" $v641
+@v643 kernel.seq.make item "shapes"
+@v644 kernel.value.record "id" "classification.polygon" "statement" "An instance of polygon can be described by that category." "rule" $v642 "citations" $v643
+@v645 kernel.seq.make item "?x"
+@v646 kernel.value.record "predicate" "triangle" "terms" $v645 "negative" false "context" "world"
+@v647 kernel.seq.make item $v646
+@v648 kernel.seq.make item "?x" item "triangle"
+@v649 kernel.value.record "predicate" "kind" "terms" $v648 "negative" false "context" "world"
+@v650 kernel.value.record "body" $v647 "head" $v649
+@v651 kernel.seq.make item "shapes"
+@v652 kernel.value.record "id" "classification.triangle" "statement" "An instance of triangle can be described by that category." "rule" $v650 "citations" $v651
+@v653 kernel.seq.make item "?x"
+@v654 kernel.value.record "predicate" "shape" "terms" $v653 "negative" false "context" "world"
+@v655 kernel.seq.make item $v654
+@v656 kernel.seq.make item "?x" item "shape"
+@v657 kernel.value.record "predicate" "kind" "terms" $v656 "negative" false "context" "world"
+@v658 kernel.value.record "body" $v655 "head" $v657
+@v659 kernel.seq.make item "shapes"
+@v660 kernel.value.record "id" "classification.shape" "statement" "An instance of shape can be described by that category." "rule" $v658 "citations" $v659
+@v661 kernel.seq.make item "?x"
+@v662 kernel.value.record "predicate" "terrestrial-planet" "terms" $v661 "negative" false "context" "world"
+@v663 kernel.seq.make item $v662
+@v664 kernel.seq.make item "?x" item "terrestrial-planet"
+@v665 kernel.value.record "predicate" "kind" "terms" $v664 "negative" false "context" "world"
+@v666 kernel.value.record "body" $v663 "head" $v665
+@v667 kernel.seq.make item "planets"
+@v668 kernel.value.record "id" "classification.terrestrial-planet" "statement" "An instance of terrestrial-planet can be described by that category." "rule" $v666 "citations" $v667
+@v669 kernel.seq.make item "?x"
+@v670 kernel.value.record "predicate" "planet" "terms" $v669 "negative" false "context" "world"
+@v671 kernel.seq.make item $v670
+@v672 kernel.seq.make item "?x" item "planet"
+@v673 kernel.value.record "predicate" "kind" "terms" $v672 "negative" false "context" "world"
+@v674 kernel.value.record "body" $v671 "head" $v673
+@v675 kernel.seq.make item "planets"
+@v676 kernel.value.record "id" "classification.planet" "statement" "An instance of planet can be described by that category." "rule" $v674 "citations" $v675
+@v677 kernel.seq.make item "?x"
+@v678 kernel.value.record "predicate" "solar-planet" "terms" $v677 "negative" false "context" "world"
+@v679 kernel.seq.make item $v678
+@v680 kernel.seq.make item "?x" item "solar-planet"
+@v681 kernel.value.record "predicate" "kind" "terms" $v680 "negative" false "context" "world"
+@v682 kernel.value.record "body" $v679 "head" $v681
+@v683 kernel.seq.make item "planets"
+@v684 kernel.value.record "id" "classification.solar-planet" "statement" "An instance of solar-planet can be described by that category." "rule" $v682 "citations" $v683
+@v685 kernel.seq.make item "?x"
+@v686 kernel.value.record "predicate" "chair" "terms" $v685 "negative" false "context" "world"
+@v687 kernel.seq.make item $v686
+@v688 kernel.seq.make item "?x" item "chair"
+@v689 kernel.value.record "predicate" "kind" "terms" $v688 "negative" false "context" "world"
+@v690 kernel.value.record "body" $v687 "head" $v689
+@v691 kernel.seq.make item "chair"
+@v692 kernel.value.record "id" "classification.chair" "statement" "An instance of chair can be described by that category." "rule" $v690 "citations" $v691
+@v693 kernel.seq.make item "?x"
+@v694 kernel.value.record "predicate" "furniture" "terms" $v693 "negative" false "context" "world"
+@v695 kernel.seq.make item $v694
+@v696 kernel.seq.make item "?x" item "furniture"
+@v697 kernel.value.record "predicate" "kind" "terms" $v696 "negative" false "context" "world"
+@v698 kernel.value.record "body" $v695 "head" $v697
+@v699 kernel.seq.make item "chair"
+@v700 kernel.value.record "id" "classification.furniture" "statement" "An instance of furniture can be described by that category." "rule" $v698 "citations" $v699
+@v701 kernel.seq.make item "?x"
+@v702 kernel.value.record "predicate" "spoon" "terms" $v701 "negative" false "context" "world"
+@v703 kernel.seq.make item $v702
+@v704 kernel.seq.make item "?x" item "spoon"
+@v705 kernel.value.record "predicate" "kind" "terms" $v704 "negative" false "context" "world"
+@v706 kernel.value.record "body" $v703 "head" $v705
+@v707 kernel.seq.make item "spoon"
+@v708 kernel.value.record "id" "classification.spoon" "statement" "An instance of spoon can be described by that category." "rule" $v706 "citations" $v707
+@v709 kernel.seq.make item "?x"
+@v710 kernel.value.record "predicate" "utensil" "terms" $v709 "negative" false "context" "world"
+@v711 kernel.seq.make item $v710
+@v712 kernel.seq.make item "?x" item "utensil"
+@v713 kernel.value.record "predicate" "kind" "terms" $v712 "negative" false "context" "world"
+@v714 kernel.value.record "body" $v711 "head" $v713
+@v715 kernel.seq.make item "spoon"
+@v716 kernel.value.record "id" "classification.utensil" "statement" "An instance of utensil can be described by that category." "rule" $v714 "citations" $v715
+@v717 kernel.seq.make item "?x" item "?y"
+@v718 kernel.value.record "predicate" "kind" "terms" $v717 "negative" false "context" "world"
+@v719 kernel.seq.make item "?y" item "?z"
+@v720 kernel.value.record "predicate" "kind" "terms" $v719 "negative" false "context" "world"
+@v721 kernel.seq.make item $v718 item $v720
+@v722 kernel.seq.make item "?x" item "?z"
+@v723 kernel.value.record "predicate" "kind" "terms" $v722 "negative" false "context" "world"
+@v724 kernel.value.record "body" $v721 "head" $v723
+@v725 kernel.seq.make item "shapes" item "vertebrates"
+@v726 kernel.value.record "id" "classification.inheritance" "statement" "Kind-of classification composes across categories." "rule" $v724 "citations" $v725
+@v727 kernel.seq.make item "?x"
+@v728 kernel.value.record "predicate" "dolphin" "terms" $v727 "negative" false "context" "world"
+@v729 kernel.seq.make item $v728
+@v730 kernel.seq.make item "?x"
+@v731 kernel.value.record "predicate" "fish" "terms" $v730 "negative" true "context" "world"
+@v732 kernel.value.record "body" $v729 "head" $v731
+@v733 kernel.seq.make item "dolphins"
+@v734 kernel.value.record "id" "dolphin.not-fish" "statement" "A dolphin is not a fish." "rule" $v732 "citations" $v733
+@v735 kernel.seq.make item "?x"
+@v736 kernel.value.record "predicate" "invertebrate" "terms" $v735 "negative" false "context" "world"
+@v737 kernel.seq.make item $v736
+@v738 kernel.seq.make item "?x"
+@v739 kernel.value.record "predicate" "vertebrate" "terms" $v738 "negative" true "context" "world"
+@v740 kernel.value.record "body" $v737 "head" $v739
+@v741 kernel.seq.make item "invertebrates"
+@v742 kernel.value.record "id" "invertebrate.not-vertebrate" "statement" "An invertebrate is not a vertebrate." "rule" $v740 "citations" $v741
+@v743 kernel.seq.make item "?x"
+@v744 kernel.value.record "predicate" "solar-planet" "terms" $v743 "negative" false "context" "world"
+@v745 kernel.seq.make item $v744
+@v746 kernel.seq.make item "?x" item "sun"
+@v747 kernel.value.record "predicate" "orbit" "terms" $v746 "negative" false "context" "world"
+@v748 kernel.value.record "body" $v745 "head" $v747
+@v749 kernel.seq.make item "orbits"
+@v750 kernel.value.record "id" "solar-planet.orbit" "statement" "Each solar-system planet in this vocabulary orbits the Sun." "rule" $v748 "citations" $v749
+@v751 kernel.seq.make item "?x"
+@v752 kernel.value.record "predicate" "triangle" "terms" $v751 "negative" false "context" "world"
+@v753 kernel.seq.make item $v752
+@v754 kernel.seq.make item "?x" item "side" item "3"
+@v755 kernel.value.record "predicate" "measure_count" "terms" $v754 "negative" false "context" "world"
+@v756 kernel.value.record "body" $v753 "head" $v755
+@v757 kernel.seq.make item "shapes"
+@v758 kernel.value.record "id" "geometry.triangle.sides-instance" "statement" "triangle instances have 3 sides." "rule" $v756 "citations" $v757
+@v759 kernel.seq.make item "?x"
+@v760 kernel.value.record "predicate" "quadrilateral" "terms" $v759 "negative" false "context" "world"
+@v761 kernel.seq.make item $v760
+@v762 kernel.seq.make item "?x" item "side" item "4"
+@v763 kernel.value.record "predicate" "measure_count" "terms" $v762 "negative" false "context" "world"
+@v764 kernel.value.record "body" $v761 "head" $v763
+@v765 kernel.seq.make item "shapes"
+@v766 kernel.value.record "id" "geometry.quadrilateral.sides-instance" "statement" "quadrilateral instances have 4 sides." "rule" $v764 "citations" $v765
+@v767 kernel.seq.make item "?x" item "?y"
+@v768 kernel.value.record "predicate" "kind" "terms" $v767 "negative" false "context" "world"
+@v769 kernel.seq.make item "?y" item "side" item "?n"
+@v770 kernel.value.record "predicate" "measure_count" "terms" $v769 "negative" false "context" "world"
+@v771 kernel.seq.make item $v768 item $v770
+@v772 kernel.seq.make item "?x" item "side" item "?n"
+@v773 kernel.value.record "predicate" "measure_count" "terms" $v772 "negative" false "context" "world"
+@v774 kernel.value.record "body" $v771 "head" $v773
+@v775 kernel.seq.make item "shapes"
+@v776 kernel.value.record "id" "geometry.inherited-sides" "statement" "A subtype inherits the side count of its supertype." "rule" $v774 "citations" $v775
+@v777 kernel.seq.make item "?city" item "?country"
+@v778 kernel.value.record "predicate" "capital_of" "terms" $v777 "negative" false "context" "world"
+@v779 kernel.seq.make item "?country"
+@v780 kernel.value.record "predicate" "country" "terms" $v779 "negative" false "context" "world"
+@v781 kernel.seq.make item $v778 item $v780
+@v782 kernel.seq.make item "?city"
+@v783 kernel.value.record "predicate" "city" "terms" $v782 "negative" false "context" "world"
+@v784 kernel.value.record "body" $v781 "head" $v783
+@v785 kernel.seq.make item "france" item "italy"
+@v786 kernel.value.record "id" "geography.capital-city" "statement" "A national capital named by this country relation is a city." "rule" $v784 "citations" $v785
+@v787 kernel.seq.make item "?city" item "?country"
+@v788 kernel.value.record "predicate" "capital_of" "terms" $v787 "negative" false "context" "world"
+@v789 kernel.seq.make item "?country"
+@v790 kernel.value.record "predicate" "country" "terms" $v789 "negative" false "context" "world"
+@v791 kernel.seq.make item $v788 item $v790
+@v792 kernel.seq.make item "?city" item "?country"
+@v793 kernel.value.record "predicate" "in" "terms" $v792 "negative" false "context" "world"
+@v794 kernel.value.record "body" $v791 "head" $v793
+@v795 kernel.seq.make item "france" item "italy"
+@v796 kernel.value.record "id" "geography.capital-location" "statement" "The named national capital is located in its country." "rule" $v794 "citations" $v795
+@v797 kernel.seq.make item "?x"
+@v798 kernel.value.record "predicate" "city" "terms" $v797 "negative" false "context" "world"
+@v799 kernel.seq.make item $v798
+@v800 kernel.seq.make item "?x" item "city"
+@v801 kernel.value.record "predicate" "kind" "terms" $v800 "negative" false "context" "world"
+@v802 kernel.value.record "body" $v799 "head" $v801
+@v803 kernel.seq.make item "france" item "italy"
+@v804 kernel.value.record "id" "classification.city" "statement" "An instance of city can be described by that category." "rule" $v802 "citations" $v803
+@v805 kernel.seq.make item "?x"
+@v806 kernel.value.record "predicate" "country" "terms" $v805 "negative" false "context" "world"
+@v807 kernel.seq.make item $v806
+@v808 kernel.seq.make item "?x" item "country"
+@v809 kernel.value.record "predicate" "kind" "terms" $v808 "negative" false "context" "world"
+@v810 kernel.value.record "body" $v807 "head" $v809
+@v811 kernel.seq.make item "france" item "italy"
+@v812 kernel.value.record "id" "classification.country" "statement" "An instance of country can be described by that category." "rule" $v810 "citations" $v811
+@v813 kernel.seq.make item "?x"
+@v814 kernel.value.record "predicate" "star" "terms" $v813 "negative" false "context" "world"
+@v815 kernel.seq.make item $v814
+@v816 kernel.seq.make item "?x" item "star"
+@v817 kernel.value.record "predicate" "kind" "terms" $v816 "negative" false "context" "world"
+@v818 kernel.value.record "body" $v815 "head" $v817
+@v819 kernel.seq.make item "sun"
+@v820 kernel.value.record "id" "classification.star" "statement" "An instance of star can be described by that category." "rule" $v818 "citations" $v819
+@v821 kernel.seq.make item "?x"
+@v822 kernel.value.record "predicate" "satellite" "terms" $v821 "negative" false "context" "world"
+@v823 kernel.seq.make item $v822
+@v824 kernel.seq.make item "?x" item "satellite"
+@v825 kernel.value.record "predicate" "kind" "terms" $v824 "negative" false "context" "world"
+@v826 kernel.value.record "body" $v823 "head" $v825
+@v827 kernel.seq.make item "orbits"
+@v828 kernel.value.record "id" "classification.satellite" "statement" "An instance of satellite can be described by that category." "rule" $v826 "citations" $v827
+@v829 kernel.seq.make item "?x"
+@v830 kernel.value.record "predicate" "dwarf-planet" "terms" $v829 "negative" false "context" "world"
+@v831 kernel.seq.make item $v830
+@v832 kernel.seq.make item "?x" item "dwarf-planet"
+@v833 kernel.value.record "predicate" "kind" "terms" $v832 "negative" false "context" "world"
+@v834 kernel.value.record "body" $v831 "head" $v833
+@v835 kernel.seq.make item "planets"
+@v836 kernel.value.record "id" "classification.dwarf-planet" "statement" "An instance of dwarf-planet can be described by that category." "rule" $v834 "citations" $v835
+@v837 kernel.seq.make item "?x"
+@v838 kernel.value.record "predicate" "solid" "terms" $v837 "negative" false "context" "world"
+@v839 kernel.seq.make item $v838
+@v840 kernel.seq.make item "?x" item "solid"
+@v841 kernel.value.record "predicate" "kind" "terms" $v840 "negative" false "context" "world"
+@v842 kernel.value.record "body" $v839 "head" $v841
+@v843 kernel.seq.make item "water"
+@v844 kernel.value.record "id" "classification.solid" "statement" "An instance of solid can be described by that category." "rule" $v842 "citations" $v843
+@v845 kernel.seq.make item "?x"
+@v846 kernel.value.record "predicate" "liquid" "terms" $v845 "negative" false "context" "world"
+@v847 kernel.seq.make item $v846
+@v848 kernel.seq.make item "?x" item "liquid"
+@v849 kernel.value.record "predicate" "kind" "terms" $v848 "negative" false "context" "world"
+@v850 kernel.value.record "body" $v847 "head" $v849
+@v851 kernel.seq.make item "water"
+@v852 kernel.value.record "id" "classification.liquid" "statement" "An instance of liquid can be described by that category." "rule" $v850 "citations" $v851
+@v853 kernel.seq.make item "?x"
+@v854 kernel.value.record "predicate" "gas" "terms" $v853 "negative" false "context" "world"
+@v855 kernel.seq.make item $v854
+@v856 kernel.seq.make item "?x" item "gas"
+@v857 kernel.value.record "predicate" "kind" "terms" $v856 "negative" false "context" "world"
+@v858 kernel.value.record "body" $v855 "head" $v857
+@v859 kernel.seq.make item "water"
+@v860 kernel.value.record "id" "classification.gas" "statement" "An instance of gas can be described by that category." "rule" $v858 "citations" $v859
+@v861 kernel.seq.make item $v300 item $v308 item $v316 item $v324 item $v332 item $v340 item $v348 item $v356 item $v364 item $v372 item $v380 item $v388 item $v396 item $v404 item $v412 item $v420 item $v428 item $v436 item $v444 item $v452 item $v460 item $v468 item $v476 item $v484 item $v492 item $v500 item $v508 item $v516 item $v524 item $v532 item $v540 item $v548 item $v556 item $v564 item $v572 item $v580 item $v588 item $v596 item $v604 item $v612 item $v620 item $v628 item $v636 item $v644 item $v652 item $v660 item $v668 item $v676 item $v684 item $v692 item $v700 item $v708 item $v716 item $v726 item $v734 item $v742 item $v750 item $v758 item $v766 item $v776 item $v786 item $v796 item $v804 item $v812 item $v820 item $v828 item $v836 item $v844 item $v852 item $v860
+@v862 kernel.value.record "category" "N" "surface" "mammal" "value" "mammal"
+@v863 kernel.value.record "category" "N" "surface" "mammals" "value" "mammal"
+@v864 kernel.value.record "category" "N" "surface" "vertebrate" "value" "vertebrate"
+@v865 kernel.value.record "category" "N" "surface" "vertebrates" "value" "vertebrate"
+@v866 kernel.value.record "category" "N" "surface" "bird" "value" "bird"
+@v867 kernel.value.record "category" "N" "surface" "birds" "value" "bird"
+@v868 kernel.value.record "category" "N" "surface" "reptile" "value" "reptile"
+@v869 kernel.value.record "category" "N" "surface" "reptiles" "value" "reptile"
+@v870 kernel.value.record "category" "N" "surface" "amphibian" "value" "amphibian"
+@v871 kernel.value.record "category" "N" "surface" "amphibians" "value" "amphibian"
+@v872 kernel.value.record "category" "N" "surface" "fish" "value" "fish"
+@v873 kernel.value.record "category" "N" "surface" "animal" "value" "animal"
+@v874 kernel.value.record "category" "N" "surface" "animals" "value" "animal"
+@v875 kernel.value.record "category" "N" "surface" "dolphin" "value" "dolphin"
+@v876 kernel.value.record "category" "N" "surface" "dolphins" "value" "dolphin"
+@v877 kernel.value.record "category" "N" "surface" "insect" "value" "insect"
+@v878 kernel.value.record "category" "N" "surface" "insects" "value" "insect"
+@v879 kernel.value.record "category" "N" "surface" "invertebrate" "value" "invertebrate"
+@v880 kernel.value.record "category" "N" "surface" "invertebrates" "value" "invertebrate"
+@v881 kernel.value.record "category" "N" "surface" "spider" "value" "spider"
+@v882 kernel.value.record "category" "N" "surface" "spiders" "value" "spider"
+@v883 kernel.value.record "category" "N" "surface" "tree" "value" "tree"
+@v884 kernel.value.record "category" "N" "surface" "trees" "value" "tree"
+@v885 kernel.value.record "category" "N" "surface" "plant" "value" "plant"
+@v886 kernel.value.record "category" "N" "surface" "plants" "value" "plant"
+@v887 kernel.value.record "category" "N" "surface" "shrub" "value" "shrub"
+@v888 kernel.value.record "category" "N" "surface" "shrubs" "value" "shrub"
+@v889 kernel.value.record "category" "N" "surface" "conifer" "value" "conifer"
+@v890 kernel.value.record "category" "N" "surface" "conifers" "value" "conifer"
+@v891 kernel.value.record "category" "N" "surface" "square" "value" "square"
+@v892 kernel.value.record "category" "N" "surface" "squares" "value" "square"
+@v893 kernel.value.record "category" "N" "surface" "rectangle" "value" "rectangle"
+@v894 kernel.value.record "category" "N" "surface" "rectangles" "value" "rectangle"
+@v895 kernel.value.record "category" "N" "surface" "rhombus" "value" "rhombus"
+@v896 kernel.value.record "category" "N" "surface" "rhombuses" "value" "rhombus"
+@v897 kernel.value.record "category" "N" "surface" "quadrilateral" "value" "quadrilateral"
+@v898 kernel.value.record "category" "N" "surface" "quadrilaterals" "value" "quadrilateral"
+@v899 kernel.value.record "category" "N" "surface" "polygon" "value" "polygon"
+@v900 kernel.value.record "category" "N" "surface" "polygons" "value" "polygon"
+@v901 kernel.value.record "category" "N" "surface" "triangle" "value" "triangle"
+@v902 kernel.value.record "category" "N" "surface" "triangles" "value" "triangle"
+@v903 kernel.value.record "category" "N" "surface" "shape" "value" "shape"
+@v904 kernel.value.record "category" "N" "surface" "shapes" "value" "shape"
+@v905 kernel.value.record "category" "N" "surface" "terrestrial-planet" "value" "terrestrial-planet"
+@v906 kernel.value.record "category" "N" "surface" "terrestrial-planets" "value" "terrestrial-planet"
+@v907 kernel.value.record "category" "N" "surface" "planet" "value" "planet"
+@v908 kernel.value.record "category" "N" "surface" "planets" "value" "planet"
+@v909 kernel.value.record "category" "N" "surface" "solar-planet" "value" "solar-planet"
+@v910 kernel.value.record "category" "N" "surface" "solar-planets" "value" "solar-planet"
+@v911 kernel.value.record "category" "N" "surface" "chair" "value" "chair"
+@v912 kernel.value.record "category" "N" "surface" "chairs" "value" "chair"
+@v913 kernel.value.record "category" "N" "surface" "furniture" "value" "furniture"
+@v914 kernel.value.record "category" "N" "surface" "spoon" "value" "spoon"
+@v915 kernel.value.record "category" "N" "surface" "spoons" "value" "spoon"
+@v916 kernel.value.record "category" "N" "surface" "utensil" "value" "utensil"
+@v917 kernel.value.record "category" "N" "surface" "utensils" "value" "utensil"
+@v918 kernel.value.record "category" "N" "surface" "star" "value" "star"
+@v919 kernel.value.record "category" "N" "surface" "stars" "value" "star"
+@v920 kernel.value.record "category" "N" "surface" "satellite" "value" "satellite"
+@v921 kernel.value.record "category" "N" "surface" "satellites" "value" "satellite"
+@v922 kernel.value.record "category" "N" "surface" "dwarf-planet" "value" "dwarf-planet"
+@v923 kernel.value.record "category" "N" "surface" "dwarf-planets" "value" "dwarf-planet"
+@v924 kernel.value.record "category" "N" "surface" "solid" "value" "solid"
+@v925 kernel.value.record "category" "N" "surface" "solids" "value" "solid"
+@v926 kernel.value.record "category" "N" "surface" "liquid" "value" "liquid"
+@v927 kernel.value.record "category" "N" "surface" "liquids" "value" "liquid"
+@v928 kernel.value.record "category" "N" "surface" "gas" "value" "gas"
+@v929 kernel.value.record "category" "N" "surface" "gases" "value" "gas"
+@v930 kernel.value.record "category" "N" "surface" "unit" "value" "unit"
+@v931 kernel.value.record "category" "N" "surface" "units" "value" "unit"
+@v932 kernel.value.record "category" "N" "surface" "side" "value" "side"
+@v933 kernel.value.record "category" "N" "surface" "sides" "value" "side"
+@v934 kernel.value.record "category" "N" "surface" "second" "value" "second"
+@v935 kernel.value.record "category" "N" "surface" "seconds" "value" "second"
+@v936 kernel.value.record "category" "N" "surface" "minute" "value" "minute"
+@v937 kernel.value.record "category" "N" "surface" "minutes" "value" "minute"
+@v938 kernel.value.record "category" "N" "surface" "hour" "value" "hour"
+@v939 kernel.value.record "category" "N" "surface" "hours" "value" "hour"
+@v940 kernel.value.record "category" "N" "surface" "day" "value" "day"
+@v941 kernel.value.record "category" "N" "surface" "days" "value" "day"
+@v942 kernel.value.record "category" "N" "surface" "metre" "value" "metre"
+@v943 kernel.value.record "category" "N" "surface" "metres" "value" "metre"
+@v944 kernel.value.record "category" "N" "surface" "kilogram" "value" "kilogram"
+@v945 kernel.value.record "category" "N" "surface" "kilograms" "value" "kilogram"
+@v946 kernel.value.record "category" "V" "surface" "orbit" "value" "orbit"
+@v947 kernel.value.record "category" "V" "surface" "orbits" "value" "orbit"
+@v948 kernel.value.record "category" "V" "surface" "measure" "value" "measure"
+@v949 kernel.value.record "category" "V" "surface" "measures" "value" "measure"
+@v950 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "mercury" "value" "mercury"
+@v951 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "venus" "value" "venus"
+@v952 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "earth" "value" "earth"
+@v953 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "mars" "value" "mars"
+@v954 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "jupiter" "value" "jupiter"
+@v955 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "saturn" "value" "saturn"
+@v956 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "uranus" "value" "uranus"
+@v957 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "neptune" "value" "neptune"
+@v958 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "sun" "value" "sun"
+@v959 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "moon" "value" "moon"
+@v960 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "pluto" "value" "pluto"
+@v961 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "ice" "value" "ice"
+@v962 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "water-vapor" "value" "water-vapor"
+@v963 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "liquid-water" "value" "liquid-water"
+@v964 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "france" "value" "france"
+@v965 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "paris" "value" "paris"
+@v966 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "italy" "value" "italy"
+@v967 kernel.value.record "category" "ELEMENTARY_NAME" "surface" "rome" "value" "rome"
+@v968 kernel.value.record "category" "N" "surface" "city" "value" "city"
+@v969 kernel.value.record "category" "N" "surface" "cities" "value" "city"
+@v970 kernel.value.record "category" "N" "surface" "country" "value" "country"
+@v971 kernel.value.record "category" "N" "surface" "countries" "value" "country"
+@v972 kernel.seq.make item $v862 item $v863 item $v864 item $v865 item $v866 item $v867 item $v868 item $v869 item $v870 item $v871 item $v872 item $v873 item $v874 item $v875 item $v876 item $v877 item $v878 item $v879 item $v880 item $v881 item $v882 item $v883 item $v884 item $v885 item $v886 item $v887 item $v888 item $v889 item $v890 item $v891 item $v892 item $v893 item $v894 item $v895 item $v896 item $v897 item $v898 item $v899 item $v900 item $v901 item $v902 item $v903 item $v904 item $v905 item $v906 item $v907 item $v908 item $v909 item $v910 item $v911 item $v912 item $v913 item $v914 item $v915 item $v916 item $v917 item $v918 item $v919 item $v920 item $v921 item $v922 item $v923 item $v924 item $v925 item $v926 item $v927 item $v928 item $v929 item $v930 item $v931 item $v932 item $v933 item $v934 item $v935 item $v936 item $v937 item $v938 item $v939 item $v940 item $v941 item $v942 item $v943 item $v944 item $v945 item $v946 item $v947 item $v948 item $v949 item $v950 item $v951 item $v952 item $v953 item $v954 item $v955 item $v956 item $v957 item $v958 item $v959 item $v960 item $v961 item $v962 item $v963 item $v964 item $v965 item $v966 item $v967 item $v968 item $v969 item $v970 item $v971
+@v973 kernel.value.record "lex" "ELEMENTARY_NAME"
+@v974 kernel.seq.make item $v973
+@v975 kernel.value.record "id" "elementary.np.name" "lhs" "NP" "rhs" $v974 "action" "en.np.24.semantics"
+@v976 kernel.value.record "literal" "what"
+@v977 kernel.seq.make item $v976 item "COP" item "ElementaryReference"
+@v978 kernel.value.record "id" "elementary.question.definition-name" "lhs" "Question" "rhs" $v977 "action" "elementary.definition-name"
+@v979 kernel.value.record "literal" "what"
+@v980 kernel.seq.make item $v979 item "COP" item "DET" item "N"
+@v981 kernel.value.record "id" "elementary.question.definition-category" "lhs" "Question" "rhs" $v980 "action" "elementary.definition-category"
+@v982 kernel.value.record "literal" "how"
+@v983 kernel.value.record "literal" "many"
+@v984 kernel.value.record "literal" "in"
+@v985 kernel.seq.make item $v982 item $v983 item "N" item "COP" item $v984 item "ElementaryReference"
+@v986 kernel.value.record "id" "elementary.question.measure-count" "lhs" "Question" "rhs" $v985 "action" "elementary.measure-count"
+@v987 kernel.value.record "class" "name"
+@v988 kernel.seq.make item $v987
+@v989 kernel.value.record "id" "elementary.reference.name" "lhs" "ElementaryReference" "rhs" $v988 "action" "en.np.24.semantics"
+@v990 kernel.value.record "lex" "ELEMENTARY_NAME"
+@v991 kernel.seq.make item $v990
+@v992 kernel.value.record "id" "elementary.reference.lexical-name" "lhs" "ElementaryReference" "rhs" $v991 "action" "en.np.24.semantics"
+@v993 kernel.seq.make item "DEF" item "N"
+@v994 kernel.value.record "id" "elementary.reference.definite" "lhs" "ElementaryReference" "rhs" $v993 "action" "en.np.26.semantics"
+@v995 kernel.value.record "literal" "how"
+@v996 kernel.value.record "literal" "many"
+@v997 kernel.value.record "literal" "in"
+@v998 kernel.seq.make item $v995 item $v996 item "N" item "COP" item $v997 item "DET" item "N"
+@v999 kernel.value.record "id" "elementary.question.measure-count-category" "lhs" "Question" "rhs" $v998 "action" "elementary.measure-count-category"
+@v1000 kernel.value.record "literal" "capital"
+@v1001 kernel.value.record "literal" "of"
+@v1002 kernel.seq.make item $v1000 item $v1001
+@v1003 kernel.value.record "id" "elementary.prep.capital" "lhs" "Prep" "rhs" $v1002 "action" "elementary.capital-relation"
+@v1004 kernel.seq.make item $v975 item $v978 item $v981 item $v986 item $v989 item $v992 item $v994 item $v999 item $v1003
+@v1005 kernel.value.record "lexicon" $v972 "productions" $v1004
+@v1006 kernel.value.record "id" "elementary.definition-name" "source" &source0
+@v1007 kernel.value.record "id" "elementary.definition-category" "source" &source1
+@v1008 kernel.value.record "id" "elementary.definition" "source" &source2
+@v1009 kernel.value.record "id" "elementary.measure-count" "source" &source3
+@v1010 kernel.value.record "id" "elementary.measure-count-category" "source" &source4
+@v1011 kernel.value.record "id" "elementary.capital-relation" "source" &source5
+@v1012 kernel.seq.make item $v1006 item $v1007 item $v1008 item $v1009 item $v1010 item $v1011
+@v1013 kernel.value.record "schema" "sxlm.elementary-teaching.v1" "id" "elementary-knowledge" "version" "1" "origin" $v0 "sources" $v17 "domains" $v18 "limitations" $v19 "facts" $v292 "rules" $v861 "grammar" $v1005 "policies" $v1012
+@output result $v1013
+

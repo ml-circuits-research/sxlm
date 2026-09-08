@@ -1,0 +1,8 @@
+@input item any
+@input with object
+@histogram kernel.value.get value $with key "histogram" fallback null
+@row kernel.seq.find items $histogram key "value" value $item fallback null
+@count0 kernel.value.get value $row key "count" fallback 0
+@count data.number value $count0
+@value kernel.number.unary operation "log1p" value $count
+@output result $value

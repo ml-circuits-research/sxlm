@@ -1,0 +1,129 @@
+@v0 kernel.value.record "kind" "authored-bootstrap-migration" "source" "earlier english-bootstrap pack" "independent" false
+@v1 kernel.seq.make item "?x" item "?y"
+@v2 kernel.value.record "predicate" "north_of" "terms" $v1 "negative" false "context" "world"
+@v3 kernel.seq.make item $v2
+@v4 kernel.seq.make item "?y" item "?x"
+@v5 kernel.value.record "predicate" "south_of" "terms" $v4 "negative" false "context" "world"
+@v6 kernel.value.record "body" $v3 "head" $v5
+@v7 kernel.seq.make item "?x" item "?y"
+@v8 kernel.value.record "predicate" "south_of" "terms" $v7 "negative" false "context" "world"
+@v9 kernel.seq.make item $v8
+@v10 kernel.seq.make item "?y" item "?x"
+@v11 kernel.value.record "predicate" "north_of" "terms" $v10 "negative" false "context" "world"
+@v12 kernel.value.record "body" $v9 "head" $v11
+@v13 kernel.seq.make item "?x" item "?y"
+@v14 kernel.value.record "predicate" "east_of" "terms" $v13 "negative" false "context" "world"
+@v15 kernel.seq.make item $v14
+@v16 kernel.seq.make item "?y" item "?x"
+@v17 kernel.value.record "predicate" "west_of" "terms" $v16 "negative" false "context" "world"
+@v18 kernel.value.record "body" $v15 "head" $v17
+@v19 kernel.seq.make item "?x" item "?y"
+@v20 kernel.value.record "predicate" "west_of" "terms" $v19 "negative" false "context" "world"
+@v21 kernel.seq.make item $v20
+@v22 kernel.seq.make item "?y" item "?x"
+@v23 kernel.value.record "predicate" "east_of" "terms" $v22 "negative" false "context" "world"
+@v24 kernel.value.record "body" $v21 "head" $v23
+@v25 kernel.seq.make item "?x" item "?y"
+@v26 kernel.value.record "predicate" "older_than" "terms" $v25 "negative" false "context" "world"
+@v27 kernel.seq.make item $v26
+@v28 kernel.seq.make item "?y" item "?x"
+@v29 kernel.value.record "predicate" "younger_than" "terms" $v28 "negative" false "context" "world"
+@v30 kernel.value.record "body" $v27 "head" $v29
+@v31 kernel.seq.make item "?x" item "?y"
+@v32 kernel.value.record "predicate" "younger_than" "terms" $v31 "negative" false "context" "world"
+@v33 kernel.seq.make item $v32
+@v34 kernel.seq.make item "?y" item "?x"
+@v35 kernel.value.record "predicate" "older_than" "terms" $v34 "negative" false "context" "world"
+@v36 kernel.value.record "body" $v33 "head" $v35
+@v37 kernel.seq.make item "?x" item "?y"
+@v38 kernel.value.record "predicate" "parent_of" "terms" $v37 "negative" false "context" "world"
+@v39 kernel.seq.make item $v38
+@v40 kernel.seq.make item "?y" item "?x"
+@v41 kernel.value.record "predicate" "child_of" "terms" $v40 "negative" false "context" "world"
+@v42 kernel.value.record "body" $v39 "head" $v41
+@v43 kernel.seq.make item "?x" item "?y"
+@v44 kernel.value.record "predicate" "child_of" "terms" $v43 "negative" false "context" "world"
+@v45 kernel.seq.make item $v44
+@v46 kernel.seq.make item "?y" item "?x"
+@v47 kernel.value.record "predicate" "parent_of" "terms" $v46 "negative" false "context" "world"
+@v48 kernel.value.record "body" $v45 "head" $v47
+@v49 kernel.seq.make item "?x" item "?y"
+@v50 kernel.value.record "predicate" "north_of" "terms" $v49 "negative" false "context" "world"
+@v51 kernel.seq.make item "?y" item "?z"
+@v52 kernel.value.record "predicate" "north_of" "terms" $v51 "negative" false "context" "world"
+@v53 kernel.seq.make item $v50 item $v52
+@v54 kernel.seq.make item "?x" item "?z"
+@v55 kernel.value.record "predicate" "north_of" "terms" $v54 "negative" false "context" "world"
+@v56 kernel.value.record "body" $v53 "head" $v55
+@v57 kernel.seq.make item "?x" item "?y"
+@v58 kernel.value.record "predicate" "south_of" "terms" $v57 "negative" false "context" "world"
+@v59 kernel.seq.make item "?y" item "?z"
+@v60 kernel.value.record "predicate" "south_of" "terms" $v59 "negative" false "context" "world"
+@v61 kernel.seq.make item $v58 item $v60
+@v62 kernel.seq.make item "?x" item "?z"
+@v63 kernel.value.record "predicate" "south_of" "terms" $v62 "negative" false "context" "world"
+@v64 kernel.value.record "body" $v61 "head" $v63
+@v65 kernel.seq.make item "?x" item "?y"
+@v66 kernel.value.record "predicate" "east_of" "terms" $v65 "negative" false "context" "world"
+@v67 kernel.seq.make item "?y" item "?z"
+@v68 kernel.value.record "predicate" "east_of" "terms" $v67 "negative" false "context" "world"
+@v69 kernel.seq.make item $v66 item $v68
+@v70 kernel.seq.make item "?x" item "?z"
+@v71 kernel.value.record "predicate" "east_of" "terms" $v70 "negative" false "context" "world"
+@v72 kernel.value.record "body" $v69 "head" $v71
+@v73 kernel.seq.make item "?x" item "?y"
+@v74 kernel.value.record "predicate" "west_of" "terms" $v73 "negative" false "context" "world"
+@v75 kernel.seq.make item "?y" item "?z"
+@v76 kernel.value.record "predicate" "west_of" "terms" $v75 "negative" false "context" "world"
+@v77 kernel.seq.make item $v74 item $v76
+@v78 kernel.seq.make item "?x" item "?z"
+@v79 kernel.value.record "predicate" "west_of" "terms" $v78 "negative" false "context" "world"
+@v80 kernel.value.record "body" $v77 "head" $v79
+@v81 kernel.seq.make item "?x" item "?y"
+@v82 kernel.value.record "predicate" "older_than" "terms" $v81 "negative" false "context" "world"
+@v83 kernel.seq.make item "?y" item "?z"
+@v84 kernel.value.record "predicate" "older_than" "terms" $v83 "negative" false "context" "world"
+@v85 kernel.seq.make item $v82 item $v84
+@v86 kernel.seq.make item "?x" item "?z"
+@v87 kernel.value.record "predicate" "older_than" "terms" $v86 "negative" false "context" "world"
+@v88 kernel.value.record "body" $v85 "head" $v87
+@v89 kernel.seq.make item "?x" item "?y"
+@v90 kernel.value.record "predicate" "younger_than" "terms" $v89 "negative" false "context" "world"
+@v91 kernel.seq.make item "?y" item "?z"
+@v92 kernel.value.record "predicate" "younger_than" "terms" $v91 "negative" false "context" "world"
+@v93 kernel.seq.make item $v90 item $v92
+@v94 kernel.seq.make item "?x" item "?z"
+@v95 kernel.value.record "predicate" "younger_than" "terms" $v94 "negative" false "context" "world"
+@v96 kernel.value.record "body" $v93 "head" $v95
+@v97 kernel.seq.make item "?x" item "?y"
+@v98 kernel.value.record "predicate" "ancestor_of" "terms" $v97 "negative" false "context" "world"
+@v99 kernel.seq.make item "?y" item "?z"
+@v100 kernel.value.record "predicate" "ancestor_of" "terms" $v99 "negative" false "context" "world"
+@v101 kernel.seq.make item $v98 item $v100
+@v102 kernel.seq.make item "?x" item "?z"
+@v103 kernel.value.record "predicate" "ancestor_of" "terms" $v102 "negative" false "context" "world"
+@v104 kernel.value.record "body" $v101 "head" $v103
+@v105 kernel.seq.make item "?x" item "?y"
+@v106 kernel.value.record "predicate" "part_of" "terms" $v105 "negative" false "context" "world"
+@v107 kernel.seq.make item "?y" item "?z"
+@v108 kernel.value.record "predicate" "part_of" "terms" $v107 "negative" false "context" "world"
+@v109 kernel.seq.make item $v106 item $v108
+@v110 kernel.seq.make item "?x" item "?z"
+@v111 kernel.value.record "predicate" "part_of" "terms" $v110 "negative" false "context" "world"
+@v112 kernel.value.record "body" $v109 "head" $v111
+@v113 kernel.seq.make item "?x" item "?y"
+@v114 kernel.value.record "predicate" "parent_of" "terms" $v113 "negative" false "context" "world"
+@v115 kernel.seq.make item $v114
+@v116 kernel.seq.make item "?x" item "?y"
+@v117 kernel.value.record "predicate" "ancestor_of" "terms" $v116 "negative" false "context" "world"
+@v118 kernel.value.record "body" $v115 "head" $v117
+@v119 kernel.seq.make item $v6 item $v12 item $v18 item $v24 item $v30 item $v36 item $v42 item $v48 item $v56 item $v64 item $v72 item $v80 item $v88 item $v96 item $v104 item $v112 item $v118
+@v120 kernel.seq.make item "." item "!" item "?"
+@v121 kernel.seq.make item "." item "!" item "?"
+@v122 kernel.value.record "boundaries" $v120 "keep" $v121
+@v123 kernel.seq.make item "a" item "an" item "the" item "and" item "or" item "is" item "are" item "was" item "were" item "of" item "to" item "in" item "for" item "it" item "that" item "this" item "with" item "as" item "by" item "on" item "at"
+@v124 kernel.value.record "centrality" 1 "lead" 0.7 "focus" 10 "redundancy" 5
+@v125 kernel.seq.make item "." item "," item "!" item "?" item ":" item ";" item ")"
+@v126 kernel.value.record "segmentation" $v122 "stopwords" $v123 "weights" $v124 "minimumContext" 1 "attachLeft" $v125
+@v127 kernel.value.record "schema" "sxlm.knowledge-source.v1" "origin" $v0 "pack" "english-bootstrap" "theory" $v119 "text" $v126
+@output result $v127

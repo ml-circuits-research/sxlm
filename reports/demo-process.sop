@@ -1,0 +1,2 @@
+@v0 kernel.value.record "schema" "sxlm.demo-process.v1" "pid" 2881584 "port" 3210 "status" "running-chat-with-attachments"
+@output result $v0

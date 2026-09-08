@@ -1,0 +1,8 @@
+@input state object
+@input item any
+@input with object
+@stop0 kernel.value.get value $state key "stopped" fallback null
+@stop data.boolean value $stop0
+@args kernel.value.record state $state options $with
+@result kernel.flow.choose condition $stop then "completion.keep-backoff" else "completion.advance" with $args
+@output result $result

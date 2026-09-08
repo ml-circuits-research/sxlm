@@ -1,0 +1,166 @@
+@v0 kernel.seq.make
+@v1 kernel.value.record "status" "evaluated" "truth" null "value" "" "values" null "gaps" null "text" "" "verification" null
+@v2 kernel.value.record "id" "normalization-transfer-0" "pass" true "failures" $v0 "actual" $v1 "milliseconds" 0.05
+@v3 kernel.seq.make item "value: @result kernel.value.literal value \"ℌＥＬＬＯ\"\n@output result $result\n, expected @result kernel.value.literal value \"hello\"\n@output result $result\n"
+@v4 kernel.value.record "status" "evaluated" "truth" null "value" "ℌＥＬＬＯ" "values" null "gaps" null "text" "" "verification" null
+@v5 kernel.value.record "id" "normalization-transfer-1" "pass" false "failures" $v3 "actual" $v4 "milliseconds" 0.02
+@v6 kernel.seq.make item "value: @result kernel.value.literal value \"𝐀𝐁𝐂\"\n@output result $result\n, expected @result kernel.value.literal value \"abc\"\n@output result $result\n"
+@v7 kernel.value.record "status" "evaluated" "truth" null "value" "𝐀𝐁𝐂" "values" null "gaps" null "text" "" "verification" null
+@v8 kernel.value.record "id" "normalization-transfer-2" "pass" false "failures" $v6 "actual" $v7 "milliseconds" 0.02
+@v9 kernel.seq.make item "value: @result kernel.value.literal value \"Ａ＋Ｂ\"\n@output result $result\n, expected @result kernel.value.literal value \"a+b\"\n@output result $result\n"
+@v10 kernel.value.record "status" "evaluated" "truth" null "value" "Ａ＋Ｂ" "values" null "gaps" null "text" "" "verification" null
+@v11 kernel.value.record "id" "normalization-transfer-3" "pass" false "failures" $v9 "actual" $v10 "milliseconds" 0.02
+@v12 kernel.seq.make item "value: @result kernel.value.literal value \"①②\"\n@output result $result\n, expected @result kernel.value.literal value \"12\"\n@output result $result\n"
+@v13 kernel.value.record "status" "evaluated" "truth" null "value" "①②" "values" null "gaps" null "text" "" "verification" null
+@v14 kernel.value.record "id" "normalization-transfer-4" "pass" false "failures" $v12 "actual" $v13 "milliseconds" 0.01
+@v15 kernel.seq.make item "value: @result kernel.value.literal value \"ﬂOWER\"\n@output result $result\n, expected @result kernel.value.literal value \"flower\"\n@output result $result\n"
+@v16 kernel.value.record "status" "evaluated" "truth" null "value" "ﬂOWER" "values" null "gaps" null "text" "" "verification" null
+@v17 kernel.value.record "id" "normalization-transfer-5" "pass" false "failures" $v15 "actual" $v16 "milliseconds" 0.01
+@v18 kernel.seq.make item "value: @result kernel.value.literal value \"Å\"\n@output result $result\n, expected @result kernel.value.literal value \"å\"\n@output result $result\n"
+@v19 kernel.value.record "status" "evaluated" "truth" null "value" "Å" "values" null "gaps" null "text" "" "verification" null
+@v20 kernel.value.record "id" "normalization-transfer-6" "pass" false "failures" $v18 "actual" $v19 "milliseconds" 0.01
+@v21 kernel.seq.make item "value: @result kernel.value.literal value \"ÅNGSTRÖM\"\n@output result $result\n, expected @result kernel.value.literal value \"ångström\"\n@output result $result\n"
+@v22 kernel.value.record "status" "evaluated" "truth" null "value" "ÅNGSTRÖM" "values" null "gaps" null "text" "" "verification" null
+@v23 kernel.value.record "id" "normalization-transfer-7" "pass" false "failures" $v21 "actual" $v22 "milliseconds" 0.02
+@v24 kernel.seq.make item "value: @result kernel.value.literal value \"ΣΟΣ\"\n@output result $result\n, expected @result kernel.value.literal value \"σος\"\n@output result $result\n"
+@v25 kernel.value.record "status" "evaluated" "truth" null "value" "ΣΟΣ" "values" null "gaps" null "text" "" "verification" null
+@v26 kernel.value.record "id" "normalization-transfer-8" "pass" false "failures" $v24 "actual" $v25 "milliseconds" 0.02
+@v27 kernel.seq.make item "value: @result kernel.value.literal value \"ΟΣΑ\"\n@output result $result\n, expected @result kernel.value.literal value \"οσα\"\n@output result $result\n"
+@v28 kernel.value.record "status" "evaluated" "truth" null "value" "ΟΣΑ" "values" null "gaps" null "text" "" "verification" null
+@v29 kernel.value.record "id" "normalization-transfer-9" "pass" false "failures" $v27 "actual" $v28 "milliseconds" 0.01
+@v30 kernel.seq.make item "value: @result kernel.value.literal value \"ǅ\"\n@output result $result\n, expected @result kernel.value.literal value \"dž\"\n@output result $result\n"
+@v31 kernel.value.record "status" "evaluated" "truth" null "value" "ǅ" "values" null "gaps" null "text" "" "verification" null
+@v32 kernel.value.record "id" "normalization-transfer-10" "pass" false "failures" $v30 "actual" $v31 "milliseconds" 0.01
+@v33 kernel.seq.make item "value: @result kernel.value.literal value \"ẞ\"\n@output result $result\n, expected @result kernel.value.literal value \"ß\"\n@output result $result\n"
+@v34 kernel.value.record "status" "evaluated" "truth" null "value" "ẞ" "values" null "gaps" null "text" "" "verification" null
+@v35 kernel.value.record "id" "normalization-transfer-11" "pass" false "failures" $v33 "actual" $v34 "milliseconds" 0.01
+@v36 kernel.seq.make item "value: @result kernel.value.literal value \"Å\"\n@output result $result\n, expected @result kernel.value.literal value \"å\"\n@output result $result\n"
+@v37 kernel.value.record "status" "evaluated" "truth" null "value" "Å" "values" null "gaps" null "text" "" "verification" null
+@v38 kernel.value.record "id" "normalization-transfer-12" "pass" false "failures" $v36 "actual" $v37 "milliseconds" 0.01
+@v39 kernel.seq.make item "value: @result kernel.value.literal value \"🧪 Ｘ-２\"\n@output result $result\n, expected @result kernel.value.literal value \"🧪 x-2\"\n@output result $result\n"
+@v40 kernel.value.record "status" "evaluated" "truth" null "value" "🧪 Ｘ-２" "values" null "gaps" null "text" "" "verification" null
+@v41 kernel.value.record "id" "normalization-transfer-13" "pass" false "failures" $v39 "actual" $v40 "milliseconds" 0.01
+@v42 kernel.seq.make item "value: @result kernel.value.literal value \"İSTANBUL\"\n@output result $result\n, expected @result kernel.value.literal value \"i̇stanbul\"\n@output result $result\n"
+@v43 kernel.value.record "status" "evaluated" "truth" null "value" "İSTANBUL" "values" null "gaps" null "text" "" "verification" null
+@v44 kernel.value.record "id" "normalization-transfer-14" "pass" false "failures" $v42 "actual" $v43 "milliseconds" 0.02
+@v45 kernel.seq.make item "value: @result kernel.value.literal value \"𝐑ＯＬＥ ≠ ROLE\"\n@output result $result\n, expected @result kernel.value.literal value \"role ≠ role\"\n@output result $result\n"
+@v46 kernel.value.record "status" "evaluated" "truth" null "value" "𝐑ＯＬＥ ≠ ROLE" "values" null "gaps" null "text" "" "verification" null
+@v47 kernel.value.record "id" "normalization-transfer-15" "pass" false "failures" $v45 "actual" $v46 "milliseconds" 0.01
+@v48 kernel.seq.make item $v2 item $v5 item $v8 item $v11 item $v14 item $v17 item $v20 item $v23 item $v26 item $v29 item $v32 item $v35 item $v38 item $v41 item $v44 item $v47
+@v49 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "08fa0d88d3947d219d0732cb5686f5890373bbc755f1cef6f58708df16170ca3" "casesHash" "885bd9ebdc67b1735740ff5bb494a21210a7dd27aa28d9a3c0c3f72a5eedbb70" "total" 16 "passed" 1 "failed" 15 "results" $v48
+@v50 kernel.seq.make
+@v51 kernel.value.record "status" "evaluated" "truth" null "value" "" "values" null "gaps" null "text" "" "verification" null
+@v52 kernel.value.record "id" "normalization-transfer-0" "pass" true "failures" $v50 "actual" $v51 "milliseconds" 0.09
+@v53 kernel.seq.make
+@v54 kernel.value.record "status" "evaluated" "truth" null "value" "hello" "values" null "gaps" null "text" "" "verification" null
+@v55 kernel.value.record "id" "normalization-transfer-1" "pass" true "failures" $v53 "actual" $v54 "milliseconds" 0.08
+@v56 kernel.seq.make
+@v57 kernel.value.record "status" "evaluated" "truth" null "value" "abc" "values" null "gaps" null "text" "" "verification" null
+@v58 kernel.value.record "id" "normalization-transfer-2" "pass" true "failures" $v56 "actual" $v57 "milliseconds" 0.05
+@v59 kernel.seq.make
+@v60 kernel.value.record "status" "evaluated" "truth" null "value" "a+b" "values" null "gaps" null "text" "" "verification" null
+@v61 kernel.value.record "id" "normalization-transfer-3" "pass" true "failures" $v59 "actual" $v60 "milliseconds" 0.05
+@v62 kernel.seq.make
+@v63 kernel.value.record "status" "evaluated" "truth" null "value" "12" "values" null "gaps" null "text" "" "verification" null
+@v64 kernel.value.record "id" "normalization-transfer-4" "pass" true "failures" $v62 "actual" $v63 "milliseconds" 0.05
+@v65 kernel.seq.make
+@v66 kernel.value.record "status" "evaluated" "truth" null "value" "flower" "values" null "gaps" null "text" "" "verification" null
+@v67 kernel.value.record "id" "normalization-transfer-5" "pass" true "failures" $v65 "actual" $v66 "milliseconds" 0.05
+@v68 kernel.seq.make
+@v69 kernel.value.record "status" "evaluated" "truth" null "value" "å" "values" null "gaps" null "text" "" "verification" null
+@v70 kernel.value.record "id" "normalization-transfer-6" "pass" true "failures" $v68 "actual" $v69 "milliseconds" 0.05
+@v71 kernel.seq.make
+@v72 kernel.value.record "status" "evaluated" "truth" null "value" "ångström" "values" null "gaps" null "text" "" "verification" null
+@v73 kernel.value.record "id" "normalization-transfer-7" "pass" true "failures" $v71 "actual" $v72 "milliseconds" 0.04
+@v74 kernel.seq.make
+@v75 kernel.value.record "status" "evaluated" "truth" null "value" "σος" "values" null "gaps" null "text" "" "verification" null
+@v76 kernel.value.record "id" "normalization-transfer-8" "pass" true "failures" $v74 "actual" $v75 "milliseconds" 0.05
+@v77 kernel.seq.make
+@v78 kernel.value.record "status" "evaluated" "truth" null "value" "οσα" "values" null "gaps" null "text" "" "verification" null
+@v79 kernel.value.record "id" "normalization-transfer-9" "pass" true "failures" $v77 "actual" $v78 "milliseconds" 0.06
+@v80 kernel.seq.make
+@v81 kernel.value.record "status" "evaluated" "truth" null "value" "dž" "values" null "gaps" null "text" "" "verification" null
+@v82 kernel.value.record "id" "normalization-transfer-10" "pass" true "failures" $v80 "actual" $v81 "milliseconds" 0.06
+@v83 kernel.seq.make
+@v84 kernel.value.record "status" "evaluated" "truth" null "value" "ß" "values" null "gaps" null "text" "" "verification" null
+@v85 kernel.value.record "id" "normalization-transfer-11" "pass" true "failures" $v83 "actual" $v84 "milliseconds" 0.05
+@v86 kernel.seq.make
+@v87 kernel.value.record "status" "evaluated" "truth" null "value" "å" "values" null "gaps" null "text" "" "verification" null
+@v88 kernel.value.record "id" "normalization-transfer-12" "pass" true "failures" $v86 "actual" $v87 "milliseconds" 0.04
+@v89 kernel.seq.make
+@v90 kernel.value.record "status" "evaluated" "truth" null "value" "🧪 x-2" "values" null "gaps" null "text" "" "verification" null
+@v91 kernel.value.record "id" "normalization-transfer-13" "pass" true "failures" $v89 "actual" $v90 "milliseconds" 0.05
+@v92 kernel.seq.make
+@v93 kernel.value.record "status" "evaluated" "truth" null "value" "i̇stanbul" "values" null "gaps" null "text" "" "verification" null
+@v94 kernel.value.record "id" "normalization-transfer-14" "pass" true "failures" $v92 "actual" $v93 "milliseconds" 0.05
+@v95 kernel.seq.make
+@v96 kernel.value.record "status" "evaluated" "truth" null "value" "role ≠ role" "values" null "gaps" null "text" "" "verification" null
+@v97 kernel.value.record "id" "normalization-transfer-15" "pass" true "failures" $v95 "actual" $v96 "milliseconds" 0.05
+@v98 kernel.seq.make item $v52 item $v55 item $v58 item $v61 item $v64 item $v67 item $v70 item $v73 item $v76 item $v79 item $v82 item $v85 item $v88 item $v91 item $v94 item $v97
+@v99 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "casesHash" "885bd9ebdc67b1735740ff5bb494a21210a7dd27aa28d9a3c0c3f72a5eedbb70" "total" 16 "passed" 16 "failed" 0 "results" $v98
+@v100 kernel.seq.make
+@v101 kernel.value.record "status" "evaluated" "truth" null "value" "" "values" null "gaps" null "text" "" "verification" null
+@v102 kernel.value.record "id" "normalization-transfer-0" "pass" true "failures" $v100 "actual" $v101 "milliseconds" 0.06
+@v103 kernel.seq.make
+@v104 kernel.value.record "status" "evaluated" "truth" null "value" "hello" "values" null "gaps" null "text" "" "verification" null
+@v105 kernel.value.record "id" "normalization-transfer-1" "pass" true "failures" $v103 "actual" $v104 "milliseconds" 0.05
+@v106 kernel.seq.make
+@v107 kernel.value.record "status" "evaluated" "truth" null "value" "abc" "values" null "gaps" null "text" "" "verification" null
+@v108 kernel.value.record "id" "normalization-transfer-2" "pass" true "failures" $v106 "actual" $v107 "milliseconds" 0.04
+@v109 kernel.seq.make
+@v110 kernel.value.record "status" "evaluated" "truth" null "value" "a+b" "values" null "gaps" null "text" "" "verification" null
+@v111 kernel.value.record "id" "normalization-transfer-3" "pass" true "failures" $v109 "actual" $v110 "milliseconds" 0.04
+@v112 kernel.seq.make
+@v113 kernel.value.record "status" "evaluated" "truth" null "value" "12" "values" null "gaps" null "text" "" "verification" null
+@v114 kernel.value.record "id" "normalization-transfer-4" "pass" true "failures" $v112 "actual" $v113 "milliseconds" 0.04
+@v115 kernel.seq.make
+@v116 kernel.value.record "status" "evaluated" "truth" null "value" "flower" "values" null "gaps" null "text" "" "verification" null
+@v117 kernel.value.record "id" "normalization-transfer-5" "pass" true "failures" $v115 "actual" $v116 "milliseconds" 0.04
+@v118 kernel.seq.make
+@v119 kernel.value.record "status" "evaluated" "truth" null "value" "å" "values" null "gaps" null "text" "" "verification" null
+@v120 kernel.value.record "id" "normalization-transfer-6" "pass" true "failures" $v118 "actual" $v119 "milliseconds" 0.04
+@v121 kernel.seq.make
+@v122 kernel.value.record "status" "evaluated" "truth" null "value" "ångström" "values" null "gaps" null "text" "" "verification" null
+@v123 kernel.value.record "id" "normalization-transfer-7" "pass" true "failures" $v121 "actual" $v122 "milliseconds" 0.04
+@v124 kernel.seq.make
+@v125 kernel.value.record "status" "evaluated" "truth" null "value" "σος" "values" null "gaps" null "text" "" "verification" null
+@v126 kernel.value.record "id" "normalization-transfer-8" "pass" true "failures" $v124 "actual" $v125 "milliseconds" 0.04
+@v127 kernel.seq.make
+@v128 kernel.value.record "status" "evaluated" "truth" null "value" "οσα" "values" null "gaps" null "text" "" "verification" null
+@v129 kernel.value.record "id" "normalization-transfer-9" "pass" true "failures" $v127 "actual" $v128 "milliseconds" 0.04
+@v130 kernel.seq.make
+@v131 kernel.value.record "status" "evaluated" "truth" null "value" "dž" "values" null "gaps" null "text" "" "verification" null
+@v132 kernel.value.record "id" "normalization-transfer-10" "pass" true "failures" $v130 "actual" $v131 "milliseconds" 0.04
+@v133 kernel.seq.make
+@v134 kernel.value.record "status" "evaluated" "truth" null "value" "ß" "values" null "gaps" null "text" "" "verification" null
+@v135 kernel.value.record "id" "normalization-transfer-11" "pass" true "failures" $v133 "actual" $v134 "milliseconds" 0.04
+@v136 kernel.seq.make
+@v137 kernel.value.record "status" "evaluated" "truth" null "value" "å" "values" null "gaps" null "text" "" "verification" null
+@v138 kernel.value.record "id" "normalization-transfer-12" "pass" true "failures" $v136 "actual" $v137 "milliseconds" 0.04
+@v139 kernel.seq.make
+@v140 kernel.value.record "status" "evaluated" "truth" null "value" "🧪 x-2" "values" null "gaps" null "text" "" "verification" null
+@v141 kernel.value.record "id" "normalization-transfer-13" "pass" true "failures" $v139 "actual" $v140 "milliseconds" 0.04
+@v142 kernel.seq.make
+@v143 kernel.value.record "status" "evaluated" "truth" null "value" "i̇stanbul" "values" null "gaps" null "text" "" "verification" null
+@v144 kernel.value.record "id" "normalization-transfer-14" "pass" true "failures" $v142 "actual" $v143 "milliseconds" 0.05
+@v145 kernel.seq.make
+@v146 kernel.value.record "status" "evaluated" "truth" null "value" "role ≠ role" "values" null "gaps" null "text" "" "verification" null
+@v147 kernel.value.record "id" "normalization-transfer-15" "pass" true "failures" $v145 "actual" $v146 "milliseconds" 0.04
+@v148 kernel.seq.make item $v102 item $v105 item $v108 item $v111 item $v114 item $v117 item $v120 item $v123 item $v126 item $v129 item $v132 item $v135 item $v138 item $v141 item $v144 item $v147
+@v149 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "casesHash" "885bd9ebdc67b1735740ff5bb494a21210a7dd27aa28d9a3c0c3f72a5eedbb70" "total" 16 "passed" 16 "failed" 0 "results" $v148
+@v150 kernel.seq.make
+@v151 kernel.seq.make item "alpha"
+@v152 kernel.seq.make item "alpha"
+@v153 kernel.value.record "before" $v150 "after" $v151 "restored" $v152
+@v154 kernel.value.record "text" "string" "form" "string"
+@v155 kernel.value.record
+@v156 kernel.value.record "kind" "op" "name" "kernel.text.normalize" "inputs" $v154 "output" "string" "bind" $v155 "identity" "7805a60e95ac1b17c1280e78b35f426713269cd177ec4205d76bb2ac5ae10b63"
+@v157 kernel.value.record "text" "string" "mode" "string"
+@v158 kernel.value.record
+@v159 kernel.value.record "kind" "op" "name" "kernel.text.case" "inputs" $v157 "output" "string" "bind" $v158 "identity" "0d63aab64eb9d004a1e6c4b8f37aa4273b4c8cfc7326110bf2fa5400524e2beb"
+@v160 kernel.seq.make item $v156 item $v159
+@v161 kernel.value.record "applications" 2 "candidates" 10000 "representatives" 1000 "milliseconds" 10000
+@v162 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "trainingHash" "3a95e810383b2677965b7ee330ca01bec86f89d606fb78dd595b7e10ca267133" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v160 "limits" $v161 "evaluated" 179 "rejected" 140 "pruned" 26 "retained" 17 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 2 "graphNodes" 2 "circuitHash" "50e141fd4d49beeb0ee6359c2ad1fb051b38fe60b07bb87df4ef28e5fdbba79d" "fit" 8
+@v163 kernel.value.record "schema" "sxlm.lexical-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v162 "trainingHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "qualification" "Terminal selection, lexicon indexing, class exclusions and case policy execute in SOP. Normalization composition is synthesized. Native token boundaries and Earley scheduling remain; authored lexical policy is not relabeled as learned."
+@v164 kernel.value.record "schema" "sxlm.lexical-learning-evaluation.v1" "generated" "2026-09-08T13:53:19.598Z" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "before" $v49 "after" $v99 "recovery" $v149 "composition" $v153 "unchangedRuntime" true "derivation" $v163 "qualification" "A two-operation normalization method is synthesized from teacher-supplied Unicode observations and reused in parser policy. These public same-project cases are separate from teacher examples; they are not external blind language evaluation. The surrounding lexical policy remains authored."
+@output result $v164

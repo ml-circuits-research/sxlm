@@ -1,0 +1,7 @@
+@input item any
+@input with object
+@key kernel.value.get value $item key "key" fallback null
+@items kernel.value.get value $item key "items" fallback null
+@values kernel.seq.pluck items $items key "value"
+@pair kernel.seq.make item $key item $values
+@output result $pair

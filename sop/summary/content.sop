@@ -1,0 +1,6 @@
+@input item any
+@input with object
+@span kernel.value.get value $item key "value" fallback null
+@text kernel.value.get value $span key "text" fallback null
+@tokens summary.tokens item $text with $with
+@output result $tokens

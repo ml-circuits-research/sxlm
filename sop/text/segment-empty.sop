@@ -1,0 +1,4 @@
+@input with object
+@spans kernel.value.get value $with key "spans" fallback null
+@result data.array value $spans
+@output result $result

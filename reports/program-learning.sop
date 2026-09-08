@@ -1,0 +1,733 @@
+@v0 kernel.value.record "left" "any" "right" "any"
+@v1 kernel.value.record
+@v2 kernel.value.record "kind" "op" "name" "kernel.seq.difference" "inputs" $v0 "output" "array" "bind" $v1 "identity" "9ab10db8b399c80c94aecdef734ceabe6444864e1cd36a6335622e2f78ce736e"
+@v3 kernel.value.record "items" "any"
+@v4 kernel.value.record
+@v5 kernel.value.record "kind" "op" "name" "kernel.seq.count" "inputs" $v3 "output" "number" "bind" $v4 "identity" "faf54cfa207eabdfbd7ee8c39986efcd81e2833335c05bbe74ab44c1e9d19963"
+@v6 kernel.value.record "left" "any" "right" "any"
+@v7 kernel.value.record
+@v8 kernel.value.record "kind" "op" "name" "kernel.value.equal" "inputs" $v6 "output" "boolean" "bind" $v7 "identity" "b665eba680588b8107208a96b14b7273822edf5e17655d1c9966694894ab41e6"
+@v9 kernel.seq.make item $v2 item $v5 item $v8
+@v10 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v11 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "91fe677f44e8677f7d526142abd3a745a7c7a106d1a33e041f342790db7caea5" "trainingHash" "65e29f1566519d74470659f70c7def1782f84e438721b2cb92696089abc973e0" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v9 "limits" $v10 "evaluated" 211 "rejected" 119 "pruned" 75 "retained" 19 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 3 "graphNodes" 3 "circuitHash" "616bf7f3d89cd5eec9addc78133ba732f4e82ed15ae8db89d098523612262774" "fit" 8
+@v12 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v13 kernel.value.record "id" "coverage-0" "pass" false "failures" $v12 "actual" null "milliseconds" 0
+@v14 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v15 kernel.value.record "id" "coverage-1" "pass" false "failures" $v14 "actual" null "milliseconds" 0
+@v16 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v17 kernel.value.record "id" "coverage-2" "pass" false "failures" $v16 "actual" null "milliseconds" 0
+@v18 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v19 kernel.value.record "id" "coverage-3" "pass" false "failures" $v18 "actual" null "milliseconds" 0
+@v20 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v21 kernel.value.record "id" "coverage-4" "pass" false "failures" $v20 "actual" null "milliseconds" 0
+@v22 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v23 kernel.value.record "id" "coverage-5" "pass" false "failures" $v22 "actual" null "milliseconds" 0
+@v24 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v25 kernel.value.record "id" "coverage-6" "pass" false "failures" $v24 "actual" null "milliseconds" 0
+@v26 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v27 kernel.value.record "id" "coverage-7" "pass" false "failures" $v26 "actual" null "milliseconds" 0
+@v28 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v29 kernel.value.record "id" "coverage-8" "pass" false "failures" $v28 "actual" null "milliseconds" 0
+@v30 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v31 kernel.value.record "id" "coverage-9" "pass" false "failures" $v30 "actual" null "milliseconds" 0
+@v32 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v33 kernel.value.record "id" "coverage-10" "pass" false "failures" $v32 "actual" null "milliseconds" 0
+@v34 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v35 kernel.value.record "id" "coverage-11" "pass" false "failures" $v34 "actual" null "milliseconds" 0
+@v36 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v37 kernel.value.record "id" "coverage-12" "pass" false "failures" $v36 "actual" null "milliseconds" 0
+@v38 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v39 kernel.value.record "id" "coverage-13" "pass" false "failures" $v38 "actual" null "milliseconds" 0
+@v40 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v41 kernel.value.record "id" "coverage-14" "pass" false "failures" $v40 "actual" null "milliseconds" 0
+@v42 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v43 kernel.value.record "id" "coverage-15" "pass" false "failures" $v42 "actual" null "milliseconds" 0
+@v44 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v45 kernel.value.record "id" "coverage-16" "pass" false "failures" $v44 "actual" null "milliseconds" 0
+@v46 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v47 kernel.value.record "id" "coverage-17" "pass" false "failures" $v46 "actual" null "milliseconds" 0
+@v48 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v49 kernel.value.record "id" "coverage-18" "pass" false "failures" $v48 "actual" null "milliseconds" 0
+@v50 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v51 kernel.value.record "id" "coverage-19" "pass" false "failures" $v50 "actual" null "milliseconds" 0
+@v52 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v53 kernel.value.record "id" "coverage-20" "pass" false "failures" $v52 "actual" null "milliseconds" 0
+@v54 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v55 kernel.value.record "id" "coverage-21" "pass" false "failures" $v54 "actual" null "milliseconds" 0
+@v56 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v57 kernel.value.record "id" "coverage-22" "pass" false "failures" $v56 "actual" null "milliseconds" 0
+@v58 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v59 kernel.value.record "id" "coverage-23" "pass" false "failures" $v58 "actual" null "milliseconds" 0
+@v60 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v61 kernel.value.record "id" "coverage-24" "pass" false "failures" $v60 "actual" null "milliseconds" 0
+@v62 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v63 kernel.value.record "id" "coverage-25" "pass" false "failures" $v62 "actual" null "milliseconds" 0
+@v64 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v65 kernel.value.record "id" "coverage-26" "pass" false "failures" $v64 "actual" null "milliseconds" 0
+@v66 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v67 kernel.value.record "id" "coverage-27" "pass" false "failures" $v66 "actual" null "milliseconds" 0
+@v68 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v69 kernel.value.record "id" "coverage-28" "pass" false "failures" $v68 "actual" null "milliseconds" 0
+@v70 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v71 kernel.value.record "id" "coverage-29" "pass" false "failures" $v70 "actual" null "milliseconds" 0
+@v72 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v73 kernel.value.record "id" "coverage-30" "pass" false "failures" $v72 "actual" null "milliseconds" 0
+@v74 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v75 kernel.value.record "id" "coverage-31" "pass" false "failures" $v74 "actual" null "milliseconds" 0
+@v76 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v77 kernel.value.record "id" "coverage-32" "pass" false "failures" $v76 "actual" null "milliseconds" 0
+@v78 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v79 kernel.value.record "id" "coverage-33" "pass" false "failures" $v78 "actual" null "milliseconds" 0
+@v80 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v81 kernel.value.record "id" "coverage-34" "pass" false "failures" $v80 "actual" null "milliseconds" 0
+@v82 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v83 kernel.value.record "id" "coverage-35" "pass" false "failures" $v82 "actual" null "milliseconds" 0
+@v84 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v85 kernel.value.record "id" "coverage-36" "pass" false "failures" $v84 "actual" null "milliseconds" 0
+@v86 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v87 kernel.value.record "id" "coverage-37" "pass" false "failures" $v86 "actual" null "milliseconds" 0
+@v88 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v89 kernel.value.record "id" "coverage-38" "pass" false "failures" $v88 "actual" null "milliseconds" 0
+@v90 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v91 kernel.value.record "id" "coverage-39" "pass" false "failures" $v90 "actual" null "milliseconds" 0
+@v92 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v93 kernel.value.record "id" "coverage-40" "pass" false "failures" $v92 "actual" null "milliseconds" 0
+@v94 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v95 kernel.value.record "id" "coverage-41" "pass" false "failures" $v94 "actual" null "milliseconds" 0
+@v96 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v97 kernel.value.record "id" "coverage-42" "pass" false "failures" $v96 "actual" null "milliseconds" 0
+@v98 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v99 kernel.value.record "id" "coverage-43" "pass" false "failures" $v98 "actual" null "milliseconds" 0
+@v100 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v101 kernel.value.record "id" "coverage-44" "pass" false "failures" $v100 "actual" null "milliseconds" 0
+@v102 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v103 kernel.value.record "id" "coverage-45" "pass" false "failures" $v102 "actual" null "milliseconds" 0
+@v104 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v105 kernel.value.record "id" "coverage-46" "pass" false "failures" $v104 "actual" null "milliseconds" 0
+@v106 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v107 kernel.value.record "id" "coverage-47" "pass" false "failures" $v106 "actual" null "milliseconds" 0
+@v108 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v109 kernel.value.record "id" "coverage-48" "pass" false "failures" $v108 "actual" null "milliseconds" 0
+@v110 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v111 kernel.value.record "id" "coverage-49" "pass" false "failures" $v110 "actual" null "milliseconds" 0
+@v112 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v113 kernel.value.record "id" "coverage-50" "pass" false "failures" $v112 "actual" null "milliseconds" 0
+@v114 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v115 kernel.value.record "id" "coverage-51" "pass" false "failures" $v114 "actual" null "milliseconds" 0
+@v116 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v117 kernel.value.record "id" "coverage-52" "pass" false "failures" $v116 "actual" null "milliseconds" 0
+@v118 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v119 kernel.value.record "id" "coverage-53" "pass" false "failures" $v118 "actual" null "milliseconds" 0
+@v120 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v121 kernel.value.record "id" "coverage-54" "pass" false "failures" $v120 "actual" null "milliseconds" 0
+@v122 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v123 kernel.value.record "id" "coverage-55" "pass" false "failures" $v122 "actual" null "milliseconds" 0
+@v124 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v125 kernel.value.record "id" "coverage-56" "pass" false "failures" $v124 "actual" null "milliseconds" 0
+@v126 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v127 kernel.value.record "id" "coverage-57" "pass" false "failures" $v126 "actual" null "milliseconds" 0
+@v128 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v129 kernel.value.record "id" "coverage-58" "pass" false "failures" $v128 "actual" null "milliseconds" 0
+@v130 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v131 kernel.value.record "id" "coverage-59" "pass" false "failures" $v130 "actual" null "milliseconds" 0
+@v132 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v133 kernel.value.record "id" "coverage-60" "pass" false "failures" $v132 "actual" null "milliseconds" 0
+@v134 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v135 kernel.value.record "id" "coverage-61" "pass" false "failures" $v134 "actual" null "milliseconds" 0
+@v136 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v137 kernel.value.record "id" "coverage-62" "pass" false "failures" $v136 "actual" null "milliseconds" 0
+@v138 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v139 kernel.value.record "id" "coverage-63" "pass" false "failures" $v138 "actual" null "milliseconds" 0
+@v140 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v141 kernel.value.record "id" "coverage-transfer-64" "pass" false "failures" $v140 "actual" null "milliseconds" 0
+@v142 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v143 kernel.value.record "id" "coverage-transfer-65" "pass" false "failures" $v142 "actual" null "milliseconds" 0
+@v144 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v145 kernel.value.record "id" "coverage-transfer-66" "pass" false "failures" $v144 "actual" null "milliseconds" 0
+@v146 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v147 kernel.value.record "id" "coverage-transfer-67" "pass" false "failures" $v146 "actual" null "milliseconds" 0
+@v148 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v149 kernel.value.record "id" "coverage-transfer-68" "pass" false "failures" $v148 "actual" null "milliseconds" 0
+@v150 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v151 kernel.value.record "id" "coverage-transfer-69" "pass" false "failures" $v150 "actual" null "milliseconds" 0
+@v152 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v153 kernel.value.record "id" "coverage-transfer-70" "pass" false "failures" $v152 "actual" null "milliseconds" 0
+@v154 kernel.seq.make item $v13 item $v15 item $v17 item $v19 item $v21 item $v23 item $v25 item $v27 item $v29 item $v31 item $v33 item $v35 item $v37 item $v39 item $v41 item $v43 item $v45 item $v47 item $v49 item $v51 item $v53 item $v55 item $v57 item $v59 item $v61 item $v63 item $v65 item $v67 item $v69 item $v71 item $v73 item $v75 item $v77 item $v79 item $v81 item $v83 item $v85 item $v87 item $v89 item $v91 item $v93 item $v95 item $v97 item $v99 item $v101 item $v103 item $v105 item $v107 item $v109 item $v111 item $v113 item $v115 item $v117 item $v119 item $v121 item $v123 item $v125 item $v127 item $v129 item $v131 item $v133 item $v135 item $v137 item $v139 item $v141 item $v143 item $v145 item $v147 item $v149 item $v151 item $v153
+@v155 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "casesHash" "eb85fe9baf4119220645a40fd912eccaa8c5d8590dc5b9ce16682cf569a6f4e5" "total" 71 "passed" 0 "failed" 71 "results" $v154
+@v156 kernel.seq.make
+@v157 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v158 kernel.value.record "id" "coverage-0" "pass" true "failures" $v156 "actual" $v157 "milliseconds" 0.11
+@v159 kernel.seq.make
+@v160 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v161 kernel.value.record "id" "coverage-1" "pass" true "failures" $v159 "actual" $v160 "milliseconds" 0.07
+@v162 kernel.seq.make
+@v163 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v164 kernel.value.record "id" "coverage-2" "pass" true "failures" $v162 "actual" $v163 "milliseconds" 0.08
+@v165 kernel.seq.make
+@v166 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v167 kernel.value.record "id" "coverage-3" "pass" true "failures" $v165 "actual" $v166 "milliseconds" 0.06
+@v168 kernel.seq.make
+@v169 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v170 kernel.value.record "id" "coverage-4" "pass" true "failures" $v168 "actual" $v169 "milliseconds" 0.06
+@v171 kernel.seq.make
+@v172 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v173 kernel.value.record "id" "coverage-5" "pass" true "failures" $v171 "actual" $v172 "milliseconds" 0.08
+@v174 kernel.seq.make
+@v175 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v176 kernel.value.record "id" "coverage-6" "pass" true "failures" $v174 "actual" $v175 "milliseconds" 0.07
+@v177 kernel.seq.make
+@v178 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v179 kernel.value.record "id" "coverage-7" "pass" true "failures" $v177 "actual" $v178 "milliseconds" 0.06
+@v180 kernel.seq.make
+@v181 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v182 kernel.value.record "id" "coverage-8" "pass" true "failures" $v180 "actual" $v181 "milliseconds" 0.07
+@v183 kernel.seq.make
+@v184 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v185 kernel.value.record "id" "coverage-9" "pass" true "failures" $v183 "actual" $v184 "milliseconds" 0.08
+@v186 kernel.seq.make
+@v187 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v188 kernel.value.record "id" "coverage-10" "pass" true "failures" $v186 "actual" $v187 "milliseconds" 0.06
+@v189 kernel.seq.make
+@v190 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v191 kernel.value.record "id" "coverage-11" "pass" true "failures" $v189 "actual" $v190 "milliseconds" 0.06
+@v192 kernel.seq.make
+@v193 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v194 kernel.value.record "id" "coverage-12" "pass" true "failures" $v192 "actual" $v193 "milliseconds" 0.06
+@v195 kernel.seq.make
+@v196 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v197 kernel.value.record "id" "coverage-13" "pass" true "failures" $v195 "actual" $v196 "milliseconds" 0.07
+@v198 kernel.seq.make
+@v199 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v200 kernel.value.record "id" "coverage-14" "pass" true "failures" $v198 "actual" $v199 "milliseconds" 0.07
+@v201 kernel.seq.make
+@v202 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v203 kernel.value.record "id" "coverage-15" "pass" true "failures" $v201 "actual" $v202 "milliseconds" 0.07
+@v204 kernel.seq.make
+@v205 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v206 kernel.value.record "id" "coverage-16" "pass" true "failures" $v204 "actual" $v205 "milliseconds" 0.08
+@v207 kernel.seq.make
+@v208 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v209 kernel.value.record "id" "coverage-17" "pass" true "failures" $v207 "actual" $v208 "milliseconds" 0.07
+@v210 kernel.seq.make
+@v211 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v212 kernel.value.record "id" "coverage-18" "pass" true "failures" $v210 "actual" $v211 "milliseconds" 0.12
+@v213 kernel.seq.make
+@v214 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v215 kernel.value.record "id" "coverage-19" "pass" true "failures" $v213 "actual" $v214 "milliseconds" 0.07
+@v216 kernel.seq.make
+@v217 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v218 kernel.value.record "id" "coverage-20" "pass" true "failures" $v216 "actual" $v217 "milliseconds" 0.07
+@v219 kernel.seq.make
+@v220 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v221 kernel.value.record "id" "coverage-21" "pass" true "failures" $v219 "actual" $v220 "milliseconds" 0.07
+@v222 kernel.seq.make
+@v223 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v224 kernel.value.record "id" "coverage-22" "pass" true "failures" $v222 "actual" $v223 "milliseconds" 0.07
+@v225 kernel.seq.make
+@v226 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v227 kernel.value.record "id" "coverage-23" "pass" true "failures" $v225 "actual" $v226 "milliseconds" 0.07
+@v228 kernel.seq.make
+@v229 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v230 kernel.value.record "id" "coverage-24" "pass" true "failures" $v228 "actual" $v229 "milliseconds" 0.09
+@v231 kernel.seq.make
+@v232 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v233 kernel.value.record "id" "coverage-25" "pass" true "failures" $v231 "actual" $v232 "milliseconds" 0.09
+@v234 kernel.seq.make
+@v235 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v236 kernel.value.record "id" "coverage-26" "pass" true "failures" $v234 "actual" $v235 "milliseconds" 0.1
+@v237 kernel.seq.make
+@v238 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v239 kernel.value.record "id" "coverage-27" "pass" true "failures" $v237 "actual" $v238 "milliseconds" 0.08
+@v240 kernel.seq.make
+@v241 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v242 kernel.value.record "id" "coverage-28" "pass" true "failures" $v240 "actual" $v241 "milliseconds" 0.07
+@v243 kernel.seq.make
+@v244 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v245 kernel.value.record "id" "coverage-29" "pass" true "failures" $v243 "actual" $v244 "milliseconds" 0.09
+@v246 kernel.seq.make
+@v247 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v248 kernel.value.record "id" "coverage-30" "pass" true "failures" $v246 "actual" $v247 "milliseconds" 0.07
+@v249 kernel.seq.make
+@v250 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v251 kernel.value.record "id" "coverage-31" "pass" true "failures" $v249 "actual" $v250 "milliseconds" 0.07
+@v252 kernel.seq.make
+@v253 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v254 kernel.value.record "id" "coverage-32" "pass" true "failures" $v252 "actual" $v253 "milliseconds" 0.07
+@v255 kernel.seq.make
+@v256 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v257 kernel.value.record "id" "coverage-33" "pass" true "failures" $v255 "actual" $v256 "milliseconds" 0.08
+@v258 kernel.seq.make
+@v259 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v260 kernel.value.record "id" "coverage-34" "pass" true "failures" $v258 "actual" $v259 "milliseconds" 0.07
+@v261 kernel.seq.make
+@v262 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v263 kernel.value.record "id" "coverage-35" "pass" true "failures" $v261 "actual" $v262 "milliseconds" 0.07
+@v264 kernel.seq.make
+@v265 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v266 kernel.value.record "id" "coverage-36" "pass" true "failures" $v264 "actual" $v265 "milliseconds" 0.08
+@v267 kernel.seq.make
+@v268 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v269 kernel.value.record "id" "coverage-37" "pass" true "failures" $v267 "actual" $v268 "milliseconds" 0.07
+@v270 kernel.seq.make
+@v271 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v272 kernel.value.record "id" "coverage-38" "pass" true "failures" $v270 "actual" $v271 "milliseconds" 0.07
+@v273 kernel.seq.make
+@v274 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v275 kernel.value.record "id" "coverage-39" "pass" true "failures" $v273 "actual" $v274 "milliseconds" 0.07
+@v276 kernel.seq.make
+@v277 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v278 kernel.value.record "id" "coverage-40" "pass" true "failures" $v276 "actual" $v277 "milliseconds" 0.09
+@v279 kernel.seq.make
+@v280 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v281 kernel.value.record "id" "coverage-41" "pass" true "failures" $v279 "actual" $v280 "milliseconds" 0.1
+@v282 kernel.seq.make
+@v283 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v284 kernel.value.record "id" "coverage-42" "pass" true "failures" $v282 "actual" $v283 "milliseconds" 0.08
+@v285 kernel.seq.make
+@v286 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v287 kernel.value.record "id" "coverage-43" "pass" true "failures" $v285 "actual" $v286 "milliseconds" 0.08
+@v288 kernel.seq.make
+@v289 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v290 kernel.value.record "id" "coverage-44" "pass" true "failures" $v288 "actual" $v289 "milliseconds" 0.08
+@v291 kernel.seq.make
+@v292 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v293 kernel.value.record "id" "coverage-45" "pass" true "failures" $v291 "actual" $v292 "milliseconds" 0.09
+@v294 kernel.seq.make
+@v295 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v296 kernel.value.record "id" "coverage-46" "pass" true "failures" $v294 "actual" $v295 "milliseconds" 0.07
+@v297 kernel.seq.make
+@v298 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v299 kernel.value.record "id" "coverage-47" "pass" true "failures" $v297 "actual" $v298 "milliseconds" 0.07
+@v300 kernel.seq.make
+@v301 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v302 kernel.value.record "id" "coverage-48" "pass" true "failures" $v300 "actual" $v301 "milliseconds" 0.09
+@v303 kernel.seq.make
+@v304 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v305 kernel.value.record "id" "coverage-49" "pass" true "failures" $v303 "actual" $v304 "milliseconds" 0.08
+@v306 kernel.seq.make
+@v307 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v308 kernel.value.record "id" "coverage-50" "pass" true "failures" $v306 "actual" $v307 "milliseconds" 0.09
+@v309 kernel.seq.make
+@v310 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v311 kernel.value.record "id" "coverage-51" "pass" true "failures" $v309 "actual" $v310 "milliseconds" 0.07
+@v312 kernel.seq.make
+@v313 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v314 kernel.value.record "id" "coverage-52" "pass" true "failures" $v312 "actual" $v313 "milliseconds" 0.08
+@v315 kernel.seq.make
+@v316 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v317 kernel.value.record "id" "coverage-53" "pass" true "failures" $v315 "actual" $v316 "milliseconds" 0.1
+@v318 kernel.seq.make
+@v319 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v320 kernel.value.record "id" "coverage-54" "pass" true "failures" $v318 "actual" $v319 "milliseconds" 0.09
+@v321 kernel.seq.make
+@v322 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v323 kernel.value.record "id" "coverage-55" "pass" true "failures" $v321 "actual" $v322 "milliseconds" 0.07
+@v324 kernel.seq.make
+@v325 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v326 kernel.value.record "id" "coverage-56" "pass" true "failures" $v324 "actual" $v325 "milliseconds" 0.09
+@v327 kernel.seq.make
+@v328 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v329 kernel.value.record "id" "coverage-57" "pass" true "failures" $v327 "actual" $v328 "milliseconds" 0.09
+@v330 kernel.seq.make
+@v331 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v332 kernel.value.record "id" "coverage-58" "pass" true "failures" $v330 "actual" $v331 "milliseconds" 0.09
+@v333 kernel.seq.make
+@v334 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v335 kernel.value.record "id" "coverage-59" "pass" true "failures" $v333 "actual" $v334 "milliseconds" 0.12
+@v336 kernel.seq.make
+@v337 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v338 kernel.value.record "id" "coverage-60" "pass" true "failures" $v336 "actual" $v337 "milliseconds" 0.09
+@v339 kernel.seq.make
+@v340 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v341 kernel.value.record "id" "coverage-61" "pass" true "failures" $v339 "actual" $v340 "milliseconds" 0.09
+@v342 kernel.seq.make
+@v343 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v344 kernel.value.record "id" "coverage-62" "pass" true "failures" $v342 "actual" $v343 "milliseconds" 0.09
+@v345 kernel.seq.make
+@v346 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v347 kernel.value.record "id" "coverage-63" "pass" true "failures" $v345 "actual" $v346 "milliseconds" 0.12
+@v348 kernel.seq.make
+@v349 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v350 kernel.value.record "id" "coverage-transfer-64" "pass" true "failures" $v348 "actual" $v349 "milliseconds" 0.11
+@v351 kernel.seq.make
+@v352 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v353 kernel.value.record "id" "coverage-transfer-65" "pass" true "failures" $v351 "actual" $v352 "milliseconds" 0.1
+@v354 kernel.seq.make
+@v355 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v356 kernel.value.record "id" "coverage-transfer-66" "pass" true "failures" $v354 "actual" $v355 "milliseconds" 0.11
+@v357 kernel.seq.make
+@v358 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v359 kernel.value.record "id" "coverage-transfer-67" "pass" true "failures" $v357 "actual" $v358 "milliseconds" 0.1
+@v360 kernel.seq.make
+@v361 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v362 kernel.value.record "id" "coverage-transfer-68" "pass" true "failures" $v360 "actual" $v361 "milliseconds" 0.11
+@v363 kernel.seq.make
+@v364 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v365 kernel.value.record "id" "coverage-transfer-69" "pass" true "failures" $v363 "actual" $v364 "milliseconds" 0.41
+@v366 kernel.seq.make
+@v367 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v368 kernel.value.record "id" "coverage-transfer-70" "pass" true "failures" $v366 "actual" $v367 "milliseconds" 0.4
+@v369 kernel.seq.make item $v158 item $v161 item $v164 item $v167 item $v170 item $v173 item $v176 item $v179 item $v182 item $v185 item $v188 item $v191 item $v194 item $v197 item $v200 item $v203 item $v206 item $v209 item $v212 item $v215 item $v218 item $v221 item $v224 item $v227 item $v230 item $v233 item $v236 item $v239 item $v242 item $v245 item $v248 item $v251 item $v254 item $v257 item $v260 item $v263 item $v266 item $v269 item $v272 item $v275 item $v278 item $v281 item $v284 item $v287 item $v290 item $v293 item $v296 item $v299 item $v302 item $v305 item $v308 item $v311 item $v314 item $v317 item $v320 item $v323 item $v326 item $v329 item $v332 item $v335 item $v338 item $v341 item $v344 item $v347 item $v350 item $v353 item $v356 item $v359 item $v362 item $v365 item $v368
+@v370 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "8856cccdb22fdea45db45d94357ba54173f8242e123a5df91e66824d86674827" "casesHash" "eb85fe9baf4119220645a40fd912eccaa8c5d8590dc5b9ce16682cf569a6f4e5" "total" 71 "passed" 71 "failed" 0 "results" $v369
+@v371 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v372 kernel.value.record "id" "coverage-0" "pass" false "failures" $v371 "actual" null "milliseconds" 0
+@v373 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v374 kernel.value.record "id" "coverage-1" "pass" false "failures" $v373 "actual" null "milliseconds" 0
+@v375 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v376 kernel.value.record "id" "coverage-2" "pass" false "failures" $v375 "actual" null "milliseconds" 0
+@v377 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v378 kernel.value.record "id" "coverage-3" "pass" false "failures" $v377 "actual" null "milliseconds" 0
+@v379 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v380 kernel.value.record "id" "coverage-4" "pass" false "failures" $v379 "actual" null "milliseconds" 0
+@v381 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v382 kernel.value.record "id" "coverage-5" "pass" false "failures" $v381 "actual" null "milliseconds" 0
+@v383 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v384 kernel.value.record "id" "coverage-6" "pass" false "failures" $v383 "actual" null "milliseconds" 0
+@v385 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v386 kernel.value.record "id" "coverage-7" "pass" false "failures" $v385 "actual" null "milliseconds" 0
+@v387 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v388 kernel.value.record "id" "coverage-8" "pass" false "failures" $v387 "actual" null "milliseconds" 0
+@v389 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v390 kernel.value.record "id" "coverage-9" "pass" false "failures" $v389 "actual" null "milliseconds" 0
+@v391 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v392 kernel.value.record "id" "coverage-10" "pass" false "failures" $v391 "actual" null "milliseconds" 0
+@v393 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v394 kernel.value.record "id" "coverage-11" "pass" false "failures" $v393 "actual" null "milliseconds" 0
+@v395 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v396 kernel.value.record "id" "coverage-12" "pass" false "failures" $v395 "actual" null "milliseconds" 0
+@v397 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v398 kernel.value.record "id" "coverage-13" "pass" false "failures" $v397 "actual" null "milliseconds" 0
+@v399 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v400 kernel.value.record "id" "coverage-14" "pass" false "failures" $v399 "actual" null "milliseconds" 0
+@v401 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v402 kernel.value.record "id" "coverage-15" "pass" false "failures" $v401 "actual" null "milliseconds" 0
+@v403 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v404 kernel.value.record "id" "coverage-16" "pass" false "failures" $v403 "actual" null "milliseconds" 0
+@v405 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v406 kernel.value.record "id" "coverage-17" "pass" false "failures" $v405 "actual" null "milliseconds" 0
+@v407 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v408 kernel.value.record "id" "coverage-18" "pass" false "failures" $v407 "actual" null "milliseconds" 0
+@v409 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v410 kernel.value.record "id" "coverage-19" "pass" false "failures" $v409 "actual" null "milliseconds" 0
+@v411 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v412 kernel.value.record "id" "coverage-20" "pass" false "failures" $v411 "actual" null "milliseconds" 0
+@v413 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v414 kernel.value.record "id" "coverage-21" "pass" false "failures" $v413 "actual" null "milliseconds" 0
+@v415 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v416 kernel.value.record "id" "coverage-22" "pass" false "failures" $v415 "actual" null "milliseconds" 0
+@v417 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v418 kernel.value.record "id" "coverage-23" "pass" false "failures" $v417 "actual" null "milliseconds" 0
+@v419 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v420 kernel.value.record "id" "coverage-24" "pass" false "failures" $v419 "actual" null "milliseconds" 0
+@v421 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v422 kernel.value.record "id" "coverage-25" "pass" false "failures" $v421 "actual" null "milliseconds" 0
+@v423 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v424 kernel.value.record "id" "coverage-26" "pass" false "failures" $v423 "actual" null "milliseconds" 0
+@v425 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v426 kernel.value.record "id" "coverage-27" "pass" false "failures" $v425 "actual" null "milliseconds" 0
+@v427 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v428 kernel.value.record "id" "coverage-28" "pass" false "failures" $v427 "actual" null "milliseconds" 0
+@v429 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v430 kernel.value.record "id" "coverage-29" "pass" false "failures" $v429 "actual" null "milliseconds" 0
+@v431 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v432 kernel.value.record "id" "coverage-30" "pass" false "failures" $v431 "actual" null "milliseconds" 0
+@v433 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v434 kernel.value.record "id" "coverage-31" "pass" false "failures" $v433 "actual" null "milliseconds" 0
+@v435 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v436 kernel.value.record "id" "coverage-32" "pass" false "failures" $v435 "actual" null "milliseconds" 0
+@v437 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v438 kernel.value.record "id" "coverage-33" "pass" false "failures" $v437 "actual" null "milliseconds" 0
+@v439 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v440 kernel.value.record "id" "coverage-34" "pass" false "failures" $v439 "actual" null "milliseconds" 0
+@v441 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v442 kernel.value.record "id" "coverage-35" "pass" false "failures" $v441 "actual" null "milliseconds" 0
+@v443 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v444 kernel.value.record "id" "coverage-36" "pass" false "failures" $v443 "actual" null "milliseconds" 0
+@v445 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v446 kernel.value.record "id" "coverage-37" "pass" false "failures" $v445 "actual" null "milliseconds" 0
+@v447 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v448 kernel.value.record "id" "coverage-38" "pass" false "failures" $v447 "actual" null "milliseconds" 0
+@v449 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v450 kernel.value.record "id" "coverage-39" "pass" false "failures" $v449 "actual" null "milliseconds" 0
+@v451 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v452 kernel.value.record "id" "coverage-40" "pass" false "failures" $v451 "actual" null "milliseconds" 0
+@v453 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v454 kernel.value.record "id" "coverage-41" "pass" false "failures" $v453 "actual" null "milliseconds" 0
+@v455 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v456 kernel.value.record "id" "coverage-42" "pass" false "failures" $v455 "actual" null "milliseconds" 0
+@v457 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v458 kernel.value.record "id" "coverage-43" "pass" false "failures" $v457 "actual" null "milliseconds" 0
+@v459 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v460 kernel.value.record "id" "coverage-44" "pass" false "failures" $v459 "actual" null "milliseconds" 0
+@v461 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v462 kernel.value.record "id" "coverage-45" "pass" false "failures" $v461 "actual" null "milliseconds" 0
+@v463 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v464 kernel.value.record "id" "coverage-46" "pass" false "failures" $v463 "actual" null "milliseconds" 0
+@v465 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v466 kernel.value.record "id" "coverage-47" "pass" false "failures" $v465 "actual" null "milliseconds" 0
+@v467 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v468 kernel.value.record "id" "coverage-48" "pass" false "failures" $v467 "actual" null "milliseconds" 0
+@v469 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v470 kernel.value.record "id" "coverage-49" "pass" false "failures" $v469 "actual" null "milliseconds" 0
+@v471 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v472 kernel.value.record "id" "coverage-50" "pass" false "failures" $v471 "actual" null "milliseconds" 0
+@v473 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v474 kernel.value.record "id" "coverage-51" "pass" false "failures" $v473 "actual" null "milliseconds" 0
+@v475 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v476 kernel.value.record "id" "coverage-52" "pass" false "failures" $v475 "actual" null "milliseconds" 0
+@v477 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v478 kernel.value.record "id" "coverage-53" "pass" false "failures" $v477 "actual" null "milliseconds" 0
+@v479 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v480 kernel.value.record "id" "coverage-54" "pass" false "failures" $v479 "actual" null "milliseconds" 0
+@v481 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v482 kernel.value.record "id" "coverage-55" "pass" false "failures" $v481 "actual" null "milliseconds" 0
+@v483 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v484 kernel.value.record "id" "coverage-56" "pass" false "failures" $v483 "actual" null "milliseconds" 0
+@v485 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v486 kernel.value.record "id" "coverage-57" "pass" false "failures" $v485 "actual" null "milliseconds" 0
+@v487 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v488 kernel.value.record "id" "coverage-58" "pass" false "failures" $v487 "actual" null "milliseconds" 0
+@v489 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v490 kernel.value.record "id" "coverage-59" "pass" false "failures" $v489 "actual" null "milliseconds" 0
+@v491 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v492 kernel.value.record "id" "coverage-60" "pass" false "failures" $v491 "actual" null "milliseconds" 0
+@v493 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v494 kernel.value.record "id" "coverage-61" "pass" false "failures" $v493 "actual" null "milliseconds" 0
+@v495 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v496 kernel.value.record "id" "coverage-62" "pass" false "failures" $v495 "actual" null "milliseconds" 0
+@v497 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v498 kernel.value.record "id" "coverage-63" "pass" false "failures" $v497 "actual" null "milliseconds" 0
+@v499 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v500 kernel.value.record "id" "coverage-transfer-64" "pass" false "failures" $v499 "actual" null "milliseconds" 0
+@v501 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v502 kernel.value.record "id" "coverage-transfer-65" "pass" false "failures" $v501 "actual" null "milliseconds" 0
+@v503 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v504 kernel.value.record "id" "coverage-transfer-66" "pass" false "failures" $v503 "actual" null "milliseconds" 0
+@v505 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v506 kernel.value.record "id" "coverage-transfer-67" "pass" false "failures" $v505 "actual" null "milliseconds" 0
+@v507 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v508 kernel.value.record "id" "coverage-transfer-68" "pass" false "failures" $v507 "actual" null "milliseconds" 0
+@v509 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v510 kernel.value.record "id" "coverage-transfer-69" "pass" false "failures" $v509 "actual" null "milliseconds" 0
+@v511 kernel.seq.make item "Unknown circuit: learned.coverage"
+@v512 kernel.value.record "id" "coverage-transfer-70" "pass" false "failures" $v511 "actual" null "milliseconds" 0
+@v513 kernel.seq.make item $v372 item $v374 item $v376 item $v378 item $v380 item $v382 item $v384 item $v386 item $v388 item $v390 item $v392 item $v394 item $v396 item $v398 item $v400 item $v402 item $v404 item $v406 item $v408 item $v410 item $v412 item $v414 item $v416 item $v418 item $v420 item $v422 item $v424 item $v426 item $v428 item $v430 item $v432 item $v434 item $v436 item $v438 item $v440 item $v442 item $v444 item $v446 item $v448 item $v450 item $v452 item $v454 item $v456 item $v458 item $v460 item $v462 item $v464 item $v466 item $v468 item $v470 item $v472 item $v474 item $v476 item $v478 item $v480 item $v482 item $v484 item $v486 item $v488 item $v490 item $v492 item $v494 item $v496 item $v498 item $v500 item $v502 item $v504 item $v506 item $v508 item $v510 item $v512
+@v514 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "1be1eabdf6bc9c765ddd7e80329f9492ae941d639b748bcacfdaa71b0eee4b27" "casesHash" "eb85fe9baf4119220645a40fd912eccaa8c5d8590dc5b9ce16682cf569a6f4e5" "total" 71 "passed" 0 "failed" 71 "results" $v513
+@v515 kernel.seq.make
+@v516 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v517 kernel.value.record "id" "coverage-0" "pass" true "failures" $v515 "actual" $v516 "milliseconds" 0.15
+@v518 kernel.seq.make
+@v519 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v520 kernel.value.record "id" "coverage-1" "pass" true "failures" $v518 "actual" $v519 "milliseconds" 0.1
+@v521 kernel.seq.make
+@v522 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v523 kernel.value.record "id" "coverage-2" "pass" true "failures" $v521 "actual" $v522 "milliseconds" 0.12
+@v524 kernel.seq.make
+@v525 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v526 kernel.value.record "id" "coverage-3" "pass" true "failures" $v524 "actual" $v525 "milliseconds" 0.1
+@v527 kernel.seq.make
+@v528 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v529 kernel.value.record "id" "coverage-4" "pass" true "failures" $v527 "actual" $v528 "milliseconds" 0.09
+@v530 kernel.seq.make
+@v531 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v532 kernel.value.record "id" "coverage-5" "pass" true "failures" $v530 "actual" $v531 "milliseconds" 0.09
+@v533 kernel.seq.make
+@v534 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v535 kernel.value.record "id" "coverage-6" "pass" true "failures" $v533 "actual" $v534 "milliseconds" 0.09
+@v536 kernel.seq.make
+@v537 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v538 kernel.value.record "id" "coverage-7" "pass" true "failures" $v536 "actual" $v537 "milliseconds" 0.09
+@v539 kernel.seq.make
+@v540 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v541 kernel.value.record "id" "coverage-8" "pass" true "failures" $v539 "actual" $v540 "milliseconds" 0.1
+@v542 kernel.seq.make
+@v543 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v544 kernel.value.record "id" "coverage-9" "pass" true "failures" $v542 "actual" $v543 "milliseconds" 0.1
+@v545 kernel.seq.make
+@v546 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v547 kernel.value.record "id" "coverage-10" "pass" true "failures" $v545 "actual" $v546 "milliseconds" 0.09
+@v548 kernel.seq.make
+@v549 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v550 kernel.value.record "id" "coverage-11" "pass" true "failures" $v548 "actual" $v549 "milliseconds" 0.1
+@v551 kernel.seq.make
+@v552 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v553 kernel.value.record "id" "coverage-12" "pass" true "failures" $v551 "actual" $v552 "milliseconds" 0.09
+@v554 kernel.seq.make
+@v555 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v556 kernel.value.record "id" "coverage-13" "pass" true "failures" $v554 "actual" $v555 "milliseconds" 0.09
+@v557 kernel.seq.make
+@v558 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v559 kernel.value.record "id" "coverage-14" "pass" true "failures" $v557 "actual" $v558 "milliseconds" 0.09
+@v560 kernel.seq.make
+@v561 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v562 kernel.value.record "id" "coverage-15" "pass" true "failures" $v560 "actual" $v561 "milliseconds" 0.09
+@v563 kernel.seq.make
+@v564 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v565 kernel.value.record "id" "coverage-16" "pass" true "failures" $v563 "actual" $v564 "milliseconds" 0.1
+@v566 kernel.seq.make
+@v567 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v568 kernel.value.record "id" "coverage-17" "pass" true "failures" $v566 "actual" $v567 "milliseconds" 0.09
+@v569 kernel.seq.make
+@v570 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v571 kernel.value.record "id" "coverage-18" "pass" true "failures" $v569 "actual" $v570 "milliseconds" 0.1
+@v572 kernel.seq.make
+@v573 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v574 kernel.value.record "id" "coverage-19" "pass" true "failures" $v572 "actual" $v573 "milliseconds" 0.09
+@v575 kernel.seq.make
+@v576 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v577 kernel.value.record "id" "coverage-20" "pass" true "failures" $v575 "actual" $v576 "milliseconds" 0.09
+@v578 kernel.seq.make
+@v579 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v580 kernel.value.record "id" "coverage-21" "pass" true "failures" $v578 "actual" $v579 "milliseconds" 0.1
+@v581 kernel.seq.make
+@v582 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v583 kernel.value.record "id" "coverage-22" "pass" true "failures" $v581 "actual" $v582 "milliseconds" 0.09
+@v584 kernel.seq.make
+@v585 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v586 kernel.value.record "id" "coverage-23" "pass" true "failures" $v584 "actual" $v585 "milliseconds" 0.09
+@v587 kernel.seq.make
+@v588 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v589 kernel.value.record "id" "coverage-24" "pass" true "failures" $v587 "actual" $v588 "milliseconds" 0.1
+@v590 kernel.seq.make
+@v591 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v592 kernel.value.record "id" "coverage-25" "pass" true "failures" $v590 "actual" $v591 "milliseconds" 0.11
+@v593 kernel.seq.make
+@v594 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v595 kernel.value.record "id" "coverage-26" "pass" true "failures" $v593 "actual" $v594 "milliseconds" 0.11
+@v596 kernel.seq.make
+@v597 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v598 kernel.value.record "id" "coverage-27" "pass" true "failures" $v596 "actual" $v597 "milliseconds" 0.11
+@v599 kernel.seq.make
+@v600 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v601 kernel.value.record "id" "coverage-28" "pass" true "failures" $v599 "actual" $v600 "milliseconds" 0.09
+@v602 kernel.seq.make
+@v603 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v604 kernel.value.record "id" "coverage-29" "pass" true "failures" $v602 "actual" $v603 "milliseconds" 0.09
+@v605 kernel.seq.make
+@v606 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v607 kernel.value.record "id" "coverage-30" "pass" true "failures" $v605 "actual" $v606 "milliseconds" 0.09
+@v608 kernel.seq.make
+@v609 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v610 kernel.value.record "id" "coverage-31" "pass" true "failures" $v608 "actual" $v609 "milliseconds" 0.1
+@v611 kernel.seq.make
+@v612 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v613 kernel.value.record "id" "coverage-32" "pass" true "failures" $v611 "actual" $v612 "milliseconds" 0.1
+@v614 kernel.seq.make
+@v615 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v616 kernel.value.record "id" "coverage-33" "pass" true "failures" $v614 "actual" $v615 "milliseconds" 0.09
+@v617 kernel.seq.make
+@v618 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v619 kernel.value.record "id" "coverage-34" "pass" true "failures" $v617 "actual" $v618 "milliseconds" 0.09
+@v620 kernel.seq.make
+@v621 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v622 kernel.value.record "id" "coverage-35" "pass" true "failures" $v620 "actual" $v621 "milliseconds" 0.09
+@v623 kernel.seq.make
+@v624 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v625 kernel.value.record "id" "coverage-36" "pass" true "failures" $v623 "actual" $v624 "milliseconds" 0.1
+@v626 kernel.seq.make
+@v627 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v628 kernel.value.record "id" "coverage-37" "pass" true "failures" $v626 "actual" $v627 "milliseconds" 0.09
+@v629 kernel.seq.make
+@v630 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v631 kernel.value.record "id" "coverage-38" "pass" true "failures" $v629 "actual" $v630 "milliseconds" 0.09
+@v632 kernel.seq.make
+@v633 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v634 kernel.value.record "id" "coverage-39" "pass" true "failures" $v632 "actual" $v633 "milliseconds" 0.09
+@v635 kernel.seq.make
+@v636 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v637 kernel.value.record "id" "coverage-40" "pass" true "failures" $v635 "actual" $v636 "milliseconds" 0.13
+@v638 kernel.seq.make
+@v639 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v640 kernel.value.record "id" "coverage-41" "pass" true "failures" $v638 "actual" $v639 "milliseconds" 0.12
+@v641 kernel.seq.make
+@v642 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v643 kernel.value.record "id" "coverage-42" "pass" true "failures" $v641 "actual" $v642 "milliseconds" 0.1
+@v644 kernel.seq.make
+@v645 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v646 kernel.value.record "id" "coverage-43" "pass" true "failures" $v644 "actual" $v645 "milliseconds" 0.09
+@v647 kernel.seq.make
+@v648 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v649 kernel.value.record "id" "coverage-44" "pass" true "failures" $v647 "actual" $v648 "milliseconds" 0.1
+@v650 kernel.seq.make
+@v651 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v652 kernel.value.record "id" "coverage-45" "pass" true "failures" $v650 "actual" $v651 "milliseconds" 0.11
+@v653 kernel.seq.make
+@v654 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v655 kernel.value.record "id" "coverage-46" "pass" true "failures" $v653 "actual" $v654 "milliseconds" 0.09
+@v656 kernel.seq.make
+@v657 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v658 kernel.value.record "id" "coverage-47" "pass" true "failures" $v656 "actual" $v657 "milliseconds" 0.09
+@v659 kernel.seq.make
+@v660 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v661 kernel.value.record "id" "coverage-48" "pass" true "failures" $v659 "actual" $v660 "milliseconds" 0.1
+@v662 kernel.seq.make
+@v663 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v664 kernel.value.record "id" "coverage-49" "pass" true "failures" $v662 "actual" $v663 "milliseconds" 0.09
+@v665 kernel.seq.make
+@v666 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v667 kernel.value.record "id" "coverage-50" "pass" true "failures" $v665 "actual" $v666 "milliseconds" 0.12
+@v668 kernel.seq.make
+@v669 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v670 kernel.value.record "id" "coverage-51" "pass" true "failures" $v668 "actual" $v669 "milliseconds" 0.09
+@v671 kernel.seq.make
+@v672 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v673 kernel.value.record "id" "coverage-52" "pass" true "failures" $v671 "actual" $v672 "milliseconds" 0.1
+@v674 kernel.seq.make
+@v675 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v676 kernel.value.record "id" "coverage-53" "pass" true "failures" $v674 "actual" $v675 "milliseconds" 0.09
+@v677 kernel.seq.make
+@v678 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v679 kernel.value.record "id" "coverage-54" "pass" true "failures" $v677 "actual" $v678 "milliseconds" 0.1
+@v680 kernel.seq.make
+@v681 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v682 kernel.value.record "id" "coverage-55" "pass" true "failures" $v680 "actual" $v681 "milliseconds" 0.09
+@v683 kernel.seq.make
+@v684 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v685 kernel.value.record "id" "coverage-56" "pass" true "failures" $v683 "actual" $v684 "milliseconds" 0.11
+@v686 kernel.seq.make
+@v687 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v688 kernel.value.record "id" "coverage-57" "pass" true "failures" $v686 "actual" $v687 "milliseconds" 0.11
+@v689 kernel.seq.make
+@v690 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v691 kernel.value.record "id" "coverage-58" "pass" true "failures" $v689 "actual" $v690 "milliseconds" 0.11
+@v692 kernel.seq.make
+@v693 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v694 kernel.value.record "id" "coverage-59" "pass" true "failures" $v692 "actual" $v693 "milliseconds" 0.12
+@v695 kernel.seq.make
+@v696 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v697 kernel.value.record "id" "coverage-60" "pass" true "failures" $v695 "actual" $v696 "milliseconds" 0.11
+@v698 kernel.seq.make
+@v699 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v700 kernel.value.record "id" "coverage-61" "pass" true "failures" $v698 "actual" $v699 "milliseconds" 0.11
+@v701 kernel.seq.make
+@v702 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v703 kernel.value.record "id" "coverage-62" "pass" true "failures" $v701 "actual" $v702 "milliseconds" 0.11
+@v704 kernel.seq.make
+@v705 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v706 kernel.value.record "id" "coverage-63" "pass" true "failures" $v704 "actual" $v705 "milliseconds" 0.11
+@v707 kernel.seq.make
+@v708 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v709 kernel.value.record "id" "coverage-transfer-64" "pass" true "failures" $v707 "actual" $v708 "milliseconds" 0.13
+@v710 kernel.seq.make
+@v711 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v712 kernel.value.record "id" "coverage-transfer-65" "pass" true "failures" $v710 "actual" $v711 "milliseconds" 0.12
+@v713 kernel.seq.make
+@v714 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v715 kernel.value.record "id" "coverage-transfer-66" "pass" true "failures" $v713 "actual" $v714 "milliseconds" 0.14
+@v716 kernel.seq.make
+@v717 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v718 kernel.value.record "id" "coverage-transfer-67" "pass" true "failures" $v716 "actual" $v717 "milliseconds" 0.14
+@v719 kernel.seq.make
+@v720 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v721 kernel.value.record "id" "coverage-transfer-68" "pass" true "failures" $v719 "actual" $v720 "milliseconds" 0.12
+@v722 kernel.seq.make
+@v723 kernel.value.record "status" "evaluated" "truth" null "value" false "values" null "gaps" null "text" "" "verification" null
+@v724 kernel.value.record "id" "coverage-transfer-69" "pass" true "failures" $v722 "actual" $v723 "milliseconds" 0.38
+@v725 kernel.seq.make
+@v726 kernel.value.record "status" "evaluated" "truth" null "value" true "values" null "gaps" null "text" "" "verification" null
+@v727 kernel.value.record "id" "coverage-transfer-70" "pass" true "failures" $v725 "actual" $v726 "milliseconds" 0.33
+@v728 kernel.seq.make item $v517 item $v520 item $v523 item $v526 item $v529 item $v532 item $v535 item $v538 item $v541 item $v544 item $v547 item $v550 item $v553 item $v556 item $v559 item $v562 item $v565 item $v568 item $v571 item $v574 item $v577 item $v580 item $v583 item $v586 item $v589 item $v592 item $v595 item $v598 item $v601 item $v604 item $v607 item $v610 item $v613 item $v616 item $v619 item $v622 item $v625 item $v628 item $v631 item $v634 item $v637 item $v640 item $v643 item $v646 item $v649 item $v652 item $v655 item $v658 item $v661 item $v664 item $v667 item $v670 item $v673 item $v676 item $v679 item $v682 item $v685 item $v688 item $v691 item $v694 item $v697 item $v700 item $v703 item $v706 item $v709 item $v712 item $v715 item $v718 item $v721 item $v724 item $v727
+@v729 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "c851a5a2e9869fe72e593c5114ab7e0d11e749df6321635328fee26c7e7e386a" "casesHash" "c93c8720a40b0c2ba8e77763aa25985272cb57d40e86c0ca8c79ae54503b3d39" "total" 71 "passed" 71 "failed" 0 "results" $v728
+@v730 kernel.value.record "trainingFit" 2 "transferPassed" 49 "transferTotal" 71 "promotionAccepted" false
+@v731 kernel.value.record "schema" "sxlm.program-learning-evaluation.v1" "model" "4700852adbbbb19e9f46bb15772bcbf104c10743ae021429434f1c07475006d4" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "generated" "2026-09-08T13:53:17.426Z" "sourcePack" "5015c6174b7ae70139d507426594c6ce88a17d0b3624497e53cd31d2d63d3f95" "receipt" $v11 "exactReplay" true "unchangedRuntime" true "before" $v155 "after" $v370 "ablated" $v514 "reuse" $v729 "counterexample" $v730 "qualification" "Public same-project finite-set procedure evaluation. The teacher supplies types, constants and library choices. This demonstrates bounded program learning and reuse, not general language understanding or an external benchmark."
+@output result $v731

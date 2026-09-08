@@ -1,0 +1,60 @@
+@v0 kernel.value.record "kind" "agent-supervised-migration" "source" "test/reference/reason-v1.mjs and test/reference/world-v1.mjs" "independent" false
+@v1 kernel.value.record "kind" "fact"
+@v2 kernel.value.record "input" $v1 "output" "fact"
+@v3 kernel.value.record "kind" "rule"
+@v4 kernel.value.record "input" $v3 "output" "rule"
+@v5 kernel.value.record "kind" "quantity"
+@v6 kernel.value.record "input" $v5 "output" "quantity"
+@v7 kernel.value.record "kind" "gap"
+@v8 kernel.value.record "input" $v7 "output" "gap"
+@v9 kernel.value.record "kind" "query"
+@v10 kernel.value.record "input" $v9 "output" "ignore"
+@v11 kernel.seq.make item $v2 item $v4 item $v6 item $v8 item $v10
+@v12 kernel.value.record "fallback" "invalid" "examples" $v11
+@v13 kernel.value.record "kind" "query" "intent" ""
+@v14 kernel.value.record "input" $v13 "output" "query"
+@v15 kernel.value.record "kind" "gap" "intent" "query"
+@v16 kernel.value.record "input" $v15 "output" "unsupported"
+@v17 kernel.value.record "kind" "gap" "intent" "statement"
+@v18 kernel.value.record "input" $v17 "output" "apply"
+@v19 kernel.value.record "kind" "fact" "intent" ""
+@v20 kernel.value.record "input" $v19 "output" "apply"
+@v21 kernel.value.record "kind" "rule" "intent" ""
+@v22 kernel.value.record "input" $v21 "output" "apply"
+@v23 kernel.value.record "kind" "quantity" "intent" ""
+@v24 kernel.value.record "input" $v23 "output" "apply"
+@v25 kernel.seq.make item $v14 item $v16 item $v18 item $v20 item $v22 item $v24
+@v26 kernel.value.record "fallback" "apply" "examples" $v25
+@v27 kernel.value.record "kind" "truth"
+@v28 kernel.value.record "input" $v27 "output" "logic"
+@v29 kernel.value.record "kind" "select"
+@v30 kernel.value.record "input" $v29 "output" "logic"
+@v31 kernel.value.record "kind" "quantity"
+@v32 kernel.value.record "input" $v31 "output" "quantity"
+@v33 kernel.value.record "kind" "arithmetic"
+@v34 kernel.value.record "input" $v33 "output" "arithmetic"
+@v35 kernel.seq.make item $v28 item $v30 item $v32 item $v34
+@v36 kernel.value.record "fallback" "unsupported" "examples" $v35
+@v37 kernel.value.record "operation" "set"
+@v38 kernel.value.record "input" $v37 "output" "set"
+@v39 kernel.value.record "operation" "add"
+@v40 kernel.value.record "input" $v39 "output" "increment"
+@v41 kernel.value.record "operation" "subtract"
+@v42 kernel.value.record "input" $v41 "output" "decrement"
+@v43 kernel.value.record "operation" "transfer"
+@v44 kernel.value.record "input" $v43 "output" "transfer"
+@v45 kernel.seq.make item $v38 item $v40 item $v42 item $v44
+@v46 kernel.value.record "fallback" "invalid" "examples" $v45
+@v47 kernel.value.record "kind" "assert"
+@v48 kernel.value.record "input" $v47 "output" "assert"
+@v49 kernel.value.record "kind" "rule"
+@v50 kernel.value.record "input" $v49 "output" "rule"
+@v51 kernel.value.record "kind" "query"
+@v52 kernel.value.record "input" $v51 "output" "query"
+@v53 kernel.value.record "kind" "quantity"
+@v54 kernel.value.record "input" $v53 "output" "quantity"
+@v55 kernel.seq.make item $v48 item $v50 item $v52 item $v54
+@v56 kernel.value.record "fallback" "invalid" "examples" $v55
+@v57 kernel.value.record "entry" $v12 "instruction" $v26 "solver" $v36 "event" $v46 "lowering" $v56
+@v58 kernel.value.record "schema" "sxlm.curriculum.v1" "origin" $v0 "components" $v57
+@output result $v58

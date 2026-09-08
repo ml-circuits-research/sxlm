@@ -1,0 +1,6 @@
+@input item any
+@input with object
+@atom data.object value $item
+@checked primitive "relation.validateAtom" bind atom $atom ground true
+@key primitive "relation.key" bind atom $checked
+@output result $key

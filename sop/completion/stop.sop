@@ -1,0 +1,6 @@
+@input with object
+@state0 kernel.value.get value $with key "state" fallback null
+@state data.object value $state0
+@patch kernel.value.record stopped true
+@result kernel.value.merge left $state right $patch
+@output result $result

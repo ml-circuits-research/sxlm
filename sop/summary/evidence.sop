@@ -1,0 +1,8 @@
+@input item any
+@input with object
+@span kernel.value.get value $item key "span" fallback null
+@source kernel.value.get value $with key "source" fallback null
+@start kernel.value.get value $span key "start" fallback null
+@end kernel.value.get value $span key "end" fallback null
+@record kernel.value.record source $source start $start end $end
+@output result $record

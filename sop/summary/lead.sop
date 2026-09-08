@@ -1,0 +1,4 @@
+@input with object
+@amount0 kernel.value.get value $with key "amount" fallback null
+@amount data.number value $amount0
+@output result $amount

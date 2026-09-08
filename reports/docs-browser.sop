@@ -1,0 +1,4 @@
+@v0 kernel.seq.make item "chapter index" item "chapter chat" item "chapter usage" item "chapter interfaces" item "chapter architecture" item "chapter sop" item "chapter lexical-policy" item "chapter formal-relations" item "chapter formal-planning" item "chapter text-tasks" item "chapter expression-lowering" item "chapter training" item "chapter evaluation" item "chapter next" item "chapter wiki" item "navigation map" item "outside click" item "Escape focus" item "keyboard menu" item "desktop layout" item "mobile layout" item "specification matrix" item "DS contract and relative wiki links" item "mobile specification width" item "rendered architecture diagram" item "no JavaScript exceptions"
+@v1 kernel.seq.make item "docs-desktop.png" item "docs-mobile.png" item "docs-specification.png"
+@v2 kernel.value.record "schema" "sxlm.docs-browser.v1" "passed" true "checks" $v0 "screenshots" $v1
+@output result $v2

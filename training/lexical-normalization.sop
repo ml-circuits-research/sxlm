@@ -1,0 +1,26 @@
+@v0 kernel.value.record "text" "string"
+@v1 kernel.value.record "op" "kernel.text.normalize"
+@v2 kernel.value.record "op" "kernel.text.case"
+@v3 kernel.seq.make item $v1 item $v2
+@v4 kernel.seq.make item "NFC" item "NFKC" item "lower" item "upper"
+@v5 kernel.value.record "text" "AbC"
+@v6 kernel.value.record "input" $v5 "output" "abc"
+@v7 kernel.value.record "text" "ＦＯＯ"
+@v8 kernel.value.record "input" $v7 "output" "foo"
+@v9 kernel.value.record "text" "ℂAFÉ"
+@v10 kernel.value.record "input" $v9 "output" "café"
+@v11 kernel.value.record "text" "Ⅳ"
+@v12 kernel.value.record "input" $v11 "output" "iv"
+@v13 kernel.value.record "text" "Straße"
+@v14 kernel.value.record "input" $v13 "output" "straße"
+@v15 kernel.value.record "text" "İ"
+@v16 kernel.value.record "input" $v15 "output" "i̇"
+@v17 kernel.value.record "text" "ﬃ"
+@v18 kernel.value.record "input" $v17 "output" "ffi"
+@v19 kernel.value.record "text" "🛰️ X"
+@v20 kernel.value.record "input" $v19 "output" "🛰️ x"
+@v21 kernel.seq.make item $v6 item $v8 item $v10 item $v12 item $v14 item $v16 item $v18 item $v20
+@v22 kernel.value.record "applications" 2 "candidates" 10000 "representatives" 1000 "milliseconds" 10000
+@v23 kernel.value.record "kind" "agent-authored-supervision" "independent" false "scope" "primitive-library" "qualification" "Teacher-chosen Unicode normalization/case observations and primitive library. Same-project transfer checks are separate; this does not learn token boundaries or grammar."
+@v24 kernel.value.record "id" "learned.lexical.normalize" "inputs" $v0 "output" "string" "library" $v3 "constants" $v4 "examples" $v21 "limits" $v22 "origin" $v23
+@output result $v24

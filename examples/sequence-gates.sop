@@ -1,0 +1,8 @@
+@v0 kernel.value.record "maxTokens" 4
+@v1 kernel.value.record "text" "Opaque tessera rotates smoothly." "grounding" "distributional-pattern"
+@v2 kernel.value.record "id" "sequence-new-prefix" "task" "complete" "text" "Opaque tessera" "options" $v0 "expect" $v1
+@v3 kernel.value.record "maxTokens" 4
+@v4 kernel.value.record "status" "unknown"
+@v5 kernel.value.record "id" "sequence-unsupported-context" "task" "complete" "text" "Opaque unknowncomponent" "options" $v3 "expect" $v4
+@v6 kernel.seq.make item $v2 item $v5
+@output result $v6

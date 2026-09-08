@@ -1,0 +1,12 @@
+✔ generic leading trim preserves non-whitespace code units and accounts for input work (2.997214ms)
+✔ SOP segmentation agrees with a frozen historical oracle on finite boundaries and UTF-16 spans (603.664416ms)
+✔ offline learning executes a captured SOP dependency closure with the deployed identity (6.917256ms)
+✔ sequence learning follows changed SOP normalization and audit rejects a mismatched deployed policy (5591.194727ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7282.086104

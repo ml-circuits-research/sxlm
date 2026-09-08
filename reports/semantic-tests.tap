@@ -1,0 +1,14 @@
+✔ semantic policies execute as circuits and reproduce their declared sources (19.734095ms)
+✔ migration preserves the previous interpreter over temporal, partial and inconsistent event histories (1063.314866ms)
+✔ independent conservation and context checks cover unseen numeric bindings (288.383516ms)
+✔ learning a new event label changes reusable state behavior without native edits (99.541058ms)
+✔ fold is ordered, empty-safe, cache-correct, typed and bounded across unrelated domains (1.868352ms)
+✔ general term operations reject unsafe records and preserve exact arithmetic and lazy scope (0.303046ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1626.931283

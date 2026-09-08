@@ -1,0 +1,9 @@
+@input state object
+@input item any
+@input with object
+@distribution kernel.value.get value $state key "distribution" fallback null
+@count kernel.seq.count items $distribution
+@empty kernel.value.equal left $count right 0
+@arguments kernel.value.record state $state size $item options $with
+@result kernel.flow.choose condition $empty then "completion.lookup" else "completion.keep-backoff" with $arguments
+@output result $result

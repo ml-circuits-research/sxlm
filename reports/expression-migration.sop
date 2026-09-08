@@ -1,0 +1,3 @@
+@v0 kernel.value.record "schema" "sxlm.expression-migration.v1" "sourceHash" "e83f010bf1738a5c70c3fbeba0365784c2d2588ee9bbcea43157a4d2ef304f3d" "roots" 131 "templateCalls" 188 "compiledModules" 603 "maxNodes" 124 "qualification" "Offline compilation removes the runtime expression interpreter. Authored input remains authored; generated fragments are not new skills."
+@output result $v0
+

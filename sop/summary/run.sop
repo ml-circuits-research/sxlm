@@ -1,0 +1,48 @@
+@input text string
+@input config object
+@input options object
+@length kernel.seq.count items $text
+@validText kernel.number.between value $length minimum 0 maximum 200000 integer true
+@checkedText0 kernel.value.require condition $validText message "Summary input is too large" value $text
+@checkedText data.string value $checkedText0
+@requested kernel.value.get value $options key "sentences" fallback 3
+@validLimit kernel.number.between value $requested minimum 1 maximum 30 integer true
+@checkedLimit kernel.value.require condition $validLimit message "Summary length must be 1–30 sentences" value $requested
+@limit data.number value $checkedLimit
+@segmentation kernel.value.get value $config key "segmentation" fallback null
+@boundaries0 kernel.value.get value $segmentation key "boundaries" fallback null
+@boundaries data.array value $boundaries0
+@chunks text.segment text $checkedText boundaries $boundaries keep $boundaries
+@indexed kernel.seq.index items $chunks
+@stopwords kernel.value.get value $config key "stopwords" fallback null
+@tokenargs kernel.value.record stopwords $stopwords
+@content kernel.flow.map items $indexed circuit "summary.content" with $tokenargs
+@unique kernel.flow.map items $content circuit "summary.unique" with $tokenargs
+@terms kernel.seq.flat items $unique
+@histogram kernel.seq.histogram items $terms
+@focusText kernel.value.get value $options key "focus" fallback ""
+@focus summary.tokens item $focusText with $tokenargs
+@weights kernel.value.get value $config key "weights" fallback null
+@scoreargs kernel.value.record content $content histogram $histogram focus $focus weights $weights
+@scored kernel.flow.map items $indexed circuit "summary.score" with $scoreargs
+@total kernel.seq.count items $chunks
+@count kernel.number.binary operation "min" left $limit right $total
+@iterations kernel.seq.range count $count
+@empty kernel.seq.make
+@initial kernel.value.record remaining $scored selected $empty
+@redundancy kernel.value.get value $weights key "redundancy" fallback null
+@selectionargs kernel.value.record redundancy $redundancy
+@selection kernel.flow.fold items $iterations seed $initial circuit "summary.step" with $selectionargs
+@selected0 kernel.value.get value $selection key "selected" fallback null
+@selected kernel.seq.sort items $selected0 key "index" descending false
+@spans kernel.seq.pluck items $selected key "span"
+@texts kernel.seq.pluck items $spans key "text"
+@answer kernel.text.join items $texts separator " "
+@sourceId kernel.value.hash value $text
+@source kernel.value.record id $sourceId text $text
+@evidenceargs kernel.value.record source $sourceId
+@evidence kernel.flow.map items $selected circuit "summary.evidence" with $evidenceargs
+@indices kernel.seq.pluck items $selected key "index"
+@guarantees kernel.seq.make item "verbatim-source-spans"
+@result kernel.value.record kind "summary" status "answered" method "extractive" text $answer evidence $evidence source $source selected $indices totalSentences $total coverage "selected-source-spans" guarantees $guarantees
+@output result $result

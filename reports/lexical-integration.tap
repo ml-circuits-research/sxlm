@@ -1,0 +1,239 @@
+TAP version 13
+# Subtest: SOP document policy preserves historical interpretation, scopes, source spans and coverage
+ok 1 - SOP document policy preserves historical interpretation, scopes, source spans and coverage
+  ---
+  duration_ms: 6315.457461
+  type: 'test'
+  ...
+# Subtest: unparsed, ambiguous and invalid semantic results become explicit SOP gaps
+ok 2 - unparsed, ambiguous and invalid semantic results become explicit SOP gaps
+  ---
+  duration_ms: 1411.71616
+  type: 'test'
+  ...
+# Subtest: grammar proposals execute as circuit knowledge and removal of wiring removes their competence
+ok 3 - grammar proposals execute as circuit knowledge and removal of wiring removes their competence
+  ---
+  duration_ms: 4124.738965
+  type: 'test'
+  ...
+# Subtest: changing document interpretation policy changes SOP content, not the host implementation
+ok 4 - changing document interpretation policy changes SOP content, not the host implementation
+  ---
+  duration_ms: 571.325957
+  type: 'test'
+  ...
+# Subtest: attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure
+ok 5 - attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure
+  ---
+  duration_ms: 1.729088
+  type: 'test'
+  ...
+# Subtest: runtime inspection cannot mutate programs, primitive contracts or cached answers
+ok 6 - runtime inspection cannot mutate programs, primitive contracts or cached answers
+  ---
+  duration_ms: 0.899779
+  type: 'test'
+  ...
+# Subtest: grammar indexes are immutable views with normalized and collision-free lexical identity
+ok 7 - grammar indexes are immutable views with normalized and collision-free lexical identity
+  ---
+  duration_ms: 131.792172
+  type: 'test'
+  ...
+# Subtest: prototype-like text remains in source evidence without unsafe label keys
+ok 8 - prototype-like text remains in source evidence without unsafe label keys
+  ---
+  duration_ms: 289.480283
+  type: 'test'
+  ...
+# Subtest: all retired operator families lower to one graph VM with differential value checks
+ok 9 - all retired operator families lower to one graph VM with differential value checks
+  ---
+  duration_ms: 169.849759
+  type: 'test'
+  ...
+# Subtest: lazy branches, boolean short circuits and defaults preserve failure boundaries
+ok 10 - lazy branches, boolean short circuits and defaults preserve failure boundaries
+  ---
+  duration_ms: 14.55333
+  type: 'test'
+  ...
+# Subtest: nested iteration preserves source scope and variable shadowing
+ok 11 - nested iteration preserves source scope and variable shadowing
+  ---
+  duration_ms: 8.025445
+  type: 'test'
+  ...
+# Subtest: categorical fusion is compact and preserves equality and fallback behavior
+ok 12 - categorical fusion is compact and preserves equality and fallback behavior
+  ---
+  duration_ms: 14.277034
+  type: 'test'
+  ...
+# Subtest: compiled iteration and branches respect budgets and reject malformed values
+ok 13 - compiled iteration and branches respect budgets and reject malformed values
+  ---
+  duration_ms: 10.374383
+  type: 'test'
+  ...
+# Subtest: the active library cannot execute expression objects or install the retired opcode
+ok 14 - the active library cannot execute expression objects or install the retired opcode
+  ---
+  duration_ms: 1092.667768
+  type: 'test'
+  ...
+# Subtest: construction induction preserves expression-shaped constants as inert semantic data
+ok 15 - construction induction preserves expression-shaped constants as inert semantic data
+  ---
+  duration_ms: 1590.219458
+  type: 'test'
+  ...
+# Subtest: a replay receipt cannot certify a reordered executable record or an obsolete fragment
+ok 16 - a replay receipt cannot certify a reordered executable record or an obsolete fragment
+  ---
+  duration_ms: 5513.238759
+  type: 'test'
+  ...
+# Subtest: chart composition preserves values that later circuits can distinguish
+ok 17 - chart composition preserves values that later circuits can distinguish
+  ---
+  duration_ms: 998.785467
+  type: 'test'
+  ...
+# Subtest: HTTP workbench serves the module UI and executes all natural-language tasks
+ok 18 - HTTP workbench serves the module UI and executes all natural-language tasks
+  ---
+  duration_ms: 3784.357226
+  type: 'test'
+  ...
+# Subtest: CLI text, SOP, summary and completion flags behave correctly
+not ok 19 - CLI text, SOP, summary and completion flags behave correctly
+  ---
+  duration_ms: 2548.392713
+  type: 'test'
+  location: '/home/salboaie/work/sllm/sxlm/test/interfaces.test.mjs:23:1'
+  failureType: 'testCodeFailure'
+  error: 'spawnSync /home/salboaie/.nvm/versions/node/v24.9.0/bin/node ENOBUFS'
+  code: 'ENOBUFS'
+  stack: |-
+    Object.spawnSync (node:internal/child_process:1120:20)
+    spawnSync (node:child_process:911:24)
+    execFileSync (node:child_process:954:15)
+    run (file:///home/salboaie/work/sllm/sxlm/test/interfaces.test.mjs:25:19)
+    TestContext.<anonymous> (file:///home/salboaie/work/sllm/sxlm/test/interfaces.test.mjs:27:26)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1106:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+    Test.postRun (node:internal/test_runner/test:1235:19)
+    Test.run (node:internal/test_runner/test:1163:12)
+  ...
+# Subtest: unparsed questions do not taint persistent state or hide behind an earlier answer
+ok 20 - unparsed questions do not taint persistent state or hide behind an earlier answer
+  ---
+  duration_ms: 1718.236511
+  type: 'test'
+  ...
+# Subtest: long derivations verify through a DAG even when the display tree is truncated
+not ok 21 - long derivations verify through a DAG even when the display tree is truncated
+  ---
+  duration_ms: 3062.460303
+  type: 'test'
+  location: '/home/salboaie/work/sllm/sxlm/test/interfaces.test.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'true'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'true'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/salboaie/work/sllm/sxlm/test/interfaces.test.mjs:43:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1106:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+    Test.postRun (node:internal/test_runner/test:1235:19)
+    Test.run (node:internal/test_runner/test:1163:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.processPendingSubtests (node:internal/test_runner/test:788:7)
+  ...
+# Subtest: content identity prevents specialized constant cache collisions
+ok 22 - content identity prevents specialized constant cache collisions
+  ---
+  duration_ms: 4.697457
+  type: 'test'
+  ...
+# Subtest: typed graph rejects forward references, bad arguments and cycles
+ok 23 - typed graph rejects forward references, bad arguments and cycles
+  ---
+  duration_ms: 0.510967
+  type: 'test'
+  ...
+# Subtest: nested circuits compose through typed inputs
+ok 24 - nested circuits compose through typed inputs
+  ---
+  duration_ms: 0.711763
+  type: 'test'
+  ...
+# Subtest: JSON boundary rejects code, non-finite values and prototype pollution
+ok 25 - JSON boundary rejects code, non-finite values and prototype pollution
+  ---
+  duration_ms: 0.249826
+  type: 'test'
+  ...
+# Subtest: node budgets also apply to cache hits
+ok 26 - node budgets also apply to cache hits
+  ---
+  duration_ms: 1.453978
+  type: 'test'
+  ...
+# Subtest: grammar interpreter works with an unrelated alphabet and external semantics
+ok 27 - grammar interpreter works with an unrelated alphabet and external semantics
+  ---
+  duration_ms: 393.190869
+  type: 'test'
+  ...
+# Subtest: unsafe and cross-world Horn rules are rejected
+ok 28 - unsafe and cross-world Horn rules are rejected
+  ---
+  duration_ms: 0.635287
+  type: 'test'
+  ...
+# Subtest: four-valued inference does not use absence as negation or explode on contradictions
+ok 29 - four-valued inference does not use absence as negation or explode on contradictions
+  ---
+  duration_ms: 1.288033
+  type: 'test'
+  ...
+# Subtest: recursive closure terminates on a finite cyclic domain
+ok 30 - recursive closure terminates on a finite cyclic domain
+  ---
+  duration_ms: 0.761072
+  type: 'test'
+  ...
+# Subtest: exact arithmetic has precedence, parentheses, unary signs and no code execution
+ok 31 - exact arithmetic has precedence, parentheses, unary signs and no code execution
+  ---
+  duration_ms: 1.280979
+  type: 'test'
+  ...
+# Subtest: finite planner optimizes cost and has independently replayable witnesses
+ok 32 - finite planner optimizes cost and has independently replayable witnesses
+  ---
+  duration_ms: 927.514907
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 30
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14042.219153

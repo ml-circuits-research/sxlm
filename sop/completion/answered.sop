@@ -1,0 +1,3 @@
+@input with object
+@result data.string value "answered"
+@output result $result

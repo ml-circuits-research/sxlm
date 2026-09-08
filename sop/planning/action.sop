@@ -1,0 +1,20 @@
+@input item any
+@input with object
+@action data.object value $item
+@rawId kernel.value.get value $action key "id" fallback null
+@id data.string value $rawId
+@rawCost kernel.value.get value $action key "cost" fallback null
+@missing kernel.value.equal left $rawCost right null
+@costArgs kernel.value.record cost $rawCost
+@cost kernel.flow.choose condition $missing then "planning.cost-default" else "planning.cost-value" with $costArgs
+@rawRequires kernel.value.get value $action key "requires" fallback null
+@requires data.array value $rawRequires
+@rawAdd kernel.value.get value $action key "add" fallback null
+@add data.array value $rawAdd
+@rawRemove kernel.value.get value $action key "remove" fallback null
+@remove data.array value $rawRemove
+@preconditions kernel.flow.map items $requires circuit "planning.atom-key" with $with
+@additions kernel.flow.map items $add circuit "planning.atom-key" with $with
+@deletions kernel.flow.map items $remove circuit "planning.atom-key" with $with
+@result kernel.value.record id $id cost $cost requires $preconditions add $additions remove $deletions
+@output result $result

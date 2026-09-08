@@ -1,0 +1,28 @@
+@input with object
+@state kernel.value.get value $with key "state" fallback null
+@tokens kernel.value.get value $state key "tokens" fallback null
+@total kernel.seq.count items $tokens
+@options kernel.value.get value $with key "options" fallback null
+@maximum0 kernel.value.get value $options key "maximum" fallback null
+@maximum data.number value $maximum0
+@minimum0 kernel.value.get value $options key "minimum" fallback null
+@minimum data.number value $minimum0
+@longest kernel.number.binary operation "min" left $total right $maximum
+@span kernel.number.binary operation "subtract" left $longest right $minimum
+@candidateCount0 kernel.number.binary operation "add" left $span right 1
+@candidateCount kernel.number.binary operation "max" left $candidateCount0 right 0
+@range kernel.seq.range count $candidateCount
+@sizeargs kernel.value.record minimum $minimum
+@sizes0 kernel.flow.map items $range circuit "completion.context-size" with $sizeargs
+@sizes kernel.seq.reverse items $sizes0
+@empty kernel.seq.make
+@initial kernel.value.record distribution $empty contextLength 0
+@args kernel.value.record tokens $tokens
+@search kernel.flow.fold items $sizes seed $initial circuit "completion.backoff" with $args
+@distribution kernel.value.get value $search key "distribution" fallback null
+@n kernel.seq.count items $distribution
+@missing kernel.value.equal left $n right 0
+@addition kernel.value.record search $search
+@next kernel.value.merge left $with right $addition
+@result kernel.flow.choose condition $missing then "completion.stop" else "completion.emit" with $next
+@output result $result

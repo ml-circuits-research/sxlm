@@ -1,0 +1,10 @@
+@input with object
+@data kernel.value.get value $with key "data" fallback null
+@lowered kernel.value.get value $with key "lowered" fallback null
+@instructions kernel.value.get value $lowered key "instructions" fallback null
+@span kernel.value.get value $data key "span" fallback null
+@parsed kernel.value.get value $data key "parsed" fallback null
+@derivations kernel.value.get value $parsed key "derivations" fallback null
+@args kernel.value.record span $span derivations $derivations
+@result kernel.flow.map items $instructions circuit "document.instruction" with $args
+@output result $result

@@ -1,0 +1,5 @@
+@input with object
+@list kernel.seq.empty
+@classes kernel.value.empty
+@result kernel.value.record productions $list lexicon $list classes $classes
+@output result $result

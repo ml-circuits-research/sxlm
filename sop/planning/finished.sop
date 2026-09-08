@@ -1,0 +1,4 @@
+@input with object
+@raw kernel.value.get value $with key "result" fallback null
+@result data.object value $raw
+@output result $result

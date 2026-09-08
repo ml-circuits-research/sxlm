@@ -1,0 +1,3 @@
+@input with object
+@result kernel.seq.make
+@output result $result

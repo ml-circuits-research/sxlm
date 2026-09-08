@@ -1,0 +1,3 @@
+@input with object
+@cost kernel.value.literal value 1
+@output result $cost

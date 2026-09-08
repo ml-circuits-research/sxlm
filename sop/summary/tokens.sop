@@ -1,0 +1,7 @@
+@input item any
+@input with object
+@text data.string value $item
+@words kernel.text.words text $text
+@stop kernel.value.get value $with key "stopwords" fallback null
+@content kernel.seq.difference left $words right $stop
+@output result $content

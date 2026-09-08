@@ -1,0 +1,30 @@
+@input item any
+@input with object
+@text kernel.value.get value $item key "text" fallback null
+@textString data.string value $text
+@start kernel.value.get value $item key "start" fallback null
+@end kernel.value.get value $item key "end" fallback null
+@span kernel.value.record start $start end $end
+@startString kernel.value.scalarText value $start
+@source kernel.value.get value $with key "source" fallback null
+@hash kernel.value.get value $source key "id" fallback null
+@scope kernel.value.get value $with key "scope" fallback null
+@parts kernel.seq.make item $scope item $hash item $startString
+@parseScope kernel.text.join items $parts separator ":"
+@category kernel.value.get value $with key "start" fallback null
+@categoryString data.string value $category
+@parsed kernel.chart.parse text $textString scope $parseScope start $categoryString maxAlternatives 8
+@status kernel.value.get value $parsed key "status" fallback null
+@isParsed kernel.value.equal left $status right "parsed"
+@args kernel.value.record parsed $parsed source $source config $with span $span text $textString
+@lowered kernel.flow.choose condition $isParsed then "document.valid" else "document.unparsed" with $args
+@ok kernel.value.get value $lowered key "ok" fallback false
+@success data.boolean value $ok
+@resultArgs kernel.value.record data $args lowered $lowered
+@entries kernel.flow.choose condition $success then "document.instructions" else "document.gap" with $resultArgs
+@tokens lexical.tokenize text $textString
+@empty kernel.value.empty
+@labels kernel.flow.fold items $tokens circuit "document.label" seed $empty with $empty
+@gap kernel.value.equal left $success right false
+@result kernel.value.record entries $entries labels $labels gap $gap
+@output result $result

@@ -1,0 +1,32 @@
+@input with object
+@data kernel.value.get value $with key "data" fallback null
+@lowered kernel.value.get value $with key "lowered" fallback null
+@span kernel.value.get value $data key "span" fallback null
+@start kernel.value.get value $span key "start" fallback null
+@end kernel.value.get value $span key "end" fallback null
+@startNumber data.number value $start
+@endNumber data.number value $end
+@last kernel.number.binary operation "subtract" left $endNumber right 1
+@source kernel.value.get value $data key "source" fallback null
+@sourceText kernel.value.get value $source key "text" fallback null
+@sourceString data.string value $sourceText
+@marker kernel.text.slice text $sourceString start $last end $endNumber
+@outerConfig kernel.value.get value $data key "config" fallback null
+@config kernel.value.get value $outerConfig key "config" fallback null
+@empty kernel.seq.empty
+@queryBoundaries kernel.value.get value $config key "queryBoundaries" fallback $empty
+@query kernel.seq.includes items $queryBoundaries value $marker
+@intents kernel.value.record true "query" false "statement"
+@selector kernel.value.booleanLabel value $query
+@intent kernel.value.get value $intents key $selector fallback "statement"
+@text kernel.text.slice text $sourceString start $startNumber end $endNumber
+@parseText kernel.value.get value $data key "text" fallback null
+@parseString data.string value $parseText
+@tokens lexical.tokenize text $parseString
+@affected kernel.seq.pluck items $tokens key "value"
+@reason kernel.value.get value $lowered key "reason" fallback null
+@parsed kernel.value.get value $data key "parsed" fallback null
+@alternatives kernel.value.get value $parsed key "alternativeCount" fallback null
+@gap kernel.value.record kind "gap" intent $intent text $text reason $reason affected $affected span $span alternatives $alternatives
+@result kernel.seq.make item $gap
+@output result $result

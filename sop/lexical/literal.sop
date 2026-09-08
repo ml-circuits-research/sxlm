@@ -1,0 +1,11 @@
+@input with object
+@symbol kernel.value.get value $with key "symbol" fallback null
+@literal0 kernel.value.get value $symbol key "literal" fallback null
+@literal data.string value $literal0
+@normal learned.lexical.normalize text $literal
+@token kernel.value.get value $with key "token" fallback null
+@value kernel.value.get value $token key "value" fallback null
+@matches kernel.value.equal left $normal right $value
+@args kernel.value.record value $value
+@out kernel.flow.choose condition $matches then "lexical.accept" else "lexical.empty" with $args
+@output result $out

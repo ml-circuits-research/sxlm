@@ -1,0 +1,5 @@
+@input with object
+@parsed kernel.value.get value $with key "parsed" fallback null
+@reason kernel.value.get value $parsed key "status" fallback null
+@result kernel.value.record ok false reason $reason
+@output result $result

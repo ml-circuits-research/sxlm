@@ -1,0 +1,3 @@
+@v0 kernel.value.record "schema" "sxlm.knowledge-migration.v1" "sourceHash" "43381c1ff31626d38999692002ce969031566d2d72d8e7d4fc031a404353a49d" "modules" 19 "authoredPolicies" 7 "theoryModules" 10 "textModules" 2 "qualification" "Supplied rules/configuration are compiled, not induced. Theory installation now executes through SOP."
+@output result $v0
+

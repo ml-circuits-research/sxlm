@@ -1,0 +1,9 @@
+@input state object
+@input item any
+@input with object
+@key kernel.value.get value $item key "value" fallback null
+@keyString data.string value $key
+@safe kernel.value.keyAllowed key $keyString
+@args kernel.value.record state $state item $item
+@result kernel.flow.choose condition $safe then "document.safe-label" else "document.keep-labels" with $args
+@output result $result

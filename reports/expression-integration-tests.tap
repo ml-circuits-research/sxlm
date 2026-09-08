@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: all retired operator families lower to one graph VM with differential value checks
+ok 1 - all retired operator families lower to one graph VM with differential value checks
+  ---
+  duration_ms: 120.378748
+  type: 'test'
+  ...
+# Subtest: lazy branches, boolean short circuits and defaults preserve failure boundaries
+ok 2 - lazy branches, boolean short circuits and defaults preserve failure boundaries
+  ---
+  duration_ms: 12.222971
+  type: 'test'
+  ...
+# Subtest: nested iteration preserves source scope and variable shadowing
+ok 3 - nested iteration preserves source scope and variable shadowing
+  ---
+  duration_ms: 3.976265
+  type: 'test'
+  ...
+# Subtest: categorical fusion is compact and preserves equality and fallback behavior
+ok 4 - categorical fusion is compact and preserves equality and fallback behavior
+  ---
+  duration_ms: 7.941844
+  type: 'test'
+  ...
+# Subtest: compiled iteration and branches respect budgets and reject malformed values
+ok 5 - compiled iteration and branches respect budgets and reject malformed values
+  ---
+  duration_ms: 10.806848
+  type: 'test'
+  ...
+# Subtest: the active library cannot execute expression objects or install the retired opcode
+ok 6 - the active library cannot execute expression objects or install the retired opcode
+  ---
+  duration_ms: 864.625457
+  type: 'test'
+  ...
+# Subtest: construction induction preserves expression-shaped constants as inert semantic data
+ok 7 - construction induction preserves expression-shaped constants as inert semantic data
+  ---
+  duration_ms: 1302.623911
+  type: 'test'
+  ...
+# Subtest: a replay receipt cannot certify a reordered executable record or an obsolete fragment
+ok 8 - a replay receipt cannot certify a reordered executable record or an obsolete fragment
+  ---
+  duration_ms: 4094.93687
+  type: 'test'
+  ...
+# Subtest: chart composition preserves values that later circuits can distinguish
+ok 9 - chart composition preserves values that later circuits can distinguish
+  ---
+  duration_ms: 3.747392
+  type: 'test'
+  ...
+# Subtest: execution identity preserves observable property order and signed zero
+ok 10 - execution identity preserves observable property order and signed zero
+  ---
+  duration_ms: 8.662896
+  type: 'test'
+  ...
+# Subtest: literal execution order changes program and pack identities
+ok 11 - literal execution order changes program and pack identities
+  ---
+  duration_ms: 4.090667
+  type: 'test'
+  ...
+# Subtest: canonical circuit encoding is stable across equivalent record orders
+ok 12 - canonical circuit encoding is stable across equivalent record orders
+  ---
+  duration_ms: 1.238375
+  type: 'test'
+  ...
+# Subtest: installed model and executable registries cannot change under their identities
+ok 13 - installed model and executable registries cannot change under their identities
+  ---
+  duration_ms: 770.200128
+  type: 'test'
+  ...
+# Subtest: fresh processes bind actual native code and reject snapshots after a host revision
+ok 14 - fresh processes bind actual native code and reject snapshots after a host revision
+  ---
+  duration_ms: 3363.099892
+  type: 'test'
+  ...
+# Subtest: a source edit cannot relabel already loaded modules as a fresh model
+ok 15 - a source edit cannot relabel already loaded modules as a fresh model
+  ---
+  duration_ms: 1820.440585
+  type: 'test'
+  ...
+# Subtest: the sealed loader profile rejects new dynamic or multiline imports
+ok 16 - the sealed loader profile rejects new dynamic or multiline imports
+  ---
+  duration_ms: 93.174801
+  type: 'test'
+  ...
+# Subtest: HTTP workbench serves the module UI and executes all natural-language tasks
+ok 17 - HTTP workbench serves the module UI and executes all natural-language tasks
+  ---
+  duration_ms: 2403.075435
+  type: 'test'
+  ...
+# Subtest: CLI text, JSON, summary and completion flags behave correctly
+ok 18 - CLI text, JSON, summary and completion flags behave correctly
+  ---
+  duration_ms: 3907.52762
+  type: 'test'
+  ...
+# Subtest: unparsed questions do not taint persistent state or hide behind an earlier answer
+ok 19 - unparsed questions do not taint persistent state or hide behind an earlier answer
+  ---
+  duration_ms: 1031.56063
+  type: 'test'
+  ...
+# Subtest: long derivations verify through a DAG even when the display tree is truncated
+ok 20 - long derivations verify through a DAG even when the display tree is truncated
+  ---
+  duration_ms: 1206.32569
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8764.531756

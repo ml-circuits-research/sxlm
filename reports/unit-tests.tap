@@ -1,0 +1,914 @@
+
+> sxlm@0.1.0 test
+> node --test --test-reporter=tap test/*.test.mjs
+
+TAP version 13
+# Subtest: completion executes SOP and preserves the historical source and frequency contracts
+ok 1 - completion executes SOP and preserves the historical source and frequency contracts
+  ---
+  duration_ms: 679.882508
+  type: 'test'
+  ...
+# Subtest: source evidence preserves UTF-16 offsets, ties and alternative order
+ok 2 - source evidence preserves UTF-16 offsets, ties and alternative order
+  ---
+  duration_ms: 1429.125808
+  type: 'test'
+  ...
+# Subtest: independent sequence providers add observed counts without native retraining
+ok 3 - independent sequence providers add observed counts without native retraining
+  ---
+  duration_ms: 1580.80322
+  type: 'test'
+  ...
+# Subtest: learned circuits alone carry source and sequence competence; ablation removes both
+ok 4 - learned circuits alone carry source and sequence competence; ablation removes both
+  ---
+  duration_ms: 3478.245003
+  type: 'test'
+  ...
+# Subtest: compiled observation pages support unrelated nested values and arbitrary safe field names
+ok 5 - compiled observation pages support unrelated nested values and arbitrary safe field names
+  ---
+  duration_ms: 373.850486
+  type: 'test'
+  ...
+# Subtest: finite-function learning rejects conflicts and lazily retrieves exact observed values
+ok 6 - finite-function learning rejects conflicts and lazily retrieves exact observed values
+  ---
+  duration_ms: 197.027101
+  type: 'test'
+  ...
+# Subtest: provider linking preserves order, hashes dependencies and checks contracts and size
+ok 7 - provider linking preserves order, hashes dependencies and checks contracts and size
+  ---
+  duration_ms: 4.916273
+  type: 'test'
+  ...
+# Subtest: sequence find preserves a matching null value instead of replacing it with a fallback
+ok 8 - sequence find preserves a matching null value instead of replacing it with a fallback
+  ---
+  duration_ms: 1.488061
+  type: 'test'
+  ...
+# Subtest: a sequence learning tag cannot certify changed SOP, wiring or missing training evidence
+ok 9 - a sequence learning tag cannot certify changed SOP, wiring or missing training evidence
+  ---
+  duration_ms: 10922.330266
+  type: 'test'
+  ...
+# Subtest: sequence candidates pass the offline CLI learning and promotion loop with parent checks
+ok 10 - sequence candidates pass the offline CLI learning and promotion loop with parent checks
+  ---
+  duration_ms: 34715.054807
+  type: 'test'
+  ...
+# Subtest: generic collection contracts validate singleton collation and explicit slice bounds
+ok 11 - generic collection contracts validate singleton collation and explicit slice bounds
+  ---
+  duration_ms: 1.655194
+  type: 'test'
+  ...
+# Subtest: SOP document policy preserves historical interpretation, scopes, source spans and coverage
+ok 12 - SOP document policy preserves historical interpretation, scopes, source spans and coverage
+  ---
+  duration_ms: 2307.312205
+  type: 'test'
+  ...
+# Subtest: unparsed, ambiguous and invalid semantic results become explicit SOP gaps
+ok 13 - unparsed, ambiguous and invalid semantic results become explicit SOP gaps
+  ---
+  duration_ms: 2471.947191
+  type: 'test'
+  ...
+# Subtest: grammar proposals execute as circuit knowledge and removal of wiring removes their competence
+ok 14 - grammar proposals execute as circuit knowledge and removal of wiring removes their competence
+  ---
+  duration_ms: 7105.481909
+  type: 'test'
+  ...
+# Subtest: changing document interpretation policy changes SOP content, not the host implementation
+ok 15 - changing document interpretation policy changes SOP content, not the host implementation
+  ---
+  duration_ms: 781.635277
+  type: 'test'
+  ...
+# Subtest: attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure
+ok 16 - attempt is typed, dependency-bound and does not convert resource exhaustion to ordinary failure
+  ---
+  duration_ms: 3.153172
+  type: 'test'
+  ...
+# Subtest: runtime inspection cannot mutate programs, primitive contracts or cached answers
+ok 17 - runtime inspection cannot mutate programs, primitive contracts or cached answers
+  ---
+  duration_ms: 1.685785
+  type: 'test'
+  ...
+# Subtest: grammar indexes are immutable views with normalized and collision-free lexical identity
+ok 18 - grammar indexes are immutable views with normalized and collision-free lexical identity
+  ---
+  duration_ms: 1.49749
+  type: 'test'
+  ...
+# Subtest: prototype-like text remains in source evidence without unsafe label keys
+ok 19 - prototype-like text remains in source evidence without unsafe label keys
+  ---
+  duration_ms: 181.551852
+  type: 'test'
+  ...
+# Subtest: all retired operator families lower to one graph VM with differential value checks
+ok 20 - all retired operator families lower to one graph VM with differential value checks
+  ---
+  duration_ms: 336.635965
+  type: 'test'
+  ...
+# Subtest: lazy branches, boolean short circuits and defaults preserve failure boundaries
+ok 21 - lazy branches, boolean short circuits and defaults preserve failure boundaries
+  ---
+  duration_ms: 29.766743
+  type: 'test'
+  ...
+# Subtest: nested iteration preserves source scope and variable shadowing
+ok 22 - nested iteration preserves source scope and variable shadowing
+  ---
+  duration_ms: 15.89193
+  type: 'test'
+  ...
+# Subtest: categorical fusion is compact and preserves equality and fallback behavior
+ok 23 - categorical fusion is compact and preserves equality and fallback behavior
+  ---
+  duration_ms: 20.20232
+  type: 'test'
+  ...
+# Subtest: compiled iteration and branches respect budgets and reject malformed values
+ok 24 - compiled iteration and branches respect budgets and reject malformed values
+  ---
+  duration_ms: 20.926097
+  type: 'test'
+  ...
+# Subtest: the active library cannot execute expression objects or install the retired opcode
+ok 25 - the active library cannot execute expression objects or install the retired opcode
+  ---
+  duration_ms: 2169.228281
+  type: 'test'
+  ...
+# Subtest: construction induction preserves expression-shaped constants as inert semantic data
+ok 26 - construction induction preserves expression-shaped constants as inert semantic data
+  ---
+  duration_ms: 2986.481693
+  type: 'test'
+  ...
+# Subtest: a replay receipt cannot certify a reordered executable record or an obsolete fragment
+ok 27 - a replay receipt cannot certify a reordered executable record or an obsolete fragment
+  ---
+  duration_ms: 8059.101543
+  type: 'test'
+  ...
+# Subtest: chart composition preserves values that later circuits can distinguish
+ok 28 - chart composition preserves values that later circuits can distinguish
+  ---
+  duration_ms: 7.575241
+  type: 'test'
+  ...
+# Subtest: execution identity preserves observable property order and signed zero
+ok 29 - execution identity preserves observable property order and signed zero
+  ---
+  duration_ms: 30.701861
+  type: 'test'
+  ...
+# Subtest: literal execution order changes program and pack identities
+ok 30 - literal execution order changes program and pack identities
+  ---
+  duration_ms: 14.518061
+  type: 'test'
+  ...
+# Subtest: canonical circuit encoding is stable across equivalent record orders
+ok 31 - canonical circuit encoding is stable across equivalent record orders
+  ---
+  duration_ms: 2.033809
+  type: 'test'
+  ...
+# Subtest: installed model and executable registries cannot change under their identities
+ok 32 - installed model and executable registries cannot change under their identities
+  ---
+  duration_ms: 1842.758151
+  type: 'test'
+  ...
+# Subtest: fresh processes bind actual native code and reject snapshots after a host revision
+ok 33 - fresh processes bind actual native code and reject snapshots after a host revision
+  ---
+  duration_ms: 7024.112911
+  type: 'test'
+  ...
+# Subtest: a source edit cannot relabel already loaded modules as a fresh model
+ok 34 - a source edit cannot relabel already loaded modules as a fresh model
+  ---
+  duration_ms: 3600.235224
+  type: 'test'
+  ...
+# Subtest: the sealed loader profile rejects new dynamic or multiline imports
+ok 35 - the sealed loader profile rejects new dynamic or multiline imports
+  ---
+  duration_ms: 148.17426
+  type: 'test'
+  ...
+# Subtest: HTTP workbench serves the module UI and executes all natural-language tasks
+ok 36 - HTTP workbench serves the module UI and executes all natural-language tasks
+  ---
+  duration_ms: 5621.276464
+  type: 'test'
+  ...
+# Subtest: CLI text, JSON, summary and completion flags behave correctly
+ok 37 - CLI text, JSON, summary and completion flags behave correctly
+  ---
+  duration_ms: 7575.905585
+  type: 'test'
+  ...
+# Subtest: unparsed questions do not taint persistent state or hide behind an earlier answer
+ok 38 - unparsed questions do not taint persistent state or hide behind an earlier answer
+  ---
+  duration_ms: 1915.155479
+  type: 'test'
+  ...
+# Subtest: long derivations verify through a DAG even when the display tree is truncated
+ok 39 - long derivations verify through a DAG even when the display tree is truncated
+  ---
+  duration_ms: 2040.97816
+  type: 'test'
+  ...
+# Subtest: content identity prevents specialized constant cache collisions
+ok 40 - content identity prevents specialized constant cache collisions
+  ---
+  duration_ms: 12.242736
+  type: 'test'
+  ...
+# Subtest: typed graph rejects forward references, bad arguments and cycles
+ok 41 - typed graph rejects forward references, bad arguments and cycles
+  ---
+  duration_ms: 0.708691
+  type: 'test'
+  ...
+# Subtest: nested circuits compose through typed inputs
+ok 42 - nested circuits compose through typed inputs
+  ---
+  duration_ms: 2.493023
+  type: 'test'
+  ...
+# Subtest: JSON boundary rejects code, non-finite values and prototype pollution
+ok 43 - JSON boundary rejects code, non-finite values and prototype pollution
+  ---
+  duration_ms: 0.357663
+  type: 'test'
+  ...
+# Subtest: node budgets also apply to cache hits
+ok 44 - node budgets also apply to cache hits
+  ---
+  duration_ms: 1.49749
+  type: 'test'
+  ...
+# Subtest: grammar interpreter works with an unrelated alphabet and external semantics
+ok 45 - grammar interpreter works with an unrelated alphabet and external semantics
+  ---
+  duration_ms: 9.599553
+  type: 'test'
+  ...
+# Subtest: unsafe and cross-world Horn rules are rejected
+ok 46 - unsafe and cross-world Horn rules are rejected
+  ---
+  duration_ms: 0.671814
+  type: 'test'
+  ...
+# Subtest: four-valued inference does not use absence as negation or explode on contradictions
+ok 47 - four-valued inference does not use absence as negation or explode on contradictions
+  ---
+  duration_ms: 1.70611
+  type: 'test'
+  ...
+# Subtest: recursive closure terminates on a finite cyclic domain
+ok 48 - recursive closure terminates on a finite cyclic domain
+  ---
+  duration_ms: 1.581231
+  type: 'test'
+  ...
+# Subtest: exact arithmetic has precedence, parentheses, unary signs and no code execution
+ok 49 - exact arithmetic has precedence, parentheses, unary signs and no code execution
+  ---
+  duration_ms: 1.922202
+  type: 'test'
+  ...
+# Subtest: finite planner optimizes cost and has independently replayable witnesses
+ok 50 - finite planner optimizes cost and has independently replayable witnesses
+  ---
+  duration_ms: 2.025498
+  type: 'test'
+  ...
+# Subtest: persistent theory and text have one circuit authority with explicit authored provenance
+ok 51 - persistent theory and text have one circuit authority with explicit authored provenance
+  ---
+  duration_ms: 1937.604629
+  type: 'test'
+  ...
+# Subtest: theory ablation removes entailment and reinstalling restores it without host changes
+ok 52 - theory ablation removes entailment and reinstalling restores it without host changes
+  ---
+  duration_ms: 4817.24393
+  type: 'test'
+  ...
+# Subtest: compiled theory transfers across bindings and supplied rule chains with checked evidence
+ok 53 - compiled theory transfers across bindings and supplied rule chains with checked evidence
+  ---
+  duration_ms: 3753.375204
+  type: 'test'
+  ...
+# Subtest: theory validates at both compilation and execution, including raw constructor proposals
+ok 54 - theory validates at both compilation and execution, including raw constructor proposals
+  ---
+  duration_ms: 2449.119706
+  type: 'test'
+  ...
+# Subtest: text configuration is reused by tasks and changes through circuit replacement
+ok 55 - text configuration is reused by tasks and changes through circuit replacement
+  ---
+  duration_ms: 2591.260005
+  type: 'test'
+  ...
+# Subtest: expression induction learns role order and transfers to new multiword bindings
+ok 56 - expression induction learns role order and transfers to new multiword bindings
+  ---
+  duration_ms: 25.091984
+  type: 'test'
+  ...
+# Subtest: ambiguous binding alignments require more evidence
+ok 57 - ambiguous binding alignments require more evidence
+  ---
+  duration_ms: 1.221822
+  type: 'test'
+  ...
+# Subtest: constant expression memory is distinguished from slot induction
+ok 58 - constant expression memory is distinguished from slot induction
+  ---
+  duration_ms: 2.072013
+  type: 'test'
+  ...
+# Subtest: decision-tree induction uses supplied features rather than host task names
+ok 59 - decision-tree induction uses supplied features rather than host task names
+  ---
+  duration_ms: 18.007245
+  type: 'test'
+  ...
+# Subtest: conditionals and defaults evaluate only the selected expression
+ok 60 - conditionals and defaults evaluate only the selected expression
+  ---
+  duration_ms: 26.368214
+  type: 'test'
+  ...
+# Subtest: map and choice cache identities include their control dependencies
+ok 61 - map and choice cache identities include their control dependencies
+  ---
+  duration_ms: 5.946588
+  type: 'test'
+  ...
+# Subtest: branch circuits must expose matching contracts
+ok 62 - branch circuits must expose matching contracts
+  ---
+  duration_ms: 1.531643
+  type: 'test'
+  ...
+# Subtest: active realization is reproducibly learned circuit execution, with authored adapters disclosed
+ok 63 - active realization is reproducibly learned circuit execution, with authored adapters disclosed
+  ---
+  duration_ms: 2567.779145
+  type: 'test'
+  ...
+# Subtest: the vision audit does not accept a fabricated learning tag as a derivation
+ok 64 - the vision audit does not accept a fabricated learning tag as a derivation
+  ---
+  duration_ms: 7520.763998
+  type: 'test'
+  ...
+# Subtest: rendering circuits respect optional polarity and context in the shared atom contract
+ok 65 - rendering circuits respect optional polarity and context in the shared atom contract
+  ---
+  duration_ms: 1351.324706
+  type: 'test'
+  ...
+# Subtest: class-chain
+ok 66 - class-chain
+  ---
+  duration_ms: 391.435534
+  type: 'test'
+  ...
+# Subtest: open-world
+ok 67 - open-world
+  ---
+  duration_ms: 216.250162
+  type: 'test'
+  ...
+# Subtest: explicit-negative
+ok 68 - explicit-negative
+  ---
+  duration_ms: 268.80423
+  type: 'test'
+  ...
+# Subtest: conflict
+ok 69 - conflict
+  ---
+  duration_ms: 287.290943
+  type: 'test'
+  ...
+# Subtest: no-explosion
+ok 70 - no-explosion
+  ---
+  duration_ms: 271.928977
+  type: 'test'
+  ...
+# Subtest: negative-rule
+ok 71 - negative-rule
+  ---
+  duration_ms: 280.17722
+  type: 'test'
+  ...
+# Subtest: relative-existential
+ok 72 - relative-existential
+  ---
+  duration_ms: 401.877664
+  type: 'test'
+  ...
+# Subtest: binding-separation
+ok 73 - binding-separation
+  ---
+  duration_ms: 383.906388
+  type: 'test'
+  ...
+# Subtest: belief-isolation
+ok 74 - belief-isolation
+  ---
+  duration_ms: 271.918501
+  type: 'test'
+  ...
+# Subtest: belief-query
+ok 75 - belief-query
+  ---
+  duration_ms: 239.768179
+  type: 'test'
+  ...
+# Subtest: ground-relation
+ok 76 - ground-relation
+  ---
+  duration_ms: 231.231976
+  type: 'test'
+  ...
+# Subtest: role-reversal
+ok 77 - role-reversal
+  ---
+  duration_ms: 239.845914
+  type: 'test'
+  ...
+# Subtest: negative-relation
+ok 78 - negative-relation
+  ---
+  duration_ms: 175.423115
+  type: 'test'
+  ...
+# Subtest: wh-subject
+ok 79 - wh-subject
+  ---
+  duration_ms: 300.943588
+  type: 'test'
+  ...
+# Subtest: wh-object
+ok 80 - wh-object
+  ---
+  duration_ms: 271.678802
+  type: 'test'
+  ...
+# Subtest: location
+ok 81 - location
+  ---
+  duration_ms: 285.359593
+  type: 'test'
+  ...
+# Subtest: relative-direction
+ok 82 - relative-direction
+  ---
+  duration_ms: 254.568612
+  type: 'test'
+  ...
+# Subtest: inverse-direction
+ok 83 - inverse-direction
+  ---
+  duration_ms: 221.407672
+  type: 'test'
+  ...
+# Subtest: inventory-dependency
+ok 84 - inventory-dependency
+  ---
+  duration_ms: 243.515081
+  type: 'test'
+  ...
+# Subtest: recipient-unknown
+ok 85 - recipient-unknown
+  ---
+  duration_ms: 286.663689
+  type: 'test'
+  ...
+# Subtest: no-stale-inventory
+ok 86 - no-stale-inventory
+  ---
+  duration_ms: 462.334465
+  type: 'test'
+  ...
+# Subtest: decimal-inventory
+ok 87 - decimal-inventory
+  ---
+  duration_ms: 231.018607
+  type: 'test'
+  ...
+# Subtest: arithmetic-precedence
+ok 88 - arithmetic-precedence
+  ---
+  duration_ms: 190.307219
+  type: 'test'
+  ...
+# Subtest: arithmetic-exact
+ok 89 - arithmetic-exact
+  ---
+  duration_ms: 140.343046
+  type: 'test'
+  ...
+# Subtest: unsafe-scope-abstention
+ok 90 - unsafe-scope-abstention
+  ---
+  duration_ms: 214.579463
+  type: 'test'
+  ...
+# Subtest: source-summary
+ok 91 - source-summary
+  ---
+  duration_ms: 30.086411
+  type: 'test'
+  ...
+# Subtest: context-completion
+ok 92 - context-completion
+  ---
+  duration_ms: 34.568474
+  type: 'test'
+  ...
+# Subtest: untrained-completion
+ok 93 - untrained-completion
+  ---
+  duration_ms: 119.350669
+  type: 'test'
+  ...
+# Subtest: join-three-variables
+ok 94 - join-three-variables
+  ---
+  duration_ms: 297.351175
+  type: 'test'
+  ...
+# Subtest: shared-variable-guard
+ok 95 - shared-variable-guard
+  ---
+  duration_ms: 311.701406
+  type: 'test'
+  ...
+# Subtest: shared-variable-success
+ok 96 - shared-variable-success
+  ---
+  duration_ms: 342.841877
+  type: 'test'
+  ...
+# Subtest: relative-plus-chain
+ok 97 - relative-plus-chain
+  ---
+  duration_ms: 391.025768
+  type: 'test'
+  ...
+# Subtest: relative-negative-body
+ok 98 - relative-negative-body
+  ---
+  duration_ms: 293.799901
+  type: 'test'
+  ...
+# Subtest: two-conclusions
+ok 99 - two-conclusions
+  ---
+  duration_ms: 258.983696
+  type: 'test'
+  ...
+# Subtest: recursive-join
+ok 100 - recursive-join
+  ---
+  duration_ms: 358.109555
+  type: 'test'
+  ...
+# Subtest: typed-wh
+ok 101 - typed-wh
+  ---
+  duration_ms: 329.26564
+  type: 'test'
+  ...
+# Subtest: fresh-domain
+ok 102 - fresh-domain
+  ---
+  duration_ms: 310.940682
+  type: 'test'
+  ...
+# Subtest: negative-derived-conflict
+ok 103 - negative-derived-conflict
+  ---
+  duration_ms: 304.959173
+  type: 'test'
+  ...
+# Subtest: dependency-locality
+ok 104 - dependency-locality
+  ---
+  duration_ms: 257.075534
+  type: 'test'
+  ...
+# Subtest: multiple-events
+ok 105 - multiple-events
+  ---
+  duration_ms: 389.708123
+  type: 'test'
+  ...
+# Subtest: session state is isolated, serializable and model-bound
+ok 106 - session state is isolated, serializable and model-bound
+  ---
+  duration_ms: 537.671319
+  type: 'test'
+  ...
+# Subtest: failed execution rolls back all statements from that request
+ok 107 - failed execution rolls back all statements from that request
+  ---
+  duration_ms: 116.737866
+  type: 'test'
+  ...
+# Subtest: questions observe state at their narrative position
+ok 108 - questions observe state at their narrative position
+  ---
+  duration_ms: 365.0192
+  type: 'test'
+  ...
+# Subtest: cold, warm and disabled caches preserve semantics
+ok 109 - cold, warm and disabled caches preserve semantics
+  ---
+  duration_ms: 686.027588
+  type: 'test'
+  ...
+# Subtest: proof verifier rejects a forged conclusion and damaged evidence
+ok 110 - proof verifier rejects a forged conclusion and damaged evidence
+  ---
+  duration_ms: 188.231784
+  type: 'test'
+  ...
+# Subtest: induction learns a compositional construction and transfers beyond its examples
+ok 111 - induction learns a compositional construction and transfers beyond its examples
+  ---
+  duration_ms: 2195.330045
+  type: 'test'
+  ...
+# Subtest: induction refuses unsupported alignments and duplicate examples
+ok 112 - induction refuses unsupported alignments and duplicate examples
+  ---
+  duration_ms: 0.753878
+  type: 'test'
+  ...
+# Subtest: corpus-only learning expands completions without editing the runtime
+ok 113 - corpus-only learning expands completions without editing the runtime
+  ---
+  duration_ms: 1036.929552
+  type: 'test'
+  ...
+# Subtest: model resources and committed snapshots cannot silently mutate beneath cache identities
+ok 114 - model resources and committed snapshots cannot silently mutate beneath cache identities
+  ---
+  duration_ms: 120.24961
+  type: 'test'
+  ...
+# Subtest: an impossible transfer cannot certify the recipient inventory
+ok 115 - an impossible transfer cannot certify the recipient inventory
+  ---
+  duration_ms: 233.029509
+  type: 'test'
+  ...
+# Subtest: existential answers realize the supported witness instead of an unbound variable
+ok 116 - existential answers realize the supported witness instead of an unbound variable
+  ---
+  duration_ms: 222.765476
+  type: 'test'
+  ...
+# Subtest: indexed relational closure agrees with exhaustive grounding on recursive and contextual theories
+ok 117 - indexed relational closure agrees with exhaustive grounding on recursive and contextual theories
+  ---
+  duration_ms: 83.686018
+  type: 'test'
+  ...
+# Subtest: relational index identity cannot alias user-supplied predicate and context delimiters
+ok 118 - relational index identity cannot alias user-supplied predicate and context delimiters
+  ---
+  duration_ms: 0.521653
+  type: 'test'
+  ...
+# Subtest: semantic policies execute as circuits and reproduce their declared sources
+ok 119 - semantic policies execute as circuits and reproduce their declared sources
+  ---
+  duration_ms: 285.278924
+  type: 'test'
+  ...
+# Subtest: migration preserves the previous interpreter over temporal, partial and inconsistent event histories
+ok 120 - migration preserves the previous interpreter over temporal, partial and inconsistent event histories
+  ---
+  duration_ms: 1354.42012
+  type: 'test'
+  ...
+# Subtest: independent conservation and context checks cover unseen numeric bindings
+ok 121 - independent conservation and context checks cover unseen numeric bindings
+  ---
+  duration_ms: 236.411625
+  type: 'test'
+  ...
+# Subtest: learning a new event label changes reusable state behavior without native edits
+ok 122 - learning a new event label changes reusable state behavior without native edits
+  ---
+  duration_ms: 1481.054019
+  type: 'test'
+  ...
+# Subtest: fold is ordered, empty-safe, cache-correct, typed and bounded across unrelated domains
+ok 123 - fold is ordered, empty-safe, cache-correct, typed and bounded across unrelated domains
+  ---
+  duration_ms: 9.108281
+  type: 'test'
+  ...
+# Subtest: general term operations reject unsafe records and preserve exact arithmetic and lazy scope
+ok 124 - general term operations reject unsafe records and preserve exact arithmetic and lazy scope
+  ---
+  duration_ms: 13.89814
+  type: 'test'
+  ...
+# Subtest: SOP graph compilation supports sharing, forward references and scalar strings as inert data
+ok 125 - SOP graph compilation supports sharing, forward references and scalar strings as inert data
+  ---
+  duration_ms: 12.481108
+  type: 'test'
+  ...
+# Subtest: SOP rejects cycles, unbound wires, executable literals and malformed arguments
+ok 126 - SOP rejects cycles, unbound wires, executable literals and malformed arguments
+  ---
+  duration_ms: 1.751926
+  type: 'test'
+  ...
+# Subtest: SOP branches preserve laziness, typed contracts and dependency content identity
+ok 127 - SOP branches preserve laziness, typed contracts and dependency content identity
+  ---
+  duration_ms: 16.730107
+  type: 'test'
+  ...
+# Subtest: the active summary runs its strategy in SOP with no native task shortcut
+ok 128 - the active summary runs its strategy in SOP with no native task shortcut
+  ---
+  duration_ms: 1940.477105
+  type: 'test'
+  ...
+# Subtest: SOP selection preserves source spans and the historical policy across lengths, ties and focus changes
+ok 129 - SOP selection preserves source spans and the historical policy across lengths, ties and focus changes
+  ---
+  duration_ms: 2911.289831
+  type: 'test'
+  ...
+# Subtest: a source-only SOP strategy update changes behavior while preserving the primitive registry
+ok 130 - a source-only SOP strategy update changes behavior while preserving the primitive registry
+  ---
+  duration_ms: 2516.163199
+  type: 'test'
+  ...
+# Subtest: affine supervision induces a reusable SOP program over unrelated feature names
+ok 131 - affine supervision induces a reusable SOP program over unrelated feature names
+  ---
+  duration_ms: 6.046532
+  type: 'test'
+  ...
+# Subtest: the learned summary score is necessary, reproducible and transfers to new feature bindings
+ok 132 - the learned summary score is necessary, reproducible and transfers to new feature bindings
+  ---
+  duration_ms: 2368.105367
+  type: 'test'
+  ...
+# Subtest: ordinary document lengths fit the default circuit budget while explicit limits still stop selection
+ok 133 - ordinary document lengths fit the default circuit budget while explicit limits still stop selection
+  ---
+  duration_ms: 1497.810038
+  type: 'test'
+  ...
+# Subtest: ablating the learned scoring rule loses focus selection on an unseen document
+ok 134 - ablating the learned scoring rule loses focus selection on an unseen document
+  ---
+  duration_ms: 2098.370976
+  type: 'test'
+  ...
+# Subtest: a learned SOP receipt cannot certify changed program content
+ok 135 - a learned SOP receipt cannot certify changed program content
+  ---
+  duration_ms: 3948.015304
+  type: 'test'
+  ...
+# Subtest: the JSON boundary rejects accessors and hidden or extra properties without invoking them
+ok 136 - the JSON boundary rejects accessors and hidden or extra properties without invoking them
+  ---
+  duration_ms: 2.121252
+  type: 'test'
+  ...
+# Subtest: the VM owns its input snapshot and never freezes a caller or an external native result
+ok 137 - the VM owns its input snapshot and never freezes a caller or an external native result
+  ---
+  duration_ms: 6.067974
+  type: 'test'
+  ...
+# Subtest: returned values and cache inspection cannot mutate cached results
+ok 138 - returned values and cache inspection cannot mutate cached results
+  ---
+  duration_ms: 4.345242
+  type: 'test'
+  ...
+# Subtest: immutable sharing and hash memoization trust only recursively owned values
+ok 139 - immutable sharing and hash memoization trust only recursively owned values
+  ---
+  duration_ms: 0.585768
+  type: 'test'
+  ...
+# Subtest: cached subtree heights cannot bypass the nesting limit when shared deeper
+ok 140 - cached subtree heights cannot bypass the nesting limit when shared deeper
+  ---
+  duration_ms: 1.016067
+  type: 'test'
+  ...
+# Subtest: structural probes preserve falsy values, discriminate absence and ignore inherited keys
+ok 141 - structural probes preserve falsy values, discriminate absence and ignore inherited keys
+  ---
+  duration_ms: 11.379345
+  type: 'test'
+  ...
+# Subtest: record and JSON conversions retain ordinary data and observable property order
+ok 142 - record and JSON conversions retain ordinary data and observable property order
+  ---
+  duration_ms: 6.799502
+  type: 'test'
+  ...
+# Subtest: text operations are literal mechanisms with no regex or executable formatting
+ok 143 - text operations are literal mechanisms with no regex or executable formatting
+  ---
+  duration_ms: 3.167072
+  type: 'test'
+  ...
+# Subtest: scoped names are deterministic and rational arithmetic rejects coercion and undefined operations
+ok 144 - scoped names are deterministic and rational arithmetic rejects coercion and undefined operations
+  ---
+  duration_ms: 5.577122
+  type: 'test'
+  ...
+# Subtest: structural traversal consumes caller work budgets
+ok 145 - structural traversal consumes caller work budgets
+  ---
+  duration_ms: 0.873588
+  type: 'test'
+  ...
+# Subtest: candidate validation, atomic promotion, reload and rollback work without sibling code
+ok 146 - candidate validation, atomic promotion, reload and rollback work without sibling code
+  ---
+  duration_ms: 33343.358133
+  type: 'test'
+  ...
+# Subtest: promotion rejects no-op candidates and verbatim evaluation leakage
+ok 147 - promotion rejects no-op candidates and verbatim evaluation leakage
+  ---
+  duration_ms: 2618.680254
+  type: 'test'
+  ...
+# Subtest: agent packet contains teacher examples and contracts, not promotion gate texts
+ok 148 - agent packet contains teacher examples and contracts, not promotion gate texts
+  ---
+  duration_ms: 840.066021
+  type: 'test'
+  ...
+# Subtest: registry writers cannot overwrite a concurrent promotion
+ok 149 - registry writers cannot overwrite a concurrent promotion
+  ---
+  duration_ms: 0.705548
+  type: 'test'
+  ...
+# Subtest: a candidate cannot replace the trusted task entrypoint to manufacture passing answers
+ok 150 - a candidate cannot replace the trusted task entrypoint to manufacture passing answers
+  ---
+  duration_ms: 1543.69947
+  type: 'test'
+  ...
+1..150
+# tests 150
+# suites 0
+# pass 150
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 55615.927064

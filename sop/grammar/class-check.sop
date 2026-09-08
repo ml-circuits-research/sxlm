@@ -1,0 +1,15 @@
+@input item any
+@input with object
+@old kernel.value.get value $with key "classes" fallback null
+@key kernel.value.get value $item key "key" fallback null
+@keyString data.string value $key
+@value kernel.value.get value $item key "value" fallback null
+@existing kernel.value.get value $old key $key fallback null
+@missing kernel.value.equal left $existing right null
+@equal kernel.value.equal left $existing right $value
+@conditions kernel.seq.make item $missing item $equal
+@allowed kernel.seq.includes items $conditions value true
+@message kernel.text.concat left "Lexical class collision: " right $keyString
+@checked kernel.value.require condition $allowed message $message value $allowed
+@result data.boolean value $checked
+@output result $result

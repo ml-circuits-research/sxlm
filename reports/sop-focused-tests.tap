@@ -1,0 +1,366 @@
+TAP version 13
+# Subtest: all retired operator families lower to one graph VM with differential value checks
+ok 1 - all retired operator families lower to one graph VM with differential value checks
+  ---
+  duration_ms: 223.326451
+  type: 'test'
+  ...
+# Subtest: lazy branches, boolean short circuits and defaults preserve failure boundaries
+ok 2 - lazy branches, boolean short circuits and defaults preserve failure boundaries
+  ---
+  duration_ms: 25.66525
+  type: 'test'
+  ...
+# Subtest: nested iteration preserves source scope and variable shadowing
+ok 3 - nested iteration preserves source scope and variable shadowing
+  ---
+  duration_ms: 7.272964
+  type: 'test'
+  ...
+# Subtest: categorical fusion is compact and preserves equality and fallback behavior
+ok 4 - categorical fusion is compact and preserves equality and fallback behavior
+  ---
+  duration_ms: 15.165778
+  type: 'test'
+  ...
+# Subtest: compiled iteration and branches respect budgets and reject malformed values
+ok 5 - compiled iteration and branches respect budgets and reject malformed values
+  ---
+  duration_ms: 18.474002
+  type: 'test'
+  ...
+# Subtest: the active library cannot execute expression objects or install the retired opcode
+ok 6 - the active library cannot execute expression objects or install the retired opcode
+  ---
+  duration_ms: 1232.686296
+  type: 'test'
+  ...
+# Subtest: construction induction preserves expression-shaped constants as inert semantic data
+ok 7 - construction induction preserves expression-shaped constants as inert semantic data
+  ---
+  duration_ms: 1537.568435
+  type: 'test'
+  ...
+# Subtest: a replay receipt cannot certify a reordered executable record or an obsolete fragment
+ok 8 - a replay receipt cannot certify a reordered executable record or an obsolete fragment
+  ---
+  duration_ms: 5949.270999
+  type: 'test'
+  ...
+# Subtest: chart composition preserves values that later circuits can distinguish
+ok 9 - chart composition preserves values that later circuits can distinguish
+  ---
+  duration_ms: 4.581659
+  type: 'test'
+  ...
+# Subtest: execution identity preserves observable property order and signed zero
+ok 10 - execution identity preserves observable property order and signed zero
+  ---
+  duration_ms: 12.247835
+  type: 'test'
+  ...
+# Subtest: literal execution order changes program and pack identities
+ok 11 - literal execution order changes program and pack identities
+  ---
+  duration_ms: 8.217163
+  type: 'test'
+  ...
+# Subtest: canonical circuit encoding is stable across equivalent record orders
+ok 12 - canonical circuit encoding is stable across equivalent record orders
+  ---
+  duration_ms: 1.8078
+  type: 'test'
+  ...
+# Subtest: installed model and executable registries cannot change under their identities
+ok 13 - installed model and executable registries cannot change under their identities
+  ---
+  duration_ms: 1109.557435
+  type: 'test'
+  ...
+# Subtest: fresh processes bind actual native code and reject snapshots after a host revision
+ok 14 - fresh processes bind actual native code and reject snapshots after a host revision
+  ---
+  duration_ms: 4029.023933
+  type: 'test'
+  ...
+# Subtest: a source edit cannot relabel already loaded modules as a fresh model
+ok 15 - a source edit cannot relabel already loaded modules as a fresh model
+  ---
+  duration_ms: 1929.46025
+  type: 'test'
+  ...
+# Subtest: the sealed loader profile rejects new dynamic or multiline imports
+ok 16 - the sealed loader profile rejects new dynamic or multiline imports
+  ---
+  duration_ms: 105.933603
+  type: 'test'
+  ...
+# Subtest: persistent theory and text have one circuit authority with explicit authored provenance
+ok 17 - persistent theory and text have one circuit authority with explicit authored provenance
+  ---
+  duration_ms: 1209.107796
+  type: 'test'
+  ...
+# Subtest: theory ablation removes entailment and reinstalling restores it without host changes
+ok 18 - theory ablation removes entailment and reinstalling restores it without host changes
+  ---
+  duration_ms: 2812.267492
+  type: 'test'
+  ...
+# Subtest: compiled theory transfers across bindings and supplied rule chains with checked evidence
+ok 19 - compiled theory transfers across bindings and supplied rule chains with checked evidence
+  ---
+  duration_ms: 2873.769623
+  type: 'test'
+  ...
+# Subtest: theory validates at both compilation and execution, including raw constructor proposals
+ok 20 - theory validates at both compilation and execution, including raw constructor proposals
+  ---
+  duration_ms: 1220.729843
+  type: 'test'
+  ...
+# Subtest: text configuration is reused by tasks and changes through circuit replacement
+ok 21 - text configuration is reused by tasks and changes through circuit replacement
+  ---
+  duration_ms: 1335.953038
+  type: 'test'
+  ...
+# Subtest: expression induction learns role order and transfers to new multiword bindings
+ok 22 - expression induction learns role order and transfers to new multiword bindings
+  ---
+  duration_ms: 15.10746
+  type: 'test'
+  ...
+# Subtest: ambiguous binding alignments require more evidence
+ok 23 - ambiguous binding alignments require more evidence
+  ---
+  duration_ms: 0.836921
+  type: 'test'
+  ...
+# Subtest: constant expression memory is distinguished from slot induction
+ok 24 - constant expression memory is distinguished from slot induction
+  ---
+  duration_ms: 0.93498
+  type: 'test'
+  ...
+# Subtest: decision-tree induction uses supplied features rather than host task names
+ok 25 - decision-tree induction uses supplied features rather than host task names
+  ---
+  duration_ms: 17.345
+  type: 'test'
+  ...
+# Subtest: conditionals and defaults evaluate only the selected expression
+ok 26 - conditionals and defaults evaluate only the selected expression
+  ---
+  duration_ms: 16.065488
+  type: 'test'
+  ...
+# Subtest: map and choice cache identities include their control dependencies
+ok 27 - map and choice cache identities include their control dependencies
+  ---
+  duration_ms: 4.088083
+  type: 'test'
+  ...
+# Subtest: branch circuits must expose matching contracts
+ok 28 - branch circuits must expose matching contracts
+  ---
+  duration_ms: 1.16071
+  type: 'test'
+  ...
+# Subtest: active realization is reproducibly learned circuit execution, with authored adapters disclosed
+ok 29 - active realization is reproducibly learned circuit execution, with authored adapters disclosed
+  ---
+  duration_ms: 1604.878377
+  type: 'test'
+  ...
+# Subtest: the vision audit does not accept a fabricated learning tag as a derivation
+ok 30 - the vision audit does not accept a fabricated learning tag as a derivation
+  ---
+  duration_ms: 5525.816724
+  type: 'test'
+  ...
+# Subtest: rendering circuits respect optional polarity and context in the shared atom contract
+ok 31 - rendering circuits respect optional polarity and context in the shared atom contract
+  ---
+  duration_ms: 652.012058
+  type: 'test'
+  ...
+# Subtest: typed program synthesis finds a reusable composition and reproduces it exactly
+not ok 32 - typed program synthesis finds a reusable composition and reproduces it exactly
+  ---
+  duration_ms: 558.041962
+  type: 'test'
+  location: '/home/salboaie/work/sllm/sxlm/test/program-learning.test.mjs:19:1'
+  failureType: 'testCodeFailure'
+  error: 'Unknown pack field'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    check (file:///home/salboaie/work/sllm/sxlm/src/kernel/data.mjs:68:67)
+    validatePack (file:///home/salboaie/work/sllm/sxlm/src/learning/packs.mjs:20:3)
+    combinePacks (file:///home/salboaie/work/sllm/sxlm/src/learning/packs.mjs:32:22)
+    new SymbolicModel (file:///home/salboaie/work/sllm/sxlm/src/model.mjs:18:22)
+    TestContext.<anonymous> (file:///home/salboaie/work/sllm/sxlm/test/program-learning.test.mjs:28:25)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1106:25)
+    Test.start (node:internal/test_runner/test:1003:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+  ...
+# Subtest: a learned procedure can be a typed library member in a separately synthesized procedure
+ok 33 - a learned procedure can be a typed library member in a separately synthesized procedure
+  ---
+  duration_ms: 2563.574157
+  type: 'test'
+  ...
+# Subtest: the same learner discovers numeric and text compositions from other typed libraries
+ok 34 - the same learner discovers numeric and text compositions from other typed libraries
+  ---
+  duration_ms: 2149.871202
+  type: 'test'
+  ...
+# Subtest: training fit is insufficient: independent gates reject an underspecified hypothesis
+ok 35 - training fit is insufficient: independent gates reject an underspecified hypothesis
+  ---
+  duration_ms: 1331.848473
+  type: 'test'
+  ...
+# Subtest: failed or bounded searches produce no executable candidate and never imply impossibility
+ok 36 - failed or bounded searches produce no executable candidate and never imply impossibility
+  ---
+  duration_ms: 662.893078
+  type: 'test'
+  ...
+# Subtest: constant memory is labeled and reference-shaped records cannot become executable wires
+ok 37 - constant memory is labeled and reference-shaped records cannot become executable wires
+  ---
+  duration_ms: 733.459001
+  type: 'test'
+  ...
+# Subtest: program learning uses guarded promotion, detects repeated gate inputs, reloads and rolls back
+ok 38 - program learning uses guarded promotion, detects repeated gate inputs, reloads and rolls back
+  ---
+  duration_ms: 4864.93713
+  type: 'test'
+  ...
+# Subtest: the CLI can synthesize a self-contained method pack without changing the active registry
+ok 39 - the CLI can synthesize a self-contained method pack without changing the active registry
+  ---
+  duration_ms: 1611.572138
+  type: 'test'
+  ...
+# Subtest: the learning audit reproduces method provenance and rejects changed programs or missing derivations
+ok 40 - the learning audit reproduces method provenance and rejects changed programs or missing derivations
+  ---
+  duration_ms: 7436.101267
+  type: 'test'
+  ...
+# Subtest: semantic policies execute as circuits and reproduce their declared sources
+ok 41 - semantic policies execute as circuits and reproduce their declared sources
+  ---
+  duration_ms: 261.924061
+  type: 'test'
+  ...
+# Subtest: migration preserves the previous interpreter over temporal, partial and inconsistent event histories
+ok 42 - migration preserves the previous interpreter over temporal, partial and inconsistent event histories
+  ---
+  duration_ms: 1621.919702
+  type: 'test'
+  ...
+# Subtest: independent conservation and context checks cover unseen numeric bindings
+ok 43 - independent conservation and context checks cover unseen numeric bindings
+  ---
+  duration_ms: 530.839132
+  type: 'test'
+  ...
+# Subtest: learning a new event label changes reusable state behavior without native edits
+ok 44 - learning a new event label changes reusable state behavior without native edits
+  ---
+  duration_ms: 861.268138
+  type: 'test'
+  ...
+# Subtest: fold is ordered, empty-safe, cache-correct, typed and bounded across unrelated domains
+ok 45 - fold is ordered, empty-safe, cache-correct, typed and bounded across unrelated domains
+  ---
+  duration_ms: 6.092418
+  type: 'test'
+  ...
+# Subtest: general term operations reject unsafe records and preserve exact arithmetic and lazy scope
+ok 46 - general term operations reject unsafe records and preserve exact arithmetic and lazy scope
+  ---
+  duration_ms: 8.022512
+  type: 'test'
+  ...
+# Subtest: SOP data uses the executable constructor syntax and preserves all inert values
+ok 47 - SOP data uses the executable constructor syntax and preserves all inert values
+  ---
+  duration_ms: 20.629896
+  type: 'test'
+  ...
+# Subtest: source modules remain readable and inert, including apparent delimiters inside their bodies
+ok 48 - source modules remain readable and inert, including apparent delimiters inside their bodies
+  ---
+  duration_ms: 2.038699
+  type: 'test'
+  ...
+# Subtest: data boundaries reject JSON, executable operations, malformed SSA and expansion attacks
+ok 49 - data boundaries reject JSON, executable operations, malformed SSA and expansion attacks
+  ---
+  duration_ms: 0.957679
+  type: 'test'
+  ...
+# Subtest: SOP compilation rejects metadata bypasses and enforces SSA and typed bindings
+ok 50 - SOP compilation rejects metadata bypasses and enforces SSA and typed bindings
+  ---
+  duration_ms: 2.276582
+  type: 'test'
+  ...
+# Subtest: graph-to-source migration preserves constants, iteration roles, branch laziness and failure
+ok 51 - graph-to-source migration preserves constants, iteration roles, branch laziness and failure
+  ---
+  duration_ms: 9.348399
+  type: 'test'
+  ...
+# Subtest: the installed model and all owned data artifacts have SOP as their persistent format
+ok 52 - the installed model and all owned data artifacts have SOP as their persistent format
+  ---
+  duration_ms: 512.247796
+  type: 'test'
+  ...
+# Subtest: structural probes preserve falsy values, discriminate absence and ignore inherited keys
+ok 53 - structural probes preserve falsy values, discriminate absence and ignore inherited keys
+  ---
+  duration_ms: 6.458672
+  type: 'test'
+  ...
+# Subtest: record and SOP conversions retain ordinary data and observable property order
+ok 54 - record and SOP conversions retain ordinary data and observable property order
+  ---
+  duration_ms: 5.059869
+  type: 'test'
+  ...
+# Subtest: text operations are literal mechanisms with no regex or executable formatting
+ok 55 - text operations are literal mechanisms with no regex or executable formatting
+  ---
+  duration_ms: 1.726014
+  type: 'test'
+  ...
+# Subtest: scoped names are deterministic and rational arithmetic rejects coercion and undefined operations
+ok 56 - scoped names are deterministic and rational arithmetic rejects coercion and undefined operations
+  ---
+  duration_ms: 4.410964
+  type: 'test'
+  ...
+# Subtest: structural traversal consumes caller work budgets
+ok 57 - structural traversal consumes caller work budgets
+  ---
+  duration_ms: 0.521303
+  type: 'test'
+  ...
+1..57
+# tests 57
+# suites 0
+# pass 56
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 24695.231271

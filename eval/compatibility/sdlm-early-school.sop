@@ -1,0 +1,287 @@
+@v0 kernel.value.record "project" "sdlm" "path" "benchmarks/early-school/v1.json" "hash" "3e0ed4f4cb3a1daa6bdd2e829df58296c02f8c57468737284e8a028d8951e9aa" "kind" "user-owned-evaluation-data" "qualification" "Read-only conversion of case data. No sibling implementation is imported or executed; public development-visible cases are not blind validation."
+@v1 kernel.value.record "title" "Primary mathematics programme" "url" "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study"
+@v2 kernel.value.record "title" "Primary science programme" "url" "https://www.gov.uk/government/publications/national-curriculum-in-england-science-programmes-of-study/national-curriculum-in-england-science-programmes-of-study"
+@v3 kernel.seq.make item $v1 item $v2
+@v4 kernel.seq.make item "Biscuit is a dog."
+@v5 kernel.value.record "kind" "boolean" "status" "true"
+@v6 kernel.value.record "id" "animals-01" "domain" "animals" "split" "dev" "context" $v4 "question" "Is Biscuit an animal?" "expected" $v5
+@v7 kernel.seq.make item "Mimi is a cat."
+@v8 kernel.value.record "kind" "boolean" "status" "true"
+@v9 kernel.value.record "id" "animals-02" "domain" "animals" "split" "dev" "context" $v7 "question" "Is Mimi a mammal?" "expected" $v8
+@v10 kernel.seq.make item "Buzz is a bee."
+@v11 kernel.value.record "kind" "boolean" "status" "true"
+@v12 kernel.value.record "id" "animals-03" "domain" "animals" "split" "dev" "context" $v10 "question" "Is Buzz an insect?" "expected" $v11
+@v13 kernel.seq.make item "Pebble is a rock."
+@v14 kernel.value.record "kind" "boolean" "status" "false"
+@v15 kernel.value.record "id" "animals-04" "domain" "animals" "split" "dev" "context" $v13 "question" "Is Pebble alive?" "expected" $v14
+@v16 kernel.seq.make item "Nori is a penguin."
+@v17 kernel.value.record "kind" "boolean" "status" "true"
+@v18 kernel.value.record "id" "animals-05" "domain" "animals" "split" "eval" "context" $v16 "question" "Is Nori a bird?" "expected" $v17
+@v19 kernel.seq.make item "Nori is a penguin."
+@v20 kernel.value.record "kind" "boolean" "status" "false"
+@v21 kernel.value.record "id" "animals-06" "domain" "animals" "split" "eval" "context" $v19 "question" "Can Nori fly?" "expected" $v20
+@v22 kernel.seq.make item "Tiki is a sparrow."
+@v23 kernel.value.record "kind" "boolean" "status" "true"
+@v24 kernel.value.record "id" "animals-07" "domain" "animals" "split" "eval" "context" $v22 "question" "Can Tiki fly?" "expected" $v23
+@v25 kernel.seq.make item "Dot is an ant."
+@v26 kernel.value.record "kind" "boolean" "status" "true"
+@v27 kernel.value.record "id" "animals-08" "domain" "animals" "split" "eval" "context" $v25 "question" "Is Dot an animal?" "expected" $v26
+@v28 kernel.seq.make item "Rose is a plant."
+@v29 kernel.value.record "kind" "boolean" "status" "true"
+@v30 kernel.value.record "id" "plants_materials-01" "domain" "plants_materials" "split" "dev" "context" $v28 "question" "Does Rose need water?" "expected" $v29
+@v31 kernel.seq.make item "Fern is a plant."
+@v32 kernel.value.record "kind" "boolean" "status" "true"
+@v33 kernel.value.record "id" "plants_materials-02" "domain" "plants_materials" "split" "dev" "context" $v31 "question" "Does Fern need light?" "expected" $v32
+@v34 kernel.seq.make item "Cup is made of glass."
+@v35 kernel.value.record "kind" "boolean" "status" "true"
+@v36 kernel.value.record "id" "plants_materials-03" "domain" "plants_materials" "split" "dev" "context" $v34 "question" "Is Cup fragile?" "expected" $v35
+@v37 kernel.seq.make item "Spoon is made of metal."
+@v38 kernel.value.record "kind" "boolean" "status" "true"
+@v39 kernel.value.record "id" "plants_materials-04" "domain" "plants_materials" "split" "dev" "context" $v37 "question" "Is Spoon hard?" "expected" $v38
+@v40 kernel.seq.make item "Oak is a tree."
+@v41 kernel.value.record "kind" "boolean" "status" "true"
+@v42 kernel.value.record "id" "plants_materials-05" "domain" "plants_materials" "split" "eval" "context" $v40 "question" "Is Oak a plant?" "expected" $v41
+@v43 kernel.seq.make item "Tulip is a flower."
+@v44 kernel.value.record "kind" "boolean" "status" "true"
+@v45 kernel.value.record "id" "plants_materials-06" "domain" "plants_materials" "split" "eval" "context" $v43 "question" "Does Tulip need water?" "expected" $v44
+@v46 kernel.seq.make item "Towel is made of cotton."
+@v47 kernel.value.record "kind" "boolean" "status" "true"
+@v48 kernel.value.record "id" "plants_materials-07" "domain" "plants_materials" "split" "eval" "context" $v46 "question" "Is Towel absorbent?" "expected" $v47
+@v49 kernel.seq.make item "Window is made of glass."
+@v50 kernel.value.record "kind" "boolean" "status" "true"
+@v51 kernel.value.record "id" "plants_materials-08" "domain" "plants_materials" "split" "eval" "context" $v49 "question" "Is Window transparent?" "expected" $v50
+@v52 kernel.seq.make
+@v53 kernel.seq.make item "see"
+@v54 kernel.value.record "kind" "bindings" "values" $v53
+@v55 kernel.value.record "id" "senses_tools-01" "domain" "senses_tools" "split" "dev" "context" $v52 "question" "What do eyes help us do?" "expected" $v54
+@v56 kernel.seq.make
+@v57 kernel.seq.make item "hear"
+@v58 kernel.value.record "kind" "bindings" "values" $v57
+@v59 kernel.value.record "id" "senses_tools-02" "domain" "senses_tools" "split" "dev" "context" $v56 "question" "What do ears help us do?" "expected" $v58
+@v60 kernel.seq.make
+@v61 kernel.seq.make item "smell"
+@v62 kernel.value.record "kind" "bindings" "values" $v61
+@v63 kernel.value.record "id" "senses_tools-03" "domain" "senses_tools" "split" "dev" "context" $v60 "question" "What do noses help us do?" "expected" $v62
+@v64 kernel.seq.make
+@v65 kernel.seq.make item "write"
+@v66 kernel.value.record "kind" "bindings" "values" $v65
+@v67 kernel.value.record "id" "senses_tools-04" "domain" "senses_tools" "split" "dev" "context" $v64 "question" "What is a pencil used for?" "expected" $v66
+@v68 kernel.seq.make
+@v69 kernel.seq.make item "taste"
+@v70 kernel.value.record "kind" "bindings" "values" $v69
+@v71 kernel.value.record "id" "senses_tools-05" "domain" "senses_tools" "split" "eval" "context" $v68 "question" "What do tongues help us do?" "expected" $v70
+@v72 kernel.seq.make
+@v73 kernel.seq.make item "unlock"
+@v74 kernel.value.record "kind" "bindings" "values" $v73
+@v75 kernel.value.record "id" "senses_tools-06" "domain" "senses_tools" "split" "eval" "context" $v72 "question" "What is a key used for?" "expected" $v74
+@v76 kernel.seq.make
+@v77 kernel.seq.make item "shelter"
+@v78 kernel.value.record "kind" "bindings" "values" $v77
+@v79 kernel.value.record "id" "senses_tools-07" "domain" "senses_tools" "split" "eval" "context" $v76 "question" "What is an umbrella used for?" "expected" $v78
+@v80 kernel.seq.make
+@v81 kernel.seq.make item "measure"
+@v82 kernel.value.record "kind" "bindings" "values" $v81
+@v83 kernel.value.record "id" "senses_tools-08" "domain" "senses_tools" "split" "eval" "context" $v80 "question" "What is a ruler used for?" "expected" $v82
+@v84 kernel.seq.make
+@v85 kernel.value.record "kind" "number" "value" 7
+@v86 kernel.value.record "id" "arithmetic-01" "domain" "arithmetic" "split" "dev" "context" $v84 "question" "What is 4 plus 3?" "expected" $v85
+@v87 kernel.seq.make
+@v88 kernel.value.record "kind" "number" "value" 5
+@v89 kernel.value.record "id" "arithmetic-02" "domain" "arithmetic" "split" "dev" "context" $v87 "question" "What is 9 minus 4?" "expected" $v88
+@v90 kernel.seq.make
+@v91 kernel.value.record "kind" "number" "value" 6
+@v92 kernel.value.record "id" "arithmetic-03" "domain" "arithmetic" "split" "dev" "context" $v90 "question" "What is 2 times 3?" "expected" $v91
+@v93 kernel.seq.make
+@v94 kernel.value.record "kind" "number" "value" 4
+@v95 kernel.value.record "id" "arithmetic-04" "domain" "arithmetic" "split" "dev" "context" $v93 "question" "What is 8 divided by 2?" "expected" $v94
+@v96 kernel.seq.make
+@v97 kernel.value.record "kind" "number" "value" 15
+@v98 kernel.value.record "id" "arithmetic-05" "domain" "arithmetic" "split" "eval" "context" $v96 "question" "What is 8 plus 7?" "expected" $v97
+@v99 kernel.seq.make
+@v100 kernel.value.record "kind" "number" "value" 7
+@v101 kernel.value.record "id" "arithmetic-06" "domain" "arithmetic" "split" "eval" "context" $v99 "question" "What is 15 minus 8?" "expected" $v100
+@v102 kernel.seq.make
+@v103 kernel.value.record "kind" "number" "value" 20
+@v104 kernel.value.record "id" "arithmetic-07" "domain" "arithmetic" "split" "eval" "context" $v102 "question" "What is 4 times 5?" "expected" $v103
+@v105 kernel.seq.make
+@v106 kernel.value.record "kind" "number" "value" 4
+@v107 kernel.value.record "id" "arithmetic-08" "domain" "arithmetic" "split" "eval" "context" $v105 "question" "What is 12 divided by 3?" "expected" $v106
+@v108 kernel.seq.make item "Mia has 5 apples." item "Mia gets 2 apples."
+@v109 kernel.value.record "kind" "number" "value" 7
+@v110 kernel.value.record "id" "quantities-01" "domain" "quantities" "split" "dev" "context" $v108 "question" "How many apples does Mia have?" "expected" $v109
+@v111 kernel.seq.make item "Leo has 8 pencils." item "Leo loses 3 pencils."
+@v112 kernel.value.record "kind" "number" "value" 5
+@v113 kernel.value.record "id" "quantities-02" "domain" "quantities" "split" "dev" "context" $v111 "question" "How many pencils does Leo have?" "expected" $v112
+@v114 kernel.seq.make item "Mia has 2 apples." item "Mia has 3 pears."
+@v115 kernel.value.record "kind" "number" "value" 2
+@v116 kernel.value.record "id" "quantities-03" "domain" "quantities" "split" "dev" "context" $v114 "question" "How many apples does Mia have?" "expected" $v115
+@v117 kernel.seq.make item "Ana has 4 books." item "Bo has 9 books."
+@v118 kernel.value.record "kind" "number" "value" 4
+@v119 kernel.value.record "id" "quantities-04" "domain" "quantities" "split" "dev" "context" $v117 "question" "How many books does Ana have?" "expected" $v118
+@v120 kernel.seq.make item "Ivo has 6 marbles." item "Ivo gets 4 marbles." item "Ivo loses 3 marbles."
+@v121 kernel.value.record "kind" "number" "value" 7
+@v122 kernel.value.record "id" "quantities-05" "domain" "quantities" "split" "eval" "context" $v120 "question" "How many marbles does Ivo have?" "expected" $v121
+@v123 kernel.seq.make item "Zoe has 9 apples." item "Zoe eats 2 apples."
+@v124 kernel.value.record "kind" "number" "value" 7
+@v125 kernel.value.record "id" "quantities-06" "domain" "quantities" "split" "eval" "context" $v123 "question" "How many apples does Zoe have?" "expected" $v124
+@v126 kernel.seq.make item "Eli has 3 pencils." item "Eli loses 3 pencils."
+@v127 kernel.value.record "kind" "number" "value" 0
+@v128 kernel.value.record "id" "quantities-07" "domain" "quantities" "split" "eval" "context" $v126 "question" "How many pencils does Eli have?" "expected" $v127
+@v129 kernel.seq.make item "Ada has 8 pears." item "Ada gets 1 pear."
+@v130 kernel.value.record "kind" "number" "value" 9
+@v131 kernel.value.record "id" "quantities-08" "domain" "quantities" "split" "eval" "context" $v129 "question" "How many pears does Ada have?" "expected" $v130
+@v132 kernel.seq.make item "Ball is in Box."
+@v133 kernel.seq.make item "box"
+@v134 kernel.value.record "kind" "bindings" "values" $v133
+@v135 kernel.value.record "id" "space-01" "domain" "space" "split" "dev" "context" $v132 "question" "Where is Ball?" "expected" $v134
+@v136 kernel.seq.make item "Ball is in Box." item "Box is in Room."
+@v137 kernel.value.record "kind" "boolean" "status" "true"
+@v138 kernel.value.record "id" "space-02" "domain" "space" "split" "dev" "context" $v136 "question" "Is Ball in Room?" "expected" $v137
+@v139 kernel.seq.make item "Mia is in Kitchen." item "Mia goes to Garden."
+@v140 kernel.seq.make item "garden"
+@v141 kernel.value.record "kind" "bindings" "values" $v140
+@v142 kernel.value.record "id" "space-03" "domain" "space" "split" "dev" "context" $v139 "question" "Where is Mia?" "expected" $v141
+@v143 kernel.seq.make item "Book is on Table."
+@v144 kernel.value.record "kind" "boolean" "status" "true"
+@v145 kernel.value.record "id" "space-04" "domain" "space" "split" "dev" "context" $v143 "question" "Is Book on Table?" "expected" $v144
+@v146 kernel.seq.make item "Key is in Bag." item "Bag is in Drawer." item "Drawer is in Bedroom."
+@v147 kernel.value.record "kind" "boolean" "status" "true"
+@v148 kernel.value.record "id" "space-05" "domain" "space" "split" "eval" "context" $v146 "question" "Is Key in Bedroom?" "expected" $v147
+@v149 kernel.seq.make item "Zoe is in Park." item "Zoe goes to School."
+@v150 kernel.value.record "kind" "boolean" "status" "unknown"
+@v151 kernel.value.record "id" "space-06" "domain" "space" "split" "eval" "context" $v149 "question" "Is Zoe in Park?" "expected" $v150
+@v152 kernel.seq.make item "Cup is under Desk."
+@v153 kernel.value.record "kind" "boolean" "status" "true"
+@v154 kernel.value.record "id" "space-07" "domain" "space" "split" "eval" "context" $v152 "question" "Is Cup under Desk?" "expected" $v153
+@v155 kernel.seq.make item "Ball is left of Box."
+@v156 kernel.value.record "kind" "boolean" "status" "true"
+@v157 kernel.value.record "id" "space-08" "domain" "space" "split" "eval" "context" $v155 "question" "Is Box right of Ball?" "expected" $v156
+@v158 kernel.seq.make
+@v159 kernel.seq.make item "tuesday"
+@v160 kernel.value.record "kind" "bindings" "values" $v159
+@v161 kernel.value.record "id" "order_calendar-01" "domain" "order_calendar" "split" "dev" "context" $v158 "question" "What comes after Monday?" "expected" $v160
+@v162 kernel.seq.make
+@v163 kernel.seq.make item "thursday"
+@v164 kernel.value.record "kind" "bindings" "values" $v163
+@v165 kernel.value.record "id" "order_calendar-02" "domain" "order_calendar" "split" "dev" "context" $v162 "question" "What comes before Friday?" "expected" $v164
+@v166 kernel.seq.make item "Breakfast is before School." item "School is before Lunch."
+@v167 kernel.value.record "kind" "boolean" "status" "true"
+@v168 kernel.value.record "id" "order_calendar-03" "domain" "order_calendar" "split" "dev" "context" $v166 "question" "Is Breakfast before Lunch?" "expected" $v167
+@v169 kernel.seq.make item "Dinner is after Lunch."
+@v170 kernel.value.record "kind" "boolean" "status" "true"
+@v171 kernel.value.record "id" "order_calendar-04" "domain" "order_calendar" "split" "dev" "context" $v169 "question" "Is Lunch before Dinner?" "expected" $v170
+@v172 kernel.seq.make
+@v173 kernel.seq.make item "monday"
+@v174 kernel.value.record "kind" "bindings" "values" $v173
+@v175 kernel.value.record "id" "order_calendar-05" "domain" "order_calendar" "split" "eval" "context" $v172 "question" "What comes after Sunday?" "expected" $v174
+@v176 kernel.seq.make
+@v177 kernel.seq.make item "monday"
+@v178 kernel.value.record "kind" "bindings" "values" $v177
+@v179 kernel.value.record "id" "order_calendar-06" "domain" "order_calendar" "split" "eval" "context" $v176 "question" "What comes before Tuesday?" "expected" $v178
+@v180 kernel.seq.make item "Reading is before Drawing." item "Drawing is before Play."
+@v181 kernel.value.record "kind" "boolean" "status" "true"
+@v182 kernel.value.record "id" "order_calendar-07" "domain" "order_calendar" "split" "eval" "context" $v180 "question" "Is Play after Reading?" "expected" $v181
+@v183 kernel.seq.make
+@v184 kernel.seq.make item "january"
+@v185 kernel.value.record "kind" "bindings" "values" $v184
+@v186 kernel.value.record "id" "order_calendar-08" "domain" "order_calendar" "split" "eval" "context" $v183 "question" "What comes after December?" "expected" $v185
+@v187 kernel.seq.make item "Ana is a mother of Ben."
+@v188 kernel.value.record "kind" "boolean" "status" "true"
+@v189 kernel.value.record "id" "family-01" "domain" "family" "split" "dev" "context" $v187 "question" "Is Ana a parent of Ben?" "expected" $v188
+@v190 kernel.seq.make item "Ana is a parent of Ben." item "Ben is a parent of Cora."
+@v191 kernel.value.record "kind" "boolean" "status" "true"
+@v192 kernel.value.record "id" "family-02" "domain" "family" "split" "dev" "context" $v190 "question" "Is Ana a grandparent of Cora?" "expected" $v191
+@v193 kernel.seq.make item "Ben is a brother of Cora."
+@v194 kernel.value.record "kind" "boolean" "status" "true"
+@v195 kernel.value.record "id" "family-03" "domain" "family" "split" "dev" "context" $v193 "question" "Is Cora a sibling of Ben?" "expected" $v194
+@v196 kernel.seq.make item "Ana is a parent of Ben."
+@v197 kernel.value.record "kind" "boolean" "status" "true"
+@v198 kernel.value.record "id" "family-04" "domain" "family" "split" "dev" "context" $v196 "question" "Is Ben a child of Ana?" "expected" $v197
+@v199 kernel.seq.make item "Ivo is a father of Zoe."
+@v200 kernel.value.record "kind" "boolean" "status" "true"
+@v201 kernel.value.record "id" "family-05" "domain" "family" "split" "eval" "context" $v199 "question" "Is Ivo a parent of Zoe?" "expected" $v200
+@v202 kernel.seq.make item "Nora is a parent of Eli." item "Eli is a parent of Pip."
+@v203 kernel.value.record "kind" "boolean" "status" "true"
+@v204 kernel.value.record "id" "family-06" "domain" "family" "split" "eval" "context" $v202 "question" "Is Pip a grandchild of Nora?" "expected" $v203
+@v205 kernel.seq.make item "Lia is a sister of Max."
+@v206 kernel.value.record "kind" "boolean" "status" "true"
+@v207 kernel.value.record "id" "family-07" "domain" "family" "split" "eval" "context" $v205 "question" "Is Max a sibling of Lia?" "expected" $v206
+@v208 kernel.seq.make item "Nora is a parent of Eli."
+@v209 kernel.value.record "kind" "boolean" "status" "unknown"
+@v210 kernel.value.record "id" "family-08" "domain" "family" "split" "eval" "context" $v208 "question" "Is Eli a parent of Nora?" "expected" $v209
+@v211 kernel.seq.make item "Mia is outside." item "Mia is in rain."
+@v212 kernel.value.record "kind" "boolean" "status" "true"
+@v213 kernel.value.record "id" "causal-01" "domain" "causal" "split" "dev" "context" $v211 "question" "Is Mia wet?" "expected" $v212
+@v214 kernel.seq.make item "Ice is warm."
+@v215 kernel.value.record "kind" "boolean" "status" "true"
+@v216 kernel.value.record "id" "causal-02" "domain" "causal" "split" "dev" "context" $v214 "question" "Does Ice melt?" "expected" $v215
+@v217 kernel.seq.make item "Plant is a plant." item "Plant is without water."
+@v218 kernel.value.record "kind" "boolean" "status" "true"
+@v219 kernel.value.record "id" "causal-03" "domain" "causal" "split" "dev" "context" $v217 "question" "Is Plant thirsty?" "expected" $v218
+@v220 kernel.seq.make item "Tom is tired."
+@v221 kernel.value.record "kind" "boolean" "status" "true"
+@v222 kernel.value.record "id" "causal-04" "domain" "causal" "split" "dev" "context" $v220 "question" "Does Tom need rest?" "expected" $v221
+@v223 kernel.seq.make item "Zoe is hungry."
+@v224 kernel.value.record "kind" "boolean" "status" "true"
+@v225 kernel.value.record "id" "causal-05" "domain" "causal" "split" "eval" "context" $v223 "question" "Does Zoe need food?" "expected" $v224
+@v226 kernel.seq.make item "Eli is thirsty."
+@v227 kernel.value.record "kind" "boolean" "status" "true"
+@v228 kernel.value.record "id" "causal-06" "domain" "causal" "split" "eval" "context" $v226 "question" "Does Eli need water?" "expected" $v227
+@v229 kernel.seq.make item "Ada is outside." item "Ada is in rain." item "Ada has shelter."
+@v230 kernel.value.record "kind" "boolean" "status" "unknown"
+@v231 kernel.value.record "id" "causal-07" "domain" "causal" "split" "eval" "context" $v229 "question" "Is Ada wet?" "expected" $v230
+@v232 kernel.seq.make item "Ivo is cold."
+@v233 kernel.value.record "kind" "boolean" "status" "true"
+@v234 kernel.value.record "id" "causal-08" "domain" "causal" "split" "eval" "context" $v232 "question" "Does Ivo need warmth?" "expected" $v233
+@v235 kernel.seq.make
+@v236 kernel.value.record "kind" "boolean" "status" "true"
+@v237 kernel.value.record "id" "comparisons-01" "domain" "comparisons" "split" "dev" "context" $v235 "question" "Is 8 greater than 3?" "expected" $v236
+@v238 kernel.seq.make
+@v239 kernel.value.record "kind" "boolean" "status" "false"
+@v240 kernel.value.record "id" "comparisons-02" "domain" "comparisons" "split" "dev" "context" $v238 "question" "Is 2 greater than 7?" "expected" $v239
+@v241 kernel.seq.make item "Oak is taller than Bush." item "Bush is taller than Grass."
+@v242 kernel.value.record "kind" "boolean" "status" "true"
+@v243 kernel.value.record "id" "comparisons-03" "domain" "comparisons" "split" "dev" "context" $v241 "question" "Is Oak taller than Grass?" "expected" $v242
+@v244 kernel.seq.make item "Box is heavier than Bag."
+@v245 kernel.value.record "kind" "boolean" "status" "true"
+@v246 kernel.value.record "id" "comparisons-04" "domain" "comparisons" "split" "dev" "context" $v244 "question" "Is Bag lighter than Box?" "expected" $v245
+@v247 kernel.seq.make
+@v248 kernel.value.record "kind" "boolean" "status" "true"
+@v249 kernel.value.record "id" "comparisons-05" "domain" "comparisons" "split" "eval" "context" $v247 "question" "Is 6 less than 9?" "expected" $v248
+@v250 kernel.seq.make
+@v251 kernel.value.record "kind" "boolean" "status" "true"
+@v252 kernel.value.record "id" "comparisons-06" "domain" "comparisons" "split" "eval" "context" $v250 "question" "Is 5 equal to 5?" "expected" $v251
+@v253 kernel.seq.make item "Ana is older than Ben." item "Ben is older than Cora."
+@v254 kernel.value.record "kind" "boolean" "status" "true"
+@v255 kernel.value.record "id" "comparisons-07" "domain" "comparisons" "split" "eval" "context" $v253 "question" "Is Cora younger than Ana?" "expected" $v254
+@v256 kernel.seq.make
+@v257 kernel.value.record "kind" "boolean" "status" "false"
+@v258 kernel.value.record "id" "comparisons-08" "domain" "comparisons" "split" "eval" "context" $v256 "question" "Is 10 less than 4?" "expected" $v257
+@v259 kernel.seq.make item "Mia is a child."
+@v260 kernel.value.record "kind" "boolean" "status" "unknown"
+@v261 kernel.value.record "id" "epistemic-01" "domain" "epistemic" "split" "dev" "context" $v259 "question" "Is Mia happy?" "expected" $v260
+@v262 kernel.seq.make item "Ball is red." item "Ball is not red."
+@v263 kernel.value.record "kind" "boolean" "status" "both"
+@v264 kernel.value.record "id" "epistemic-02" "domain" "epistemic" "split" "dev" "context" $v262 "question" "Is Ball red?" "expected" $v263
+@v265 kernel.seq.make item "Aster is a dax." item "Every dax is round."
+@v266 kernel.value.record "kind" "boolean" "status" "true"
+@v267 kernel.value.record "id" "epistemic-03" "domain" "epistemic" "split" "dev" "context" $v265 "question" "Is Aster round?" "expected" $v266
+@v268 kernel.seq.make item "Every human is mortal."
+@v269 kernel.value.record "kind" "boolean" "status" "unknown"
+@v270 kernel.value.record "id" "epistemic-04" "domain" "epistemic" "split" "dev" "context" $v268 "question" "Is UnknownPerson mortal?" "expected" $v269
+@v271 kernel.seq.make item "Mara is human."
+@v272 kernel.value.record "kind" "boolean" "status" "true"
+@v273 kernel.value.record "id" "epistemic-05" "domain" "epistemic" "split" "eval" "context" $v271 "question" "Is Mara human" "expected" $v272
+@v274 kernel.seq.make item "Socrate is human." item "All humans die."
+@v275 kernel.value.record "kind" "boolean" "status" "true"
+@v276 kernel.value.record "id" "epistemic-06" "domain" "epistemic" "split" "eval" "context" $v274 "question" "Is Scorate going to die?" "expected" $v275
+@v277 kernel.seq.make item "Nori is a penguin."
+@v278 kernel.value.record "kind" "boolean" "status" "unknown"
+@v279 kernel.value.record "id" "epistemic-07" "domain" "epistemic" "split" "eval" "context" $v277 "question" "Is Nori a mammal?" "expected" $v278
+@v280 kernel.seq.make item "Ball is in Box."
+@v281 kernel.value.record "kind" "boolean" "status" "unknown"
+@v282 kernel.value.record "id" "epistemic-08" "domain" "epistemic" "split" "eval" "context" $v280 "question" "Is Ball in Garden?" "expected" $v281
+@v283 kernel.seq.make item $v6 item $v9 item $v12 item $v15 item $v18 item $v21 item $v24 item $v27 item $v30 item $v33 item $v36 item $v39 item $v42 item $v45 item $v48 item $v51 item $v55 item $v59 item $v63 item $v67 item $v71 item $v75 item $v79 item $v83 item $v86 item $v89 item $v92 item $v95 item $v98 item $v101 item $v104 item $v107 item $v110 item $v113 item $v116 item $v119 item $v122 item $v125 item $v128 item $v131 item $v135 item $v138 item $v142 item $v145 item $v148 item $v151 item $v154 item $v157 item $v161 item $v165 item $v168 item $v171 item $v175 item $v179 item $v182 item $v186 item $v189 item $v192 item $v195 item $v198 item $v201 item $v204 item $v207 item $v210 item $v213 item $v216 item $v219 item $v222 item $v225 item $v228 item $v231 item $v234 item $v237 item $v240 item $v243 item $v246 item $v249 item $v252 item $v255 item $v258 item $v261 item $v264 item $v267 item $v270 item $v273 item $v276 item $v279 item $v282
+@v284 kernel.value.record "schema" "sxlm.compatibility-cases.v1" "source" $v0 "name" "early-school" "version" 1 "language" "en" "description" "Authored software evaluation inspired by early-primary topics; not a validated developmental assessment. Evaluation cases are a reserved regression split, not a blind human study." "sources" $v3 "cases" $v283
+@output result $v284
+

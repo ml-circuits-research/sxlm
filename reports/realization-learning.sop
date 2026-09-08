@@ -1,0 +1,134 @@
+@v0 kernel.seq.make item "expressions" item "message.truth.true"
+@v1 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v2 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v0 "origin" $v1
+@v3 kernel.value.record "circuit" "learned.expression.message.truth.true" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "967440eb497833c44726646d9c86a7d2140ad79ed01c49efcd0dd5e940cfb40d" "trainingCount" 2 "explored" 26 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v2
+@v4 kernel.seq.make item "expressions" item "message.truth.false"
+@v5 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v6 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v4 "origin" $v5
+@v7 kernel.value.record "circuit" "learned.expression.message.truth.false" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "17631d87456190a8d4c4b7660d3a091ad842e6dc94cba7dff88e13595b2d42c1" "trainingCount" 2 "explored" 29 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v6
+@v8 kernel.seq.make item "expressions" item "message.truth.both"
+@v9 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v10 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v8 "origin" $v9
+@v11 kernel.value.record "circuit" "learned.expression.message.truth.both" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "14cdc72197c77489637b7b6e3b9e3652eb235130072acc8a56792c576c19c487" "trainingCount" 2 "explored" 93 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v10
+@v12 kernel.seq.make item "expressions" item "message.truth.unknown"
+@v13 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v14 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v12 "origin" $v13
+@v15 kernel.value.record "circuit" "learned.expression.message.truth.unknown" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "75a5d485336a07e637fab4f4c05deba2ea93e6e2bf3a645701bdacb00e56cf98" "trainingCount" 2 "explored" 102 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v14
+@v16 kernel.seq.make item "expressions" item "message.select.answered"
+@v17 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v18 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v16 "origin" $v17
+@v19 kernel.value.record "circuit" "learned.expression.message.select.answered" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "544dbef7c114ff00a5ff6ce204acd152d301ae1028976baf8e7b50f5c7b54c33" "trainingCount" 2 "explored" 121 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v18
+@v20 kernel.seq.make item "expressions" item "message.select.unknown"
+@v21 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v22 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v20 "origin" $v21
+@v23 kernel.value.record "circuit" "learned.expression.message.select.unknown" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "42a958cbf6048ce31a3397d7aa8027cbe07ca65aa1748d0bb2d484d5b8a3a877" "trainingCount" 2 "explored" 68 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v22
+@v24 kernel.seq.make item "expressions" item "message.quantity.answered"
+@v25 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v26 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v24 "origin" $v25
+@v27 kernel.value.record "circuit" "learned.expression.message.quantity.answered" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "279ae813c044ec60f17f0f28170187619050fa413404151973b5d8934eec691f" "trainingCount" 2 "explored" 65 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v26
+@v28 kernel.seq.make item "expressions" item "message.quantity.unknown"
+@v29 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v30 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v28 "origin" $v29
+@v31 kernel.value.record "circuit" "learned.expression.message.quantity.unknown" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "5c1e90c7ec3d7181f34bd28938b590ef369947e598235f2ed1b84ffda9ae60c6" "trainingCount" 2 "explored" 75 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v30
+@v32 kernel.seq.make item "expressions" item "message.arithmetic.answered"
+@v33 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v34 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v32 "origin" $v33
+@v35 kernel.value.record "circuit" "learned.expression.message.arithmetic.answered" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "c6886d67ca85c07340f31056acf227e7ffabfd797a0119293e84621c526a6541" "trainingCount" 2 "explored" 20 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v34
+@v36 kernel.seq.make item "expressions" item "message.acknowledged"
+@v37 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v38 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v36 "origin" $v37
+@v39 kernel.value.record "circuit" "learned.expression.message.acknowledged" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "161877f83a5212b78753a0bfa5adf50c352d6c5591af51d39582f2222d537783" "trainingCount" 2 "explored" 203 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v38
+@v40 kernel.seq.make item "expressions" item "message.unsupported"
+@v41 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v42 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v40 "origin" $v41
+@v43 kernel.value.record "circuit" "learned.expression.message.unsupported" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "48dc075e601ca0c9a92d76f33c35b8e1bb09b7509ea6af7b16d9aebaa6891aba" "trainingCount" 2 "explored" 103 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v42
+@v44 kernel.seq.make item "expressions" item "message.incomplete"
+@v45 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v46 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v44 "origin" $v45
+@v47 kernel.value.record "circuit" "learned.expression.message.incomplete" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "76bede2f268cddc9163778f926a0e02a60383392d241113bbf16992657101282" "trainingCount" 2 "explored" 118 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v46
+@v48 kernel.seq.make item "expressions" item "message.budget-exceeded"
+@v49 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v50 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v48 "origin" $v49
+@v51 kernel.value.record "circuit" "learned.expression.message.budget-exceeded" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "a3e740660388bf29e4528f15b79fe675272195855e8fa7cd09d05193d7a0c2d6" "trainingCount" 2 "explored" 81 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v50
+@v52 kernel.seq.make item "expressions" item "message.completion.unknown"
+@v53 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v54 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v52 "origin" $v53
+@v55 kernel.value.record "circuit" "learned.expression.message.completion.unknown" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "9b15f0afd6d823b68b54533fdc208e089c7e5e6d37347d8b63afbc11cfb33361" "trainingCount" 2 "explored" 99 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v54
+@v56 kernel.seq.make item "expressions" item "atom.unary"
+@v57 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v58 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v56 "origin" $v57
+@v59 kernel.value.record "circuit" "learned.expression.atom.unary" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "a3e38d18e9dac42e40cbd181c12262b61693425580fd7b33636a027912572357" "trainingCount" 2 "explored" 37 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v58
+@v60 kernel.seq.make item "expressions" item "atom.binary"
+@v61 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v62 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v60 "origin" $v61
+@v63 kernel.value.record "circuit" "learned.expression.atom.binary" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "49e6a4a4cd2f5b26c86888f723eb0b09d40e63fe02fa1da319c5a85af317a16c" "trainingCount" 2 "explored" 63 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v62
+@v64 kernel.seq.make item "expressions" item "atom.negativeUnary"
+@v65 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v66 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v64 "origin" $v65
+@v67 kernel.value.record "circuit" "learned.expression.atom.negativeUnary" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "354a6d1e325ce52f0fdff39d03a004c4c199a4b8658b2db74936eb4ab6880e9a" "trainingCount" 2 "explored" 45 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v66
+@v68 kernel.seq.make item "expressions" item "atom.negativeBinary"
+@v69 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v70 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v68 "origin" $v69
+@v71 kernel.value.record "circuit" "learned.expression.atom.negativeBinary" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "d92ab953996ed9c2191635d3b16e1bdb4782bbd1b0d6cad3ef8ce6780afa0354" "trainingCount" 2 "explored" 81 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v70
+@v72 kernel.seq.make item "expressions" item "atom.context"
+@v73 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v74 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v72 "origin" $v73
+@v75 kernel.value.record "circuit" "learned.expression.atom.context" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "8c5986ff747c6167b3f1a6e118a2abc42a21d1c165c37a939a4663a3800e9971" "trainingCount" 2 "explored" 68 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v74
+@v76 kernel.seq.make item "expressions" item "label.typed"
+@v77 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v78 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v76 "origin" $v77
+@v79 kernel.value.record "circuit" "learned.expression.label.typed" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "116953629c541ed8b4a26cc306d1c54758565647bed17a2abda37b306f139696" "trainingCount" 2 "explored" 20 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v78
+@v80 kernel.seq.make item "expressions" item "label.unknown"
+@v81 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v82 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v80 "origin" $v81
+@v83 kernel.value.record "circuit" "learned.expression.label.unknown" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "c3ed31b3b79f274819077b0aa82e7bf4109f84e6c7566945e1e3bcab454b14ab" "trainingCount" 2 "explored" 18 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v82
+@v84 kernel.seq.make item "expressions" item "label.named"
+@v85 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v86 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v84 "origin" $v85
+@v87 kernel.value.record "circuit" "learned.expression.label.named" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "06701dbb758a11bc662846ebedd6383d5dc86ec8d369e376fb843816392d9cb8" "trainingCount" 2 "explored" 9 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v86
+@v88 kernel.seq.make item "expressions" item "text.identity"
+@v89 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v90 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v88 "origin" $v89
+@v91 kernel.value.record "circuit" "learned.expression.text.identity" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "7c4e2a088f34f3e2b20700d45282a811d7bbd97ad3d726c4eee554b65d3e39f3" "trainingCount" 2 "explored" 21 "fit" 2 "uniqueTrainingExamples" 2 "mode" "slot-induction" "curriculum" $v90
+@v92 kernel.seq.make item "expressions" item "atom.unknown"
+@v93 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v94 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v92 "origin" $v93
+@v95 kernel.value.record "circuit" "learned.expression.atom.unknown" "schema" "sxlm.derivation.v1" "kind" "supervised-expression-induction" "algorithm" "supervised-expression-induction-v1" "trainingHash" "1f611c429ebba4bc6669b28ea79e9b47601c5de075acd74ce6d1872e352091a4" "trainingCount" 2 "explored" 55 "fit" 2 "uniqueTrainingExamples" 1 "mode" "constant-output-memory" "curriculum" $v94
+@v96 kernel.seq.make item "kind"
+@v97 kernel.seq.make item "status"
+@v98 kernel.seq.make item "truth"
+@v99 kernel.seq.make item $v96 item $v97 item $v98
+@v100 kernel.seq.make item "answerDispatch"
+@v101 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v102 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v100 "origin" $v101
+@v103 kernel.value.record "circuit" "learned.dispatch.answer" "schema" "sxlm.derivation.v1" "kind" "supervised-dispatch-induction" "algorithm" "supervised-dispatch-induction-v1" "trainingHash" "fe0960c6f3043fe9fbd3aa9a945ff47805ebd373d77806a4b68ee0a146503dae" "trainingCount" 12 "features" $v99 "fallback" "message.unsupported" "fit" 12 "curriculum" $v102
+@v104 kernel.seq.make item "arity"
+@v105 kernel.seq.make item "negative"
+@v106 kernel.seq.make item $v104 item $v105
+@v107 kernel.seq.make item "atomDispatch"
+@v108 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v109 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v107 "origin" $v108
+@v110 kernel.value.record "circuit" "learned.dispatch.atom" "schema" "sxlm.derivation.v1" "kind" "supervised-dispatch-induction" "algorithm" "supervised-dispatch-induction-v1" "trainingHash" "ab11074d648e98cf0157e7c2d9f8256851b201e1cb68eb3a1baede0c1d78ddf4" "trainingCount" 4 "features" $v106 "fallback" "atom.unknown" "fit" 4 "curriculum" $v109
+@v111 kernel.seq.make item "predicate"
+@v112 kernel.seq.make item "form"
+@v113 kernel.seq.make item $v111 item $v112
+@v114 kernel.seq.make item "lexicalDispatch"
+@v115 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v116 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v114 "origin" $v115
+@v117 kernel.value.record "circuit" "learned.dispatch.lexical" "schema" "sxlm.derivation.v1" "kind" "supervised-dispatch-induction" "algorithm" "supervised-dispatch-induction-v1" "trainingHash" "09ef9348c1d71964623b3b3a44b7a7f39aac31d47f0227d3e95aa9da72b29711" "trainingCount" 88 "features" $v113 "fallback" "" "fit" 88 "curriculum" $v116
+@v118 kernel.seq.make item "item"
+@v119 kernel.seq.make item $v118
+@v120 kernel.seq.make item "quantityDispatch"
+@v121 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v122 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v120 "origin" $v121
+@v123 kernel.value.record "circuit" "learned.dispatch.quantity" "schema" "sxlm.derivation.v1" "kind" "supervised-dispatch-induction" "algorithm" "supervised-dispatch-induction-v1" "trainingHash" "d471b99ec18eec4ff21fc432d1396a3cc3cdd31d40539c85e65f39505079ed4b" "trainingCount" 4 "features" $v119 "fallback" "" "fit" 4 "curriculum" $v122
+@v124 kernel.seq.make item "reason"
+@v125 kernel.seq.make item $v124
+@v126 kernel.seq.make item "reasonDispatch"
+@v127 kernel.value.record "kind" "agent-supervised-migration" "sourcePackHash" "7b8bbd1cfb733e11dff107b1a419af78995398d83dbf3cc02ed2cfc575667858" "note" "Annotations preserve the prior authored renderer. Shared origin is explicit; separate transfer tests must evaluate the induced circuits."
+@v128 kernel.value.record "hash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "component" $v126 "origin" $v127
+@v129 kernel.value.record "circuit" "learned.dispatch.reason" "schema" "sxlm.derivation.v1" "kind" "supervised-dispatch-induction" "algorithm" "supervised-dispatch-induction-v1" "trainingHash" "1788f026ceb886a11d4645a7719be79e9af9f03d8df6e0a696e6de9f795b4f22" "trainingCount" 2 "features" $v125 "fallback" "" "fit" 2 "curriculum" $v128
+@v130 kernel.seq.make item $v3 item $v7 item $v11 item $v15 item $v19 item $v23 item $v27 item $v31 item $v35 item $v39 item $v43 item $v47 item $v51 item $v55 item $v59 item $v63 item $v67 item $v71 item $v75 item $v79 item $v83 item $v87 item $v91 item $v95 item $v103 item $v110 item $v117 item $v123 item $v129
+@v131 kernel.value.record "schema" "sxlm.realization-learning.v1" "curriculumHash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "adapterProposalHash" "e43bcd1ff149c00439d5e87aa2f1a142152f8b757813ca8fe512b089138692a5" "inducedCircuits" 29 "compiledLearnedFragments" 160 "authoredAdapters" 5 "receipts" $v130 "qualification" "Expressions and dispatch policies are induced from migration annotations; semantic adapters remain explicitly authored. This is not a complete learning derivation for the model."
+@output result $v131
+

@@ -1,0 +1,166 @@
+@v0 kernel.value.record "status" "pending" "sourceClosureHash" null "reason" "Terminal policy now executes in SOP, but native token boundaries, word extraction and Earley scheduling remain unapproved. Scoped Unicode, character-membership, transition-replay and iteration contracts do not approve the full closure."
+@v1 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Check and preserve an inert record."
+@v2 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Produce a record with one explicitly named field replaced; reject unsafe keys."
+@v3 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Construct a one-field record with a supplied key and value."
+@v4 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Read an explicit safe path from a supplied value."
+@v5 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Concatenate supplied arrays."
+@v6 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Apply exact, explicitly supplied term bindings."
+@v7 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Validate and preserve an array value."
+@v8 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Validate and preserve a string value."
+@v9 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Validate and preserve a number value."
+@v10 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/terms.mjs" "contract" "Validate and preserve a boolean value."
+@v11 kernel.seq.make item "test/sop.test.mjs"
+@v12 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Construct an empty record." "evidence" $v11
+@v13 kernel.seq.make item "test/sop.test.mjs"
+@v14 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Read a safe named or indexed field with an explicit fallback." "evidence" $v13
+@v15 kernel.seq.make item "test/sop.test.mjs"
+@v16 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Compare finite inert values structurally." "evidence" $v15
+@v17 kernel.seq.make item "test/sop.test.mjs"
+@v18 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Encode a boolean as its canonical selector label." "evidence" $v17
+@v19 kernel.seq.make item "test/sop.test.mjs"
+@v20 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Content hash of an inert value or text." "evidence" $v19
+@v21 kernel.seq.make item "test/sop.test.mjs"
+@v22 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Assert a supplied boolean condition without choosing a task policy." "evidence" $v21
+@v23 kernel.seq.make item "test/sop.test.mjs"
+@v24 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Finite scalar addition, subtraction, multiplication, division and extrema." "evidence" $v23
+@v25 kernel.seq.make item "test/sop.test.mjs"
+@v26 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Square root and log(1+x), with finite-result validation." "evidence" $v25
+@v27 kernel.seq.make item "test/sop.test.mjs"
+@v28 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Check explicit numeric bounds and an optional integer constraint." "evidence" $v27
+@v29 kernel.seq.make item "test/sop.test.mjs"
+@v30 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Construct an empty sequence." "evidence" $v29
+@v31 kernel.seq.make item "test/sop.test.mjs"
+@v32 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Append one immutable value." "evidence" $v31
+@v33 kernel.seq.make item "test/sop.test.mjs"
+@v34 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Length of a supplied sequence." "evidence" $v33
+@v35 kernel.seq.make item "test/sop.test.mjs"
+@v36 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Structural deduplication." "evidence" $v35
+@v37 kernel.seq.make item "test/sop.test.mjs"
+@v38 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Flatten one sequence level." "evidence" $v37
+@v39 kernel.seq.make item "test/sop.test.mjs"
+@v40 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Project an explicit field from sequence elements." "evidence" $v39
+@v41 kernel.seq.make item "test/sop.test.mjs"
+@v42 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Pair sequence elements with their ordinal indices." "evidence" $v41
+@v43 kernel.seq.make item "test/sop.test.mjs"
+@v44 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Structural sequence difference." "evidence" $v43
+@v45 kernel.seq.make item "test/sop.test.mjs"
+@v46 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Structural set intersection." "evidence" $v45
+@v47 kernel.seq.make item "test/sop.test.mjs"
+@v48 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Sequence concatenation." "evidence" $v47
+@v49 kernel.seq.make item "test/sop.test.mjs"
+@v50 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Count equal values." "evidence" $v49
+@v51 kernel.seq.make item "test/sop.test.mjs"
+@v52 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Find the first explicitly keyed match or return a supplied fallback." "evidence" $v51
+@v53 kernel.seq.make item "test/sop.test.mjs"
+@v54 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Exclude explicitly keyed matches." "evidence" $v53
+@v55 kernel.seq.make item "test/sop.test.mjs"
+@v56 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Finite numeric reduction." "evidence" $v55
+@v57 kernel.seq.make item "test/sop.test.mjs"
+@v58 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Maximum with a supplied initial value." "evidence" $v57
+@v59 kernel.seq.make item "test/sop.test.mjs"
+@v60 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Stable sort on an explicit scalar field and direction." "evidence" $v59
+@v61 kernel.seq.make item "test/sop.test.mjs"
+@v62 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Bounded integer enumeration." "evidence" $v61
+@v63 kernel.seq.make item "test/sop.test.mjs"
+@v64 kernel.value.record "class" "unreviewed-policy" "implementation" "src/kernel/collections.mjs" "contract" "Unicode token extraction and normalization; no vocabulary or task scoring." "evidence" $v63 "remaining" "Token boundaries and normalization still use the native tokenizer outside the SOP lexical parser policy. This path needs circuit migration or an explicit general-mechanism reference contract."
+@v65 kernel.seq.make item "test/sop.test.mjs"
+@v66 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Join supplied strings using the supplied separator." "evidence" $v65
+@v67 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v68 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v67
+@v69 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v70 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v69
+@v71 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v72 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v71
+@v73 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v74 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v73
+@v75 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v76 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v75
+@v77 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v78 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v77
+@v79 kernel.seq.make item "test/relational-reference.test.mjs" item "test/kernel.test.mjs" item "test/model.test.mjs"
+@v80 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Finite signed relational algebra and its validation/proof projection; the profile is explicit in docs/FORMAL-RELATIONS.md. No vocabulary, event dynamics or task dispatch." "evidence" $v79
+@v81 kernel.seq.make item "test/kernel.test.mjs"
+@v82 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/primitives.mjs" "contract" "Bounded parsing and evaluation of exact rational arithmetic, returning explicit success or error data." "evidence" $v81
+@v83 kernel.seq.make item "test/completion.test.mjs"
+@v84 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Merge two explicit records; right-hand fields replace equal left-hand fields." "evidence" $v83
+@v85 kernel.seq.make item "test/identity.test.mjs" item "test/knowledge.test.mjs" item "test/sop-artifacts.test.mjs"
+@v86 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Canonical SOP construction: recursively sort record keys and normalize signed zero for equality-based lookup; use caller work budgets. This is not executable identity." "evidence" $v85
+@v87 kernel.seq.make item "test/completion.test.mjs"
+@v88 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Compare two like string or numeric scalars with the deterministic JavaScript scalar ordering." "evidence" $v87
+@v89 kernel.seq.make item "test/completion.test.mjs"
+@v90 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Conjunction of two supplied booleans." "evidence" $v89
+@v91 kernel.seq.make item "test/completion.test.mjs"
+@v92 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Structural membership in a supplied sequence." "evidence" $v91
+@v93 kernel.seq.make item "test/completion.test.mjs"
+@v94 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Copy a slice with explicit integer start/end bounds; JavaScript negative-index semantics." "evidence" $v93
+@v95 kernel.seq.make item "test/completion.test.mjs"
+@v96 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Return a reversed copy of a supplied sequence." "evidence" $v95
+@v97 kernel.seq.make item "test/completion.test.mjs"
+@v98 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Deduplicate by an explicit field, retaining the last value and first key position." "evidence" $v97
+@v99 kernel.seq.make item "test/completion.test.mjs"
+@v100 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Group records by an explicit structural field value, preserving encounter order." "evidence" $v99
+@v101 kernel.seq.make item "test/completion.test.mjs"
+@v102 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Stable ordering of string fields under a supplied Intl locale; validates even singleton inputs. ICU version affects locale ordering." "evidence" $v101
+@v103 kernel.seq.make item "test/completion.test.mjs"
+@v104 kernel.value.record "class" "unreviewed-policy" "implementation" "src/kernel/collections.mjs" "contract" "Unicode tokenization with normalized values and original UTF-16 offsets; no lexical dictionary." "evidence" $v103 "remaining" "Token boundaries and normalization still use the native tokenizer outside the SOP lexical parser policy. This path needs circuit migration or an explicit general-mechanism reference contract."
+@v105 kernel.seq.make item "test/completion.test.mjs"
+@v106 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Slice a string using explicitly supplied UTF-16 integer bounds." "evidence" $v105
+@v107 kernel.seq.make item "test/completion.test.mjs"
+@v108 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Concatenate two supplied strings." "evidence" $v107
+@v109 kernel.seq.make item "test/document.test.mjs" item "test/kernel.test.mjs"
+@v110 kernel.value.record "class" "unverified-accelerator" "implementation" "src/language/grammar.mjs" "remaining" "Earley recognition and semantic-action scheduling consume a circuit-produced grammar snapshot. Document policy is SOP, but chart parsing, lexical-terminal policy, dynamic action identity and whole-kernel minimality still need a formal mechanism review." "evidence" $v109 "contract" "Earley recognition invokes explicitly selected pure SOP lexical preparation, tokenization and terminal programs. Semantic actions execute in the VM under the caller budget and trace. Native chart scheduling, token bounds and interpretation enumeration still require review."
+@v111 kernel.seq.make item "test/document.test.mjs"
+@v112 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Test whether a string is an allowed plain inert record key; excludes the same structural keys as the interchange boundary." "evidence" $v111
+@v113 kernel.seq.make item "test/document.test.mjs"
+@v114 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Enumerate own record entries in insertion order as key/value records." "evidence" $v113
+@v115 kernel.seq.make item "test/document.test.mjs"
+@v116 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Remove Unicode whitespace from both ends of a string." "evidence" $v115
+@v117 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v118 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Classify an inert value as null, array, object, string, number or boolean; no semantic category inference." "evidence" $v117
+@v119 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v120 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Depth-first traversal of scalar leaves in array order and ECMAScript own-record enumeration order; empty containers contribute no leaves. Charge one work step per visited value." "evidence" $v119
+@v121 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v122 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Traverse fewer than 64 caller-supplied string/integer keys using own properties. Return {found:false} for absence and {found:true,value} even for null/false/zero. No inherited access. Materialized unsafe keys remain forbidden by the SOP data boundary." "evidence" $v121
+@v123 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v124 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Return own enumerable record entries as ordered [string,value] pairs. Charge one work step per entry." "evidence" $v123
+@v125 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v126 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Build an inert record from two-element [string,value] pairs. Later values replace duplicates using ordinary ECMAScript key order; reject unsafe property names. Charge one work step per pair." "evidence" $v125
+@v127 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs" item "test/sop-artifacts.test.mjs"
+@v128 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Serialize validated inert values as a SOP constructor DAG, preserving property order and signed zero and consuming caller budgets. No encoded graph object or executable expression interpreter is used." "evidence" $v127
+@v129 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs" item "test/sop-artifacts.test.mjs"
+@v130 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Read only SOP record, sequence and scalar constructors. Check all SSA producers, reject duplicate/unbound/cyclic references, unsafe keys and non-finite scalars, and bound expanded values and caller work. Source quotations remain inert text; no calls or imports are permitted." "evidence" $v129
+@v131 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v132 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Convert only a string, finite number or boolean to its scalar string form. Reject containers and null; no pattern/template interpretation." "evidence" $v131
+@v133 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v134 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Construct a deterministic scoped symbol as the first 96 bits of SHA-256 over canonical {scope,name}. Equal scope/name data yields equal symbols; not a fresh allocation per call and not a mathematical collision-free identifier." "evidence" $v133
+@v135 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v136 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Apply ordinary array or UTF-16 string slicing at caller-supplied integer start/end offsets. Negative offsets and clamping follow ECMAScript slicing semantics." "evidence" $v135
+@v137 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v138 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Boolean complement; non-boolean arguments are rejected." "evidence" $v137
+@v139 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v140 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Return an array element at an integer index, supporting negative offsets from the end; distinguish absence from a present null, false, zero or empty string." "evidence" $v139
+@v141 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v142 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Case-sensitive literal UTF-16 prefix test. The empty prefix matches any string." "evidence" $v141
+@v143 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v144 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Replace every non-overlapping occurrence of a nonempty literal string with a supplied literal string. No regex, replacement metasyntax or source evaluation." "evidence" $v143
+@v145 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v146 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Return strings in ECMAScript UTF-16 lexicographic order, preserving duplicates; input is unchanged. Charge validation work per item; this primitive has cooperative, not preemptive CPU limits." "evidence" $v145
+@v147 kernel.seq.make item "test/value-primitives.test.mjs" item "test/value-boundary.test.mjs" item "test/expressions.test.mjs"
+@v148 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/values.mjs" "contract" "Normalize, compare or apply +, -, *, / to scalar decimal/fraction representations using exact integer arithmetic. Reject coercion from arrays/records/booleans/null, invalid scalar representations, unknown operations and division by zero. Normalize ignores the right operand." "evidence" $v147
+@v149 kernel.seq.make item "docs/LEXICAL-POLICY.md" item "test/lexical.test.mjs"
+@v150 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/text.mjs" "contract" "Apply the explicitly supplied NFC, NFD, NFKC or NFKD Unicode normalization form to a string; reject unknown forms and charge source code units." "evidence" $v149
+@v151 kernel.seq.make item "docs/LEXICAL-POLICY.md" item "test/lexical.test.mjs"
+@v152 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/text.mjs" "contract" "Apply explicitly supplied locale-independent Unicode lower or upper casing; reject other operations and charge source code units. Unicode implementation versions are part of runtime identity." "evidence" $v151
+@v153 kernel.seq.make item "docs/LEXICAL-POLICY.md" item "test/lexical.test.mjs"
+@v154 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/text.mjs" "contract" "Full-string membership in 1–4 concatenated Unicode character classes with at most one optional/repeated class. No alternation, lookaround, arbitrary executable patterns or task vocabulary. Final newlines must match explicitly. Charge input and pattern code units." "evidence" $v153
+@v155 kernel.seq.make item "test/text-policy.test.mjs"
+@v156 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/collections.mjs" "contract" "Remove the maximal leading ECMAScript WhiteSpace/LineTerminator prefix. Preserve every remaining UTF-16 code unit; charge steps by input length. This operation neither chooses boundaries nor recognizes sentences." "evidence" $v155 "reference" "String trimStart; explicit whitespace-prefix and non-whitespace preservation checks."
+@v157 kernel.value.record "data.object" $v1 "data.attach" $v2 "data.wrap" $v3 "data.get" $v4 "data.concat" $v5 "data.substitute" $v6 "data.array" $v7 "data.string" $v8 "data.number" $v9 "data.boolean" $v10 "kernel.value.empty" $v12 "kernel.value.get" $v14 "kernel.value.equal" $v16 "kernel.value.booleanLabel" $v18 "kernel.value.hash" $v20 "kernel.value.require" $v22 "kernel.number.binary" $v24 "kernel.number.unary" $v26 "kernel.number.between" $v28 "kernel.seq.empty" $v30 "kernel.seq.append" $v32 "kernel.seq.count" $v34 "kernel.seq.unique" $v36 "kernel.seq.flat" $v38 "kernel.seq.pluck" $v40 "kernel.seq.index" $v42 "kernel.seq.difference" $v44 "kernel.seq.intersection" $v46 "kernel.seq.concat" $v48 "kernel.seq.histogram" $v50 "kernel.seq.find" $v52 "kernel.seq.without" $v54 "kernel.seq.sum" $v56 "kernel.seq.max" $v58 "kernel.seq.sort" $v60 "kernel.seq.range" $v62 "kernel.text.words" $v64 "kernel.text.join" $v66 "relation.validateAtom" $v68 "kernel.relation.validateRule" $v70 "relation.key" $v72 "relation.close" $v74 "relation.query" $v76 "relation.tree" $v78 "relation.certificate" $v80 "math.expression" $v82 "kernel.value.merge" $v84 "kernel.value.encode" $v86 "kernel.value.compare" $v88 "kernel.boolean.and" $v90 "kernel.seq.includes" $v92 "kernel.seq.slice" $v94 "kernel.seq.reverse" $v96 "kernel.seq.uniqueBy" $v98 "kernel.seq.group" $v100 "kernel.seq.collate" $v102 "kernel.text.tokens" $v104 "kernel.text.slice" $v106 "kernel.text.concat" $v108 "kernel.chart.parse" $v110 "kernel.value.keyAllowed" $v112 "kernel.value.entries" $v114 "kernel.text.trim" $v116 "kernel.value.type" $v118 "kernel.value.leaves" $v120 "kernel.value.probe" $v122 "kernel.value.pairs" $v124 "kernel.value.fromPairs" $v126 "kernel.value.serialize" $v128 "kernel.value.parse" $v130 "kernel.value.scalarText" $v132 "kernel.value.fresh" $v134 "kernel.value.slice" $v136 "kernel.boolean.not" $v138 "kernel.seq.probe" $v140 "kernel.text.startsWith" $v142 "kernel.text.replace" $v144 "kernel.text.sort" $v146 "kernel.rational.calculate" $v148 "kernel.text.normalize" $v150 "kernel.text.case" $v152 "kernel.text.matchClass" $v154 "kernel.text.trimStart" $v156
+@v158 kernel.seq.make item "docs/SOP.md" item "test/iteration.test.mjs"
+@v159 kernel.value.record "class" "general-mechanism" "implementation" "src/kernel/circuit.mjs" "contract" "A static typed body and boolean guard share a state input. Evaluate the guard before each immutable state transition; return only after false, otherwise throw at the explicit safe-integer bound. Both targets and the bound enter executable/cache identity. Impure guards disable aggregate caching; all work shares the caller budget." "evidence" $v158
+@v160 kernel.value.record "iterate" $v159
+@v161 kernel.seq.make item "docs/FORMAL-PLANNING.md" item "test/planning.test.mjs"
+@v162 kernel.value.record "class" "general-mechanism" "implementation" "src/semantics/verify-plan.mjs" "contract" "Replay supplied finite signed transitions, checking declared preconditions, delete/add effects, accumulated finite nonnegative cost and final goals. No action search, ordering or output language. Validity does not establish minimum cost." "evidence" $v161
+@v163 kernel.value.record "planning" $v162
+@v164 kernel.value.record "schema" "sxlm.native-contract-review.v1" "qualification" "An explicit review inventory, not a proof produced by a keyword scan. Every registered primitive must be listed; unresolved policies keep the architecture gate open." "closureReview" $v0 "primitives" $v157 "controlForms" $v160 "witnessCheckers" $v163
+@output result $v164

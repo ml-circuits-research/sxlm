@@ -1,0 +1,6 @@
+@input with object
+@raw kernel.value.get value $with key "cost" fallback null
+@valid kernel.number.between value $raw minimum 0 maximum 1.7976931348623157e308 integer false
+@checked kernel.value.require condition $valid message "Action costs must be finite and nonnegative" value $raw
+@cost data.number value $checked
+@output result $cost

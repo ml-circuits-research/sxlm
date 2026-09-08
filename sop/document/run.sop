@@ -1,0 +1,32 @@
+@input text string
+@input scope string
+@input config object
+@input start string
+@trimmed kernel.text.trim text $text
+@length kernel.seq.count items $text
+@trimLength kernel.seq.count items $trimmed
+@sizeOK kernel.number.between value $length minimum 1 maximum 60000 integer true
+@nonempty kernel.number.between value $trimLength minimum 1 maximum 60000 integer true
+@valid kernel.boolean.and left $sizeOK right $nonempty
+@checked kernel.value.require condition $valid message "Input must be a nonempty string of at most 60,000 characters" value $text
+@sourceText data.string value $checked
+@hash kernel.value.hash value $sourceText
+@source kernel.value.record id $hash text $sourceText
+@boundaries kernel.value.get value $config key "boundaries" fallback null
+@boundaryList data.array value $boundaries
+@keep kernel.value.get value $config key "keep" fallback null
+@keepList data.array value $keep
+@spans text.segment text $sourceText boundaries $boundaryList keep $keepList
+@args kernel.value.record source $source scope $scope config $config start $start
+@results kernel.flow.map items $spans circuit "document.span" with $args
+@entryLists kernel.seq.pluck items $results key "entries"
+@entries kernel.seq.flat items $entryLists
+@empty kernel.value.empty
+@labels kernel.flow.fold items $results circuit "document.labels" seed $empty with $empty
+@gapRows kernel.seq.without items $results key "gap" value false
+@gaps kernel.seq.count items $gapRows
+@sentences kernel.seq.count items $spans
+@parsed kernel.number.binary operation "subtract" left $sentences right $gaps
+@coverage kernel.value.record sentences $sentences parsed $parsed gaps $gaps
+@result kernel.value.record schema "sxlm.document.v1" source $source entries $entries labels $labels coverage $coverage
+@output result $result

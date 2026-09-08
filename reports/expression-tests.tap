@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: all retired operator families lower to one graph VM with differential value checks
+ok 1 - all retired operator families lower to one graph VM with differential value checks
+  ---
+  duration_ms: 118.848463
+  type: 'test'
+  ...
+# Subtest: lazy branches, boolean short circuits and defaults preserve failure boundaries
+ok 2 - lazy branches, boolean short circuits and defaults preserve failure boundaries
+  ---
+  duration_ms: 10.344004
+  type: 'test'
+  ...
+# Subtest: nested iteration preserves source scope and variable shadowing
+ok 3 - nested iteration preserves source scope and variable shadowing
+  ---
+  duration_ms: 5.116443
+  type: 'test'
+  ...
+# Subtest: categorical fusion is compact and preserves equality and fallback behavior
+ok 4 - categorical fusion is compact and preserves equality and fallback behavior
+  ---
+  duration_ms: 9.535091
+  type: 'test'
+  ...
+# Subtest: compiled iteration and branches respect budgets and reject malformed values
+ok 5 - compiled iteration and branches respect budgets and reject malformed values
+  ---
+  duration_ms: 9.9473
+  type: 'test'
+  ...
+# Subtest: the active library cannot execute expression objects or install the retired opcode
+ok 6 - the active library cannot execute expression objects or install the retired opcode
+  ---
+  duration_ms: 757.343955
+  type: 'test'
+  ...
+# Subtest: construction induction preserves expression-shaped constants as inert semantic data
+ok 7 - construction induction preserves expression-shaped constants as inert semantic data
+  ---
+  duration_ms: 1141.018218
+  type: 'test'
+  ...
+# Subtest: execution identity preserves observable property order and signed zero
+ok 8 - execution identity preserves observable property order and signed zero
+  ---
+  duration_ms: 10.517284
+  type: 'test'
+  ...
+# Subtest: literal execution order changes program and pack identities
+ok 9 - literal execution order changes program and pack identities
+  ---
+  duration_ms: 4.331554
+  type: 'test'
+  ...
+# Subtest: canonical circuit encoding is stable across equivalent record orders
+ok 10 - canonical circuit encoding is stable across equivalent record orders
+  ---
+  duration_ms: 0.997838
+  type: 'test'
+  ...
+# Subtest: installed model and executable registries cannot change under their identities
+ok 11 - installed model and executable registries cannot change under their identities
+  ---
+  duration_ms: 708.403937
+  type: 'test'
+  ...
+# Subtest: fresh processes bind actual native code and reject snapshots after a host revision
+ok 12 - fresh processes bind actual native code and reject snapshots after a host revision
+  ---
+  duration_ms: 2982.311768
+  type: 'test'
+  ...
+# Subtest: a source edit cannot relabel already loaded modules as a fresh model
+ok 13 - a source edit cannot relabel already loaded modules as a fresh model
+  ---
+  duration_ms: 1494.247841
+  type: 'test'
+  ...
+# Subtest: the sealed loader profile rejects new dynamic or multiline imports
+ok 14 - the sealed loader profile rejects new dynamic or multiline imports
+  ---
+  duration_ms: 99.94786
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5433.546804

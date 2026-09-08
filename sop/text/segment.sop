@@ -1,0 +1,14 @@
+@input text string
+@input boundaries array
+@input keep array
+@tokens lexical.tokenize text $text
+@count kernel.seq.count items $tokens
+@last kernel.number.binary operation "subtract" left $count right 1
+@indexed kernel.seq.index items $tokens
+@empty kernel.seq.empty
+@seed kernel.value.record start 0 spans $empty
+@config kernel.value.record text $text boundaries $boundaries keep $keep last $last
+@state kernel.flow.fold items $indexed circuit "text.segment-step" seed $seed with $config
+@spans kernel.value.get value $state key "spans" fallback null
+@result data.array value $spans
+@output result $result

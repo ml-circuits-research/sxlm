@@ -1,0 +1,6 @@
+@input with object
+@sources kernel.value.get value $with key "sources" fallback null
+@items data.array value $sources
+@source kernel.value.get value $with key "source" fallback null
+@result kernel.seq.append items $items value $source
+@output result $result

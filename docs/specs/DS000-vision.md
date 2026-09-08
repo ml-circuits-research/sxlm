@@ -68,7 +68,7 @@ Node.js 22 or later runs the CLI and workbench with no npm runtime dependencies.
 
 #### What the evidence establishes
 
-The verified revision passes 205 implementation tests, 28 conformance cases, 12 composition cases, 60 renaming probes, 64 formal planning cases and 16 normalization transfers. A construction extension improves from zero to five transfer cases with no introduced regression. The eight open-language challenges remain unsolved. These public tests share project authorship and must not be interpreted as a blind external language benchmark.
+The verified revision passes 211 implementation tests, 28 conformance cases, 12 composition cases, 60 renaming probes, 64 formal planning cases and 16 normalization transfers. A construction extension improves from zero to five transfer cases with no introduced regression. The eight open-language challenges remain unsolved. These public tests share project authorship and must not be interpreted as a blind external language benchmark.
 
 The complete source-to-[pack](../wiki.html#definition-pack) build reproduces eleven stages. An isolated copy runs a request, learning demonstration and full evaluation. Browser checks cover the task views, validated activation, learned composition and desktop/mobile behavior. The [evaluation methodology](../evaluation.html) explains the scope of each result and why a passing acceptance gate does not override the architectural audit.
 <!-- /chapter:index -->

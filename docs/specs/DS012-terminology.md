@@ -163,7 +163,7 @@ For a ground atomic query, positive and explicit negative support produce four s
 
 #### Coding job
 
-A [coding job](../wiki.html#definition-coding-job) is one persisted document-processing attempt. It binds the uploaded document and actual parent model, prepares an [extraction](../wiki.html#definition-extraction), supervises [Codex](../wiki.html#definition-codex), validates a candidate and records a terminal result. Only a successfully checked candidate can become active in its originating conversation. Cancellation, process interruption, a stale parent, invalid source evidence or failed regression checks prevent activation. The job's operational time and concurrency limits are separate from per-question model [budgets](../wiki.html#definition-budget).
+A [coding job](../wiki.html#definition-coding-job) is one persisted document-processing operation, including an initial candidate and at most one automatic correction after host validation rejects it. It binds the uploaded document and actual parent model, prepares an [extraction](../wiki.html#definition-extraction), supervises [Codex](../wiki.html#definition-codex), validates a candidate and records a terminal result. Only a successfully checked candidate can become active in its originating conversation. Cancellation, process interruption, a stale parent, invalid source evidence or failed regression checks prevent activation. The job's operational time and concurrency limits are separate from per-question model [budgets](../wiki.html#definition-budget).
 
 #### Document interpretation
 

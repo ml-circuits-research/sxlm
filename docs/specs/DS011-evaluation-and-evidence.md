@@ -13,7 +13,7 @@ Evaluation must tell a developer what [SXLM](../wiki.html#definition-sxlm) can d
 
 Implementation tests must validate runtime, language, reasoning, learning and interface contracts. Capability evaluation must keep conformance, structural composition, renaming probes, formal planning, normalization transfer, construction transfer and open-language challenges separate. These categories must not be combined into a headline LLM accuracy score.
 
-The reference measurements are 205 passing implementation tests, 28/28 conformance cases, 12/12 composition cases, 60/60 renaming probes, 64/64 finite planning cases and 16/16 normalization transfers. Construction transfer improves from 0/5 to 5/5 with no newly introduced regressions. The eight open-language challenges remain 0/8. These numbers describe the verified [bootstrap](../wiki.html#definition-bootstrap) revision and must be refreshed when the measured model changes.
+The reference measurements are 211 passing implementation tests, 28/28 conformance cases, 12/12 composition cases, 60/60 renaming probes, 64/64 finite planning cases and 16/16 normalization transfers. Construction transfer improves from 0/5 to 5/5 with no newly introduced regressions. The eight open-language challenges remain 0/8. These numbers describe the verified [bootstrap](../wiki.html#definition-bootstrap) revision and must be refreshed when the measured model changes.
 
 The acceptance gate includes conformance, composition, renaming, formal planning, normalization and validated construction learning. Open challenges are exploratory and excluded from that gate, but their failures must remain in the report. Acceptance therefore does not establish the full objective in DS000.
 
@@ -37,7 +37,7 @@ The segmentation comparison must preserve a frozen reference implementation outs
 
 ### Reproduction, portability and browser behavior
 
-`npm run check:learning` must replay all installed learned and compiled families with accurate provenance. `npm run test:rebuild` must execute ten source-to-[pack](../wiki.html#definition-pack) stages in an isolated copy. `npm run test:standalone` must check local dependencies and run an actual request, learning demonstration and full capability evaluation without sibling repositories. Agent-manager infrastructure is excluded from that delivered runtime copy.
+`npm run check:learning` must replay all installed learned and compiled families with accurate provenance. `npm run test:rebuild` must execute eleven source-to-[pack](../wiki.html#definition-pack) stages in an isolated copy. `npm run test:standalone` must check local dependencies and run an actual request, learning demonstration and full capability evaluation without sibling repositories. Agent-manager infrastructure is excluded from that delivered runtime copy.
 
 The browser suite must check reasoning, summary, completion, learning validation, activation, learned composition, evaluation, visible architecture boundaries, desktop/mobile overflow and JavaScript errors. Screenshots support visual review but do not replace semantic assertions. Documentation checks must cover local links, canonical wiki anchors, contiguous DS numbering, navigation-map agreement, loader behavior and responsive reading width.
 
@@ -57,14 +57,20 @@ The compatibility inventory in `reports/compatibility-inventory.sop` identifies 
 
 Inventory or conversion does not establish reproduced [coverage](../wiki.html#definition-coverage). Every behavioral family requires an explicit [SXLM](../wiki.html#definition-sxlm) adapter preserving the original oracle's meaning, source [context](../wiki.html#definition-context), calibration cases and unresolved results. Internal implementation tests require equivalent invariant checks rather than identical private APIs. Human semantic-review cases must not acquire an automatic pass from keyword overlap alone. All converted cases are development-visible and cannot establish a blind generalization claim. Complete support for the earlier experiments remains an unfulfilled contract.
 
-`node eval/compatibility/run-early-school.mjs` evaluates the 88 imported school cases against the [bootstrap](../wiki.html#definition-bootstrap) plus elementary [pack](../wiki.html#definition-pack). It preserves sequential [context](../wiki.html#definition-context) statements, requires exact typed answer agreement and rejects interpretation gaps, resource failures and missing logical [certificates](../wiki.html#definition-certificate). Numeric formatting is compared by exact rational value. Elementary version 2 records 38 passing cases, with 39 answer-contract matches before the stricter interpretation requirement; version 1 recorded 18 and 19 respectively. These development-visible cases do not establish general school-level competence. The runner exits unsuccessfully while any imported case fails and writes `reports/compatibility-early-school.sop` with every result and domain subtotal.
+`node eval/compatibility/run-early-school.mjs` evaluates the 88 imported school cases against the [bootstrap](../wiki.html#definition-bootstrap) plus elementary [pack](../wiki.html#definition-pack). It preserves sequential [context](../wiki.html#definition-context) statements, requires exact typed answer agreement and rejects interpretation gaps, resource failures and missing logical [certificates](../wiki.html#definition-certificate). Numeric formatting is compared by exact rational value. Elementary version 3 records 56 passing cases, with 57 answer-contract matches before the stricter interpretation requirement; versions 1 and 2 recorded 18/19 and 38/39 respectively. These development-visible cases do not establish general school-level competence. The runner exits unsuccessfully while any imported case fails and writes `reports/compatibility-early-school.sop` with every result and domain subtotal.
+
+The CircuitLM summary conversion contains 18 sentence-index fixtures. Four Romanian originals are represented by explicitly authored English translations under the project language contract; their source identities, sentence counts and gold positions remain recorded. The other 14 English inputs are unchanged. `node eval/compatibility/run-circuitlm-summary.mjs` must preserve the source recall, precision and lead-recall measures, report the two adaptation groups separately, and verify exact [source spans](../wiki.html#definition-source-span) and requested length. Its stricter passing condition requires the exact gold sentence set and source-faithful output. Original development/holdout labels are provenance rather than evidence of a blind [SXLM](../wiki.html#definition-sxlm) evaluation. No sibling implementation may execute to obtain these results.
+
+The 15 unchanged English cases in `eval/compatibility/circuitlm-expansion.sop` preserve CircuitLM's `developmentCompletions` fixtures, which call `text.expand` and compare selected inferred predicates. That oracle measures logical consequence selection with explicit negative, modal, attributed, quoted, conditional and contradictory inputs. It is different from [SXLM](../wiki.html#definition-sxlm)'s attested or frequency-based prefix continuation. A compatible adapter must preserve those inference and abstention conditions; calling `model.complete` and comparing prose would measure a different task. Empty output caused by an unsupported interpretation must remain distinct from correctly withholding a conclusion.
+
+The imported summary evaluation records 9/18 exact gold-set selections and 18/18 source-faithful outputs. The unchanged English group scores 6/14 exact with mean recall 0.798 against lead recall 0.381; the translated group scores 3/4 exact with recall 0.917 against 0.583. Mean recall over all 18 cases is 0.824 against the lead baseline 0.426. These numbers measure the supplied sentence annotations and must not be presented as human-rated summary quality.
 
 <!-- chapter:evaluation -->
 ### Evaluation methodology
 
 Run `npm test` for implementation contracts and `npm run eval` for a machine-readable capability report. Both run offline. The workbench's Evaluation view runs the same repository benchmark and labels its [bootstrap](../wiki.html#definition-bootstrap)/reference-induction scope explicitly.
 
-Run `node eval/compatibility/run-early-school.mjs` for the imported school-level compatibility suite. Its 38/88 result is separate from the reference acceptance gate. Cases use unchanged English contexts and questions; a correct-looking answer with an interpretation gap fails. The 1,000 imported everyday cases require semantic review, and the wider six-experiment inventory does not constitute demonstrated compatibility.
+Run `node eval/compatibility/run-early-school.mjs` for the imported school-level compatibility suite. Its 56/88 result is separate from the reference acceptance gate. Cases use unchanged English contexts and questions; a correct-looking answer with an interpretation gap fails. The 1,000 imported everyday cases require semantic review, and the wider six-experiment inventory does not constitute demonstrated compatibility.
 
 | Imported school domain | Passing cases |
 | --- | --- |
@@ -72,15 +78,15 @@ Run `node eval/compatibility/run-early-school.mjs` for the imported school-level
 | Plants and materials | 2/8 |
 | Senses and tools | 0/8 |
 | Arithmetic | 8/8 |
-| Quantities | 7/8 |
-| Space | 2/8 |
-| Order and calendar | 5/8 |
-| Family | 0/8 |
+| Quantities | 8/8 |
+| Space | 6/8 |
+| Order and calendar | 8/8 |
+| Family | 8/8 |
 | Causal reasoning | 0/8 |
-| Comparisons | 1/8 |
+| Comparisons | 3/8 |
 | Epistemic cases | 7/8 |
 
-These results separate elementary version 2 from the narrower [bootstrap](../wiki.html#definition-bootstrap) acceptance suite. Missing domain knowledge, unsupported language constructions and inadequate formal assumptions require different remedies. A simplified benchmark expectation must not justify a false universal rule or a closed-world answer where the represented evidence is incomplete.
+These results separate elementary version 3 from the narrower [bootstrap](../wiki.html#definition-bootstrap) acceptance suite. Missing domain knowledge, unsupported language constructions and inadequate formal assumptions require different remedies. A simplified benchmark expectation must not justify a false universal rule or a closed-world answer where the represented evidence is incomplete.
 
 #### Separate measurements
 
@@ -130,4 +136,5 @@ Build independently annotated English episodes with source-preserving semantic i
 Keep the eight present challenges until the corresponding capability is implemented and independently evaluated. Do not delete them to make a report look better.
 
 Implementation files run sequentially under `npm test` so artificial worker contention does not invalidate the model's cooperative wall-time limit. Whole-suite CLI/browser harnesses allow time for many separately bounded requests. The per-request three-second [budget](../wiki.html#definition-budget) remains unchanged; whole-suite completion time is not an inference latency SLO.
+Run `node eval/compatibility/run-circuitlm-summary.mjs` to measure the 18 imported summarization fixtures. The report separates 14 unchanged English cases from four English translations and preserves the original sentence-index recall baseline. Exact [source spans](../wiki.html#definition-source-span) establish faithful [extraction](../wiki.html#definition-extraction), while gold-set agreement measures the supplied salience annotations. The measured result is 9/18 exact selections with 18/18 source-faithful outputs. Mean gold-sentence recall is 0.824, compared with 0.426 when selecting the leading sentences. Unchanged English cases score 6/14 exact; translated cases score 3/4. The errors include selecting administrative details and omitting a measured outcome or consequence. All fixtures are development-visible, and the CircuitLM completion cases remain a separate contract.
 <!-- /chapter:evaluation -->

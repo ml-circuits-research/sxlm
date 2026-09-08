@@ -1,0 +1,35 @@
+@v0 kernel.value.record "project" "CircuitLM" "path" "tests/fixtures.mjs" "hash" "766966cae0bcb5e9a86edccbd778d3b6ca377d1ff68bc52645e3286ed5ed7a12" "hashAlgorithm" "sha256-utf8" "oraclePath" "tools/evaluate.mjs" "oracleEntry" "text.expand"
+@v1 kernel.seq.make item "duplicate_risk" item "dedup_review"
+@v2 kernel.value.record "id" "positive-chain" "text" "Atlas retries requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v1 "sourceCaseHash" "6e78be47519bbead6eb2dcadd02425a2a4eda32e21da36c9f829794bb9d89a5a" "adaptation" "unchanged-English" "split" "development"
+@v3 kernel.seq.make
+@v4 kernel.value.record "id" "explicit-negative" "text" "Atlas does not retry requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v3 "sourceCaseHash" "e1465918b7769dc81cdb3d8efc8055dbe8266d422f94cd168e50ee8673dc45ca" "adaptation" "unchanged-English" "split" "development"
+@v5 kernel.seq.make
+@v6 kernel.value.record "id" "modal-may" "text" "Atlas may retry requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v5 "sourceCaseHash" "d9a7ac4872a8b436d690a7b927bc6b91faed97044d28e7f93b8f4537a9cfecb7" "adaptation" "unchanged-English" "split" "development"
+@v7 kernel.seq.make
+@v8 kernel.value.record "id" "modal-must" "text" "Atlas must retry requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v7 "sourceCaseHash" "35cf001307c19cbf4b1cfb9d0e5f16a5b94db4032b6cb9d90c942a32ab453f95" "adaptation" "unchanged-English" "split" "development"
+@v9 kernel.seq.make
+@v10 kernel.value.record "id" "unknown-is-not-negative" "text" "Atlas retries requests. Atlas writes records." "expected" $v9 "sourceCaseHash" "58ad53038212a7b2253209eb6879c43b32081caad3abd24627dc08034bfa918f" "adaptation" "unchanged-English" "split" "development"
+@v11 kernel.seq.make
+@v12 kernel.value.record "id" "conflict" "text" "Atlas retries requests. Atlas deduplicates requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v11 "sourceCaseHash" "b0b12b6a0b6abb22f683c7ce382e5591bb653a252127a5f91349821ff47b562f" "adaptation" "unchanged-English" "split" "development"
+@v13 kernel.seq.make
+@v14 kernel.value.record "id" "reported-speech" "text" "Mara said that Atlas retries requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v13 "sourceCaseHash" "9a8ff5f29d1f9c2198c1efe9e222ebd4d648469271f2ddc57a0fd61c67a1e87e" "adaptation" "unchanged-English" "split" "development"
+@v15 kernel.seq.make
+@v16 kernel.value.record "id" "conditional" "text" "If Atlas retries requests, the operation may fail. Atlas writes records. Atlas does not deduplicate requests." "expected" $v15 "sourceCaseHash" "011691addf812638fb8a02521d1ac6c2fd4de62800374405c5eeef59179abdf1" "adaptation" "unchanged-English" "split" "development"
+@v17 kernel.seq.make
+@v18 kernel.value.record "id" "quoted-assertion" "text" "\"Atlas retries requests.\" Atlas writes records. Atlas does not deduplicate requests." "expected" $v17 "sourceCaseHash" "36cb5daa0a415265931374847f49bbb1ea0cd572c1ed2c069fb16fccac334e56" "adaptation" "unchanged-English" "split" "development"
+@v19 kernel.seq.make
+@v20 kernel.value.record "id" "question" "text" "Atlas retries requests? Atlas writes records. Atlas does not deduplicate requests." "expected" $v19 "sourceCaseHash" "11f61d72af64aefade5a23622fbafac27dc0327dee13f6248b0c83124e77ae5a" "adaptation" "unchanged-English" "split" "development"
+@v21 kernel.seq.make
+@v22 kernel.value.record "id" "unknown-subject" "text" "Orion retries requests. Atlas writes records. Atlas does not deduplicate requests." "expected" $v21 "sourceCaseHash" "3e0c2371b83feae435af04e3f71c08264b7e4902dfe6760306b132c6c0ce866c" "adaptation" "unchanged-English" "split" "development"
+@v23 kernel.seq.make item "retry_protected"
+@v24 kernel.value.record "id" "protected-retry" "text" "Atlas retries requests. Atlas deduplicates requests." "expected" $v23 "sourceCaseHash" "3b14a509277c9145688d5cd7ca305c0b1eaf2ee93caebf3ce755248f6a89482a" "adaptation" "unchanged-English" "split" "development"
+@v25 kernel.seq.make item "loss_risk" item "durability_review"
+@v26 kernel.value.record "id" "worker-loss" "text" "Delta is a worker. Delta acknowledges messages before persisting them. Delta uses volatile memory." "expected" $v25 "sourceCaseHash" "ba1c0f15c0c1df1c5ad220fe1340a66ccd00183d481f443442f2dfc0c95077ca" "adaptation" "unchanged-English" "split" "development"
+@v27 kernel.seq.make item "stale_risk" item "cache_review"
+@v28 kernel.value.record "id" "cache-stale" "text" "Cedar is a cache. Cedar has an expiration limit. Cedar does not invalidate entries after updates." "expected" $v27 "sourceCaseHash" "d58f1f891f950cc3604f2a89f1b46c37b1c9788c2ed5420284d796013f995263" "adaptation" "unchanged-English" "split" "development"
+@v29 kernel.seq.make
+@v30 kernel.value.record "id" "empty-evidence" "text" "The meeting ended after lunch." "expected" $v29 "sourceCaseHash" "05a9c51c8a885c5e1396f49cb4b0d1fd50e854a1ea3a69a763826d6bf5278312" "adaptation" "unchanged-English" "split" "development"
+@v31 kernel.seq.make item $v2 item $v4 item $v6 item $v8 item $v10 item $v12 item $v14 item $v16 item $v18 item $v20 item $v22 item $v24 item $v26 item $v28 item $v30
+@v32 kernel.seq.make item "A strict inert literal parser reconstructed arrays, records and string concatenation with the declared base literal. No sibling code executed." item "Original expected predicates and English input are unchanged. All cases are development-visible." item "This is logical consequence selection, not prefix continuation. The SXLM behavioral adapter and original theory-contract conversion remain unverified." item "Empty expected selections must not receive passing coverage credit from an unsupported interpretation. Modal, quoted, attributed, conditional, negative and contradictory inputs retain separate calibration obligations."
+@v33 kernel.value.record "schema" "sxlm.compatibility-expansion.v1" "source" $v0 "cases" $v31 "qualifications" $v32
+@output result $v33

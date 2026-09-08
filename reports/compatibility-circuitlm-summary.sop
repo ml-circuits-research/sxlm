@@ -1,0 +1,98 @@
+@v0 kernel.value.record "project" "CircuitLM" "path" "tests/fixtures.mjs" "hash" "766966cae0bcb5e9a86edccbd778d3b6ca377d1ff68bc52645e3286ed5ed7a12" "hashAlgorithm" "sha256-utf8" "oraclePath" "tools/evaluate.mjs"
+@v1 kernel.value.record "total" 14 "passed" 6 "recall" 0.7976190476190476 "precision" 0.7976190476190476 "leadRecall" 0.38095238095238093 "sourceFaithful" 14
+@v2 kernel.value.record "total" 4 "passed" 3 "recall" 0.9166666666666666 "precision" 0.9166666666666666 "leadRecall" 0.5833333333333333 "sourceFaithful" 4
+@v3 kernel.value.record "unchanged-English" $v1 "agent-authored-English-translation" $v2
+@v4 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v5 kernel.seq.make item 0 item 3 item 5
+@v6 kernel.seq.make item 0 item 2 item 5
+@v7 kernel.value.record "nodes" 3002 "tokens" 128 "steps" 2579 "milliseconds" 70.08
+@v8 kernel.value.record "id" "dev-cache" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v4 "gold" $v5 "selected" $v6 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The team evaluated a cache to reduce document retrieval latency. The office has a blue door and a large conference table. However, stale entries remained after updates, so the team delayed deployment." "metrics" $v7
+@v9 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v10 kernel.seq.make item 0 item 3 item 5
+@v11 kernel.seq.make item 0 item 2 item 5
+@v12 kernel.value.record "nodes" 2935 "tokens" 124 "steps" 2451 "milliseconds" 61.66
+@v13 kernel.value.record "id" "dev-sensor" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v9 "gold" $v10 "selected" $v11 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The experiment tested whether a low-cost sensor could detect water leaks. The project notebook includes photographs of the laboratory. However, performance in outdoor conditions has not been measured." "metrics" $v12
+@v14 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v15 kernel.seq.make item 0 item 2 item 5
+@v16 kernel.seq.make item 0 item 2 item 3
+@v17 kernel.value.record "nodes" 2940 "tokens" 124 "steps" 2469 "milliseconds" 59.79
+@v18 kernel.value.record "id" "dev-queue" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v14 "gold" $v15 "selected" $v16 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.6666666666666666 "exactSource" true "output" "The service lost messages during a simulated power failure. The worker acknowledged messages before persisting the corresponding records. The report used a new font and a revised company logo." "metrics" $v17
+@v19 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v20 kernel.seq.make item 0 item 3 item 5
+@v21 kernel.seq.make item 0 item 1 item 3
+@v22 kernel.value.record "nodes" 2808 "tokens" 114 "steps" 2318 "milliseconds" 62.75
+@v23 kernel.value.record "id" "dev-library" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v19 "gold" $v20 "selected" $v21 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The library piloted extended evening opening hours for students. The reading room contains twelve green chairs. Evening attendance increased by 30 percent during the pilot." "metrics" $v22
+@v24 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v25 kernel.seq.make item 0 item 2 item 5
+@v26 kernel.seq.make item 0 item 1 item 5
+@v27 kernel.value.record "nodes" 2923 "tokens" 124 "steps" 2252 "milliseconds" 62.74
+@v28 kernel.value.record "id" "dev-ro-cache" "split" "development" "adaptation" "agent-authored-English-translation" "sourceLocale" "ro" "passed" false "failures" $v24 "gold" $v25 "selected" $v26 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.6666666666666666 "exactSource" true "output" "The team evaluated a cache to reduce the latency of document searches. The meeting room has a new board. However, updates left stale entries, and the team decided to postpone the launch." "metrics" $v27
+@v29 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v30 kernel.seq.make item 0 item 3 item 5
+@v31 kernel.seq.make item 0 item 2 item 5
+@v32 kernel.value.record "nodes" 3138 "tokens" 136 "steps" 2988 "milliseconds" 67.42
+@v33 kernel.value.record "id" "dev-negative-result" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v29 "gold" $v30 "selected" $v31 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The researchers tested whether extra training data improved classification accuracy. The experiment ran on equipment borrowed from another department. The result did not support the claim that more data would improve this classifier." "metrics" $v32
+@v34 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v35 kernel.seq.make item 0 item 2 item 5
+@v36 kernel.seq.make item 0 item 1 item 5
+@v37 kernel.value.record "nodes" 3433 "tokens" 156 "steps" 3436 "milliseconds" 71.61
+@v38 kernel.value.record "id" "dev-long-distractor" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v34 "gold" $v35 "selected" $v36 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.6666666666666666 "exactSource" true "output" "The migration aimed to reduce service interruption during database upgrades. The team discussed database naming conventions, database documentation, database logos, and database meeting schedules in a long administrative session. However, the rollback procedure failed and must be repaired before production use." "metrics" $v37
+@v39 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v40 kernel.seq.make item 3 item 5
+@v41 kernel.seq.make item 0 item 3
+@v42 kernel.value.record "nodes" 2640 "tokens" 116 "steps" 2018 "milliseconds" 56.25
+@v43 kernel.value.record "id" "dev-query" "split" "development" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v39 "gold" $v40 "selected" $v41 "recall" 0.5 "precision" 0.5 "leadRecall" 0 "exactSource" true "output" "The team evaluated a new retrieval service. The service failed the access-control test required for deployment." "metrics" $v42
+@v44 kernel.seq.make
+@v45 kernel.seq.make item 0 item 3 item 6
+@v46 kernel.seq.make item 0 item 3 item 6
+@v47 kernel.value.record "nodes" 3500 "tokens" 148 "steps" 3448 "milliseconds" 79.17
+@v48 kernel.value.record "id" "holdout-backup" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" true "failures" $v44 "gold" $v45 "selected" $v46 "recall" 1 "precision" 1 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The company tested whether its backups could restore the complete customer archive. The restoration recovered all files but took eleven hours instead of the four-hour target. The team decided to improve restore speed before accepting the backup process." "metrics" $v47
+@v49 kernel.seq.make
+@v50 kernel.seq.make item 0 item 3 item 5
+@v51 kernel.seq.make item 0 item 3 item 5
+@v52 kernel.value.record "nodes" 3051 "tokens" 130 "steps" 2820 "milliseconds" 61.76
+@v53 kernel.value.record "id" "holdout-bus" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" true "failures" $v49 "gold" $v50 "selected" $v51 "recall" 1 "precision" 1 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The town piloted a direct bus route between the university and the railway station. Average journey time fell from 28 minutes to 17 minutes. However, weekend demand remained too low to justify the proposed timetable." "metrics" $v52
+@v54 kernel.seq.make
+@v55 kernel.seq.make item 0 item 3 item 5
+@v56 kernel.seq.make item 0 item 3 item 5
+@v57 kernel.value.record "nodes" 3108 "tokens" 134 "steps" 2908 "milliseconds" 60.84
+@v58 kernel.value.record "id" "holdout-compression" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" true "failures" $v54 "gold" $v55 "selected" $v56 "recall" 1 "precision" 1 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The study compared two lossless compression methods for research archives. The new method reduced archive size by 18 percent but doubled decompression time. The authors recommended the method for infrequently accessed archives rather than interactive workloads." "metrics" $v57
+@v59 kernel.seq.make
+@v60 kernel.seq.make item 0 item 2 item 5
+@v61 kernel.seq.make item 0 item 2 item 5
+@v62 kernel.value.record "nodes" 3149 "tokens" 140 "steps" 2844 "milliseconds" 63.64
+@v63 kernel.value.record "id" "holdout-ro-school" "split" "holdout" "adaptation" "agent-authored-English-translation" "sourceLocale" "ro" "passed" true "failures" $v59 "gold" $v60 "selected" $v61 "recall" 1 "precision" 1 "leadRecall" 0.6666666666666666 "exactSource" true "output" "The school tested a tutoring program for pupils who were having difficulty with mathematics. Average scores increased by 12 points after eight weeks of tutoring. However, the study had no control group, so the effect of tutoring remains uncertain." "metrics" $v62
+@v64 kernel.seq.make
+@v65 kernel.seq.make item 0 item 3 item 5
+@v66 kernel.seq.make item 0 item 3 item 5
+@v67 kernel.value.record "nodes" 2828 "tokens" 116 "steps" 2264 "milliseconds" 57
+@v68 kernel.value.record "id" "holdout-ro-network" "split" "holdout" "adaptation" "agent-authored-English-translation" "sourceLocale" "ro" "passed" true "failures" $v64 "gold" $v65 "selected" $v66 "recall" 1 "precision" 1 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The team tested a new network configuration to eliminate outages. The number of outages fell from ten to two per week. However, the backup connection did not work in the failure test." "metrics" $v67
+@v69 kernel.seq.make item "Selection differs from the source gold sentence set"
+@v70 kernel.seq.make item 0 item 3 item 5
+@v71 kernel.seq.make item 0 item 3 item 4
+@v72 kernel.value.record "nodes" 3204 "tokens" 142 "steps" 2984 "milliseconds" 63.99
+@v73 kernel.value.record "id" "holdout-open-science" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" false "failures" $v69 "gold" $v70 "selected" $v71 "recall" 0.6666666666666666 "precision" 0.6666666666666666 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The project published an executable reproduction of the simulation study. Independent reruns reproduced the main trend but not the reported confidence interval. The issue tracker also contains requests for a different website theme." "metrics" $v72
+@v74 kernel.seq.make
+@v75 kernel.seq.make item 0 item 3 item 5
+@v76 kernel.seq.make item 0 item 3 item 5
+@v77 kernel.value.record "nodes" 3096 "tokens" 132 "steps" 2971 "milliseconds" 63.35
+@v78 kernel.value.record "id" "holdout-no-cue" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" true "failures" $v74 "gold" $v75 "selected" $v76 "recall" 1 "precision" 1 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The museum introduced a timed-entry system to shorten entrance queues. Median waiting time changed from 45 minutes to 16 minutes. Visitors arriving without online reservations were turned away even when galleries were half empty." "metrics" $v77
+@v79 kernel.seq.make
+@v80 kernel.seq.make item 0 item 2 item 5
+@v81 kernel.seq.make item 0 item 2 item 5
+@v82 kernel.value.record "nodes" 3173 "tokens" 138 "steps" 3283 "milliseconds" 67.75
+@v83 kernel.value.record "id" "holdout-privacy" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" true "failures" $v79 "gold" $v80 "selected" $v81 "recall" 1 "precision" 1 "leadRecall" 0.6666666666666666 "exactSource" true "output" "The team evaluated a method for sharing aggregate research data without releasing individual records. The released aggregates preserved the overall trend but obscured the smallest subgroups. The report warns that useful aggregate accuracy does not establish privacy against every attack." "metrics" $v82
+@v84 kernel.seq.make
+@v85 kernel.seq.make item 0 item 3 item 5
+@v86 kernel.seq.make item 0 item 3 item 5
+@v87 kernel.value.record "nodes" 3058 "tokens" 130 "steps" 2748 "milliseconds" 75.2
+@v88 kernel.value.record "id" "holdout-garden" "split" "holdout" "adaptation" "unchanged-English" "sourceLocale" "en" "passed" true "failures" $v84 "gold" $v85 "selected" $v86 "recall" 1 "precision" 1 "leadRecall" 0.3333333333333333 "exactSource" true "output" "The gardeners compared two irrigation schedules for newly planted trees. Trees watered twice a week survived at the same rate as trees watered every day. The twice-weekly schedule used 55 percent less water during the trial." "metrics" $v87
+@v89 kernel.seq.make
+@v90 kernel.seq.make item 0 item 2 item 5
+@v91 kernel.seq.make item 0 item 2 item 5
+@v92 kernel.value.record "nodes" 2778 "tokens" 114 "steps" 2291 "milliseconds" 68.37
+@v93 kernel.value.record "id" "holdout-ro-archive" "split" "holdout" "adaptation" "agent-authored-English-translation" "sourceLocale" "ro" "passed" true "failures" $v89 "gold" $v90 "selected" $v91 "recall" 1 "precision" 1 "leadRecall" 0.6666666666666666 "exactSource" true "output" "The archive tested automatic text recognition for historical documents. The system correctly transcribed 94 percent of the characters on printed pages. However, accuracy fell to 61 percent for handwritten documents." "metrics" $v92
+@v94 kernel.seq.make item $v8 item $v13 item $v18 item $v23 item $v28 item $v33 item $v38 item $v43 item $v48 item $v53 item $v58 item $v63 item $v68 item $v73 item $v78 item $v83 item $v88 item $v93
+@v95 kernel.seq.make item "Fixture literals were read as inert data; no sibling implementation was imported, copied or executed." item "Four Romanian fixtures are translated into English under the English-only project contract. Their original identifiers, semantic content, sentence order and gold positions are retained; they are scored separately from unchanged English." item "Original development/holdout labels are retained as provenance. All fixtures are public and development-visible in SXLM." item "Recall, precision and lead recall preserve the original sentence-index oracle. Exact selection and span checks provide an additional stricter acceptance condition."
+@v96 kernel.value.record "schema" "sxlm.compatibility-summary-evaluation.v1" "generated" "2026-09-08T16:30:02.486Z" "model" "2a3bf72e918b61a4b01c1627f3d0335596824f61f7da2691a1629990373dd948" "source" $v0 "casesHash" "b3ad674f550f42625c9f898ed57da49cf58447c1d18ded1777d4049731926db8" "total" 18 "passed" 9 "recall" 0.824074074074074 "precision" 0.824074074074074 "leadRecall" 0.4259259259259259 "sourceFaithful" 18 "groups" $v3 "results" $v94 "qualifications" $v95
+@output result $v96

@@ -1,0 +1,7 @@
+@v0 kernel.value.record "status" "ready" "milliseconds" 36.101845999999995
+@v1 kernel.value.record "status" "ready" "milliseconds" 3.1116849999999943
+@v2 kernel.value.record "status" "ready" "milliseconds" 3.6802020000000084
+@v3 kernel.value.record "status" "ready" "milliseconds" 3.0002170000000206
+@v4 kernel.seq.make item $v0 item $v1 item $v2 item $v3
+@v5 kernel.value.record "schema" "sxlm.chat-validation-responsiveness.v1" "samples" $v4 "qualification" "Observed local HTTP status-read latency after the archived XLSX candidate recheck completed. No sample was taken during validation; the asynchronous integration test covers responsiveness during that phase."
+@output result $v5

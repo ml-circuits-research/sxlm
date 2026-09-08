@@ -39,6 +39,8 @@ test('document circuits change a durable conversation while preserving prior obs
     const job = randomUUID(); mkdirSync(store.jobPath(chat.id, job));
     store.write(store.jobPath(chat.id, job, 'candidate.sop'), pack);
     controller.jobs.save(chat.id, { id: job, status: 'ready', parentModel: parent.resources.hash, candidate: validatePack(pack).hash, receipt });
+    assert.throws(() => controller.activate(chat.id, job, () => { throw new Error('Deadline elapsed'); }), /Deadline elapsed/);
+    assert.equal(controller.store.info(chat.id).activeJobs, undefined);
     controller.activate(chat.id, job);
     const answer = controller.ask(chat.id, 'Is Aster a pilot?').result;
     assert.equal(answer.truth, 'true'); assert.equal(answer.verification.valid, true);

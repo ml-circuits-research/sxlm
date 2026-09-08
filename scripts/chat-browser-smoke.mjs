@@ -99,7 +99,31 @@ try {
     assert.deepEqual(await evaluate('[...document.querySelectorAll(".chat-user")].map(item=>item.textContent)'),
       Array.from({length:45},(_,index)=>'Message '+index));
     checks.push('earlier messages preserve exact order without duplicates');
+    await evaluate(`(async () => {
+      const { mountChat } = await import('./chat.js');
+      let reads = 0;
+      const fixture = {id:'polling-fixture',title:'Polling fixture',activeJobs:[]};
+      window.pollingMessages = [];
+      const api = async (path, body) => {
+        if (body !== undefined) throw new Error('Polling must never repeat a mutation');
+        if (path === '/api/chat') return {chats:[fixture]};
+        reads++;
+        if (reads === 2) throw new Error('Temporary connection reset');
+        const ready = reads >= 3;
+        return {chat:{...fixture,activeJobs:ready?['job']:[]},total:0,offset:0,turns:[],
+          documents:[{id:'document',name:'Fixture.xlsx'}],
+          jobs:[{id:'job',document:'document',status:ready?'ready':'running',attempt:2}]};
+      };
+      await mountChat(api, message => window.pollingMessages.push(message)).refresh();
+    })()`);
+    assert.equal(await evaluate('document.querySelector("#chat-presence").textContent'), 'Refining the interpretation…');
+    await wait('window.pollingMessages.some(message => message.includes("Reconnecting"))');
+    await wait('document.querySelector("#chat-attachment-status").textContent.includes("Ready —")');
+    assert.equal(await evaluate('window.pollingMessages.at(-1)'), '');
+    assert.equal(await evaluate('document.querySelector("#chat-send").disabled'), false);
+    checks.push('repair progress remains simple', 'status polling recovers without repeating mutations');
   }
+  assert.equal(errors.length,0,JSON.stringify(errors));
   writeFileSync(new URL('../reports/'+reportPrefix+'-browser.sop',import.meta.url),encodeSOP({schema:'sxlm.chat-browser.v1',passed:true,liveCodex:live,chat,checks,screenshots:[reportPrefix+'-desktop.png',reportPrefix+'-mobile.png']}));
   console.log('Chat browser verification passed: '+checks.join(', '));
 } finally {socket?.close();child.kill('SIGTERM');await new Promise(resolve=>{if(child.exitCode!==null)resolve();else{child.once('exit',resolve);setTimeout(resolve,3000);}});rmSync(profile,{recursive:true,force:true});}

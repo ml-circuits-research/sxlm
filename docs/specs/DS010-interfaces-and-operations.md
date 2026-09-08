@@ -55,7 +55,7 @@ The HTML documentation is a static site with relative links, a shared header and
 
 `POST /api/chat/:id/documents` accepts a document `name`. Numbered `POST /api/chat/:id/documents/:document/chunks/:index` requests send raw UTF-8 `text/plain` fragments or binary `application/octet-stream` fragments. `POST /api/chat/:id/documents/:document/finish` completes the source identity and starts processing automatically; an explicit [SOP](../wiki.html#definition-sop) `{train:false}` option only stores the attachment. The simple UI uses the automatic path.
 
-`POST /api/chat/:id/jobs` retries a stored document. `GET /api/chat/:id/jobs/:job` reads job metadata; `/log` reads a bounded tail of processing output. POST `/cancel` cancels an owned active job. POST `/activate` retains an explicit integration surface, while ordinary successful jobs activate automatically. Structured request and response records use [SOP](../wiki.html#definition-sop). DS013 governs [extraction](../wiki.html#definition-extraction), coding isolation, local activation and limits.
+`POST /api/chat/:id/jobs` retries a stored document. `GET /api/chat/:id/jobs/:job` reads job metadata; `/log` reads a bounded tail of processing output. POST `/cancel` cancels an owned active job. POST `/recheck` starts a separate validation of a failed job's protected candidate when its parent is unchanged; it preserves the prior coding run and does not launch [Codex](../wiki.html#definition-codex). POST `/activate` retains an explicit integration surface, while ordinary successful jobs activate automatically. Structured request and response records use [SOP](../wiki.html#definition-sop). DS013 governs [extraction](../wiki.html#definition-extraction), coding isolation, local activation and limits.
 
 The ordinary Reason view retains process-local [session](../wiki.html#definition-session) identifiers. Persistent Chat is a separate lifecycle under `.sxlm/chat`. Programmatic `serve` and `createWorkbench` accept `chatDirectory`, the optional elementary-[pack](../wiki.html#definition-pack) toggle and an offline agent configuration; HTTP input cannot choose a command to execute. The default symbolic model remains [bootstrap](../wiki.html#definition-bootstrap)-only, while Chat additionally loads the optional introductory [pack](../wiki.html#definition-pack).
 
@@ -141,7 +141,7 @@ Run `npm run docs` and open `http://127.0.0.1:3211/docs/` for the HTML documenta
 <!-- chapter:interfaces -->
 ### Integrate the model
 
-Applications can import the JavaScript API or exchange [SOP](../wiki.html#definition-sop) documents with the local workbench. Both paths use the same model and task contracts. The CLI is convenient for experiments and durable learning; the HTTP workbench keeps [sessions](../wiki.html#definition-session) and proposals only in its process.
+Applications can import the JavaScript API or exchange [SOP](../wiki.html#definition-sop) documents with the local workbench. Both paths use the same model and task contracts. The CLI supports experiments and durable learning. The HTTP task workbench keeps reasoning [sessions](../wiki.html#definition-session) and learning proposals in its process; document conversations, attachments and coding records persist under `.sxlm/chat`.
 
 #### JavaScript entrypoints
 
@@ -163,7 +163,7 @@ Import public APIs from `src/index.mjs`. `new SymbolicModel()` loads the English
 
 #### SOP over HTTP
 
-The server defaults to `http://127.0.0.1:3210`. Every POST body must be an inert [SOP](../wiki.html#definition-sop) document with `Content-Type: application/sop`. Responses and errors use `application/sop; charset=utf-8`, with no-store caching. The workbench rejects JSON bodies and cross-origin browser requests.
+The server defaults to `http://127.0.0.1:3210`. Structured POST bodies use inert [SOP](../wiki.html#definition-sop) documents with `Content-Type: application/sop`. Attachment fragments use their declared raw text or binary content type. Responses and errors use `application/sop; charset=utf-8`, with no-store caching. The workbench rejects JSON bodies and cross-origin browser requests.
 
 ```js
 import { encodeSOP, decodeSOP } from './src/index.mjs';
@@ -190,7 +190,7 @@ The JavaScript record in this example is an in-memory value. `encodeSOP` writes 
 | `POST /api/activate` | Validated proposal `id`; installs it in memory and clears incompatible [sessions](../wiki.html#definition-session)/proposals. |
 | `POST /api/evaluate` | An inert [SOP](../wiki.html#definition-sop) body, such as an empty record; returns the [bootstrap](../wiki.html#definition-bootstrap)/reference-induction evaluation. |
 
-Reuse the returned reasoning [session](../wiki.html#definition-session) identifier to preserve state. An unknown identifier or one belonging to another model starts a new [session](../wiki.html#definition-session). The server retains at most 100 [sessions](../wiki.html#definition-session) and 20 proposals. It has no account authentication or durable browser state. Persistent [promotion](../wiki.html#definition-promotion) and rollback use the CLI registry.
+Reuse the returned reasoning [session](../wiki.html#definition-session) identifier to preserve state. An unknown identifier or one belonging to another model starts a new [session](../wiki.html#definition-session). The server retains at most 100 [sessions](../wiki.html#definition-session) and 20 proposals. These task [sessions](../wiki.html#definition-session) and proposals are process-local. The workbench has no account authentication; document conversations use the durable chat API below. Persistent [promotion](../wiki.html#definition-promotion) and rollback use the CLI registry.
 
 #### Results, limits and errors
 
@@ -207,4 +207,13 @@ The CLI's `--packs` flag appends extension artifacts to the automatically loaded
 `--registry DIR` chooses the CLI lineage directory; its default is `.sxlm`. `train promote` reruns transfer and regression checks against the actual parent under a writer lock. It stores content-addressed [SOP](../wiki.html#definition-sop) [packs](../wiki.html#definition-pack) and [receipts](../wiki.html#definition-receipt) and atomically replaces `active.sop`. `train rollback` restores the previous lineage. A [receipt](../wiki.html#definition-receipt) cannot bypass parent checks or revalidation.
 
 Source and Node component versions participate in model identity. A fresh native revision invalidates old model-bound snapshots and may invalidate registry identity. Stop model processes before editing native source, run `npm run build:model` and the verification suite, then restart. The contract is reproducibility inside a trusted process, not attestation against hostile host modifications. [DS009](../specsLoader.html?spec=DS009-identity-and-persistence.md) defines the exact persistence boundary.
+#### Persistent document chat
+
+`GET /api/chat` lists conversations and `POST /api/chat` creates one. `GET /api/chat/:id?tail=1` returns its last transcript page, attachments and jobs. Explicit `?offset=N` pagination and `GET /api/chat/:id/turns/:index` provide earlier messages and full evidence. `POST /api/chat/:id/message` accepts a [SOP](../wiki.html#definition-sop) record with `text`.
+
+Create an attachment with `POST /api/chat/:id/documents` and a `name`. Upload numbered fragments to `/documents/:document/chunks/:index` using `text/plain` for independently valid UTF-8 fragments or `application/octet-stream` for binary fragments, each at most 65,536 bytes. POST a [SOP](../wiki.html#definition-sop) record to `/documents/:document/finish` to finish the upload and start coding; `{train:false}` stores it without coding.
+
+`GET /api/chat/:id/jobs/:job` reads the processing state and `/log` reads the bounded log tail. POST `/cancel` stops an active job. A checked candidate activates automatically; POST `/activate` exposes the same guarded activation to integrations. POST `/api/chat/:id/jobs` with a document identifier starts another [coding job](../wiki.html#definition-coding-job).
+
+For an unchanged conversation parent, POST `/api/chat/:id/jobs/:job/recheck` validates a failed job's protected candidate in a separate process. It creates a new operation, preserves the failed coding record and does not rerun [Codex](../wiki.html#definition-codex). The recorded engine is `codex-artifact-revalidation`, with `revalidationOf` identifying the [coding job](../wiki.html#definition-coding-job). Rechecking enforces the same source, interpretation, [budget](../wiki.html#definition-budget) and replay requirements. [Document chat](../chat.html) explains the reader's attachment workflow and its limits.
 <!-- /chapter:interfaces -->

@@ -8,8 +8,8 @@
 @v7 kernel.value.record "stage" "build-knowledge" "output" "Installed knowledge circuits; removed raw theory/text and native initial-theory injection."
 @v8 kernel.value.record "stage" "build-expressions" "output" "Installed offline-compiled expression graphs. Compilation is not a learning claim."
 @v9 kernel.value.record "stage" "build-planning" "output" "Installed 18 SOP modules for planning and reusable set coverage."
-@v10 kernel.value.record "stage" "build-elementary" "output" "Built optional elementary pack: 114 facts, 89 rules, 166 modules."
+@v10 kernel.value.record "stage" "build-elementary" "output" "Built optional elementary pack: 114 facts, 129 rules, 228 modules."
 @v11 kernel.seq.make item $v0 item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10
-@v12 kernel.value.record "elementaryPackHash" "513fa7b548b64e66d8670f0279fbac06d7edb21e53cdc5826a190b1cf6fcee90" "schema" "sxlm.rebuild.v1" "passed" true "packHash" "be6c03f86d52d338a90db2b8fd07e6fd1f70c24db285b0b8e424e1261c70e36e" "stages" $v11 "qualification" "Exact order-sensitive pack reproduction in an isolated copy. Compilation provenance and authored policy remain explicit; this does not establish independent learning quality."
+@v12 kernel.value.record "elementaryPackHash" "fd3bbaf4f156b7a23a11d83d4e5d15ec2baa71da0587c772fc7ba157bc0f8a2c" "schema" "sxlm.rebuild.v1" "passed" true "packHash" "be6c03f86d52d338a90db2b8fd07e6fd1f70c24db285b0b8e424e1261c70e36e" "stages" $v11 "qualification" "Exact order-sensitive pack reproduction in an isolated copy. Compilation provenance and authored policy remain explicit; this does not establish independent learning quality."
 @output result $v12
 

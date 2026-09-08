@@ -17,23 +17,29 @@ const evaluation = read('latest-evaluation'), audit = read('vision-audit'), rebu
 const standalone = read('independence'), browser = read('browser-smoke'), layout = read('chat-layout-browser');
 const documents = read('docs-independence'), docsBrowser = read('docs-browser');
 const live = read('chat-browser'), compatibility = read('compatibility-early-school');
+const summaryCompatibility = read('compatibility-circuitlm-summary');
 const procedures = read('chat-procedures');
 const preservation = read('chat-preservation');
+const spreadsheet = read('chat-xlsx-live');
 const model = new SymbolicModel();
 check(evaluation.model === model.resources.hash && audit.model === model.resources.hash, 'Evaluation/audit revision mismatch');
+check(summaryCompatibility.model === model.resources.hash && summaryCompatibility.total === 18,
+  'Summary compatibility evaluation is missing or uses a different bootstrap');
 const tap = readFileSync(join(root, 'reports/current-tests.tap'), 'utf8');
 const passed = Number(tap.match(/^# pass (\d+)$/m)?.[1]), failed = Number(tap.match(/^# fail (\d+)$/m)?.[1]);
 check(Number.isInteger(passed) && passed > 0 && failed === 0 && evaluation.acceptance, 'Implementation verification failed or unfinished');
-const focused = ['phrase-tests.tap', 'elementary-tests.tap', 'extraction-tests.tap'].map(file => {
+const focused = ['phrase-tests.tap', 'elementary-tests.tap', 'relational-tests.tap',
+  'chat-repair-tests.tap', 'extraction-tests.tap'].map(file => {
   const log = readFileSync(join(root, 'reports', file), 'utf8');
   const passed = Number(log.match(/^[#ℹ] pass (\d+)$/m)?.[1]);
   const failed = Number(log.match(/^[#ℹ] fail (\d+)$/m)?.[1]);
   check(passed > 0 && failed === 0, 'Focused verification failed or unfinished: ' + file);
   return { file: 'reports/' + file, passed, failed };
 });
-check([rebuild, standalone, browser, layout, documents, docsBrowser, live, procedures, preservation]
+check([rebuild, standalone, browser, layout, documents, docsBrowser, live, procedures, preservation, spreadsheet]
   .every(report => report.passed), 'A workflow verification failed');
 check(preservation.newConversationBase === compatibility.model, 'Chat and school evaluation use different elementary bases');
+check(spreadsheet.parentModel === compatibility.model, 'Spreadsheet coding used a different elementary base');
 
 const excluded = new Set(['.git', '.sxlm', '.agents', '.claude', 'node_modules', 'reports', 'ploinky-skills-manifest.json']);
 const files = [];
@@ -61,13 +67,13 @@ const documentation = { schema: 'sxlm.documentation-verification.v2', generated,
   deterministicRebuild: documents.isolatedRebuild, checkedLinks: documents.checkedLinks,
   browser: docsBrowser, qualification: 'Structural, link, isolated rebuild and browser checks; the model architecture remains incomplete.' };
 write('documentation', documentation);
-write('verification', { schema: 'sxlm.verification.v5', generated, model: model.resources.hash,
+write('verification', { schema: 'sxlm.verification.v6', generated, model: model.resources.hash,
   runtime: model.resources.runtime.hash, codeAndKnowledgeHash: hash, files: files.length,
   sourceModules: model.packs.reduce((count, pack) => count + pack.sop.length, 0),
   installedModules: model.resources.circuits.length,
   format: 'SOP source modules and constructor documents',
   tests: { passed, failed, log: 'reports/current-tests.tap', focused,
-    qualification: 'The full suite includes model pinning, SDK phrase compilation and source extraction. Focused logs retain additional compiler, elementary and unchanged extractor checks.' },
+    qualification: 'The full suite includes model pinning, SDK phrase compilation, bounded document repair and source extraction. Focused logs retain compiler, elementary, relational, repair and unchanged extractor checks. Repair orchestration tests use a controlled child process, not a real coding-agent claim.' },
   evaluation: { report: 'reports/latest-evaluation.sop', acceptance: evaluation.acceptance,
     suites: Object.fromEntries(Object.entries(evaluation.suites).map(([name, suite]) =>
       [name, { passed: suite.passed, total: suite.total }])),
@@ -81,6 +87,11 @@ write('verification', { schema: 'sxlm.verification.v5', generated, model: model.
     restoredLayoutChecks: layout.checks.length, liveReport: 'reports/chat-browser.sop',
     preservation: { report: 'reports/chat-preservation.sop', passed: preservation.passed,
       pinnedBase: preservation.pinnedBase, newConversationBase: preservation.newConversationBase },
+    spreadsheet: { report: 'reports/chat-xlsx-live.sop', liveCodex: spreadsheet.liveCodex,
+      correct: spreadsheet.correct, total: spreadsheet.total, model: spreadsheet.model,
+      engine: spreadsheet.engine, revalidationOf: spreadsheet.revalidationOf,
+      priorFailures: 'reports/chat-xlsx-before-validation-isolation.sop',
+      qualification: spreadsheet.qualification },
     procedures: { report: 'reports/chat-procedures.sop', passed: procedures.passed,
       profiles: Object.fromEntries(Object.entries(procedures.profiles).map(([name, profile]) =>
         [name, { model: profile.model, passed: profile.passed, total: profile.total }])) },
@@ -88,7 +99,11 @@ write('verification', { schema: 'sxlm.verification.v5', generated, model: model.
     qualification: 'The live DOCX check is an observed run with its own retained conversation, candidate and model identity. It is not a claim of general document comprehension.' },
   documentation,
   compatibility: { passed: compatibility.passed, total: compatibility.total,
-    model: compatibility.model, report: 'reports/compatibility-early-school.sop', allExperimentsCovered: false },
+    model: compatibility.model, report: 'reports/compatibility-early-school.sop', allExperimentsCovered: false,
+    summarization: { report: 'reports/compatibility-circuitlm-summary.sop', model: summaryCompatibility.model,
+      exact: summaryCompatibility.passed, total: summaryCompatibility.total,
+      recall: summaryCompatibility.recall, leadRecall: summaryCompatibility.leadRecall,
+      sourceFaithful: summaryCompatibility.sourceFaithful, groups: summaryCompatibility.groups } },
   architecture: { complete: audit.complete, report: 'reports/vision-audit.sop',
     nativeOperations: audit.primitives.length, privilegedFiles: audit.sourceFiles.length,
     privilegedBytes: audit.sourceFiles.reduce((count, file) => count + file.bytes, 0),

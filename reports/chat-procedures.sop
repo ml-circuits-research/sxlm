@@ -1,473 +1,473 @@
 @v0 kernel.seq.make
 @v1 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v2 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is mortal." "verification" $v1
-@v3 kernel.value.record "id" "class-chain" "pass" true "failures" $v0 "actual" $v2 "milliseconds" 342.9
+@v3 kernel.value.record "id" "class-chain" "pass" true "failures" $v0 "actual" $v2 "milliseconds" 350.93
 @v4 kernel.seq.make
 @v5 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v6 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v5
-@v7 kernel.value.record "id" "open-world" "pass" true "failures" $v4 "actual" $v6 "milliseconds" 154.23
+@v7 kernel.value.record "id" "open-world" "pass" true "failures" $v4 "actual" $v6 "milliseconds" 153.27
 @v8 kernel.seq.make
 @v9 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v10 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira is not careful." "verification" $v9
-@v11 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v8 "actual" $v10 "milliseconds" 241.85
+@v11 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v8 "actual" $v10 "milliseconds" 244.73
 @v12 kernel.seq.make
 @v13 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v14 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v13
-@v15 kernel.value.record "id" "conflict" "pass" true "failures" $v12 "actual" $v14 "milliseconds" 317.54
+@v15 kernel.value.record "id" "conflict" "pass" true "failures" $v12 "actual" $v14 "milliseconds" 351.99
 @v16 kernel.seq.make
 @v17 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v18 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v17
-@v19 kernel.value.record "id" "no-explosion" "pass" true "failures" $v16 "actual" $v18 "milliseconds" 329.87
+@v19 kernel.value.record "id" "no-explosion" "pass" true "failures" $v16 "actual" $v18 "milliseconds" 331.02
 @v20 kernel.seq.make
 @v21 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v22 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Pico is not a robot." "verification" $v21
-@v23 kernel.value.record "id" "negative-rule" "pass" true "failures" $v20 "actual" $v22 "milliseconds" 350.37
+@v23 kernel.value.record "id" "negative-rule" "pass" true "failures" $v20 "actual" $v22 "milliseconds" 364.24
 @v24 kernel.seq.make
 @v25 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
 @v26 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is careful." "verification" $v25
-@v27 kernel.value.record "id" "relative-existential" "pass" true "failures" $v24 "actual" $v26 "milliseconds" 471.72
+@v27 kernel.value.record "id" "relative-existential" "pass" true "failures" $v24 "actual" $v26 "milliseconds" 483.42
 @v28 kernel.seq.make
 @v29 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v30 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v29
-@v31 kernel.value.record "id" "binding-separation" "pass" true "failures" $v28 "actual" $v30 "milliseconds" 470.17
+@v31 kernel.value.record "id" "binding-separation" "pass" true "failures" $v28 "actual" $v30 "milliseconds" 439.49
 @v32 kernel.seq.make
 @v33 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v34 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v33
-@v35 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v32 "actual" $v34 "milliseconds" 269.88
+@v35 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v32 "actual" $v34 "milliseconds" 279.08
 @v36 kernel.seq.make
 @v37 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v38 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Within belief:mira: Theo is a pilot." "verification" $v37
-@v39 kernel.value.record "id" "belief-query" "pass" true "failures" $v36 "actual" $v38 "milliseconds" 297.48
+@v39 kernel.value.record "id" "belief-query" "pass" true "failures" $v36 "actual" $v38 "milliseconds" 284.06
 @v40 kernel.seq.make
 @v41 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v42 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira mentors Theo." "verification" $v41
-@v43 kernel.value.record "id" "ground-relation" "pass" true "failures" $v40 "actual" $v42 "milliseconds" 220.53
+@v43 kernel.value.record "id" "ground-relation" "pass" true "failures" $v40 "actual" $v42 "milliseconds" 214.62
 @v44 kernel.seq.make
 @v45 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v46 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v45
-@v47 kernel.value.record "id" "role-reversal" "pass" true "failures" $v44 "actual" $v46 "milliseconds" 225.02
+@v47 kernel.value.record "id" "role-reversal" "pass" true "failures" $v44 "actual" $v46 "milliseconds" 224.18
 @v48 kernel.seq.make
 @v49 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v50 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira does not own Pico." "verification" $v49
-@v51 kernel.value.record "id" "negative-relation" "pass" true "failures" $v48 "actual" $v50 "milliseconds" 237.92
+@v51 kernel.value.record "id" "negative-relation" "pass" true "failures" $v48 "actual" $v50 "milliseconds" 224.92
 @v52 kernel.seq.make
 @v53 kernel.seq.make item "mira" item "theo"
 @v54 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v55 kernel.value.record "status" "answered" "truth" null "value" null "values" $v53 "gaps" 0 "text" "The supported answers are: Mira, Theo. This list is not certified exhaustive." "verification" $v54
-@v56 kernel.value.record "id" "wh-subject" "pass" true "failures" $v52 "actual" $v55 "milliseconds" 333.88
+@v56 kernel.value.record "id" "wh-subject" "pass" true "failures" $v52 "actual" $v55 "milliseconds" 323.63
 @v57 kernel.seq.make
 @v58 kernel.seq.make item "pico"
 @v59 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v60 kernel.value.record "status" "answered" "truth" null "value" null "values" $v58 "gaps" 0 "text" "The supported answers are: Pico. This list is not certified exhaustive." "verification" $v59
-@v61 kernel.value.record "id" "wh-object" "pass" true "failures" $v57 "actual" $v60 "milliseconds" 233.11
+@v61 kernel.value.record "id" "wh-object" "pass" true "failures" $v57 "actual" $v60 "milliseconds" 226.02
 @v62 kernel.seq.make
 @v63 kernel.seq.make item "paris"
 @v64 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v65 kernel.value.record "status" "answered" "truth" null "value" null "values" $v63 "gaps" 0 "text" "The supported answers are: Paris. This list is not certified exhaustive." "verification" $v64
-@v66 kernel.value.record "id" "location" "pass" true "failures" $v62 "actual" $v65 "milliseconds" 242.8
+@v66 kernel.value.record "id" "location" "pass" true "failures" $v62 "actual" $v65 "milliseconds" 240.57
 @v67 kernel.seq.make
 @v68 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v69 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is north of Nara." "verification" $v68
-@v70 kernel.value.record "id" "relative-direction" "pass" true "failures" $v67 "actual" $v69 "milliseconds" 330.33
+@v70 kernel.value.record "id" "relative-direction" "pass" true "failures" $v67 "actual" $v69 "milliseconds" 322.7
 @v71 kernel.seq.make
 @v72 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v73 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Theo is south of Mira." "verification" $v72
-@v74 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v71 "actual" $v73 "milliseconds" 243.85
+@v74 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v71 "actual" $v73 "milliseconds" 587.71
 @v75 kernel.seq.make
 @v76 kernel.value.record "status" "answered" "truth" null "value" "5" "values" null "gaps" 0 "text" "Mira has 5 apples." "verification" null
-@v77 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v75 "actual" $v76 "milliseconds" 319.19
+@v77 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v75 "actual" $v76 "milliseconds" 325.7
 @v78 kernel.seq.make
 @v79 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 0 "text" "I cannot determine the exact quantity: an initial value is missing." "verification" null
-@v80 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v78 "actual" $v79 "milliseconds" 325.98
+@v80 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v78 "actual" $v79 "milliseconds" 298.46
 @v81 kernel.seq.make
 @v82 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine the exact quantity: a relevant event is unsupported or inconsistent." "verification" null
-@v83 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v81 "actual" $v82 "milliseconds" 287.93
+@v83 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v81 "actual" $v82 "milliseconds" 295.81
 @v84 kernel.seq.make
 @v85 kernel.value.record "status" "answered" "truth" null "value" "1/5" "values" null "gaps" 0 "text" "Mira has 1/5 coins." "verification" null
-@v86 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v84 "actual" $v85 "milliseconds" 317.42
+@v86 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v84 "actual" $v85 "milliseconds" 329.71
 @v87 kernel.seq.make
 @v88 kernel.value.record "status" "answered" "truth" null "value" "14" "values" null "gaps" 0 "text" "The result is 14." "verification" null
-@v89 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v87 "actual" $v88 "milliseconds" 168.45
+@v89 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v87 "actual" $v88 "milliseconds" 155.44
 @v90 kernel.seq.make
 @v91 kernel.value.record "status" "answered" "truth" null "value" "3/10" "values" null "gaps" 0 "text" "The result is 3/10." "verification" null
-@v92 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v90 "actual" $v91 "milliseconds" 150.82
+@v92 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v90 "actual" $v91 "milliseconds" 133.77
 @v93 kernel.seq.make
 @v94 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v95 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v94
-@v96 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v93 "actual" $v95 "milliseconds" 352.11
+@v96 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v93 "actual" $v95 "milliseconds" 299.2
 @v97 kernel.seq.make
 @v98 kernel.value.record "status" "answered" "truth" null "value" null "values" null "gaps" null "text" "The launch was not approved. The sensor failed during the test." "verification" null
-@v99 kernel.value.record "id" "source-summary" "pass" true "failures" $v97 "actual" $v98 "milliseconds" 22.88
+@v99 kernel.value.record "id" "source-summary" "pass" true "failures" $v97 "actual" $v98 "milliseconds" 21.98
 @v100 kernel.seq.make
 @v101 kernel.value.record "status" "answered" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "The cobalt robot inspects the reactor." "verification" null
-@v102 kernel.value.record "id" "context-completion" "pass" true "failures" $v100 "actual" $v101 "milliseconds" 94.71
+@v102 kernel.value.record "id" "context-completion" "pass" true "failures" $v100 "actual" $v101 "milliseconds" 91.48
 @v103 kernel.seq.make
 @v104 kernel.value.record "status" "unknown" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "I have no supported continuation for this prefix. Add relevant text to the sequence training data." "verification" null
-@v105 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v103 "actual" $v104 "milliseconds" 92.31
+@v105 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v103 "actual" $v104 "milliseconds" 77.81
 @v106 kernel.seq.make
 @v107 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v108 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin helps Cyra." "verification" $v107
-@v109 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v106 "actual" $v108 "milliseconds" 506.45
+@v109 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v106 "actual" $v108 "milliseconds" 421.81
 @v110 kernel.seq.make
 @v111 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v112 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v111
-@v113 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v110 "actual" $v112 "milliseconds" 497.86
+@v113 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v110 "actual" $v112 "milliseconds" 456.56
 @v114 kernel.seq.make
 @v115 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v116 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Nara is prepared." "verification" $v115
-@v117 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v114 "actual" $v116 "milliseconds" 910.4
+@v117 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v114 "actual" $v116 "milliseconds" 458.06
 @v118 kernel.seq.make
 @v119 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
 @v120 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is eligible." "verification" $v119
-@v121 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v118 "actual" $v120 "milliseconds" 544.75
+@v121 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v118 "actual" $v120 "milliseconds" 532.33
 @v122 kernel.seq.make
 @v123 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v124 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is ready." "verification" $v123
-@v125 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v122 "actual" $v124 "milliseconds" 492.67
+@v125 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v122 "actual" $v124 "milliseconds" 448.04
 @v126 kernel.seq.make
 @v127 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v128 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Delta is calibrated." "verification" $v127
-@v129 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v126 "actual" $v128 "milliseconds" 370.89
+@v129 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v126 "actual" $v128 "milliseconds" 356.59
 @v130 kernel.seq.make
 @v131 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
 @v132 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin follows Dora." "verification" $v131
-@v133 kernel.value.record "id" "recursive-join" "pass" true "failures" $v130 "actual" $v132 "milliseconds" 527.02
+@v133 kernel.value.record "id" "recursive-join" "pass" true "failures" $v130 "actual" $v132 "milliseconds" 522.78
 @v134 kernel.seq.make
 @v135 kernel.seq.make item "mira"
 @v136 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v137 kernel.value.record "status" "answered" "truth" null "value" null "values" $v135 "gaps" 0 "text" "The supported answers are: Mira. This list is not certified exhaustive." "verification" $v136
-@v138 kernel.value.record "id" "typed-wh" "pass" true "failures" $v134 "actual" $v137 "milliseconds" 399.13
+@v138 kernel.value.record "id" "typed-wh" "pass" true "failures" $v134 "actual" $v137 "milliseconds" 425.95
 @v139 kernel.seq.make
 @v140 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
 @v141 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Zora is luminous." "verification" $v140
-@v142 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v139 "actual" $v141 "milliseconds" 451.09
+@v142 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v139 "actual" $v141 "milliseconds" 534.99
 @v143 kernel.seq.make
 @v144 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v145 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v144
-@v146 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v143 "actual" $v145 "milliseconds" 411.37
+@v146 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v143 "actual" $v145 "milliseconds" 423.75
 @v147 kernel.seq.make
 @v148 kernel.value.record "status" "answered" "truth" null "value" "8" "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. Mira has 8 apples." "verification" null
-@v149 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v147 "actual" $v148 "milliseconds" 366.96
+@v149 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v147 "actual" $v148 "milliseconds" 368.11
 @v150 kernel.seq.make
 @v151 kernel.value.record "status" "answered" "truth" null "value" "12" "values" null "gaps" 0 "text" "Mira has 12 coins." "verification" null
-@v152 kernel.value.record "id" "multiple-events" "pass" true "failures" $v150 "actual" $v151 "milliseconds" 548.72
+@v152 kernel.value.record "id" "multiple-events" "pass" true "failures" $v150 "actual" $v151 "milliseconds" 634.13
 @v153 kernel.seq.make item $v3 item $v7 item $v11 item $v15 item $v19 item $v23 item $v27 item $v31 item $v35 item $v39 item $v43 item $v47 item $v51 item $v56 item $v61 item $v66 item $v70 item $v74 item $v77 item $v80 item $v83 item $v86 item $v89 item $v92 item $v96 item $v99 item $v102 item $v105 item $v109 item $v113 item $v117 item $v121 item $v125 item $v129 item $v133 item $v138 item $v142 item $v146 item $v149 item $v152
 @v154 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "2a3bf72e918b61a4b01c1627f3d0335596824f61f7da2691a1629990373dd948" "casesHash" "f16f2312b365395d64be84119b6c08037cb5f4affbfb0a77818eeb479ab1fa7e" "total" 40 "passed" 40 "failed" 0 "results" $v153
 @v155 kernel.seq.make
 @v156 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v157 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is mortal." "verification" $v156
-@v158 kernel.value.record "id" "class-chain" "pass" true "failures" $v155 "actual" $v157 "milliseconds" 345.58
+@v158 kernel.value.record "id" "class-chain" "pass" true "failures" $v155 "actual" $v157 "milliseconds" 361.18
 @v159 kernel.seq.make
 @v160 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v161 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v160
-@v162 kernel.value.record "id" "open-world" "pass" true "failures" $v159 "actual" $v161 "milliseconds" 187.47
+@v162 kernel.value.record "id" "open-world" "pass" true "failures" $v159 "actual" $v161 "milliseconds" 183.9
 @v163 kernel.seq.make
 @v164 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v165 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira is not careful." "verification" $v164
-@v166 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v163 "actual" $v165 "milliseconds" 296.13
+@v166 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v163 "actual" $v165 "milliseconds" 297.4
 @v167 kernel.seq.make
 @v168 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v169 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v168
-@v170 kernel.value.record "id" "conflict" "pass" true "failures" $v167 "actual" $v169 "milliseconds" 373.52
+@v170 kernel.value.record "id" "conflict" "pass" true "failures" $v167 "actual" $v169 "milliseconds" 360.2
 @v171 kernel.seq.make
 @v172 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v173 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v172
-@v174 kernel.value.record "id" "no-explosion" "pass" true "failures" $v171 "actual" $v173 "milliseconds" 362.47
+@v174 kernel.value.record "id" "no-explosion" "pass" true "failures" $v171 "actual" $v173 "milliseconds" 365.12
 @v175 kernel.seq.make
 @v176 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v177 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Pico is not a robot." "verification" $v176
-@v178 kernel.value.record "id" "negative-rule" "pass" true "failures" $v175 "actual" $v177 "milliseconds" 381.44
+@v178 kernel.value.record "id" "negative-rule" "pass" true "failures" $v175 "actual" $v177 "milliseconds" 371.27
 @v179 kernel.seq.make
 @v180 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
 @v181 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is careful." "verification" $v180
-@v182 kernel.value.record "id" "relative-existential" "pass" true "failures" $v179 "actual" $v181 "milliseconds" 495.46
+@v182 kernel.value.record "id" "relative-existential" "pass" true "failures" $v179 "actual" $v181 "milliseconds" 527.77
 @v183 kernel.seq.make
 @v184 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v185 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v184
-@v186 kernel.value.record "id" "binding-separation" "pass" true "failures" $v183 "actual" $v185 "milliseconds" 480.63
+@v186 kernel.value.record "id" "binding-separation" "pass" true "failures" $v183 "actual" $v185 "milliseconds" 497.79
 @v187 kernel.seq.make
 @v188 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v189 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v188
-@v190 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v187 "actual" $v189 "milliseconds" 319.56
+@v190 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v187 "actual" $v189 "milliseconds" 313.49
 @v191 kernel.seq.make
 @v192 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v193 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Within belief:mira: Theo is a pilot." "verification" $v192
-@v194 kernel.value.record "id" "belief-query" "pass" true "failures" $v191 "actual" $v193 "milliseconds" 385.99
+@v194 kernel.value.record "id" "belief-query" "pass" true "failures" $v191 "actual" $v193 "milliseconds" 365.74
 @v195 kernel.seq.make
 @v196 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v197 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira mentors Theo." "verification" $v196
-@v198 kernel.value.record "id" "ground-relation" "pass" true "failures" $v195 "actual" $v197 "milliseconds" 244.25
+@v198 kernel.value.record "id" "ground-relation" "pass" true "failures" $v195 "actual" $v197 "milliseconds" 255.87
 @v199 kernel.seq.make
 @v200 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v201 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v200
-@v202 kernel.value.record "id" "role-reversal" "pass" true "failures" $v199 "actual" $v201 "milliseconds" 242.45
+@v202 kernel.value.record "id" "role-reversal" "pass" true "failures" $v199 "actual" $v201 "milliseconds" 253.63
 @v203 kernel.seq.make
 @v204 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v205 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira does not own Pico." "verification" $v204
-@v206 kernel.value.record "id" "negative-relation" "pass" true "failures" $v203 "actual" $v205 "milliseconds" 255.98
+@v206 kernel.value.record "id" "negative-relation" "pass" true "failures" $v203 "actual" $v205 "milliseconds" 285.22
 @v207 kernel.seq.make
 @v208 kernel.seq.make item "mira" item "theo"
 @v209 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v210 kernel.value.record "status" "answered" "truth" null "value" null "values" $v208 "gaps" 0 "text" "The supported answers are: Mira, Theo. This list is not certified exhaustive." "verification" $v209
-@v211 kernel.value.record "id" "wh-subject" "pass" true "failures" $v207 "actual" $v210 "milliseconds" 361.94
+@v211 kernel.value.record "id" "wh-subject" "pass" true "failures" $v207 "actual" $v210 "milliseconds" 388.22
 @v212 kernel.seq.make
 @v213 kernel.seq.make item "pico"
 @v214 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v215 kernel.value.record "status" "answered" "truth" null "value" null "values" $v213 "gaps" 0 "text" "The supported answers are: Pico. This list is not certified exhaustive." "verification" $v214
-@v216 kernel.value.record "id" "wh-object" "pass" true "failures" $v212 "actual" $v215 "milliseconds" 266.06
+@v216 kernel.value.record "id" "wh-object" "pass" true "failures" $v212 "actual" $v215 "milliseconds" 329.91
 @v217 kernel.seq.make
 @v218 kernel.seq.make item "paris"
 @v219 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v220 kernel.value.record "status" "answered" "truth" null "value" null "values" $v218 "gaps" 0 "text" "The supported answers are: Paris. This list is not certified exhaustive." "verification" $v219
-@v221 kernel.value.record "id" "location" "pass" true "failures" $v217 "actual" $v220 "milliseconds" 269.51
+@v221 kernel.value.record "id" "location" "pass" true "failures" $v217 "actual" $v220 "milliseconds" 299.28
 @v222 kernel.seq.make
 @v223 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v224 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is north of Nara." "verification" $v223
-@v225 kernel.value.record "id" "relative-direction" "pass" true "failures" $v222 "actual" $v224 "milliseconds" 361
+@v225 kernel.value.record "id" "relative-direction" "pass" true "failures" $v222 "actual" $v224 "milliseconds" 499.1
 @v226 kernel.seq.make
 @v227 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v228 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Theo is south of Mira." "verification" $v227
-@v229 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v226 "actual" $v228 "milliseconds" 273.55
+@v229 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v226 "actual" $v228 "milliseconds" 321.84
 @v230 kernel.seq.make
 @v231 kernel.value.record "status" "answered" "truth" null "value" "5" "values" null "gaps" 0 "text" "Mira has 5 apples." "verification" null
-@v232 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v230 "actual" $v231 "milliseconds" 355.05
+@v232 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v230 "actual" $v231 "milliseconds" 365.67
 @v233 kernel.seq.make
 @v234 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 0 "text" "I cannot determine the exact quantity: an initial value is missing." "verification" null
-@v235 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v233 "actual" $v234 "milliseconds" 341.1
+@v235 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v233 "actual" $v234 "milliseconds" 352.18
 @v236 kernel.seq.make
 @v237 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine the exact quantity: a relevant event is unsupported or inconsistent." "verification" null
-@v238 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v236 "actual" $v237 "milliseconds" 310.36
+@v238 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v236 "actual" $v237 "milliseconds" 341.91
 @v239 kernel.seq.make
 @v240 kernel.value.record "status" "answered" "truth" null "value" "1/5" "values" null "gaps" 0 "text" "Mira has 1/5 coins." "verification" null
-@v241 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v239 "actual" $v240 "milliseconds" 350.96
+@v241 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v239 "actual" $v240 "milliseconds" 383.09
 @v242 kernel.seq.make
 @v243 kernel.value.record "status" "answered" "truth" null "value" "14" "values" null "gaps" 0 "text" "The result is 14." "verification" null
-@v244 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v242 "actual" $v243 "milliseconds" 212.62
+@v244 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v242 "actual" $v243 "milliseconds" 256.48
 @v245 kernel.seq.make
 @v246 kernel.value.record "status" "answered" "truth" null "value" "3/10" "values" null "gaps" 0 "text" "The result is 3/10." "verification" null
-@v247 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v245 "actual" $v246 "milliseconds" 182.04
+@v247 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v245 "actual" $v246 "milliseconds" 177.81
 @v248 kernel.seq.make
 @v249 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v250 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v249
-@v251 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v248 "actual" $v250 "milliseconds" 314.65
+@v251 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v248 "actual" $v250 "milliseconds" 350.25
 @v252 kernel.seq.make
 @v253 kernel.value.record "status" "answered" "truth" null "value" null "values" null "gaps" null "text" "The launch was not approved. The sensor failed during the test." "verification" null
-@v254 kernel.value.record "id" "source-summary" "pass" true "failures" $v252 "actual" $v253 "milliseconds" 34.76
+@v254 kernel.value.record "id" "source-summary" "pass" true "failures" $v252 "actual" $v253 "milliseconds" 23.03
 @v255 kernel.seq.make
 @v256 kernel.value.record "status" "answered" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "The cobalt robot inspects the reactor." "verification" null
-@v257 kernel.value.record "id" "context-completion" "pass" true "failures" $v255 "actual" $v256 "milliseconds" 79.23
+@v257 kernel.value.record "id" "context-completion" "pass" true "failures" $v255 "actual" $v256 "milliseconds" 95.5
 @v258 kernel.seq.make
 @v259 kernel.value.record "status" "unknown" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "I have no supported continuation for this prefix. Add relevant text to the sequence training data." "verification" null
-@v260 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v258 "actual" $v259 "milliseconds" 89.76
+@v260 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v258 "actual" $v259 "milliseconds" 92.15
 @v261 kernel.seq.make
 @v262 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v263 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin helps Cyra." "verification" $v262
-@v264 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v261 "actual" $v263 "milliseconds" 474.53
+@v264 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v261 "actual" $v263 "milliseconds" 970.19
 @v265 kernel.seq.make
 @v266 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v267 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v266
-@v268 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v265 "actual" $v267 "milliseconds" 580.55
+@v268 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v265 "actual" $v267 "milliseconds" 529.92
 @v269 kernel.seq.make
 @v270 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v271 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Nara is prepared." "verification" $v270
-@v272 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v269 "actual" $v271 "milliseconds" 515.74
+@v272 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v269 "actual" $v271 "milliseconds" 509.41
 @v273 kernel.seq.make
 @v274 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
 @v275 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is eligible." "verification" $v274
-@v276 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v273 "actual" $v275 "milliseconds" 644.72
+@v276 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v273 "actual" $v275 "milliseconds" 580.6
 @v277 kernel.seq.make
 @v278 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v279 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is ready." "verification" $v278
-@v280 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v277 "actual" $v279 "milliseconds" 491.4
+@v280 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v277 "actual" $v279 "milliseconds" 526.96
 @v281 kernel.seq.make
 @v282 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v283 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Delta is calibrated." "verification" $v282
-@v284 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v281 "actual" $v283 "milliseconds" 435.75
+@v284 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v281 "actual" $v283 "milliseconds" 408.63
 @v285 kernel.seq.make
 @v286 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
 @v287 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin follows Dora." "verification" $v286
-@v288 kernel.value.record "id" "recursive-join" "pass" true "failures" $v285 "actual" $v287 "milliseconds" 589
+@v288 kernel.value.record "id" "recursive-join" "pass" true "failures" $v285 "actual" $v287 "milliseconds" 557.69
 @v289 kernel.seq.make
 @v290 kernel.seq.make item "mira"
 @v291 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v292 kernel.value.record "status" "answered" "truth" null "value" null "values" $v290 "gaps" 0 "text" "The supported answers are: Mira. This list is not certified exhaustive." "verification" $v291
-@v293 kernel.value.record "id" "typed-wh" "pass" true "failures" $v289 "actual" $v292 "milliseconds" 434.11
+@v293 kernel.value.record "id" "typed-wh" "pass" true "failures" $v289 "actual" $v292 "milliseconds" 469.02
 @v294 kernel.seq.make
 @v295 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
 @v296 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Zora is luminous." "verification" $v295
-@v297 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v294 "actual" $v296 "milliseconds" 498.8
+@v297 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v294 "actual" $v296 "milliseconds" 512.13
 @v298 kernel.seq.make
 @v299 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v300 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v299
-@v301 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v298 "actual" $v300 "milliseconds" 433.61
+@v301 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v298 "actual" $v300 "milliseconds" 434.1
 @v302 kernel.seq.make
 @v303 kernel.value.record "status" "answered" "truth" null "value" "8" "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. Mira has 8 apples." "verification" null
-@v304 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v302 "actual" $v303 "milliseconds" 454.66
+@v304 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v302 "actual" $v303 "milliseconds" 422.41
 @v305 kernel.seq.make
 @v306 kernel.value.record "status" "answered" "truth" null "value" "12" "values" null "gaps" 0 "text" "Mira has 12 coins." "verification" null
-@v307 kernel.value.record "id" "multiple-events" "pass" true "failures" $v305 "actual" $v306 "milliseconds" 597.66
+@v307 kernel.value.record "id" "multiple-events" "pass" true "failures" $v305 "actual" $v306 "milliseconds" 595.61
 @v308 kernel.seq.make item $v158 item $v162 item $v166 item $v170 item $v174 item $v178 item $v182 item $v186 item $v190 item $v194 item $v198 item $v202 item $v206 item $v211 item $v216 item $v221 item $v225 item $v229 item $v232 item $v235 item $v238 item $v241 item $v244 item $v247 item $v251 item $v254 item $v257 item $v260 item $v264 item $v268 item $v272 item $v276 item $v280 item $v284 item $v288 item $v293 item $v297 item $v301 item $v304 item $v307
-@v309 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "237f8cf379f7f95008ec89ba0de9ea293d07724f1827d16f80106a0833513c50" "casesHash" "f16f2312b365395d64be84119b6c08037cb5f4affbfb0a77818eeb479ab1fa7e" "total" 40 "passed" 40 "failed" 0 "results" $v308
+@v309 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "244af518f57becf98af4c3a844c3ff550b22b9314351172bfbb50f158b5f6bc8" "casesHash" "f16f2312b365395d64be84119b6c08037cb5f4affbfb0a77818eeb479ab1fa7e" "total" 40 "passed" 40 "failed" 0 "results" $v308
 @v310 kernel.seq.make
 @v311 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v312 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is mortal." "verification" $v311
-@v313 kernel.value.record "id" "class-chain" "pass" true "failures" $v310 "actual" $v312 "milliseconds" 436.52
+@v313 kernel.value.record "id" "class-chain" "pass" true "failures" $v310 "actual" $v312 "milliseconds" 420.76
 @v314 kernel.seq.make
 @v315 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v316 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v315
-@v317 kernel.value.record "id" "open-world" "pass" true "failures" $v314 "actual" $v316 "milliseconds" 233.55
+@v317 kernel.value.record "id" "open-world" "pass" true "failures" $v314 "actual" $v316 "milliseconds" 238.59
 @v318 kernel.seq.make
 @v319 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v320 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira is not careful." "verification" $v319
-@v321 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v318 "actual" $v320 "milliseconds" 321.82
+@v321 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v318 "actual" $v320 "milliseconds" 368.15
 @v322 kernel.seq.make
 @v323 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v324 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v323
-@v325 kernel.value.record "id" "conflict" "pass" true "failures" $v322 "actual" $v324 "milliseconds" 895.78
+@v325 kernel.value.record "id" "conflict" "pass" true "failures" $v322 "actual" $v324 "milliseconds" 436.5
 @v326 kernel.seq.make
 @v327 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v328 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v327
-@v329 kernel.value.record "id" "no-explosion" "pass" true "failures" $v326 "actual" $v328 "milliseconds" 409.85
+@v329 kernel.value.record "id" "no-explosion" "pass" true "failures" $v326 "actual" $v328 "milliseconds" 444.61
 @v330 kernel.seq.make
 @v331 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v332 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Pico is not a robot." "verification" $v331
-@v333 kernel.value.record "id" "negative-rule" "pass" true "failures" $v330 "actual" $v332 "milliseconds" 441
+@v333 kernel.value.record "id" "negative-rule" "pass" true "failures" $v330 "actual" $v332 "milliseconds" 400.08
 @v334 kernel.seq.make
 @v335 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
 @v336 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is careful." "verification" $v335
-@v337 kernel.value.record "id" "relative-existential" "pass" true "failures" $v334 "actual" $v336 "milliseconds" 537.38
+@v337 kernel.value.record "id" "relative-existential" "pass" true "failures" $v334 "actual" $v336 "milliseconds" 540.39
 @v338 kernel.seq.make
 @v339 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v340 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v339
-@v341 kernel.value.record "id" "binding-separation" "pass" true "failures" $v338 "actual" $v340 "milliseconds" 582.33
+@v341 kernel.value.record "id" "binding-separation" "pass" true "failures" $v338 "actual" $v340 "milliseconds" 555.75
 @v342 kernel.seq.make
 @v343 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v344 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v343
-@v345 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v342 "actual" $v344 "milliseconds" 345.36
+@v345 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v342 "actual" $v344 "milliseconds" 692.04
 @v346 kernel.seq.make
 @v347 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v348 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Within belief:mira: Theo is a pilot." "verification" $v347
-@v349 kernel.value.record "id" "belief-query" "pass" true "failures" $v346 "actual" $v348 "milliseconds" 391.61
+@v349 kernel.value.record "id" "belief-query" "pass" true "failures" $v346 "actual" $v348 "milliseconds" 389.37
 @v350 kernel.seq.make
 @v351 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v352 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira mentors Theo." "verification" $v351
-@v353 kernel.value.record "id" "ground-relation" "pass" true "failures" $v350 "actual" $v352 "milliseconds" 274.45
+@v353 kernel.value.record "id" "ground-relation" "pass" true "failures" $v350 "actual" $v352 "milliseconds" 302.35
 @v354 kernel.seq.make
 @v355 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v356 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v355
-@v357 kernel.value.record "id" "role-reversal" "pass" true "failures" $v354 "actual" $v356 "milliseconds" 288.99
+@v357 kernel.value.record "id" "role-reversal" "pass" true "failures" $v354 "actual" $v356 "milliseconds" 307.02
 @v358 kernel.seq.make
 @v359 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v360 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira does not own Pico." "verification" $v359
-@v361 kernel.value.record "id" "negative-relation" "pass" true "failures" $v358 "actual" $v360 "milliseconds" 284.47
+@v361 kernel.value.record "id" "negative-relation" "pass" true "failures" $v358 "actual" $v360 "milliseconds" 295.67
 @v362 kernel.seq.make
 @v363 kernel.seq.make item "mira" item "theo"
 @v364 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v365 kernel.value.record "status" "answered" "truth" null "value" null "values" $v363 "gaps" 0 "text" "The supported answers are: Mira, Theo. This list is not certified exhaustive." "verification" $v364
-@v366 kernel.value.record "id" "wh-subject" "pass" true "failures" $v362 "actual" $v365 "milliseconds" 405.19
+@v366 kernel.value.record "id" "wh-subject" "pass" true "failures" $v362 "actual" $v365 "milliseconds" 432.51
 @v367 kernel.seq.make
 @v368 kernel.seq.make item "pico"
 @v369 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v370 kernel.value.record "status" "answered" "truth" null "value" null "values" $v368 "gaps" 0 "text" "The supported answers are: Pico. This list is not certified exhaustive." "verification" $v369
-@v371 kernel.value.record "id" "wh-object" "pass" true "failures" $v367 "actual" $v370 "milliseconds" 298.72
+@v371 kernel.value.record "id" "wh-object" "pass" true "failures" $v367 "actual" $v370 "milliseconds" 316.38
 @v372 kernel.seq.make
 @v373 kernel.seq.make item "paris"
 @v374 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
 @v375 kernel.value.record "status" "answered" "truth" null "value" null "values" $v373 "gaps" 0 "text" "The supported answers are: Paris. This list is not certified exhaustive." "verification" $v374
-@v376 kernel.value.record "id" "location" "pass" true "failures" $v372 "actual" $v375 "milliseconds" 304.84
+@v376 kernel.value.record "id" "location" "pass" true "failures" $v372 "actual" $v375 "milliseconds" 335.45
 @v377 kernel.seq.make
 @v378 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v379 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is north of Nara." "verification" $v378
-@v380 kernel.value.record "id" "relative-direction" "pass" true "failures" $v377 "actual" $v379 "milliseconds" 423.55
+@v380 kernel.value.record "id" "relative-direction" "pass" true "failures" $v377 "actual" $v379 "milliseconds" 440.37
 @v381 kernel.seq.make
 @v382 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v383 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Theo is south of Mira." "verification" $v382
-@v384 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v381 "actual" $v383 "milliseconds" 322.38
+@v384 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v381 "actual" $v383 "milliseconds" 324.59
 @v385 kernel.seq.make
 @v386 kernel.value.record "status" "answered" "truth" null "value" "5" "values" null "gaps" 0 "text" "Mira has 5 apples." "verification" null
-@v387 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v385 "actual" $v386 "milliseconds" 377.33
+@v387 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v385 "actual" $v386 "milliseconds" 418.93
 @v388 kernel.seq.make
 @v389 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 0 "text" "I cannot determine the exact quantity: an initial value is missing." "verification" null
-@v390 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v388 "actual" $v389 "milliseconds" 410.76
+@v390 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v388 "actual" $v389 "milliseconds" 392.76
 @v391 kernel.seq.make
 @v392 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine the exact quantity: a relevant event is unsupported or inconsistent." "verification" null
-@v393 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v391 "actual" $v392 "milliseconds" 366.04
+@v393 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v391 "actual" $v392 "milliseconds" 392.79
 @v394 kernel.seq.make
 @v395 kernel.value.record "status" "answered" "truth" null "value" "1/5" "values" null "gaps" 0 "text" "Mira has 1/5 coins." "verification" null
-@v396 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v394 "actual" $v395 "milliseconds" 385.08
+@v396 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v394 "actual" $v395 "milliseconds" 404.86
 @v397 kernel.seq.make
 @v398 kernel.value.record "status" "answered" "truth" null "value" "14" "values" null "gaps" 0 "text" "The result is 14." "verification" null
-@v399 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v397 "actual" $v398 "milliseconds" 244.81
+@v399 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v397 "actual" $v398 "milliseconds" 270.7
 @v400 kernel.seq.make
 @v401 kernel.value.record "status" "answered" "truth" null "value" "3/10" "values" null "gaps" 0 "text" "The result is 3/10." "verification" null
-@v402 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v400 "actual" $v401 "milliseconds" 214.2
+@v402 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v400 "actual" $v401 "milliseconds" 235.49
 @v403 kernel.seq.make
 @v404 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v405 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v404
-@v406 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v403 "actual" $v405 "milliseconds" 368.55
+@v406 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v403 "actual" $v405 "milliseconds" 387.82
 @v407 kernel.seq.make
 @v408 kernel.value.record "status" "answered" "truth" null "value" null "values" null "gaps" null "text" "The launch was not approved. The sensor failed during the test." "verification" null
-@v409 kernel.value.record "id" "source-summary" "pass" true "failures" $v407 "actual" $v408 "milliseconds" 20.54
+@v409 kernel.value.record "id" "source-summary" "pass" true "failures" $v407 "actual" $v408 "milliseconds" 21.25
 @v410 kernel.seq.make
 @v411 kernel.value.record "status" "answered" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "The cobalt robot inspects the reactor." "verification" null
-@v412 kernel.value.record "id" "context-completion" "pass" true "failures" $v410 "actual" $v411 "milliseconds" 90.25
+@v412 kernel.value.record "id" "context-completion" "pass" true "failures" $v410 "actual" $v411 "milliseconds" 94.49
 @v413 kernel.seq.make
 @v414 kernel.value.record "status" "unknown" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "I have no supported continuation for this prefix. Add relevant text to the sequence training data." "verification" null
-@v415 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v413 "actual" $v414 "milliseconds" 75.97
+@v415 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v413 "actual" $v414 "milliseconds" 88.89
 @v416 kernel.seq.make
 @v417 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v418 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin helps Cyra." "verification" $v417
-@v419 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v416 "actual" $v418 "milliseconds" 822.07
+@v419 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v416 "actual" $v418 "milliseconds" 528.08
 @v420 kernel.seq.make
 @v421 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
 @v422 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v421
-@v423 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v420 "actual" $v422 "milliseconds" 541.05
+@v423 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v420 "actual" $v422 "milliseconds" 583.16
 @v424 kernel.seq.make
 @v425 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v426 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Nara is prepared." "verification" $v425
-@v427 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v424 "actual" $v426 "milliseconds" 537.83
+@v427 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v424 "actual" $v426 "milliseconds" 576.77
 @v428 kernel.seq.make
 @v429 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
 @v430 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is eligible." "verification" $v429
-@v431 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v428 "actual" $v430 "milliseconds" 627.02
+@v431 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v428 "actual" $v430 "milliseconds" 662.94
 @v432 kernel.seq.make
 @v433 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v434 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is ready." "verification" $v433
-@v435 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v432 "actual" $v434 "milliseconds" 537.06
+@v435 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v432 "actual" $v434 "milliseconds" 575.3
 @v436 kernel.seq.make
 @v437 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v438 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Delta is calibrated." "verification" $v437
-@v439 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v436 "actual" $v438 "milliseconds" 426.31
+@v439 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v436 "actual" $v438 "milliseconds" 477.25
 @v440 kernel.seq.make
 @v441 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
 @v442 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin follows Dora." "verification" $v441
-@v443 kernel.value.record "id" "recursive-join" "pass" true "failures" $v440 "actual" $v442 "milliseconds" 590.11
+@v443 kernel.value.record "id" "recursive-join" "pass" true "failures" $v440 "actual" $v442 "milliseconds" 599
 @v444 kernel.seq.make
 @v445 kernel.seq.make item "mira"
 @v446 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
 @v447 kernel.value.record "status" "answered" "truth" null "value" null "values" $v445 "gaps" 0 "text" "The supported answers are: Mira. This list is not certified exhaustive." "verification" $v446
-@v448 kernel.value.record "id" "typed-wh" "pass" true "failures" $v444 "actual" $v447 "milliseconds" 474.93
+@v448 kernel.value.record "id" "typed-wh" "pass" true "failures" $v444 "actual" $v447 "milliseconds" 511.56
 @v449 kernel.seq.make
 @v450 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
 @v451 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Zora is luminous." "verification" $v450
-@v452 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v449 "actual" $v451 "milliseconds" 524.01
+@v452 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v449 "actual" $v451 "milliseconds" 557.86
 @v453 kernel.seq.make
 @v454 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
 @v455 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v454
-@v456 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v453 "actual" $v455 "milliseconds" 477.17
+@v456 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v453 "actual" $v455 "milliseconds" 485.52
 @v457 kernel.seq.make
 @v458 kernel.value.record "status" "answered" "truth" null "value" "8" "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. Mira has 8 apples." "verification" null
-@v459 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v457 "actual" $v458 "milliseconds" 445.39
+@v459 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v457 "actual" $v458 "milliseconds" 457.58
 @v460 kernel.seq.make
 @v461 kernel.value.record "status" "answered" "truth" null "value" "12" "values" null "gaps" 0 "text" "Mira has 12 coins." "verification" null
-@v462 kernel.value.record "id" "multiple-events" "pass" true "failures" $v460 "actual" $v461 "milliseconds" 622.73
+@v462 kernel.value.record "id" "multiple-events" "pass" true "failures" $v460 "actual" $v461 "milliseconds" 644.14
 @v463 kernel.seq.make item $v313 item $v317 item $v321 item $v325 item $v329 item $v333 item $v337 item $v341 item $v345 item $v349 item $v353 item $v357 item $v361 item $v366 item $v371 item $v376 item $v380 item $v384 item $v387 item $v390 item $v393 item $v396 item $v399 item $v402 item $v406 item $v409 item $v412 item $v415 item $v419 item $v423 item $v427 item $v431 item $v435 item $v439 item $v443 item $v448 item $v452 item $v456 item $v459 item $v462
-@v464 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "da8edab0a31ceac3a8e5d09f1ef20d19f063e8c3977c64b9f020c3a51901fa9a" "casesHash" "f16f2312b365395d64be84119b6c08037cb5f4affbfb0a77818eeb479ab1fa7e" "total" 40 "passed" 40 "failed" 0 "results" $v463
+@v464 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "c46d0b6c41e4a194ea1cdfbc90c8c1bf5ae1f74a921cca86e98bbad52fd94de6" "casesHash" "f16f2312b365395d64be84119b6c08037cb5f4affbfb0a77818eeb479ab1fa7e" "total" 40 "passed" 40 "failed" 0 "results" $v463
 @v465 kernel.value.record "bootstrap" $v154 "elementary-language" $v309 "elementary-plus-320-terms" $v464
 @v466 kernel.seq.make
 @v467 kernel.seq.make
 @v468 kernel.seq.make item $v466 item $v467
 @v469 kernel.seq.make item "N"
 @v470 kernel.value.record "schema" "sxlm.phrase-compilation.v1" "knowledgeHash" "eeeaf4bad6a6032f296af30673360652920d7b0c79969fc2e946a185d549514f" "observations" 320 "productions" 4 "lexicalEntries" 320 "categories" $v469 "qualification" "Explicit constant lexical meanings compiled with shared prefixes, not induced language."
-@v471 kernel.value.record "schema" "sxlm.chat-procedure-evaluation.v1" "generated" "2026-09-08T15:52:11.422Z" "passed" true "profiles" $v465 "regressions" $v468 "phraseCompilation" $v470 "qualification" "Public procedure inheritance and bounded lexical stress, with optional facts and rules ablated. This does not evaluate semantic fidelity, arbitrary document scale or unrestricted language."
+@v471 kernel.value.record "schema" "sxlm.chat-procedure-evaluation.v1" "generated" "2026-09-08T16:24:40.044Z" "passed" true "profiles" $v465 "regressions" $v468 "phraseCompilation" $v470 "qualification" "Public procedure inheritance and bounded lexical stress, with optional facts and rules ablated. This does not evaluate semantic fidelity, arbitrary document scale or unrestricted language."
 @output result $v471

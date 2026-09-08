@@ -1,0 +1,24 @@
+@v0 kernel.value.record "file" "candidate.sop" "bytes" 41268 "hash" "85a9338b4316e9dd3b46707f1153d9477ce6a20de38b311687b1cb981c5d16e3"
+@v1 kernel.value.record "file" "build.mjs" "bytes" 5960 "hash" "af22d4822122cacabb5945da816898831bb3d226320b5a52f515582ca7eee2b4"
+@v2 kernel.value.record "file" "agent-result-1.txt" "bytes" 484 "hash" "fcebe16bb93df55eb14dc3b22f3450ac7b331a750da4d7e9d3662e5a23dbe1c0"
+@v3 kernel.seq.make item $v0 item $v1 item $v2
+@v4 kernel.value.record "before" 112 "after" 123
+@v5 kernel.value.record "id" "shared-variable-guard" "status" "budget-exceeded" "gaps" null "milliseconds" 3195.05
+@v6 kernel.seq.make item $v5
+@v7 kernel.value.record "stage" "procedure-regression" "profile" "new-document-observations-ablated" "parentModel" "6c9a0161b1ce67e62c3176263cdfe5e37f4771ba5d4e25534cc96708539d0817" "grammarProductions" $v4 "regressions" $v6
+@v8 kernel.value.record "schema" "sxlm.document-attempt.v1" "attempt" 1 "accepted" false "artifacts" $v3 "candidate" null "error" "Document candidate introduced regressions: shared-variable-guard" "diagnostic" $v7 "remainingMilliseconds" 793691 "qualification" "Accepted means candidate validation passed; activation also requires a live job and valid conversation replay. Repeated validation supplies adaptive feedback, not blind evaluation."
+@v9 kernel.value.record "file" "candidate.sop" "bytes" 35820 "hash" "eeb9d2a7c886a75dd8ce8b33ed08a635c88c3cb148485d292c9b8b9bcfce7923"
+@v10 kernel.value.record "file" "build.mjs" "bytes" 7329 "hash" "9af2b1d0bf05f48bc342544f3b90324bf1f37e19dd67cb4d923f19e9dc71f947"
+@v11 kernel.value.record "file" "agent-result-2.txt" "bytes" 436 "hash" "521748a9ae9d83deece37574032665c21e205eb73f42d41f66aa023b2a69a588"
+@v12 kernel.seq.make item $v9 item $v10 item $v11
+@v13 kernel.value.record "before" 112 "after" 116
+@v14 kernel.value.record "id" "relative-negative-body" "status" "budget-exceeded" "gaps" null "milliseconds" 3341.63
+@v15 kernel.seq.make item $v14
+@v16 kernel.value.record "stage" "procedure-regression" "profile" "new-document-observations-ablated" "parentModel" "6c9a0161b1ce67e62c3176263cdfe5e37f4771ba5d4e25534cc96708539d0817" "grammarProductions" $v13 "regressions" $v15
+@v17 kernel.value.record "schema" "sxlm.document-attempt.v1" "attempt" 2 "accepted" false "artifacts" $v12 "candidate" null "error" "Document candidate introduced regressions: relative-negative-body" "diagnostic" $v16 "remainingMilliseconds" 253603 "qualification" "Accepted means candidate validation passed; activation also requires a live job and valid conversation replay. Repeated validation supplies adaptive feedback, not blind evaluation."
+@v18 kernel.seq.make item $v8 item $v17
+@v19 kernel.seq.make item "Text, office part/slide/worksheet labels and cell addresses are retained. Layout, drawings and embedded objects require inspection of the original." item "Spreadsheet formulas are reported with cached values; formulas are never executed and caches may be stale." item "Word table paragraphs retain text order but do not preserve merged-cell geometry."
+@v20 kernel.value.record "schema" "sxlm.document-extraction.v1" "originalHash" "8f92f807e4f0593ae74625ec1965b5e6cf906bad6c1d49cce0da82bac7fbf4ea" "originalFile" "input/document.xlsx" "format" "xlsx" "extractor" "openxml-stream-v1" "extractorSourceHash" "86ef51f68c52a582217e9196ce257cdf951ad4a68046dc337bf3d5fd863da233" "textHash" "5b49762cf7d7b5c5b8f3651c38f91b774e8f69ffc33ffa1ef0fd353c68f928d4" "chunks" 1 "characters" 342 "limitations" $v19 "storage" "extraction-a122ff16-fccc-4615-902c-8a19f155780a"
+@v21 kernel.seq.make
+@v22 kernel.value.record "schema" "sxlm.chat-xlsx-live.v1" "generated" "2026-09-08T16:53:11.370Z" "liveCodex" true "chat" "87731dc0-bf47-4186-bdb0-486bfa2fbf40" "document" "e2b65e1e-1602-4bbd-8d72-320c68db0303" "job" "a122ff16-fccc-4615-902c-8a19f155780a" "parentModel" "6c9a0161b1ce67e62c3176263cdfe5e37f4771ba5d4e25534cc96708539d0817" "model" null "candidate" null "status" "failed" "error" "Document candidate introduced regressions: relative-negative-body" "attempts" $v18 "extraction" $v20 "before" "unknown" "total" 8 "passed" false "correct" 0 "results" $v21 "qualification" "An actual installed Codex process interpreted a synthetic two-sheet workbook. Queries were outside its copied task packet, but fixture, expectations and host share project authorship. Finite format/composition evidence does not establish general spreadsheet understanding."
+@output result $v22

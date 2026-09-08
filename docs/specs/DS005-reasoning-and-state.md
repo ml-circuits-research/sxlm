@@ -29,6 +29,16 @@ Every derived [atom](../wiki.html#definition-atom) must retain its rule, binding
 
 A valid proof establishes the formal conclusion under those premises. It must not certify source truth, missing language [coverage](../wiki.html#definition-coverage) or arbitrary parser correctness. One retained witness per generated [atom](../wiki.html#definition-atom) does not establish complete alternative-derivation tracking or truth maintenance under retraction. Those capabilities require additional contracts and evidence.
 
+### Optional relational teaching profile
+
+Elementary version 3 supplies authored relational axioms through [SOP](../wiki.html#definition-sop) theory [providers](../wiki.html#definition-provider). Mother and father specialize parent; brother and sister specialize sibling. Sibling is symmetric, but it is not treated as transitive, and shared parenthood alone does not create a sibling edge. Grandparent composes exactly two known parent links, grandchild reverses grandparent, and ancestor retains transitive ancestry. A stated grandparent relation must not invent missing intermediate people. These are explicit kinship interpretations, not a complete family ontology.
+
+Qualitative height, weight, size, left/right position and temporal order use separate predicates. Each declared ordering supplies inverse directions, transitivity and asymmetry within one fixed reference frame and comparison dimension. A conclusion in one dimension must not imply another dimension. Incompatible supplied orders may produce both positive and negative support; they must not cause unrelated conclusions. Temporal before/after is distinct from the adjacent named calendar cycle, which may wrap around.
+
+The profile interprets `in` as literal spatial containment in one state and supplies containment transitivity. This axiom does not model metaphorical uses of the preposition, movement, changing locations, event time or retraction. Those capabilities need separate interpretation and state-transition contracts. The W3C [OWL primer](https://www.w3.org/TR/owl2-primer/) supplies the formal relation patterns; their application to these predicate names is authored supervision. Temporal ordering also follows the declared sense in the [Time Ontology](https://www.w3.org/TR/owl-time/).
+
+`eval/relational-cases.mjs` provides 29 public probes, including multi-generation depth, wrong-role joins, belief isolation, negative subtype counterexamples, nontransitive siblings, relative restrictions, selection, contradictions and separate dimensions. `test/relational-language.test.mjs` additionally checks a new lexical relation, theory [ablation](../wiki.html#definition-ablation) and transactional resource failure. These checks do not imply that other relation families are automatically discovered.
+
 ### Ordered quantities and transactions
 
 Quantity state must follow narrative order and exact rational arithmetic. Questions within a turn must observe the state at their position. Assignment, addition, subtraction and transfer must preserve explicit evidence and dependencies. A known transfer out of one inventory must not require a known recipient initial total; the recipient may retain an unknown total with a known delta.
@@ -49,6 +59,8 @@ The `fact-fragments` [provider](../wiki.html#definition-provider) slot must reco
 ### Privileged relational mechanism contract
 
 The relational operations implement a finite, signed Horn profile. Predicate names and constants are arbitrary input data. No operation recognizes a natural-language phrase, selects a task, mutates a quantity, or chooses a summary.
+
+The optional elementary theory adds kinship chains, qualitative comparison and containment through [SOP](../wiki.html#definition-sop). Its rules state their assumptions: one reference frame and comparison dimension, a spatial containment interpretation for `in`, and distinct temporal ordering and calendar adjacency relations. Siblings are symmetric but not transitive; a grandparent chain has exactly two parent links. New relation nouns reuse the same language construction. The [reasoning contract](../specsLoader.html?spec=DS005-reasoning-and-state.md) defines the counterexamples and the boundary with movement, defaults and changing state.
 
 An [atom](../wiki.html#definition-atom) has a predicate, an ordered sequence of string terms, an explicit sign, and a [context](../wiki.html#definition-context) identifier. Terms beginning with `?` are variables in this profile. Missing sign means positive; missing [context](../wiki.html#definition-context) denotes the profile's default [context](../wiki.html#definition-context). Canonical [atom](../wiki.html#definition-atom) identity includes all four components. Index identities serialize a tuple, so delimiters occurring in an input name cannot merge distinct predicates or contexts.
 

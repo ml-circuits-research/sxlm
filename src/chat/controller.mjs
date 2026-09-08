@@ -9,7 +9,8 @@ import { ChatModels } from './models.mjs';
 export class ChatController {
   constructor({ current, directory, elementary = true, agent = {} }) {
     this.current = current; this.store = new ChatStore(directory);
-    this.jobs = new DocumentJobs(this.store, { ...agent, onReady: (chat, job) => this.activate(chat, job) });
+    this.jobs = new DocumentJobs(this.store, { ...agent,
+      onReady: (chat, job, checkActive) => this.activate(chat, job, checkActive) });
     this.elementary = elementary ? readPack(new URL('../../packs/elementary-knowledge.sop', import.meta.url)) : null;
     this.models = new Map();
     this.archives = new ChatModels(this.store);
@@ -76,11 +77,12 @@ export class ChatController {
     const turn = this.store.appendTurn(id, text, retained, session.snapshot());
     return { index: turn.index, text: turn.text, result: turn.result };
   }
-  activate(id, job) {
+  activate(id, job, checkActive = () => {}) {
     const receipt = this.jobs.get(id, job), current = this.model(id);
     check(receipt.status === 'ready' && receipt.parentModel === current.resources.hash, 'Document job is unavailable or has a stale parent');
     const model = this.model(id, job);
     this.session(id, model);
+    checkActive();
     this.store.update(id, { activeJobs: [...(this.store.info(id).activeJobs ?? []), job], model: model.resources.hash });
     return { model: model.resources.hash, receipt: receipt.receipt };
   }
@@ -124,6 +126,9 @@ export class ChatController {
     }
     if (action === 'jobs' && item && !operation && get) { send(this.jobs.get(id, item)); return true; }
     if (action === 'jobs' && operation === 'cancel' && post) { await readSOP(request); send(this.jobs.cancel(id, item)); return true; }
+    if (action === 'jobs' && operation === 'recheck' && post) {
+      await readSOP(request); send(this.jobs.recheck(id, item, this.model(id))); return true;
+    }
     if (action === 'jobs' && operation === 'activate' && post) { await readSOP(request); send(this.activate(id, item)); return true; }
     if (action === 'jobs' && operation === 'log' && get) {
       this.jobs.get(id, item);

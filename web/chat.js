@@ -31,7 +31,7 @@ async function* chunks(file) {
 
 export function mountChat(api, error) {
   let selected = localStorage.getItem('sxlm.chat') || null, data, timer, generation = 0;
-  let displayed = '', uploading = false;
+  let displayed = '', uploading = false, pollingError = false;
   const path = suffix => '/api/chat/' + selected + suffix;
   const safely = action => async () => { error(''); try { await action(); } catch (e) { error(e.message); } };
   function message(turn, chat) {
@@ -77,13 +77,27 @@ export function mountChat(api, error) {
       $('chat-messages').scrollTop = $('chat-messages').scrollHeight;
     }
     renderAttachments();
+    scheduleRefresh();
+  }
+  function scheduleRefresh() {
     clearTimeout(timer);
-    if (data.jobs.some(active)) timer = setTimeout(() => refresh().catch(e => error(e.message)), 2000);
+    if (data?.chat.id !== selected || !data.jobs.some(active)) return;
+    timer = setTimeout(async () => {
+      try {
+        await refresh();
+        if (pollingError) { error(''); pollingError = false; }
+      } catch {
+        pollingError = true;
+        error('Unable to refresh document processing. Reconnecting…');
+        scheduleRefresh();
+      }
+    }, 2000);
   }
   function renderAttachments() {
     const last = data.jobs.at(-1), processing = last && active(last);
     const stages = { queued: 'Waiting to process your document…', preparing: 'Reading your document…',
-      running: 'Learning from your document…', validating: 'Checking the interpretation…' };
+      running: last?.attempt > 1 ? 'Refining the interpretation…' : 'Learning from your document…',
+      validating: 'Checking the interpretation…' };
     $('chat-presence').textContent = processing ? stages[last.status] : 'Ready to talk';
     $('chat-file').disabled = !!processing || uploading; $('chat-attach').disabled = !!processing || uploading;
     $('chat-send').disabled = !!processing || uploading;
@@ -102,6 +116,8 @@ export function mountChat(api, error) {
     if (last) {
       const detail = $('chat-processing-detail'); detail.replaceChildren();
       detail.append(node('p', 'Formal proofs depend on the document interpretation.', 'hint'));
+      if (last.attempt > 1)
+        detail.append(node('p', 'The first interpretation failed validation. The coding agent received a diagnostic and one correction attempt.', 'hint'));
       for (const limitation of [...(last.receipt?.limitations ?? last.interpretationLimitations ?? []), ...(last.extraction?.limitations ?? [])])
         detail.append(node('p', limitation, 'hint'));
       if (processing) {

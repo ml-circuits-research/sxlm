@@ -13,8 +13,8 @@ export function compileConceptProperties(specification, { id, origin }) {
   for (const property of properties) {
     const { concept, relation, values, mode, source, evidence } = property;
     check(typeof concept === 'string' && concept.length > 0 && !concept.startsWith('?'), 'Invalid property concept');
-    check(typeof relation === 'string' && relation.length > 0 && !relation.startsWith('?'), 'Invalid property relation');
-    check(Array.isArray(values) && values.length <= 6 && values.every(value =>
+    check(typeof relation === 'string' && relation.length > 0 && relation.length < 100 && !relation.startsWith('?'), 'Invalid property relation');
+    check(Array.isArray(values) && values.length <= 5 && values.every(value =>
       typeof value === 'string' && !value.startsWith('?')), 'Property arguments must be ground strings');
     check(['definition', 'all-instances', 'typical'].includes(mode), 'Declare the property qualification');
     check(typeof property.negative === 'boolean' && (property.context ?? 'world') === 'world',

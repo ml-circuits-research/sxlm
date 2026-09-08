@@ -85,6 +85,16 @@ test('property teaching replays exactly and syntax-only slots cannot acquire sem
   const receipt = replay.receipts.find(item => item.pack === pack.id);
   assert.equal(receipt.reproduced, true);
   assert.deepEqual(receipt.inducedModules, ['learned-property-question.compose', 'learned-category-property-question.compose']);
+  const example = pack.training.language.constructions[0].examples[0];
+  const value = (name, category) => {
+    const span = example.spans[name];
+    return model.grammar.parse(example.text.slice(span.start, span.end), { start: category }).alternatives[0];
+  };
+  for (const auxiliary of [null, 'unrelated', { ignored: ['syntax', 7] }]) {
+    const meaning = model.runtime.execute('learned-property-question.compose', { children: ['what', auxiliary,
+      value('reference', 'EverydayReference'), value('relation', 'EverydayQuestionTail')], scope: '' });
+    assert.deepEqual(meaning, example.meaning);
+  }
   const teaching = structuredClone(pack.training.language.constructions[0]);
   for (const slot of teaching.slots) slot.semantic = false;
   assert.throws(() => induceConstruction(model, teaching), /at least one semantic slot/);

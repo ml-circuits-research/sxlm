@@ -1,0 +1,18 @@
+@input item any
+@input with object
+@atom kernel.value.get value $item key "atom" fallback null
+@predicate kernel.value.get value $atom key "predicate" fallback null
+@kind kernel.value.equal left $predicate right "kind"
+@proof kernel.value.get value $item key "proof" fallback null
+@origin kernel.value.get value $proof key "kind" fallback null
+@asserted kernel.value.equal left $origin right "asserted"
+@context kernel.value.get value $atom key "context" fallback null
+@world kernel.value.equal left $context right "world"
+@negative kernel.value.get value $atom key "negative" fallback false
+@positive kernel.value.equal left $negative right false
+@base kernel.boolean.and left $asserted right $kind
+@safe kernel.boolean.and left $world right $positive
+@show kernel.boolean.and left $base right $safe
+@args kernel.value.record atom $atom context $with
+@result kernel.flow.choose condition $show then "concept.proof-text" else "concept.empty-text" with $args
+@output result $result

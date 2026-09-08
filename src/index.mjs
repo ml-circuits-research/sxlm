@@ -8,7 +8,9 @@ export { readPack, validatePack, combinePacks, bootstrapURL } from './learning/p
 export { trainSequence, learnSequencePack } from './learning/sequence.mjs';
 export { compileGrammarKnowledge } from './learning/grammar.mjs';
 export { compileKnowledge, compileTheoryKnowledge } from './learning/knowledge.mjs';
+export { compileConceptKnowledge } from './learning/concepts.mjs';
 export { induceConstruction } from './learning/induce.mjs';
+export { compileConceptProperties } from './learning/properties.mjs';
 export { synthesizeProgram, learnProgramPack } from './learning/search.mjs';
 export { verifyProofs, verifyCertificate } from './semantics/verify.mjs';
 export { encodeSOP, decodeSOP } from './kernel/sop-data.mjs';

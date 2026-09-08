@@ -1,0 +1,20 @@
+@v0 kernel.seq.make item "animal" item "mammal" item "vertebrate"
+@v1 kernel.value.record "valid" true "checkedNodes" 6 "format" "dag-certificate"
+@v2 kernel.value.record "nodes" 44612 "steps" 5389 "tokens" 10 "terminalCacheHits" 11 "facts" 215 "matches" 28933 "milliseconds" 960.06
+@v3 kernel.value.record "chat" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "text" "What is a cat?" "answer" "Vertebrates are animals. Mammals are vertebrates. Cats are mammals." "status" "answered" "truth" null "values" $v0 "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "gaps" 0 "proof" $v1 "metrics" $v2
+@v4 kernel.seq.make item "animal" item "mammal" item "vertebrate"
+@v5 kernel.value.record "valid" true "checkedNodes" 6 "format" "dag-certificate"
+@v6 kernel.value.record "nodes" 43699 "steps" 5055 "tokens" 8 "terminalCacheHits" 11 "facts" 215 "matches" 28933 "milliseconds" 974.15
+@v7 kernel.value.record "chat" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "text" "What are cats?" "answer" "Vertebrates are animals. Mammals are vertebrates. Cats are mammals." "status" "answered" "truth" null "values" $v4 "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "gaps" 0 "proof" $v5 "metrics" $v6
+@v8 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
+@v9 kernel.value.record "nodes" 31149 "steps" 3828 "tokens" 12 "terminalCacheHits" 9 "facts" 215 "matches" 28933 "milliseconds" 743.75
+@v10 kernel.value.record "chat" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "text" "Is a cat an animal?" "answer" "Yes. Cats are animals." "status" "answered" "truth" "true" "values" null "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "gaps" 0 "proof" $v8 "metrics" $v9
+@v11 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v12 kernel.value.record "nodes" 30785 "steps" 3838 "tokens" 12 "terminalCacheHits" 9 "facts" 215 "matches" 28814 "milliseconds" 706.91
+@v13 kernel.value.record "chat" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "text" "Is some cat an animal?" "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "status" "unknown" "truth" "unknown" "values" null "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "gaps" 0 "proof" $v11 "metrics" $v12
+@v14 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v15 kernel.value.record "nodes" 33083 "steps" 4574 "tokens" 14 "terminalCacheHits" 19 "facts" 215 "matches" 28933 "milliseconds" 755.94
+@v16 kernel.value.record "chat" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "text" "Why is a cat a mammal?" "answer" "These classification statements support the answer: Cats are mammals." "status" "answered" "truth" "true" "values" null "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "gaps" 0 "proof" $v14 "metrics" $v15
+@v17 kernel.seq.make item $v3 item $v7 item $v10 item $v13 item $v16
+@v18 kernel.value.record "schema" "sxlm.live-concepts.v1" "generated" "2026-09-08T17:49:14.792Z" "passed" true "chat" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "probeChat" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "probes" $v17
+@output result $v18

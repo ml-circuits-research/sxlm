@@ -1,16 +1,21 @@
 @input value object
-@rendered render.answer value $value
+@raw render.answer value $value
+@rendered data.object value $raw
 @task kernel.value.get value $rendered key "task" fallback null
 @presentation kernel.value.get value $task key "presentation" fallback null
 @mode kernel.value.get value $presentation key "mode" fallback null
 @definition kernel.value.equal left $mode right "definition"
+@classification kernel.value.equal left $mode right "classification"
+@property kernel.value.equal left $mode right "property"
+@modes kernel.seq.make item $definition item $classification item $property
+@conceptual kernel.seq.includes items $modes value true
 @status kernel.value.get value $rendered key "status" fallback null
 @answered kernel.value.equal left $status right "answered"
 @coverage kernel.value.get value $rendered key "coverage" fallback null
 @gaps kernel.value.get value $coverage key "gaps" fallback 1
 @complete kernel.value.equal left $gaps right 0
-@eligible kernel.boolean.and left $definition right $answered
+@eligible kernel.boolean.and left $conceptual right $answered
 @safe kernel.boolean.and left $eligible right $complete
 @args kernel.value.record rendered $rendered presentation $presentation
-@result kernel.flow.choose condition $safe then "concept.render-definition" else "concept.render-keep" with $args
+@result kernel.flow.choose condition $safe then "concept.render-concept" else "concept.render-keep" with $args
 @output result $result

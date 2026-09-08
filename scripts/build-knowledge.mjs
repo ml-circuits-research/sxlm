@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { compileKnowledge, compileTheoryKnowledge } from '../src/learning/knowledge.mjs';
 import { compileSOP } from '../src/kernel/sop.mjs';
 import { canonical, digest } from '../src/kernel/data.mjs';
+import { replaceLinkages } from './support/linkages.mjs';
 
 export function synthesizeKnowledge() {
   const input = decodeSOP(readFileSync(new URL('../training/knowledge-bootstrap.sop', import.meta.url)));
@@ -29,7 +30,7 @@ export function installKnowledge(pack, result = synthesizeKnowledge()) {
   const ids = new Set(result.modules.map(m => m.id));
   pack.sop = [...(pack.sop ?? []).filter(m => !ids.has(m.id)), ...result.modules];
   pack.providers = { ...(pack.providers ?? {}), ...result.theory.providers };
-  pack.linkages = [...(pack.linkages ?? []).filter(l => ![result.linkage.id, result.factLinkage.id].includes(l.id)), result.linkage, result.factLinkage];
+  pack.linkages = replaceLinkages(pack.linkages ?? [], [result.linkage, result.factLinkage]);
   pack.entrypoints.initial = 'theory.bootstrap';
   pack.entrypoints.theory = result.linkage.id;
   pack.entrypoints.text = 'language.text-config';

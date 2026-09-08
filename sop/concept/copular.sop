@@ -7,7 +7,8 @@
 @articles kernel.seq.make item "a" item "an"
 @article kernel.seq.includes items $articles value $determiner
 @empty kernel.value.empty
-@concepts knowledge.concepts with $empty
+@records knowledge.concepts with $empty
+@concepts kernel.seq.pluck items $records key "id"
 @known kernel.seq.includes items $concepts value $category
 @eligible kernel.boolean.and left $article right $known
 @complement kernel.value.get value $children key 2 fallback null

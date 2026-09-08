@@ -1,0 +1,18 @@
+@input with object
+@raw kernel.value.get value $with key "rendered" fallback null
+@rendered data.object value $raw
+@task kernel.value.get value $rendered key "task" fallback null
+@patterns kernel.value.get value $task key "patterns" fallback null
+@items data.array value $patterns
+@empty kernel.value.empty
+@forms knowledge.concepts with $empty
+@args kernel.value.record forms $forms
+@lines kernel.flow.map items $items circuit "concept.line" with $args
+@sentence kernel.text.join items $lines separator " "
+@text kernel.text.concat left "Yes. " right $sentence
+@updated data.attach record $rendered key "text" value $text
+@rawExplain kernel.value.get value $task key "explain" fallback false
+@explain data.boolean value $rawExplain
+@context kernel.value.record rendered $updated forms $forms
+@result kernel.flow.choose condition $explain then "concept.render-why" else "concept.render-keep" with $context
+@output result $result

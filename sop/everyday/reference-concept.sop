@@ -1,0 +1,5 @@
+@input with object
+@term kernel.value.get value $with key "category" fallback null
+@constraints kernel.seq.empty
+@result kernel.value.record term $term domain "concept" constraints $constraints
+@output result $result

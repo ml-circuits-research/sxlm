@@ -40,7 +40,7 @@ A [pack](../wiki.html#definition-pack) is a versioned `sxlm.pack.v1` artifact th
 
 #### Bootstrap
 
-The English [bootstrap](../wiki.html#definition-bootstrap) is the base [pack](../wiki.html#definition-pack) loaded by a default `SymbolicModel`. It establishes [grammar](../wiki.html#definition-grammar), formal theory, text configuration, task policy and initial learned or memorized components. Model installation reconstructs these resources through [circuits](../wiki.html#definition-circuit) and seals them. The [bootstrap](../wiki.html#definition-bootstrap) mixes authored and induced knowledge. Its 851 installed modules include compilation fragments and [provider](../wiki.html#definition-provider) [linkages](../wiki.html#definition-linkage); 288 reproduced fragments do not mean 288 discovered language skills. The remaining authored knowledge and native policies keep the full learning objective unfulfilled.
+The English [bootstrap](../wiki.html#definition-bootstrap) is the base [pack](../wiki.html#definition-pack) loaded by a default `SymbolicModel`. It establishes [grammar](../wiki.html#definition-grammar), formal theory, text configuration, task policy and initial learned or memorized components. Model installation reconstructs these resources through [circuits](../wiki.html#definition-circuit) and seals them. The [bootstrap](../wiki.html#definition-bootstrap) mixes authored and induced knowledge. Its 878 installed modules include compilation fragments and [provider](../wiki.html#definition-provider) [linkages](../wiki.html#definition-linkage); 288 reproduced fragments do not mean 288 discovered language skills. The remaining authored knowledge and native policies keep the full learning objective unfulfilled.
 
 #### Grammar
 
@@ -100,7 +100,7 @@ A [linkage](../wiki.html#definition-linkage) is a static module-composition decl
 
 #### Construction induction
 
-[Construction induction](../wiki.html#definition-construction-induction) learns a reusable [grammar](../wiki.html#definition-grammar) category from aligned annotated examples. The teacher supplies the target category and categories for varying slots. The learner parses those variations, aligns their semantic changes and emits a production with a composition [circuit](../wiki.html#definition-circuit). It rejects underdetermined or incompatible alignment instead of guessing a convenient rule. Transfer into new nouns, structural positions and attributed contexts tests reuse beyond replay. This method does not discover arbitrary syntax or an ontology from unlabeled text.
+[Construction induction](../wiki.html#definition-construction-induction) learns a reusable production in an existing [grammar](../wiki.html#definition-grammar) category from annotated examples. The teacher supplies the target category and typed slots. The legacy form aligns varying token columns; the span form accepts variable-width expressions and learns nested field selection and sequence composition from their parsed meanings. The learner emits a production and typed [SOP](../wiki.html#definition-sop) [circuit](../wiki.html#definition-circuit), retaining supervision and replay evidence. Ambiguous field alignments and unexplained changes are rejected, but the bounded search and its preferences do not prove a unique hypothesis. Transfer into new nouns, predicates, structural positions and attributed contexts tests reuse beyond replay. This method does not discover arbitrary syntax or an ontology from unlabeled text.
 
 #### Program synthesis
 

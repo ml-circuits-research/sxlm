@@ -27,7 +27,11 @@ try{
   for(const stage of stages)execFileSync(process.execPath,['scripts/'+stage+'.mjs','--check'],{cwd:checkout,encoding:'utf8',timeout:60000});
   const elementary = executionDigest(decodeSOP(readFileSync(join(root,'packs/elementary-knowledge.sop'),'utf8')));
   assert.equal(executionDigest(decodeSOP(readFileSync(join(checkout,'packs/elementary-knowledge.sop'),'utf8'))),elementary,'Elementary pack rebuild differs');
-  const report={elementaryPackHash:elementary,schema:'sxlm.rebuild.v1',passed:true,packHash:original,stages:outputs,qualification:'Exact order-sensitive pack reproduction in an isolated copy. Compilation provenance and authored policy remain explicit; this does not establish independent learning quality.'};
+  const constructions = executionDigest(decodeSOP(readFileSync(join(root,'packs/english-constructions.sop'),'utf8')));
+  assert.equal(executionDigest(decodeSOP(readFileSync(join(checkout,'packs/english-constructions.sop'),'utf8'))),constructions,'Construction pack rebuild differs');
+  const everyday = executionDigest(decodeSOP(readFileSync(join(root,'packs/everyday-knowledge.sop'),'utf8')));
+  assert.equal(executionDigest(decodeSOP(readFileSync(join(checkout,'packs/everyday-knowledge.sop'),'utf8'))),everyday,'Everyday pack rebuild differs');
+  const report={everydayPackHash:everyday,constructionPackHash:constructions,elementaryPackHash:elementary,schema:'sxlm.rebuild.v1',passed:true,packHash:original,stages:outputs,qualification:'Exact order-sensitive pack reproduction in an isolated copy. Compilation provenance and authored policy remain explicit; this does not establish independent learning quality.'};
   writeFileSync(join(root,'reports/rebuild.sop'),encodeSOP(report)+'\n');
   console.log('Isolated rebuild passed: '+stages.length+' build stages and their replay checks.');
 }finally{rmSync(temporary,{recursive:true,force:true});}

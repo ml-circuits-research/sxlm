@@ -1,0 +1,7 @@
+@input with object
+@rendered concept.render-proof with $with
+@rawText kernel.value.get value $rendered key "text" fallback null
+@sentences data.string value $rawText
+@text kernel.text.concat left "These classification statements support the answer: " right $sentences
+@result data.attach record $rendered key "text" value $text
+@output result $result

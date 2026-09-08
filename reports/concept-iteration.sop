@@ -1,0 +1,18 @@
+@v0 kernel.value.record "passed" 16 "total" 16 "model" "5d9062e9f9a0db377f8f5e00234550fe38ccb23b9f9d2f61eba7212dc10c4e7e"
+@v1 kernel.value.record "specifications" 14 "chapters" 15 "browserChecks" 26
+@v2 kernel.value.record "implementationSuite" 215 "additionalSDKIntegration" 1 "structuralTransfer" $v0 "rebuildStages" 12 "liveProbes" 5 "preservedDocumentModel" "f2a2634e43408789dee0161c817f81e4d083c0101689168949f0ba0971831d0a" "documentation" $v1
+@v3 kernel.value.record "file" "reports/current-tests.tap" "hash" "dc7f7ec80e27cb51ea07fa4b137f98a281bc0d7808263804ca2d1cfe73d3fc22"
+@v4 kernel.value.record "file" "reports/current-concept-sdk.tap" "hash" "5cb8da9215c1315f08c241598af1af72db5dee552598800565400949a82db274"
+@v5 kernel.value.record "file" "reports/current-eval.log" "hash" "3a8b288dfc3aea92f23b3b5a2289db5bf74e469c8b0db61bb9d8e6369269ae55"
+@v6 kernel.value.record "file" "reports/current-learning.log" "hash" "5fb69fe7b593384412337f22016ed4eee8163f591efe98eea036408234f43424"
+@v7 kernel.value.record "file" "reports/current-rebuild.log" "hash" "409027fdb229696f4b4635a7ea8f73fdb0b0fd40833d9142421cf25af916e249"
+@v8 kernel.value.record "file" "reports/current-standalone.log" "hash" "6d47e16da476c7ada72665f1a6f7e737c0a7a8cb570541a6186fce160dc37fb0"
+@v9 kernel.value.record "file" "reports/current-browser.log" "hash" "06177508d9031d8d01736aeb9365efe752f44193ebd2ac5013e7bef0c04e2eba"
+@v10 kernel.value.record "file" "reports/current-docs-check.log" "hash" "a70c9bdf46e3d72983f29cc8ccb763468d908b96959a62c0b0e90ba4ac90b3c4"
+@v11 kernel.value.record "file" "reports/current-docs-browser.log" "hash" "dd4f3d9dc6bd0a05b3e157380f56059c850a9e54b8f5bd9e69ea4e6537719b9f"
+@v12 kernel.value.record "file" "reports/current-vision.log" "hash" "2c45e10ddf00e8dcedd564779ab92b7737e7b6deafd9b6c2bff0e156242e75da"
+@v13 kernel.seq.make item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10 item $v11 item $v12
+@v14 kernel.seq.make item "reports/concept-transfer.sop" item "reports/chat-concepts-live.sop" item "reports/chat-query-migration.sop" item "reports/chat-preservation-concepts.sop" item "reports/vision-audit.sop"
+@v15 kernel.seq.make item "small-general-kernel" item "knowledge-only-in-circuits" item "all-competence-learned"
+@v16 kernel.value.record "schema" "sxlm.concept-iteration.v1" "generated" "2026-09-08T17:54:40.623Z" "bootstrapModel" "bcdc38021f8b611215d55e1a848f4e9b92679882d541a44443e33f4938a6a6f1" "chatBase" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "native" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "passed" true "verification" $v2 "evidence" $v13 "artifacts" $v14 "goalComplete" false "architecturalCompletion" false "unmetRequirements" $v15 "allPriorExperimentsCovered" false "qualification" "Same-author development evidence for authored concept semantics, source-knowledge compilation and actual HTTP behavior. The SDK test executes the real compiler in an isolated process with supplied supervision; no new Codex teaching run or autonomous concept induction is claimed. Older evaluation reports retain their original model identities."
+@output result $v16

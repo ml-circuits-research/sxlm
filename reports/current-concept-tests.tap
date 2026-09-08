@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: one taught concept graph transfers across definition, plural, composition and instances
+ok 1 - one taught concept graph transfers across definition, plural, composition and instances
+  ---
+  duration_ms: 17529.094297
+  type: 'test'
+  ...
+# Subtest: removing the taught knowledge removes competence and restores it without native changes
+ok 2 - removing the taught knowledge removes competence and restores it without native changes
+  ---
+  duration_ms: 4570.409851
+  type: 'test'
+  ...
+# Subtest: concept supervision rejects invalid spans, undeclared categories and hidden context loss
+ok 3 - concept supervision rejects invalid spans, undeclared categories and hidden context loss
+  ---
+  duration_ms: 0.69095
+  type: 'test'
+  ...
+# Subtest: ordinary category dialogue is coherent without inventing an instance or biological explanation
+ok 4 - ordinary category dialogue is coherent without inventing an instance or biological explanation
+  ---
+  duration_ms: 5403.799688
+  type: 'test'
+  ...
+# Subtest: phrase compilation preserves exact values, prefixes and ambiguity under the parent lexical policy
+ok 5 - phrase compilation preserves exact values, prefixes and ambiguity under the parent lexical policy
+  ---
+  duration_ms: 1531.049496
+  type: 'test'
+  ...
+# Subtest: shared lexical prefixes compose in new structures and reduce flat recognition work
+ok 6 - shared lexical prefixes compose in new structures and reduce flat recognition work
+  ---
+  duration_ms: 4267.530231
+  type: 'test'
+  ...
+# Subtest: phrase compilation requires supplied tokenization and inert lexical meanings
+ok 7 - phrase compilation requires supplied tokenization and inert lexical meanings
+  ---
+  duration_ms: 0.598968
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 39111.280887

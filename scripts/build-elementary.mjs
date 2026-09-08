@@ -34,6 +34,12 @@ export function buildElementary({ input = decodeSOP(readFileSync(trainingURL)), 
     const source = { id: digest(text), text, pack: input.id };
     return { atom: item.atom, evidence: { source: source.id, start: 0, end: text.length }, source };
   });
+  for (const concept of input.concepts ?? []) {
+    const text = encodeSOP({ schema: 'sxlm.category-declaration.v1', concept }, { canonical: true });
+    const source = { id: digest(text), text, pack: input.id };
+    facts.push({ atom: { predicate: 'declared_category', terms: [concept.id], negative: false, context: 'world' },
+      evidence: { source: source.id, start: 0, end: text.length }, source });
+  }
   const memory = compileKnowledge(facts, { id: 'memory.elementary-facts', origin: provenance });
   const theory = compileTheoryKnowledge(input.rules.map(item => ({ ...item.rule, teaching: teaching(item) })), {
     id: 'memory.elementary-theory', origin: provenance, sourceName: input.id

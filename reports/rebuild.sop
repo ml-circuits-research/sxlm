@@ -1,15 +1,17 @@
-@v0 kernel.value.record "stage" "learn-realization" "output" "Installed 29 induced realization circuits; 5 adapters remain authored."
-@v1 kernel.value.record "stage" "build-semantics" "output" "Installed 248 semantic circuits. Policy provenance remains explicit."
-@v2 kernel.value.record "stage" "build-sop" "output" "Installed 14 SOP modules; summary strategy is now executed as circuits."
-@v3 kernel.value.record "stage" "build-lexical" "output" "Installed 18 lexical SOP modules."
-@v4 kernel.value.record "stage" "build-text" "output" "Installed 6 text-policy SOP modules."
-@v5 kernel.value.record "stage" "build-completion" "output" "Installed 108 completion/memory SOP modules. Raw corpus and native completion are removed from the active path."
-@v6 kernel.value.record "stage" "build-document" "output" "Installed 59 document/grammar SOP modules."
-@v7 kernel.value.record "stage" "build-knowledge" "output" "Installed knowledge circuits; removed raw theory/text and native initial-theory injection."
-@v8 kernel.value.record "stage" "build-expressions" "output" "Installed offline-compiled expression graphs. Compilation is not a learning claim."
-@v9 kernel.value.record "stage" "build-planning" "output" "Installed 18 SOP modules for planning and reusable set coverage."
-@v10 kernel.value.record "stage" "build-elementary" "output" "Built optional elementary pack: 114 facts, 129 rules, 228 modules."
-@v11 kernel.seq.make item $v0 item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10
-@v12 kernel.value.record "elementaryPackHash" "fd3bbaf4f156b7a23a11d83d4e5d15ec2baa71da0587c772fc7ba157bc0f8a2c" "schema" "sxlm.rebuild.v1" "passed" true "packHash" "be6c03f86d52d338a90db2b8fd07e6fd1f70c24db285b0b8e424e1261c70e36e" "stages" $v11 "qualification" "Exact order-sensitive pack reproduction in an isolated copy. Compilation provenance and authored policy remain explicit; this does not establish independent learning quality."
-@output result $v12
+@v0 kernel.value.record "stage" "build-concepts" "output" "Installed 26 authored concept policies."
+@v1 kernel.value.record "stage" "learn-realization" "output" "Installed 29 induced realization circuits; 5 adapters remain authored."
+@v2 kernel.value.record "stage" "build-semantics" "output" "Installed 248 semantic circuits. Policy provenance remains explicit."
+@v3 kernel.value.record "stage" "build-sop" "output" "Installed 14 SOP modules; summary strategy is now executed as circuits."
+@v4 kernel.value.record "stage" "build-lexical" "output" "Installed 18 lexical SOP modules."
+@v5 kernel.value.record "stage" "build-text" "output" "Installed 6 text-policy SOP modules."
+@v6 kernel.value.record "stage" "build-completion" "output" "Installed 108 completion/memory SOP modules. Raw corpus and native completion are removed from the active path."
+@v7 kernel.value.record "stage" "build-document" "output" "Installed 59 document/grammar SOP modules."
+@v8 kernel.value.record "stage" "build-knowledge" "output" "Installed knowledge circuits; removed raw theory/text and native initial-theory injection."
+@v9 kernel.value.record "stage" "build-expressions" "output" "Installed offline-compiled expression graphs. Compilation is not a learning claim."
+@v10 kernel.value.record "stage" "build-planning" "output" "Installed 18 SOP modules for planning and reusable set coverage."
+@v11 kernel.value.record "stage" "build-elementary" "output" "Built optional elementary pack: 114 facts, 129 rules, 252 modules."
+@v12 kernel.value.record "stage" "build-constructions" "output" "Built 5 construction/vocabulary modules."
+@v13 kernel.seq.make item $v0 item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10 item $v11 item $v12
+@v14 kernel.value.record "constructionPackHash" "ce2ff5875d5c3a6db835aff109579c719acf85ceddf25b3a15fd62d450962142" "elementaryPackHash" "65c31dd47e8e489fe59bf702d4b52b011c4016aaeb02248b5785edba7a7edd94" "schema" "sxlm.rebuild.v1" "passed" true "packHash" "9d7525dac5153983690c27396536291e9987e5d5b8a02aace489f06e79c8e2df" "stages" $v13 "qualification" "Exact order-sensitive pack reproduction in an isolated copy. Compilation provenance and authored policy remain explicit; this does not establish independent learning quality."
+@output result $v14
 

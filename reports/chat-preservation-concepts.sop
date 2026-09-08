@@ -1,0 +1,3 @@
+@v0 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v1 kernel.value.record "schema" "sxlm.preserved-document-probe.v1" "generated" "2026-09-08T17:50:54.415Z" "chat" "82343310-f3d8-498d-92cf-c296e2278c8a" "model" "f2a2634e43408789dee0161c817f81e4d083c0101689168949f0ba0971831d0a" "text" "Yes. Rowan is careful." "truth" "true" "verification" $v0 "passed" true
+@output result $v1

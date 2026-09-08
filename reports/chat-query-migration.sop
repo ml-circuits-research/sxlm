@@ -1,0 +1,11 @@
+@v0 kernel.value.record "schema" "sxlm.chat.v1" "id" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "model" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0" "title" "What is a cat?" "created" "2026-09-08T15:31:37.839Z" "updated" "2026-09-08T17:14:42.214Z" "turns" 2 "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0"
+@v1 kernel.value.record "valid" true "checkedNodes" 6 "format" "dag-certificate"
+@v2 kernel.value.record "nodes" 44612 "steps" 5389 "tokens" 10 "terminalCacheHits" 11 "facts" 215 "matches" 28933 "milliseconds" 1009.06
+@v3 kernel.value.record "index" 0 "text" "What is a cat?" "before" "I cannot identify a supported answer from the supplied information." "after" "Vertebrates are animals. Mammals are vertebrates. Cats are mammals." "verification" $v1 "metrics" $v2
+@v4 kernel.value.record "valid" true "checkedNodes" 6 "format" "dag-certificate"
+@v5 kernel.value.record "nodes" 44612 "steps" 5389 "tokens" 10 "terminalCacheHits" 11 "facts" 215 "matches" 28933 "milliseconds" 1018.86
+@v6 kernel.value.record "index" 1 "text" "What is a cat?" "before" "I cannot identify a supported answer from the supplied information." "after" "Vertebrates are animals. Mammals are vertebrates. Cats are mammals." "verification" $v4 "metrics" $v5
+@v7 kernel.seq.make item $v3 item $v6
+@v8 kernel.seq.make item "84cd8b1548e04d07abe75ee6bb6efa13e96be0dc5b84003760b6997820c67987" item "2a0a689a3978b3ed9d88aaa2f34b62fa6a985c5c0176b5099c038cbf7c32f11c"
+@v9 kernel.value.record "schema" "sxlm.query-chat-migration.v1" "id" "183328d2-567b-4a22-9543-b7105de9d301" "chat" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "generated" "2026-09-08T17:48:46.422Z" "priorChat" $v0 "from" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0" "to" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "native" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "checks" $v7 "turnHashes" $v8 "qualification" "Explicit maintenance migration of a document-free query-only conversation. Original turns and the archived base are retained. No document interpretation or observation was migrated." "passed" true "originalTurnsUnchanged" true
+@output result $v9

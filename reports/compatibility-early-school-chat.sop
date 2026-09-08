@@ -1,0 +1,835 @@
+@v0 kernel.value.record "project" "sdlm" "path" "benchmarks/early-school/v1.json" "hash" "3e0ed4f4cb3a1daa6bdd2e829df58296c02f8c57468737284e8a028d8951e9aa" "kind" "user-owned-evaluation-data" "qualification" "Read-only conversion of case data. No sibling implementation is imported or executed; public development-visible cases are not blind validation."
+@v1 kernel.value.record "curriculumHash" "cef6faaae8871f4623da2a2dfbca0555c80bf2fe33afe2218b3bb25b43292139" "inducedCircuits" 29 "authoredAdapters" 5
+@v2 kernel.value.record "schema" "sxlm.semantics-migration.v1" "curriculumHash" "ced69ea2617467d711ede415f0438bb18cb3384085bfed64df4973e116de71d7" "proposalHash" "287bfed467795ac0f3010b00d52d8089a45d6b1a6a425fe81645c293f9e71d4b" "inducedDispatchCircuits" 5 "compiledLearnedFragments" 44 "authoredPolicyCircuits" 37 "qualification" "Dispatch is induced from annotated cases. The policy bodies are agent-authored executable proposals, not learned solely because they compile or reproduce the historical interpreter."
+@v3 kernel.value.record "trainingHash" "c2087f41afd79a30e326fb3b582177baa46695f08308ce5bb39a3a3b0d14563f" "learner" "sequence-pack-v1"
+@v4 kernel.value.record "schema" "sxlm.document-migration.v1" "grammarHash" "2e3f77c17ab5a7cf10de0157fb51e11dac4aff50bce4813e1dc3a4ad352ea6df" "sourceHash" "df50abef13a8fdaf13298b6c32c696b067d5a9ad2619f2ce6ce9244dc9964749" "authoredPolicies" 19 "compiledKnowledgeModules" 40 "qualification" "Grammar knowledge is reconstructed by circuits. The Earley mechanism remains native and requires further review; source compilation is not a learning derivation."
+@v5 kernel.value.record "schema" "sxlm.knowledge-migration.v1" "sourceHash" "43381c1ff31626d38999692002ce969031566d2d72d8e7d4fc031a404353a49d" "modules" 19 "authoredPolicies" 7 "theoryModules" 10 "textModules" 2 "qualification" "Supplied rules/configuration are compiled, not induced. Theory installation now executes through SOP."
+@v6 kernel.value.record "schema" "sxlm.expression-migration.v1" "sourceHash" "e83f010bf1738a5c70c3fbeba0365784c2d2588ee9bbcea43157a4d2ef304f3d" "roots" 131 "templateCalls" 188 "compiledModules" 603 "maxNodes" 124 "qualification" "Offline compilation removes the runtime expression interpreter. Authored input remains authored; generated fragments are not new skills."
+@v7 kernel.value.record "left" "any" "right" "any"
+@v8 kernel.value.record
+@v9 kernel.value.record "kind" "op" "name" "kernel.seq.difference" "inputs" $v7 "output" "array" "bind" $v8 "identity" "9ab10db8b399c80c94aecdef734ceabe6444864e1cd36a6335622e2f78ce736e"
+@v10 kernel.value.record "items" "any"
+@v11 kernel.value.record
+@v12 kernel.value.record "kind" "op" "name" "kernel.seq.count" "inputs" $v10 "output" "number" "bind" $v11 "identity" "faf54cfa207eabdfbd7ee8c39986efcd81e2833335c05bbe74ab44c1e9d19963"
+@v13 kernel.value.record "left" "any" "right" "any"
+@v14 kernel.value.record
+@v15 kernel.value.record "kind" "op" "name" "kernel.value.equal" "inputs" $v13 "output" "boolean" "bind" $v14 "identity" "b665eba680588b8107208a96b14b7273822edf5e17655d1c9966694894ab41e6"
+@v16 kernel.seq.make item $v9 item $v12 item $v15
+@v17 kernel.value.record "applications" 3 "candidates" 10000 "representatives" 1500 "milliseconds" 10000
+@v18 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "faf9b52b730b3c758441825b5d87e8185ca8acb0c53ce370a314e25ecdfdadc3" "trainingHash" "65e29f1566519d74470659f70c7def1782f84e438721b2cb92696089abc973e0" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v16 "limits" $v17 "evaluated" 211 "rejected" 119 "pruned" 75 "retained" 19 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 3 "graphNodes" 3 "circuitHash" "0e6c383da9921eb2aad8ff5c2167d5154c85a0e1fa65dc1c12e1daeb33db5325" "fit" 8
+@v19 kernel.value.record "schema" "sxlm.planning-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v18 "trainingHash" "faf9b52b730b3c758441825b5d87e8185ca8acb0c53ce370a314e25ecdfdadc3" "qualification" "Search and action policy execute in SOP. Set coverage is induced from typed examples and reused in goals/preconditions. Policy bodies remain authored; witness verification does not prove cost optimality."
+@v20 kernel.value.record "text" "string" "form" "string"
+@v21 kernel.value.record
+@v22 kernel.value.record "kind" "op" "name" "kernel.text.normalize" "inputs" $v20 "output" "string" "bind" $v21 "identity" "7805a60e95ac1b17c1280e78b35f426713269cd177ec4205d76bb2ac5ae10b63"
+@v23 kernel.value.record "text" "string" "mode" "string"
+@v24 kernel.value.record
+@v25 kernel.value.record "kind" "op" "name" "kernel.text.case" "inputs" $v23 "output" "string" "bind" $v24 "identity" "0d63aab64eb9d004a1e6c4b8f37aa4273b4c8cfc7326110bf2fa5400524e2beb"
+@v26 kernel.seq.make item $v22 item $v25
+@v27 kernel.value.record "applications" 2 "candidates" 10000 "representatives" 1000 "milliseconds" 10000
+@v28 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-program-synthesis" "algorithm" "typed-observational-search-v1" "learnerHash" "270258e80eaa5a52eafd015b681f3930f44b8e5dfcdbd2f0057f2c23d0c1d2e6" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "trainingHash" "3a95e810383b2677965b7ee330ca01bec86f89d606fb78dd595b7e10ca267133" "trainingCount" 8 "uniqueTrainingInputs" 8 "library" $v26 "limits" $v27 "evaluated" 179 "rejected" 140 "pruned" 26 "retained" 17 "hypothesisClass" "Straight-line typed compositions over supplied pure operations and constants, with observational pruning. Equivalent observed values share a representative; search is not complete over all programs and does not establish a unique or universally correct solution." "mode" "compositional-program" "applicationCost" 2 "graphNodes" 2 "circuitHash" "50e141fd4d49beeb0ee6359c2ad1fb051b38fe60b07bb87df4ef28e5fdbba79d" "fit" 8
+@v29 kernel.value.record "schema" "sxlm.lexical-migration.v1" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "authoredPolicies" 17 "method" $v28 "trainingHash" "777c961514a5d9b430a75250d04dcbeb36d47c5affd293b05043b668b47c2200" "qualification" "Terminal selection, lexicon indexing, class exclusions and case policy execute in SOP. Normalization composition is synthesized. Native token boundaries and Earley scheduling remain; authored lexical policy is not relabeled as learned."
+@v30 kernel.value.record "schema" "sxlm.text-migration.v1" "authoredPolicies" 6 "sourceHash" "42e082a943b2f102913720735cbe279136a923af5dbd414e922d1a39083cf542" "qualification" "Segmentation executes in SOP and is shared with offline learning. Token boundaries, word extraction and Earley scheduling remain native."
+@v31 kernel.value.record "kind" "agent-authored-bootstrap" "description" "Initial English grammar and semantic circuits authored by a coding agent as seed knowledge; not induced from examples." "factorization" "Identical semantic graphs share one circuit; grammar productions retain distinct identities." "realizationLearning" $v1 "semanticMigration" $v2 "completionLearning" $v3 "documentMigration" $v4 "knowledgeMigration" $v5 "expressionMigration" $v6 "planningMigration" $v19 "lexicalMigration" $v29 "textMigration" $v30
+@v32 kernel.value.record "id" "english-bootstrap" "version" "1.0.0" "hash" "9d7525dac5153983690c27396536291e9987e5d5b8a02aace489f06e79c8e2df" "provenance" $v31
+@v33 kernel.value.record "kind" "authored-vocabulary-and-induced-construction" "parentModel" "bcdc38021f8b611215d55e1a848f4e9b92679882d541a44443e33f4938a6a6f1" "qualification" "Lexical categories and annotated phrase meanings are supervision. Span alignment and semantic composition are induced; no unlabelled grammar discovery is claimed."
+@v34 kernel.value.record "id" "english-constructions" "version" "1.0.0" "hash" "ce2ff5875d5c3a6db835aff109579c719acf85ceddf25b3a15fd62d450962142" "provenance" $v33
+@v35 kernel.value.record "kind" "agent-authored-source-supervision" "independent" false "qualification" "Curated and formalized by a coding agent. Compilation preserves this supervision; no autonomous induction or child-level conversation is claimed." "previousSourceHash" "51bf6636d582c210ef3ec4992d4689d5c8f583199eb7701ef3d6afc7c7890efd" "developmentEvidence" "The imported 88-case suite was visible before this revision. Compatibility scores are development measurements, not held-out learning evidence." "source" "training/elementary-knowledge.sop" "sourceHash" "8a2cff1b1db9fdf82cccaee844ee44d708989f550192e7b122b0b14902b17642"
+@v36 kernel.value.record "id" "elementary-knowledge" "version" "4.0.0" "hash" "65c31dd47e8e489fe59bf702d4b52b011c4016aaeb02248b5785edba7a7edd94" "provenance" $v35
+@v37 kernel.seq.make item $v32 item $v34 item $v36
+@v38 kernel.value.record "passed" 6 "total" 8
+@v39 kernel.value.record "passed" 2 "total" 8
+@v40 kernel.value.record "passed" 0 "total" 8
+@v41 kernel.value.record "passed" 8 "total" 8
+@v42 kernel.value.record "passed" 8 "total" 8
+@v43 kernel.value.record "passed" 6 "total" 8
+@v44 kernel.value.record "passed" 8 "total" 8
+@v45 kernel.value.record "passed" 8 "total" 8
+@v46 kernel.value.record "passed" 0 "total" 8
+@v47 kernel.value.record "passed" 3 "total" 8
+@v48 kernel.value.record "passed" 7 "total" 8
+@v49 kernel.value.record "animals" $v38 "plants_materials" $v39 "senses_tools" $v40 "arithmetic" $v41 "quantities" $v42 "space" $v43 "order_calendar" $v44 "family" $v45 "causal" $v46 "comparisons" $v47 "epistemic" $v48
+@v50 kernel.value.record "kind" "boolean" "status" "true"
+@v51 kernel.seq.make
+@v52 kernel.value.record "nodes" 28679 "steps" 3457 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 656.09
+@v53 kernel.value.record "text" "Biscuit is a dog." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v52
+@v54 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v55 kernel.value.record "nodes" 30707 "steps" 3907 "tokens" 10 "terminalCacheHits" 9 "facts" 223 "matches" 45737 "milliseconds" 729.33
+@v56 kernel.value.record "text" "Is Biscuit an animal?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Biscuit is an animal." "verification" $v54 "metrics" $v55
+@v57 kernel.seq.make item $v53 item $v56
+@v58 kernel.value.record "id" "animals-01" "domain" "animals" "split" "dev" "expected" $v50 "contractMatch" true "passed" true "failures" $v51 "turns" $v57
+@v59 kernel.value.record "kind" "boolean" "status" "true"
+@v60 kernel.seq.make
+@v61 kernel.value.record "nodes" 28679 "steps" 3439 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 599.67
+@v62 kernel.value.record "text" "Mimi is a cat." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v61
+@v63 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v64 kernel.value.record "nodes" 30667 "steps" 3901 "tokens" 10 "terminalCacheHits" 9 "facts" 223 "matches" 45737 "milliseconds" 756.37
+@v65 kernel.value.record "text" "Is Mimi a mammal?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Mimi is mammal." "verification" $v63 "metrics" $v64
+@v66 kernel.seq.make item $v62 item $v65
+@v67 kernel.value.record "id" "animals-02" "domain" "animals" "split" "dev" "expected" $v59 "contractMatch" true "passed" true "failures" $v60 "turns" $v66
+@v68 kernel.value.record "kind" "boolean" "status" "true"
+@v69 kernel.seq.make
+@v70 kernel.value.record "nodes" 28679 "steps" 3439 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 725.06
+@v71 kernel.value.record "text" "Buzz is a bee." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v70
+@v72 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v73 kernel.value.record "nodes" 30667 "steps" 3903 "tokens" 10 "terminalCacheHits" 9 "facts" 224 "matches" 45739 "milliseconds" 775.98
+@v74 kernel.value.record "text" "Is Buzz an insect?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Buzz is insect." "verification" $v72 "metrics" $v73
+@v75 kernel.seq.make item $v71 item $v74
+@v76 kernel.value.record "id" "animals-03" "domain" "animals" "split" "dev" "expected" $v68 "contractMatch" true "passed" true "failures" $v69 "turns" $v75
+@v77 kernel.value.record "kind" "boolean" "status" "false"
+@v78 kernel.seq.make item "Answer contract differs from the imported expectation"
+@v79 kernel.value.record "nodes" 28681 "steps" 3458 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 633.98
+@v80 kernel.value.record "text" "Pebble is a rock." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v79
+@v81 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v82 kernel.value.record "nodes" 30168 "steps" 3618 "tokens" 8 "terminalCacheHits" 9 "facts" 216 "matches" 28814 "milliseconds" 726.02
+@v83 kernel.value.record "text" "Is Pebble alive?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v81 "metrics" $v82
+@v84 kernel.seq.make item $v80 item $v83
+@v85 kernel.value.record "id" "animals-04" "domain" "animals" "split" "dev" "expected" $v77 "contractMatch" false "passed" false "failures" $v78 "turns" $v84
+@v86 kernel.value.record "kind" "boolean" "status" "true"
+@v87 kernel.seq.make
+@v88 kernel.value.record "nodes" 28679 "steps" 3463 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 602.19
+@v89 kernel.value.record "text" "Nori is a penguin." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v88
+@v90 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v91 kernel.value.record "nodes" 30707 "steps" 3871 "tokens" 10 "terminalCacheHits" 9 "facts" 224 "matches" 45741 "milliseconds" 779.41
+@v92 kernel.value.record "text" "Is Nori a bird?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Nori is a bird." "verification" $v90 "metrics" $v91
+@v93 kernel.seq.make item $v89 item $v92
+@v94 kernel.value.record "id" "animals-05" "domain" "animals" "split" "eval" "expected" $v86 "contractMatch" true "passed" true "failures" $v87 "turns" $v93
+@v95 kernel.value.record "kind" "boolean" "status" "false"
+@v96 kernel.seq.make
+@v97 kernel.value.record "nodes" 28679 "steps" 3463 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 691.34
+@v98 kernel.value.record "text" "Nori is a penguin." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v97
+@v99 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v100 kernel.value.record "nodes" 30321 "steps" 3662 "tokens" 8 "terminalCacheHits" 9 "facts" 224 "matches" 45741 "milliseconds" 709.42
+@v101 kernel.value.record "text" "Can Nori fly?" "kind" "truth" "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "answer" "No. Nori is not can fly." "verification" $v99 "metrics" $v100
+@v102 kernel.seq.make item $v98 item $v101
+@v103 kernel.value.record "id" "animals-06" "domain" "animals" "split" "eval" "expected" $v95 "contractMatch" true "passed" true "failures" $v96 "turns" $v102
+@v104 kernel.value.record "kind" "boolean" "status" "true"
+@v105 kernel.seq.make item "Answer contract differs from the imported expectation"
+@v106 kernel.value.record "nodes" 28679 "steps" 3463 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 621.97
+@v107 kernel.value.record "text" "Tiki is a sparrow." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v106
+@v108 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v109 kernel.value.record "nodes" 30289 "steps" 3655 "tokens" 8 "terminalCacheHits" 9 "facts" 223 "matches" 45736 "milliseconds" 748.82
+@v110 kernel.value.record "text" "Can Tiki fly?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v108 "metrics" $v109
+@v111 kernel.seq.make item $v107 item $v110
+@v112 kernel.value.record "id" "animals-07" "domain" "animals" "split" "eval" "expected" $v104 "contractMatch" false "passed" false "failures" $v105 "turns" $v111
+@v113 kernel.value.record "kind" "boolean" "status" "true"
+@v114 kernel.seq.make
+@v115 kernel.value.record "nodes" 28679 "steps" 3439 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 918.74
+@v116 kernel.value.record "text" "Dot is an ant." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v115
+@v117 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v118 kernel.value.record "nodes" 30707 "steps" 3883 "tokens" 10 "terminalCacheHits" 9 "facts" 224 "matches" 45739 "milliseconds" 749.69
+@v119 kernel.value.record "text" "Is Dot an animal?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Dot is an animal." "verification" $v117 "metrics" $v118
+@v120 kernel.seq.make item $v116 item $v119
+@v121 kernel.value.record "id" "animals-08" "domain" "animals" "split" "eval" "expected" $v113 "contractMatch" true "passed" true "failures" $v114 "turns" $v120
+@v122 kernel.value.record "kind" "boolean" "status" "true"
+@v123 kernel.seq.make
+@v124 kernel.value.record "nodes" 28679 "steps" 3451 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 601.66
+@v125 kernel.value.record "text" "Rose is a plant." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v124
+@v126 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v127 kernel.value.record "nodes" 29892 "steps" 3433 "tokens" 10 "terminalCacheHits" 9 "facts" 218 "matches" 29266 "milliseconds" 698.14
+@v128 kernel.value.record "text" "Does Rose need water?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Rose needs water." "verification" $v126 "metrics" $v127
+@v129 kernel.seq.make item $v125 item $v128
+@v130 kernel.value.record "id" "plants_materials-01" "domain" "plants_materials" "split" "dev" "expected" $v122 "contractMatch" true "passed" true "failures" $v123 "turns" $v129
+@v131 kernel.value.record "kind" "boolean" "status" "true"
+@v132 kernel.seq.make item "Unsupported or ambiguous input: Does Fern need light?" item "Answer contract differs from the imported expectation"
+@v133 kernel.value.record "nodes" 28679 "steps" 3451 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 582.58
+@v134 kernel.value.record "text" "Fern is a plant." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v133
+@v135 kernel.value.record "nodes" 20620 "steps" 2217 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 444.61
+@v136 kernel.value.record "text" "Does Fern need light?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v135
+@v137 kernel.seq.make item $v134 item $v136
+@v138 kernel.value.record "id" "plants_materials-02" "domain" "plants_materials" "split" "dev" "expected" $v131 "contractMatch" false "passed" false "failures" $v132 "turns" $v137
+@v139 kernel.value.record "kind" "boolean" "status" "true"
+@v140 kernel.seq.make item "Unsupported or ambiguous input: Cup is made of glass." item "Answer contract differs from the imported expectation"
+@v141 kernel.value.record "nodes" 25943 "steps" 3094 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 537.16
+@v142 kernel.value.record "text" "Cup is made of glass." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v141
+@v143 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v144 kernel.value.record "nodes" 29837 "steps" 3587 "tokens" 8 "terminalCacheHits" 9 "facts" 215 "matches" 28814 "milliseconds" 692.98
+@v145 kernel.value.record "text" "Is Cup fragile?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v143 "metrics" $v144
+@v146 kernel.seq.make item $v142 item $v145
+@v147 kernel.value.record "id" "plants_materials-03" "domain" "plants_materials" "split" "dev" "expected" $v139 "contractMatch" false "passed" false "failures" $v140 "turns" $v146
+@v148 kernel.value.record "kind" "boolean" "status" "true"
+@v149 kernel.seq.make item "Unsupported or ambiguous input: Spoon is made of metal." item "Answer contract differs from the imported expectation"
+@v150 kernel.value.record "nodes" 25943 "steps" 3106 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 542.24
+@v151 kernel.value.record "text" "Spoon is made of metal." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v150
+@v152 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v153 kernel.value.record "nodes" 29837 "steps" 3581 "tokens" 8 "terminalCacheHits" 9 "facts" 215 "matches" 28814 "milliseconds" 679.56
+@v154 kernel.value.record "text" "Is Spoon hard?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v152 "metrics" $v153
+@v155 kernel.seq.make item $v151 item $v154
+@v156 kernel.value.record "id" "plants_materials-04" "domain" "plants_materials" "split" "dev" "expected" $v148 "contractMatch" false "passed" false "failures" $v149 "turns" $v155
+@v157 kernel.value.record "kind" "boolean" "status" "true"
+@v158 kernel.seq.make
+@v159 kernel.value.record "nodes" 28679 "steps" 3439 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 601.33
+@v160 kernel.value.record "text" "Oak is a tree." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v159
+@v161 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v162 kernel.value.record "nodes" 30667 "steps" 3752 "tokens" 10 "terminalCacheHits" 9 "facts" 220 "matches" 29517 "milliseconds" 730.41
+@v163 kernel.value.record "text" "Is Oak a plant?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Oak is plant." "verification" $v161 "metrics" $v162
+@v164 kernel.seq.make item $v160 item $v163
+@v165 kernel.value.record "id" "plants_materials-05" "domain" "plants_materials" "split" "eval" "expected" $v157 "contractMatch" true "passed" true "failures" $v158 "turns" $v164
+@v166 kernel.value.record "kind" "boolean" "status" "true"
+@v167 kernel.seq.make item "Answer contract differs from the imported expectation"
+@v168 kernel.value.record "nodes" 28681 "steps" 3464 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 593.45
+@v169 kernel.value.record "text" "Tulip is a flower." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v168
+@v170 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v171 kernel.value.record "nodes" 29859 "steps" 3431 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28814 "milliseconds" 694.11
+@v172 kernel.value.record "text" "Does Tulip need water?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v170 "metrics" $v171
+@v173 kernel.seq.make item $v169 item $v172
+@v174 kernel.value.record "id" "plants_materials-06" "domain" "plants_materials" "split" "eval" "expected" $v166 "contractMatch" false "passed" false "failures" $v167 "turns" $v173
+@v175 kernel.value.record "kind" "boolean" "status" "true"
+@v176 kernel.seq.make item "Unsupported or ambiguous input: Towel is made of cotton." item "Answer contract differs from the imported expectation"
+@v177 kernel.value.record "nodes" 25943 "steps" 3111 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 561.67
+@v178 kernel.value.record "text" "Towel is made of cotton." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v177
+@v179 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v180 kernel.value.record "nodes" 29837 "steps" 3611 "tokens" 8 "terminalCacheHits" 9 "facts" 215 "matches" 28814 "milliseconds" 1166.89
+@v181 kernel.value.record "text" "Is Towel absorbent?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v179 "metrics" $v180
+@v182 kernel.seq.make item $v178 item $v181
+@v183 kernel.value.record "id" "plants_materials-07" "domain" "plants_materials" "split" "eval" "expected" $v175 "contractMatch" false "passed" false "failures" $v176 "turns" $v182
+@v184 kernel.value.record "kind" "boolean" "status" "true"
+@v185 kernel.seq.make item "Unsupported or ambiguous input: Window is made of glass." item "Answer contract differs from the imported expectation"
+@v186 kernel.value.record "nodes" 25943 "steps" 3112 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 565.91
+@v187 kernel.value.record "text" "Window is made of glass." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v186
+@v188 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v189 kernel.value.record "nodes" 29837 "steps" 3629 "tokens" 8 "terminalCacheHits" 9 "facts" 215 "matches" 28814 "milliseconds" 718.75
+@v190 kernel.value.record "text" "Is Window transparent?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v188 "metrics" $v189
+@v191 kernel.seq.make item $v187 item $v190
+@v192 kernel.value.record "id" "plants_materials-08" "domain" "plants_materials" "split" "eval" "expected" $v184 "contractMatch" false "passed" false "failures" $v185 "turns" $v191
+@v193 kernel.seq.make item "see"
+@v194 kernel.value.record "kind" "bindings" "values" $v193
+@v195 kernel.seq.make item "Unsupported or ambiguous input: What do eyes help us do?" item "Answer contract differs from the imported expectation"
+@v196 kernel.value.record "nodes" 20379 "steps" 2124 "tokens" 14 "terminalCacheHits" 9 "milliseconds" 475.41
+@v197 kernel.value.record "text" "What do eyes help us do?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v196
+@v198 kernel.seq.make item $v197
+@v199 kernel.value.record "id" "senses_tools-01" "domain" "senses_tools" "split" "dev" "expected" $v194 "contractMatch" false "passed" false "failures" $v195 "turns" $v198
+@v200 kernel.seq.make item "hear"
+@v201 kernel.value.record "kind" "bindings" "values" $v200
+@v202 kernel.seq.make item "Unsupported or ambiguous input: What do ears help us do?" item "Answer contract differs from the imported expectation"
+@v203 kernel.value.record "nodes" 20379 "steps" 2124 "tokens" 14 "terminalCacheHits" 9 "milliseconds" 469.18
+@v204 kernel.value.record "text" "What do ears help us do?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v203
+@v205 kernel.seq.make item $v204
+@v206 kernel.value.record "id" "senses_tools-02" "domain" "senses_tools" "split" "dev" "expected" $v201 "contractMatch" false "passed" false "failures" $v202 "turns" $v205
+@v207 kernel.seq.make item "smell"
+@v208 kernel.value.record "kind" "bindings" "values" $v207
+@v209 kernel.seq.make item "Unsupported or ambiguous input: What do noses help us do?" item "Answer contract differs from the imported expectation"
+@v210 kernel.value.record "nodes" 20379 "steps" 2130 "tokens" 14 "terminalCacheHits" 9 "milliseconds" 460.47
+@v211 kernel.value.record "text" "What do noses help us do?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v210
+@v212 kernel.seq.make item $v211
+@v213 kernel.value.record "id" "senses_tools-03" "domain" "senses_tools" "split" "dev" "expected" $v208 "contractMatch" false "passed" false "failures" $v209 "turns" $v212
+@v214 kernel.seq.make item "write"
+@v215 kernel.value.record "kind" "bindings" "values" $v214
+@v216 kernel.seq.make item "Unsupported or ambiguous input: What is a pencil used for?" item "Answer contract differs from the imported expectation"
+@v217 kernel.value.record "nodes" 22443 "steps" 2997 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 505.38
+@v218 kernel.value.record "text" "What is a pencil used for?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v217
+@v219 kernel.seq.make item $v218
+@v220 kernel.value.record "id" "senses_tools-04" "domain" "senses_tools" "split" "dev" "expected" $v215 "contractMatch" false "passed" false "failures" $v216 "turns" $v219
+@v221 kernel.seq.make item "taste"
+@v222 kernel.value.record "kind" "bindings" "values" $v221
+@v223 kernel.seq.make item "Unsupported or ambiguous input: What do tongues help us do?" item "Answer contract differs from the imported expectation"
+@v224 kernel.value.record "nodes" 20379 "steps" 2142 "tokens" 14 "terminalCacheHits" 9 "milliseconds" 454.97
+@v225 kernel.value.record "text" "What do tongues help us do?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v224
+@v226 kernel.seq.make item $v225
+@v227 kernel.value.record "id" "senses_tools-05" "domain" "senses_tools" "split" "eval" "expected" $v222 "contractMatch" false "passed" false "failures" $v223 "turns" $v226
+@v228 kernel.seq.make item "unlock"
+@v229 kernel.value.record "kind" "bindings" "values" $v228
+@v230 kernel.seq.make item "Unsupported or ambiguous input: What is a key used for?" item "Answer contract differs from the imported expectation"
+@v231 kernel.value.record "nodes" 22445 "steps" 2980 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 502.82
+@v232 kernel.value.record "text" "What is a key used for?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v231
+@v233 kernel.seq.make item $v232
+@v234 kernel.value.record "id" "senses_tools-06" "domain" "senses_tools" "split" "eval" "expected" $v229 "contractMatch" false "passed" false "failures" $v230 "turns" $v233
+@v235 kernel.seq.make item "shelter"
+@v236 kernel.value.record "kind" "bindings" "values" $v235
+@v237 kernel.seq.make item "Unsupported or ambiguous input: What is an umbrella used for?" item "Answer contract differs from the imported expectation"
+@v238 kernel.value.record "nodes" 22445 "steps" 3018 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 501.27
+@v239 kernel.value.record "text" "What is an umbrella used for?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v238
+@v240 kernel.seq.make item $v239
+@v241 kernel.value.record "id" "senses_tools-07" "domain" "senses_tools" "split" "eval" "expected" $v236 "contractMatch" false "passed" false "failures" $v237 "turns" $v240
+@v242 kernel.seq.make item "measure"
+@v243 kernel.value.record "kind" "bindings" "values" $v242
+@v244 kernel.seq.make item "Unsupported or ambiguous input: What is a ruler used for?" item "Answer contract differs from the imported expectation"
+@v245 kernel.value.record "nodes" 22445 "steps" 2992 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 501.94
+@v246 kernel.value.record "text" "What is a ruler used for?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v245
+@v247 kernel.seq.make item $v246
+@v248 kernel.value.record "id" "senses_tools-08" "domain" "senses_tools" "split" "eval" "expected" $v243 "contractMatch" false "passed" false "failures" $v244 "turns" $v247
+@v249 kernel.value.record "kind" "number" "value" 7
+@v250 kernel.seq.make
+@v251 kernel.value.record "nodes" 22419 "steps" 2901 "tokens" 12 "terminalCacheHits" 18 "milliseconds" 538.94
+@v252 kernel.value.record "text" "What is 4 plus 3?" "kind" "arithmetic" "status" "answered" "truth" null "value" "7" "values" null "gaps" 0 "answer" "The result is 7." "verification" null "metrics" $v251
+@v253 kernel.seq.make item $v252
+@v254 kernel.value.record "id" "arithmetic-01" "domain" "arithmetic" "split" "dev" "expected" $v249 "contractMatch" true "passed" true "failures" $v250 "turns" $v253
+@v255 kernel.value.record "kind" "number" "value" 5
+@v256 kernel.seq.make
+@v257 kernel.value.record "nodes" 22419 "steps" 2906 "tokens" 12 "terminalCacheHits" 18 "milliseconds" 554.93
+@v258 kernel.value.record "text" "What is 9 minus 4?" "kind" "arithmetic" "status" "answered" "truth" null "value" "5" "values" null "gaps" 0 "answer" "The result is 5." "verification" null "metrics" $v257
+@v259 kernel.seq.make item $v258
+@v260 kernel.value.record "id" "arithmetic-02" "domain" "arithmetic" "split" "dev" "expected" $v255 "contractMatch" true "passed" true "failures" $v256 "turns" $v259
+@v261 kernel.value.record "kind" "number" "value" 6
+@v262 kernel.seq.make
+@v263 kernel.value.record "nodes" 22419 "steps" 2906 "tokens" 12 "terminalCacheHits" 18 "milliseconds" 511.44
+@v264 kernel.value.record "text" "What is 2 times 3?" "kind" "arithmetic" "status" "answered" "truth" null "value" "6" "values" null "gaps" 0 "answer" "The result is 6." "verification" null "metrics" $v263
+@v265 kernel.seq.make item $v264
+@v266 kernel.value.record "id" "arithmetic-03" "domain" "arithmetic" "split" "dev" "expected" $v261 "contractMatch" true "passed" true "failures" $v262 "turns" $v265
+@v267 kernel.value.record "kind" "number" "value" 4
+@v268 kernel.seq.make
+@v269 kernel.value.record "nodes" 22510 "steps" 2944 "tokens" 14 "terminalCacheHits" 18 "milliseconds" 515.88
+@v270 kernel.value.record "text" "What is 8 divided by 2?" "kind" "arithmetic" "status" "answered" "truth" null "value" "4" "values" null "gaps" 0 "answer" "The result is 4." "verification" null "metrics" $v269
+@v271 kernel.seq.make item $v270
+@v272 kernel.value.record "id" "arithmetic-04" "domain" "arithmetic" "split" "dev" "expected" $v267 "contractMatch" true "passed" true "failures" $v268 "turns" $v271
+@v273 kernel.value.record "kind" "number" "value" 15
+@v274 kernel.seq.make
+@v275 kernel.value.record "nodes" 22419 "steps" 2901 "tokens" 12 "terminalCacheHits" 18 "milliseconds" 592.48
+@v276 kernel.value.record "text" "What is 8 plus 7?" "kind" "arithmetic" "status" "answered" "truth" null "value" "15" "values" null "gaps" 0 "answer" "The result is 15." "verification" null "metrics" $v275
+@v277 kernel.seq.make item $v276
+@v278 kernel.value.record "id" "arithmetic-05" "domain" "arithmetic" "split" "eval" "expected" $v273 "contractMatch" true "passed" true "failures" $v274 "turns" $v277
+@v279 kernel.value.record "kind" "number" "value" 7
+@v280 kernel.seq.make
+@v281 kernel.value.record "nodes" 22419 "steps" 2914 "tokens" 12 "terminalCacheHits" 18 "milliseconds" 508.73
+@v282 kernel.value.record "text" "What is 15 minus 8?" "kind" "arithmetic" "status" "answered" "truth" null "value" "7" "values" null "gaps" 0 "answer" "The result is 7." "verification" null "metrics" $v281
+@v283 kernel.seq.make item $v282
+@v284 kernel.value.record "id" "arithmetic-06" "domain" "arithmetic" "split" "eval" "expected" $v279 "contractMatch" true "passed" true "failures" $v280 "turns" $v283
+@v285 kernel.value.record "kind" "number" "value" 20
+@v286 kernel.seq.make
+@v287 kernel.value.record "nodes" 22419 "steps" 2906 "tokens" 12 "terminalCacheHits" 18 "milliseconds" 1132.6
+@v288 kernel.value.record "text" "What is 4 times 5?" "kind" "arithmetic" "status" "answered" "truth" null "value" "20" "values" null "gaps" 0 "answer" "The result is 20." "verification" null "metrics" $v287
+@v289 kernel.seq.make item $v288
+@v290 kernel.value.record "id" "arithmetic-07" "domain" "arithmetic" "split" "eval" "expected" $v285 "contractMatch" true "passed" true "failures" $v286 "turns" $v289
+@v291 kernel.value.record "kind" "number" "value" 4
+@v292 kernel.seq.make
+@v293 kernel.value.record "nodes" 22510 "steps" 2952 "tokens" 14 "terminalCacheHits" 18 "milliseconds" 511.94
+@v294 kernel.value.record "text" "What is 12 divided by 3?" "kind" "arithmetic" "status" "answered" "truth" null "value" "4" "values" null "gaps" 0 "answer" "The result is 4." "verification" null "metrics" $v293
+@v295 kernel.seq.make item $v294
+@v296 kernel.value.record "id" "arithmetic-08" "domain" "arithmetic" "split" "eval" "expected" $v291 "contractMatch" true "passed" true "failures" $v292 "turns" $v295
+@v297 kernel.value.record "kind" "number" "value" 7
+@v298 kernel.seq.make
+@v299 kernel.value.record "nodes" 26158 "steps" 3059 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 563
+@v300 kernel.value.record "text" "Mia has 5 apples." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v299
+@v301 kernel.value.record "nodes" 25819 "steps" 2896 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 575.39
+@v302 kernel.value.record "text" "Mia gets 2 apples." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v301
+@v303 kernel.value.record "nodes" 21871 "steps" 2489 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 491
+@v304 kernel.value.record "text" "How many apples does Mia have?" "kind" "quantity" "status" "answered" "truth" null "value" "7" "values" null "gaps" 0 "answer" "Mia has 7 apples." "verification" null "metrics" $v303
+@v305 kernel.seq.make item $v300 item $v302 item $v304
+@v306 kernel.value.record "id" "quantities-01" "domain" "quantities" "split" "dev" "expected" $v297 "contractMatch" true "passed" true "failures" $v298 "turns" $v305
+@v307 kernel.value.record "kind" "number" "value" 5
+@v308 kernel.seq.make
+@v309 kernel.value.record "nodes" 26158 "steps" 3065 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 561.92
+@v310 kernel.value.record "text" "Leo has 8 pencils." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v309
+@v311 kernel.value.record "nodes" 25819 "steps" 2909 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 573.99
+@v312 kernel.value.record "text" "Leo loses 3 pencils." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v311
+@v313 kernel.value.record "nodes" 21886 "steps" 2499 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 485.87
+@v314 kernel.value.record "text" "How many pencils does Leo have?" "kind" "quantity" "status" "answered" "truth" null "value" "5" "values" null "gaps" 0 "answer" "Leo has 5 pencil." "verification" null "metrics" $v313
+@v315 kernel.seq.make item $v310 item $v312 item $v314
+@v316 kernel.value.record "id" "quantities-02" "domain" "quantities" "split" "dev" "expected" $v307 "contractMatch" true "passed" true "failures" $v308 "turns" $v315
+@v317 kernel.value.record "kind" "number" "value" 2
+@v318 kernel.seq.make
+@v319 kernel.value.record "nodes" 26158 "steps" 3059 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 557.04
+@v320 kernel.value.record "text" "Mia has 2 apples." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v319
+@v321 kernel.value.record "nodes" 26176 "steps" 3056 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 561.28
+@v322 kernel.value.record "text" "Mia has 3 pears." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v321
+@v323 kernel.value.record "nodes" 21871 "steps" 2489 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 457.53
+@v324 kernel.value.record "text" "How many apples does Mia have?" "kind" "quantity" "status" "answered" "truth" null "value" "2" "values" null "gaps" 0 "answer" "Mia has 2 apples." "verification" null "metrics" $v323
+@v325 kernel.seq.make item $v320 item $v322 item $v324
+@v326 kernel.value.record "id" "quantities-03" "domain" "quantities" "split" "dev" "expected" $v317 "contractMatch" true "passed" true "failures" $v318 "turns" $v325
+@v327 kernel.value.record "kind" "number" "value" 4
+@v328 kernel.seq.make
+@v329 kernel.value.record "nodes" 26158 "steps" 3053 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 598.46
+@v330 kernel.value.record "text" "Ana has 4 books." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v329
+@v331 kernel.value.record "nodes" 26176 "steps" 3050 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 558.06
+@v332 kernel.value.record "text" "Bo has 9 books." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v331
+@v333 kernel.value.record "nodes" 21871 "steps" 2482 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 491.5
+@v334 kernel.value.record "text" "How many books does Ana have?" "kind" "quantity" "status" "answered" "truth" null "value" "4" "values" null "gaps" 0 "answer" "Ana has 4 books." "verification" null "metrics" $v333
+@v335 kernel.seq.make item $v330 item $v332 item $v334
+@v336 kernel.value.record "id" "quantities-04" "domain" "quantities" "split" "dev" "expected" $v327 "contractMatch" true "passed" true "failures" $v328 "turns" $v335
+@v337 kernel.value.record "kind" "number" "value" 7
+@v338 kernel.seq.make
+@v339 kernel.value.record "nodes" 26158 "steps" 3065 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 578.77
+@v340 kernel.value.record "text" "Ivo has 6 marbles." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v339
+@v341 kernel.value.record "nodes" 25819 "steps" 2902 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 546.02
+@v342 kernel.value.record "text" "Ivo gets 4 marbles." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v341
+@v343 kernel.value.record "nodes" 25837 "steps" 2912 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 888.28
+@v344 kernel.value.record "text" "Ivo loses 3 marbles." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v343
+@v345 kernel.value.record "nodes" 21886 "steps" 2499 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 481.72
+@v346 kernel.value.record "text" "How many marbles does Ivo have?" "kind" "quantity" "status" "answered" "truth" null "value" "7" "values" null "gaps" 0 "answer" "Ivo has 7 marble." "verification" null "metrics" $v345
+@v347 kernel.seq.make item $v340 item $v342 item $v344 item $v346
+@v348 kernel.value.record "id" "quantities-05" "domain" "quantities" "split" "eval" "expected" $v337 "contractMatch" true "passed" true "failures" $v338 "turns" $v347
+@v349 kernel.value.record "kind" "number" "value" 7
+@v350 kernel.seq.make
+@v351 kernel.value.record "nodes" 26158 "steps" 3059 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 568.4
+@v352 kernel.value.record "text" "Zoe has 9 apples." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v351
+@v353 kernel.value.record "nodes" 25819 "steps" 2897 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 559.93
+@v354 kernel.value.record "text" "Zoe eats 2 apples." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v353
+@v355 kernel.value.record "nodes" 21871 "steps" 2489 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 481.49
+@v356 kernel.value.record "text" "How many apples does Zoe have?" "kind" "quantity" "status" "answered" "truth" null "value" "7" "values" null "gaps" 0 "answer" "Zoe has 7 apples." "verification" null "metrics" $v355
+@v357 kernel.seq.make item $v352 item $v354 item $v356
+@v358 kernel.value.record "id" "quantities-06" "domain" "quantities" "split" "eval" "expected" $v349 "contractMatch" true "passed" true "failures" $v350 "turns" $v357
+@v359 kernel.value.record "kind" "number" "value" 0
+@v360 kernel.seq.make
+@v361 kernel.value.record "nodes" 26158 "steps" 3065 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 571.52
+@v362 kernel.value.record "text" "Eli has 3 pencils." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v361
+@v363 kernel.value.record "nodes" 25819 "steps" 2909 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 560.09
+@v364 kernel.value.record "text" "Eli loses 3 pencils." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v363
+@v365 kernel.value.record "nodes" 21886 "steps" 2499 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 467.65
+@v366 kernel.value.record "text" "How many pencils does Eli have?" "kind" "quantity" "status" "answered" "truth" null "value" "0" "values" null "gaps" 0 "answer" "Eli has 0 pencil." "verification" null "metrics" $v365
+@v367 kernel.seq.make item $v362 item $v364 item $v366
+@v368 kernel.value.record "id" "quantities-07" "domain" "quantities" "split" "eval" "expected" $v359 "contractMatch" true "passed" true "failures" $v360 "turns" $v367
+@v369 kernel.value.record "kind" "number" "value" 9
+@v370 kernel.seq.make
+@v371 kernel.value.record "nodes" 26158 "steps" 3053 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 592.78
+@v372 kernel.value.record "text" "Ada has 8 pears." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v371
+@v373 kernel.value.record "nodes" 25819 "steps" 2884 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 566.09
+@v374 kernel.value.record "text" "Ada gets 1 pear." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 0 rules and 1 state events." "verification" null "metrics" $v373
+@v375 kernel.value.record "nodes" 21886 "steps" 2485 "tokens" 14 "terminalCacheHits" 11 "milliseconds" 498.33
+@v376 kernel.value.record "text" "How many pears does Ada have?" "kind" "quantity" "status" "answered" "truth" null "value" "9" "values" null "gaps" 0 "answer" "Ada has 9 pear." "verification" null "metrics" $v375
+@v377 kernel.seq.make item $v372 item $v374 item $v376
+@v378 kernel.value.record "id" "quantities-08" "domain" "quantities" "split" "eval" "expected" $v369 "contractMatch" true "passed" true "failures" $v370 "turns" $v377
+@v379 kernel.seq.make item "box"
+@v380 kernel.value.record "kind" "bindings" "values" $v379
+@v381 kernel.seq.make
+@v382 kernel.value.record "nodes" 28651 "steps" 3474 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 619.63
+@v383 kernel.value.record "text" "Ball is in Box." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v382
+@v384 kernel.seq.make item "box"
+@v385 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v386 kernel.value.record "nodes" 34610 "steps" 3937 "tokens" 8 "terminalCacheHits" 9 "facts" 216 "matches" 28831 "milliseconds" 791.33
+@v387 kernel.value.record "text" "Where is Ball?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v384 "gaps" 0 "answer" "The supported answers are: Box. This list is not certified exhaustive." "verification" $v385 "metrics" $v386
+@v388 kernel.seq.make item $v383 item $v387
+@v389 kernel.value.record "id" "space-01" "domain" "space" "split" "dev" "expected" $v380 "contractMatch" true "passed" true "failures" $v381 "turns" $v388
+@v390 kernel.value.record "kind" "boolean" "status" "true"
+@v391 kernel.seq.make
+@v392 kernel.value.record "nodes" 28651 "steps" 3474 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 607.71
+@v393 kernel.value.record "text" "Ball is in Box." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v392
+@v394 kernel.value.record "nodes" 28778 "steps" 3488 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 605
+@v395 kernel.value.record "text" "Box is in Room." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v394
+@v396 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v397 kernel.value.record "nodes" 30748 "steps" 3825 "tokens" 10 "terminalCacheHits" 9 "facts" 218 "matches" 28873 "milliseconds" 712.54
+@v398 kernel.value.record "text" "Is Ball in Room?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Ball in Room." "verification" $v396 "metrics" $v397
+@v399 kernel.seq.make item $v393 item $v395 item $v398
+@v400 kernel.value.record "id" "space-02" "domain" "space" "split" "dev" "expected" $v390 "contractMatch" true "passed" true "failures" $v391 "turns" $v399
+@v401 kernel.seq.make item "garden"
+@v402 kernel.value.record "kind" "bindings" "values" $v401
+@v403 kernel.seq.make item "Unsupported or ambiguous input: Mia goes to Garden." item "Answer contract differs from the imported expectation"
+@v404 kernel.value.record "nodes" 28651 "steps" 3492 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 616.58
+@v405 kernel.value.record "text" "Mia is in Kitchen." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v404
+@v406 kernel.value.record "nodes" 25457 "steps" 2875 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 556.63
+@v407 kernel.value.record "text" "Mia goes to Garden." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v406
+@v408 kernel.seq.make item "kitchen"
+@v409 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v410 kernel.value.record "nodes" 34617 "steps" 3930 "tokens" 8 "terminalCacheHits" 9 "facts" 216 "matches" 28831 "milliseconds" 828.91
+@v411 kernel.value.record "text" "Where is Mia?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v408 "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. The supported answers are: Kitchen. This list is not certified exhaustive." "verification" $v409 "metrics" $v410
+@v412 kernel.seq.make item $v405 item $v407 item $v411
+@v413 kernel.value.record "id" "space-03" "domain" "space" "split" "dev" "expected" $v402 "contractMatch" false "passed" false "failures" $v403 "turns" $v412
+@v414 kernel.value.record "kind" "boolean" "status" "true"
+@v415 kernel.seq.make
+@v416 kernel.value.record "nodes" 28651 "steps" 3486 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 633.95
+@v417 kernel.value.record "text" "Book is on Table." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v416
+@v418 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v419 kernel.value.record "nodes" 30598 "steps" 3812 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28815 "milliseconds" 762.06
+@v420 kernel.value.record "text" "Is Book on Table?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Book on Table." "verification" $v418 "metrics" $v419
+@v421 kernel.seq.make item $v417 item $v420
+@v422 kernel.value.record "id" "space-04" "domain" "space" "split" "dev" "expected" $v414 "contractMatch" true "passed" true "failures" $v415 "turns" $v421
+@v423 kernel.value.record "kind" "boolean" "status" "true"
+@v424 kernel.seq.make
+@v425 kernel.value.record "nodes" 28651 "steps" 3468 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 634.2
+@v426 kernel.value.record "text" "Key is in Bag." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v425
+@v427 kernel.value.record "nodes" 28778 "steps" 3500 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 645.36
+@v428 kernel.value.record "text" "Bag is in Drawer." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v427
+@v429 kernel.value.record "nodes" 28905 "steps" 3538 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 636.41
+@v430 kernel.value.record "text" "Drawer is in Bedroom." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v429
+@v431 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
+@v432 kernel.value.record "nodes" 30898 "steps" 3856 "tokens" 10 "terminalCacheHits" 9 "facts" 221 "matches" 28950 "milliseconds" 729.8
+@v433 kernel.value.record "text" "Is Key in Bedroom?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Key in Bedroom." "verification" $v431 "metrics" $v432
+@v434 kernel.seq.make item $v426 item $v428 item $v430 item $v433
+@v435 kernel.value.record "id" "space-05" "domain" "space" "split" "eval" "expected" $v423 "contractMatch" true "passed" true "failures" $v424 "turns" $v434
+@v436 kernel.value.record "kind" "boolean" "status" "unknown"
+@v437 kernel.seq.make item "Unsupported or ambiguous input: Zoe goes to School." item "Answer contract differs from the imported expectation"
+@v438 kernel.value.record "nodes" 28651 "steps" 3474 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 622.05
+@v439 kernel.value.record "text" "Zoe is in Park." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v438
+@v440 kernel.value.record "nodes" 25457 "steps" 2875 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 554.34
+@v441 kernel.value.record "text" "Zoe goes to School." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v440
+@v442 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v443 kernel.value.record "nodes" 30605 "steps" 3800 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28831 "milliseconds" 753.54
+@v444 kernel.value.record "text" "Is Zoe in Park?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. Yes. Zoe in Park." "verification" $v442 "metrics" $v443
+@v445 kernel.seq.make item $v439 item $v441 item $v444
+@v446 kernel.value.record "id" "space-06" "domain" "space" "split" "eval" "expected" $v436 "contractMatch" false "passed" false "failures" $v437 "turns" $v445
+@v447 kernel.value.record "kind" "boolean" "status" "true"
+@v448 kernel.seq.make
+@v449 kernel.value.record "nodes" 28651 "steps" 3492 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 1341.85
+@v450 kernel.value.record "text" "Cup is under Desk." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v449
+@v451 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v452 kernel.value.record "nodes" 30598 "steps" 3818 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28815 "milliseconds" 717.63
+@v453 kernel.value.record "text" "Is Cup under Desk?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Cup under Desk." "verification" $v451 "metrics" $v452
+@v454 kernel.seq.make item $v450 item $v453
+@v455 kernel.value.record "id" "space-07" "domain" "space" "split" "eval" "expected" $v447 "contractMatch" true "passed" true "failures" $v448 "turns" $v454
+@v456 kernel.value.record "kind" "boolean" "status" "true"
+@v457 kernel.seq.make
+@v458 kernel.value.record "nodes" 28855 "steps" 3540 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 612.69
+@v459 kernel.value.record "text" "Ball is left of Box." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v458
+@v460 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v461 kernel.value.record "nodes" 31194 "steps" 4069 "tokens" 12 "terminalCacheHits" 9 "facts" 219 "matches" 28836 "milliseconds" 756.87
+@v462 kernel.value.record "text" "Is Box right of Ball?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Box right of Ball." "verification" $v460 "metrics" $v461
+@v463 kernel.seq.make item $v459 item $v462
+@v464 kernel.value.record "id" "space-08" "domain" "space" "split" "eval" "expected" $v456 "contractMatch" true "passed" true "failures" $v457 "turns" $v463
+@v465 kernel.seq.make item "tuesday"
+@v466 kernel.value.record "kind" "bindings" "values" $v465
+@v467 kernel.seq.make
+@v468 kernel.seq.make item "tuesday"
+@v469 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v470 kernel.value.record "nodes" 34000 "steps" 3846 "tokens" 10 "terminalCacheHits" 9 "facts" 215 "matches" 28833 "milliseconds" 772.07
+@v471 kernel.value.record "text" "What comes after Monday?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v468 "gaps" 0 "answer" "The supported answers are: tuesday. This list is not certified exhaustive." "verification" $v469 "metrics" $v470
+@v472 kernel.seq.make item $v471
+@v473 kernel.value.record "id" "order_calendar-01" "domain" "order_calendar" "split" "dev" "expected" $v466 "contractMatch" true "passed" true "failures" $v467 "turns" $v472
+@v474 kernel.seq.make item "thursday"
+@v475 kernel.value.record "kind" "bindings" "values" $v474
+@v476 kernel.seq.make
+@v477 kernel.seq.make item "thursday"
+@v478 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v479 kernel.value.record "nodes" 34000 "steps" 3854 "tokens" 10 "terminalCacheHits" 9 "facts" 215 "matches" 28833 "milliseconds" 763.3
+@v480 kernel.value.record "text" "What comes before Friday?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v477 "gaps" 0 "answer" "The supported answers are: thursday. This list is not certified exhaustive." "verification" $v478 "metrics" $v479
+@v481 kernel.seq.make item $v480
+@v482 kernel.value.record "id" "order_calendar-02" "domain" "order_calendar" "split" "dev" "expected" $v475 "contractMatch" true "passed" true "failures" $v476 "turns" $v481
+@v483 kernel.value.record "kind" "boolean" "status" "true"
+@v484 kernel.seq.make
+@v485 kernel.value.record "nodes" 28651 "steps" 3546 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 611.46
+@v486 kernel.value.record "text" "Breakfast is before School." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v485
+@v487 kernel.value.record "nodes" 28778 "steps" 3536 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 630.6
+@v488 kernel.value.record "text" "School is before Lunch." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v487
+@v489 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v490 kernel.value.record "nodes" 30748 "steps" 4032 "tokens" 10 "terminalCacheHits" 9 "facts" 227 "matches" 43900 "milliseconds" 764.98
+@v491 kernel.value.record "text" "Is Breakfast before Lunch?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Breakfast before Lunch." "verification" $v489 "metrics" $v490
+@v492 kernel.seq.make item $v486 item $v488 item $v491
+@v493 kernel.value.record "id" "order_calendar-03" "domain" "order_calendar" "split" "dev" "expected" $v483 "contractMatch" true "passed" true "failures" $v484 "turns" $v492
+@v494 kernel.value.record "kind" "boolean" "status" "true"
+@v495 kernel.seq.make
+@v496 kernel.value.record "nodes" 28651 "steps" 3516 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 662.72
+@v497 kernel.value.record "text" "Dinner is after Lunch." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v496
+@v498 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v499 kernel.value.record "nodes" 30598 "steps" 3850 "tokens" 10 "terminalCacheHits" 9 "facts" 219 "matches" 28836 "milliseconds" 1756.05
+@v500 kernel.value.record "text" "Is Lunch before Dinner?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Lunch before Dinner." "verification" $v498 "metrics" $v499
+@v501 kernel.seq.make item $v497 item $v500
+@v502 kernel.value.record "id" "order_calendar-04" "domain" "order_calendar" "split" "dev" "expected" $v494 "contractMatch" true "passed" true "failures" $v495 "turns" $v501
+@v503 kernel.seq.make item "monday"
+@v504 kernel.value.record "kind" "bindings" "values" $v503
+@v505 kernel.seq.make
+@v506 kernel.seq.make item "monday"
+@v507 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v508 kernel.value.record "nodes" 34000 "steps" 3846 "tokens" 10 "terminalCacheHits" 9 "facts" 215 "matches" 28833 "milliseconds" 823.98
+@v509 kernel.value.record "text" "What comes after Sunday?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v506 "gaps" 0 "answer" "The supported answers are: monday. This list is not certified exhaustive." "verification" $v507 "metrics" $v508
+@v510 kernel.seq.make item $v509
+@v511 kernel.value.record "id" "order_calendar-05" "domain" "order_calendar" "split" "eval" "expected" $v504 "contractMatch" true "passed" true "failures" $v505 "turns" $v510
+@v512 kernel.seq.make item "monday"
+@v513 kernel.value.record "kind" "bindings" "values" $v512
+@v514 kernel.seq.make
+@v515 kernel.seq.make item "monday"
+@v516 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v517 kernel.value.record "nodes" 34000 "steps" 3860 "tokens" 10 "terminalCacheHits" 9 "facts" 215 "matches" 28833 "milliseconds" 784.96
+@v518 kernel.value.record "text" "What comes before Tuesday?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v515 "gaps" 0 "answer" "The supported answers are: monday. This list is not certified exhaustive." "verification" $v516 "metrics" $v517
+@v519 kernel.seq.make item $v518
+@v520 kernel.value.record "id" "order_calendar-06" "domain" "order_calendar" "split" "eval" "expected" $v513 "contractMatch" true "passed" true "failures" $v514 "turns" $v519
+@v521 kernel.value.record "kind" "boolean" "status" "true"
+@v522 kernel.seq.make
+@v523 kernel.value.record "nodes" 28651 "steps" 3540 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 636.01
+@v524 kernel.value.record "text" "Reading is before Drawing." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v523
+@v525 kernel.value.record "nodes" 28778 "steps" 3536 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 598
+@v526 kernel.value.record "text" "Drawing is before Play." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v525
+@v527 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v528 kernel.value.record "nodes" 30748 "steps" 4010 "tokens" 10 "terminalCacheHits" 9 "facts" 227 "matches" 43900 "milliseconds" 745.05
+@v529 kernel.value.record "text" "Is Play after Reading?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Play after Reading." "verification" $v527 "metrics" $v528
+@v530 kernel.seq.make item $v524 item $v526 item $v529
+@v531 kernel.value.record "id" "order_calendar-07" "domain" "order_calendar" "split" "eval" "expected" $v521 "contractMatch" true "passed" true "failures" $v522 "turns" $v530
+@v532 kernel.seq.make item "january"
+@v533 kernel.value.record "kind" "bindings" "values" $v532
+@v534 kernel.seq.make
+@v535 kernel.seq.make item "january"
+@v536 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v537 kernel.value.record "nodes" 34000 "steps" 3858 "tokens" 10 "terminalCacheHits" 9 "facts" 215 "matches" 28833 "milliseconds" 780.04
+@v538 kernel.value.record "text" "What comes after December?" "kind" "select" "status" "answered" "truth" null "value" null "values" $v535 "gaps" 0 "answer" "The supported answers are: january. This list is not certified exhaustive." "verification" $v536 "metrics" $v537
+@v539 kernel.seq.make item $v538
+@v540 kernel.value.record "id" "order_calendar-08" "domain" "order_calendar" "split" "eval" "expected" $v533 "contractMatch" true "passed" true "failures" $v534 "turns" $v539
+@v541 kernel.value.record "kind" "boolean" "status" "true"
+@v542 kernel.seq.make
+@v543 kernel.value.record "nodes" 29329 "steps" 3721 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 624.97
+@v544 kernel.value.record "text" "Ana is a mother of Ben." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v543
+@v545 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v546 kernel.value.record "nodes" 31703 "steps" 4247 "tokens" 14 "terminalCacheHits" 9 "facts" 219 "matches" 28829 "milliseconds" 744.34
+@v547 kernel.value.record "text" "Is Ana a parent of Ben?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Ana is a parent of Ben." "verification" $v545 "metrics" $v546
+@v548 kernel.seq.make item $v544 item $v547
+@v549 kernel.value.record "id" "family-01" "domain" "family" "split" "dev" "expected" $v541 "contractMatch" true "passed" true "failures" $v542 "turns" $v548
+@v550 kernel.value.record "kind" "boolean" "status" "true"
+@v551 kernel.seq.make
+@v552 kernel.value.record "nodes" 29329 "steps" 3721 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 628.8
+@v553 kernel.value.record "text" "Ana is a parent of Ben." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v552
+@v554 kernel.value.record "nodes" 29456 "steps" 3741 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 653.71
+@v555 kernel.value.record "text" "Ben is a parent of Cora." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v554
+@v556 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v557 kernel.value.record "nodes" 31813 "steps" 4296 "tokens" 14 "terminalCacheHits" 9 "facts" 224 "matches" 28872 "milliseconds" 727.32
+@v558 kernel.value.record "text" "Is Ana a grandparent of Cora?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Ana grandparent of Cora." "verification" $v556 "metrics" $v557
+@v559 kernel.seq.make item $v553 item $v555 item $v558
+@v560 kernel.value.record "id" "family-02" "domain" "family" "split" "dev" "expected" $v550 "contractMatch" true "passed" true "failures" $v551 "turns" $v559
+@v561 kernel.value.record "kind" "boolean" "status" "true"
+@v562 kernel.seq.make
+@v563 kernel.value.record "nodes" 29329 "steps" 3733 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 616.15
+@v564 kernel.value.record "text" "Ben is a brother of Cora." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v563
+@v565 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v566 kernel.value.record "nodes" 31663 "steps" 4257 "tokens" 14 "terminalCacheHits" 9 "facts" 218 "matches" 28822 "milliseconds" 749.2
+@v567 kernel.value.record "text" "Is Cora a sibling of Ben?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Cora sibling of Ben." "verification" $v565 "metrics" $v566
+@v568 kernel.seq.make item $v564 item $v567
+@v569 kernel.value.record "id" "family-03" "domain" "family" "split" "dev" "expected" $v561 "contractMatch" true "passed" true "failures" $v562 "turns" $v568
+@v570 kernel.value.record "kind" "boolean" "status" "true"
+@v571 kernel.seq.make
+@v572 kernel.value.record "nodes" 29329 "steps" 3721 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 926.92
+@v573 kernel.value.record "text" "Ana is a parent of Ben." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v572
+@v574 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v575 kernel.value.record "nodes" 31661 "steps" 4236 "tokens" 14 "terminalCacheHits" 9 "facts" 218 "matches" 28833 "milliseconds" 741.3
+@v576 kernel.value.record "text" "Is Ben a child of Ana?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Ben child of Ana." "verification" $v574 "metrics" $v575
+@v577 kernel.seq.make item $v573 item $v576
+@v578 kernel.value.record "id" "family-04" "domain" "family" "split" "dev" "expected" $v570 "contractMatch" true "passed" true "failures" $v571 "turns" $v577
+@v579 kernel.value.record "kind" "boolean" "status" "true"
+@v580 kernel.seq.make
+@v581 kernel.value.record "nodes" 29329 "steps" 3721 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 621.77
+@v582 kernel.value.record "text" "Ivo is a father of Zoe." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v581
+@v583 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v584 kernel.value.record "nodes" 31703 "steps" 4247 "tokens" 14 "terminalCacheHits" 9 "facts" 219 "matches" 28829 "milliseconds" 750.95
+@v585 kernel.value.record "text" "Is Ivo a parent of Zoe?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Ivo is a parent of Zoe." "verification" $v583 "metrics" $v584
+@v586 kernel.seq.make item $v582 item $v585
+@v587 kernel.value.record "id" "family-05" "domain" "family" "split" "eval" "expected" $v579 "contractMatch" true "passed" true "failures" $v580 "turns" $v586
+@v588 kernel.value.record "kind" "boolean" "status" "true"
+@v589 kernel.seq.make
+@v590 kernel.value.record "nodes" 29329 "steps" 3727 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 616.86
+@v591 kernel.value.record "text" "Nora is a parent of Eli." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v590
+@v592 kernel.value.record "nodes" 29456 "steps" 3735 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 617.51
+@v593 kernel.value.record "text" "Eli is a parent of Pip." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v592
+@v594 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v595 kernel.value.record "nodes" 31813 "steps" 4292 "tokens" 14 "terminalCacheHits" 9 "facts" 224 "matches" 28872 "milliseconds" 745.91
+@v596 kernel.value.record "text" "Is Pip a grandchild of Nora?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Pip grandchild of Nora." "verification" $v594 "metrics" $v595
+@v597 kernel.seq.make item $v591 item $v593 item $v596
+@v598 kernel.value.record "id" "family-06" "domain" "family" "split" "eval" "expected" $v588 "contractMatch" true "passed" true "failures" $v589 "turns" $v597
+@v599 kernel.value.record "kind" "boolean" "status" "true"
+@v600 kernel.seq.make
+@v601 kernel.value.record "nodes" 29329 "steps" 3721 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 637.04
+@v602 kernel.value.record "text" "Lia is a sister of Max." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v601
+@v603 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v604 kernel.value.record "nodes" 31663 "steps" 4251 "tokens" 14 "terminalCacheHits" 9 "facts" 218 "matches" 28822 "milliseconds" 776.66
+@v605 kernel.value.record "text" "Is Max a sibling of Lia?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Max sibling of Lia." "verification" $v603 "metrics" $v604
+@v606 kernel.seq.make item $v602 item $v605
+@v607 kernel.value.record "id" "family-07" "domain" "family" "split" "eval" "expected" $v599 "contractMatch" true "passed" true "failures" $v600 "turns" $v606
+@v608 kernel.value.record "kind" "boolean" "status" "unknown"
+@v609 kernel.seq.make
+@v610 kernel.value.record "nodes" 29329 "steps" 3727 "tokens" 19 "terminalCacheHits" 9 "milliseconds" 648.39
+@v611 kernel.value.record "text" "Nora is a parent of Eli." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v610
+@v612 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v613 kernel.value.record "nodes" 31670 "steps" 4245 "tokens" 14 "terminalCacheHits" 9 "facts" 218 "matches" 28833 "milliseconds" 779.61
+@v614 kernel.value.record "text" "Is Eli a parent of Nora?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v612 "metrics" $v613
+@v615 kernel.seq.make item $v611 item $v614
+@v616 kernel.value.record "id" "family-08" "domain" "family" "split" "eval" "expected" $v608 "contractMatch" true "passed" true "failures" $v609 "turns" $v615
+@v617 kernel.value.record "kind" "boolean" "status" "true"
+@v618 kernel.seq.make item "Unsupported or ambiguous input: Mia is in rain." item "Answer contract differs from the imported expectation"
+@v619 kernel.value.record "nodes" 28208 "steps" 3285 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 595.13
+@v620 kernel.value.record "text" "Mia is outside." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v619
+@v621 kernel.value.record "nodes" 26409 "steps" 3228 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 564.05
+@v622 kernel.value.record "text" "Mia is in rain." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v621
+@v623 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v624 kernel.value.record "nodes" 30175 "steps" 3588 "tokens" 8 "terminalCacheHits" 9 "facts" 216 "matches" 28814 "milliseconds" 712.21
+@v625 kernel.value.record "text" "Is Mia wet?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v623 "metrics" $v624
+@v626 kernel.seq.make item $v620 item $v622 item $v625
+@v627 kernel.value.record "id" "causal-01" "domain" "causal" "split" "dev" "expected" $v617 "contractMatch" false "passed" false "failures" $v618 "turns" $v626
+@v628 kernel.value.record "kind" "boolean" "status" "true"
+@v629 kernel.seq.make item "Unsupported or ambiguous input: Does Ice melt?" item "Answer contract differs from the imported expectation"
+@v630 kernel.value.record "nodes" 28220 "steps" 3269 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 601.24
+@v631 kernel.value.record "text" "Ice is warm." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v630
+@v632 kernel.value.record "nodes" 20579 "steps" 2175 "tokens" 8 "terminalCacheHits" 9 "milliseconds" 466.32
+@v633 kernel.value.record "text" "Does Ice melt?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v632
+@v634 kernel.seq.make item $v631 item $v633
+@v635 kernel.value.record "id" "causal-02" "domain" "causal" "split" "dev" "expected" $v628 "contractMatch" false "passed" false "failures" $v629 "turns" $v634
+@v636 kernel.value.record "kind" "boolean" "status" "true"
+@v637 kernel.seq.make item "Unsupported or ambiguous input: Plant is without water." item "Answer contract differs from the imported expectation"
+@v638 kernel.value.record "nodes" 28674 "steps" 3457 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 617.48
+@v639 kernel.value.record "text" "Plant is a plant." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v638
+@v640 kernel.value.record "nodes" 26075 "steps" 3115 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 548.62
+@v641 kernel.value.record "text" "Plant is without water." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v640
+@v642 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v643 kernel.value.record "nodes" 30175 "steps" 3624 "tokens" 8 "terminalCacheHits" 9 "facts" 218 "matches" 29265 "milliseconds" 699.46
+@v644 kernel.value.record "text" "Is Plant thirsty?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v642 "metrics" $v643
+@v645 kernel.seq.make item $v639 item $v641 item $v644
+@v646 kernel.value.record "id" "causal-03" "domain" "causal" "split" "dev" "expected" $v636 "contractMatch" false "passed" false "failures" $v637 "turns" $v645
+@v647 kernel.value.record "kind" "boolean" "status" "true"
+@v648 kernel.seq.make item "Unsupported or ambiguous input: Does Tom need rest?" item "Answer contract differs from the imported expectation"
+@v649 kernel.value.record "nodes" 28208 "steps" 3273 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 590.52
+@v650 kernel.value.record "text" "Tom is tired." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v649
+@v651 kernel.value.record "nodes" 20620 "steps" 2205 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 455.82
+@v652 kernel.value.record "text" "Does Tom need rest?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v651
+@v653 kernel.seq.make item $v650 item $v652
+@v654 kernel.value.record "id" "causal-04" "domain" "causal" "split" "dev" "expected" $v647 "contractMatch" false "passed" false "failures" $v648 "turns" $v653
+@v655 kernel.value.record "kind" "boolean" "status" "true"
+@v656 kernel.seq.make item "Unsupported or ambiguous input: Does Zoe need food?" item "Answer contract differs from the imported expectation"
+@v657 kernel.value.record "nodes" 28208 "steps" 3279 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 606.93
+@v658 kernel.value.record "text" "Zoe is hungry." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v657
+@v659 kernel.value.record "nodes" 20620 "steps" 2205 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 447.65
+@v660 kernel.value.record "text" "Does Zoe need food?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v659
+@v661 kernel.seq.make item $v658 item $v660
+@v662 kernel.value.record "id" "causal-05" "domain" "causal" "split" "eval" "expected" $v655 "contractMatch" false "passed" false "failures" $v656 "turns" $v661
+@v663 kernel.value.record "kind" "boolean" "status" "true"
+@v664 kernel.seq.make item "Answer contract differs from the imported expectation"
+@v665 kernel.value.record "nodes" 28208 "steps" 3285 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 614.08
+@v666 kernel.value.record "text" "Eli is thirsty." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v665
+@v667 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v668 kernel.value.record "nodes" 29859 "steps" 3419 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28814 "milliseconds" 727.16
+@v669 kernel.value.record "text" "Does Eli need water?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v667 "metrics" $v668
+@v670 kernel.seq.make item $v666 item $v669
+@v671 kernel.value.record "id" "causal-06" "domain" "causal" "split" "eval" "expected" $v663 "contractMatch" false "passed" false "failures" $v664 "turns" $v670
+@v672 kernel.value.record "kind" "boolean" "status" "unknown"
+@v673 kernel.seq.make item "Unsupported or ambiguous input: Ada is in rain." item "Unsupported or ambiguous input: Ada has shelter."
+@v674 kernel.value.record "nodes" 28208 "steps" 3285 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 603.37
+@v675 kernel.value.record "text" "Ada is outside." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v674
+@v676 kernel.value.record "nodes" 26409 "steps" 3228 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 593.59
+@v677 kernel.value.record "text" "Ada is in rain." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v676
+@v678 kernel.value.record "nodes" 25582 "steps" 2889 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 565.34
+@v679 kernel.value.record "text" "Ada has shelter." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v678
+@v680 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v681 kernel.value.record "nodes" 30175 "steps" 3588 "tokens" 8 "terminalCacheHits" 9 "facts" 216 "matches" 28814 "milliseconds" 1523.06
+@v682 kernel.value.record "text" "Is Ada wet?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v680 "metrics" $v681
+@v683 kernel.seq.make item $v675 item $v677 item $v679 item $v682
+@v684 kernel.value.record "id" "causal-07" "domain" "causal" "split" "eval" "expected" $v672 "contractMatch" true "passed" false "failures" $v673 "turns" $v683
+@v685 kernel.value.record "kind" "boolean" "status" "true"
+@v686 kernel.seq.make item "Unsupported or ambiguous input: Does Ivo need warmth?" item "Answer contract differs from the imported expectation"
+@v687 kernel.value.record "nodes" 28208 "steps" 3267 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 591.68
+@v688 kernel.value.record "text" "Ivo is cold." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v687
+@v689 kernel.value.record "nodes" 20620 "steps" 2217 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 495.43
+@v690 kernel.value.record "text" "Does Ivo need warmth?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v689
+@v691 kernel.seq.make item $v688 item $v690
+@v692 kernel.value.record "id" "causal-08" "domain" "causal" "split" "eval" "expected" $v685 "contractMatch" false "passed" false "failures" $v686 "turns" $v691
+@v693 kernel.value.record "kind" "boolean" "status" "true"
+@v694 kernel.seq.make item "Unsupported or ambiguous input: Is 8 greater than 3?" item "Answer contract differs from the imported expectation"
+@v695 kernel.value.record "nodes" 19671 "steps" 1833 "tokens" 12 "terminalCacheHits" 9 "milliseconds" 467.39
+@v696 kernel.value.record "text" "Is 8 greater than 3?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v695
+@v697 kernel.seq.make item $v696
+@v698 kernel.value.record "id" "comparisons-01" "domain" "comparisons" "split" "dev" "expected" $v693 "contractMatch" false "passed" false "failures" $v694 "turns" $v697
+@v699 kernel.value.record "kind" "boolean" "status" "false"
+@v700 kernel.seq.make item "Unsupported or ambiguous input: Is 2 greater than 7?" item "Answer contract differs from the imported expectation"
+@v701 kernel.value.record "nodes" 19671 "steps" 1833 "tokens" 12 "terminalCacheHits" 9 "milliseconds" 439.07
+@v702 kernel.value.record "text" "Is 2 greater than 7?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v701
+@v703 kernel.seq.make item $v702
+@v704 kernel.value.record "id" "comparisons-02" "domain" "comparisons" "split" "dev" "expected" $v699 "contractMatch" false "passed" false "failures" $v700 "turns" $v703
+@v705 kernel.value.record "kind" "boolean" "status" "true"
+@v706 kernel.seq.make
+@v707 kernel.value.record "nodes" 28855 "steps" 3566 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 635.42
+@v708 kernel.value.record "text" "Oak is taller than Bush." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v707
+@v709 kernel.value.record "nodes" 28982 "steps" 3592 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 625.1
+@v710 kernel.value.record "text" "Bush is taller than Grass." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v709
+@v711 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v712 kernel.value.record "nodes" 31344 "steps" 4259 "tokens" 12 "terminalCacheHits" 9 "facts" 227 "matches" 43900 "milliseconds" 773.97
+@v713 kernel.value.record "text" "Is Oak taller than Grass?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Oak taller than Grass." "verification" $v711 "metrics" $v712
+@v714 kernel.seq.make item $v708 item $v710 item $v713
+@v715 kernel.value.record "id" "comparisons-03" "domain" "comparisons" "split" "dev" "expected" $v705 "contractMatch" true "passed" true "failures" $v706 "turns" $v714
+@v716 kernel.value.record "kind" "boolean" "status" "true"
+@v717 kernel.seq.make
+@v718 kernel.value.record "nodes" 28855 "steps" 3566 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 641.96
+@v719 kernel.value.record "text" "Box is heavier than Bag." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v718
+@v720 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v721 kernel.value.record "nodes" 31194 "steps" 4089 "tokens" 12 "terminalCacheHits" 9 "facts" 219 "matches" 28836 "milliseconds" 874.02
+@v722 kernel.value.record "text" "Is Bag lighter than Box?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Bag lighter than Box." "verification" $v720 "metrics" $v721
+@v723 kernel.seq.make item $v719 item $v722
+@v724 kernel.value.record "id" "comparisons-04" "domain" "comparisons" "split" "dev" "expected" $v716 "contractMatch" true "passed" true "failures" $v717 "turns" $v723
+@v725 kernel.value.record "kind" "boolean" "status" "true"
+@v726 kernel.seq.make item "Unsupported or ambiguous input: Is 6 less than 9?" item "Answer contract differs from the imported expectation"
+@v727 kernel.value.record "nodes" 19671 "steps" 1818 "tokens" 12 "terminalCacheHits" 9 "milliseconds" 468.04
+@v728 kernel.value.record "text" "Is 6 less than 9?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v727
+@v729 kernel.seq.make item $v728
+@v730 kernel.value.record "id" "comparisons-05" "domain" "comparisons" "split" "eval" "expected" $v725 "contractMatch" false "passed" false "failures" $v726 "turns" $v729
+@v731 kernel.value.record "kind" "boolean" "status" "true"
+@v732 kernel.seq.make item "Unsupported or ambiguous input: Is 5 equal to 5?" item "Answer contract differs from the imported expectation"
+@v733 kernel.value.record "nodes" 19662 "steps" 1806 "tokens" 12 "terminalCacheHits" 9 "milliseconds" 447.68
+@v734 kernel.value.record "text" "Is 5 equal to 5?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v733
+@v735 kernel.seq.make item $v734
+@v736 kernel.value.record "id" "comparisons-06" "domain" "comparisons" "split" "eval" "expected" $v731 "contractMatch" false "passed" false "failures" $v732 "turns" $v735
+@v737 kernel.value.record "kind" "boolean" "status" "true"
+@v738 kernel.seq.make
+@v739 kernel.value.record "nodes" 28854 "steps" 3554 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 644.15
+@v740 kernel.value.record "text" "Ana is older than Ben." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v739
+@v741 kernel.value.record "nodes" 28981 "steps" 3574 "tokens" 16 "terminalCacheHits" 9 "milliseconds" 632.4
+@v742 kernel.value.record "text" "Ben is older than Cora." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v741
+@v743 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v744 kernel.value.record "nodes" 31343 "steps" 4114 "tokens" 12 "terminalCacheHits" 9 "facts" 221 "matches" 28878 "milliseconds" 774.01
+@v745 kernel.value.record "text" "Is Cora younger than Ana?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Cora younger than Ana." "verification" $v743 "metrics" $v744
+@v746 kernel.seq.make item $v740 item $v742 item $v745
+@v747 kernel.value.record "id" "comparisons-07" "domain" "comparisons" "split" "eval" "expected" $v737 "contractMatch" true "passed" true "failures" $v738 "turns" $v746
+@v748 kernel.value.record "kind" "boolean" "status" "false"
+@v749 kernel.seq.make item "Unsupported or ambiguous input: Is 10 less than 4?" item "Answer contract differs from the imported expectation"
+@v750 kernel.value.record "nodes" 19671 "steps" 1824 "tokens" 12 "terminalCacheHits" 9 "milliseconds" 1312.01
+@v751 kernel.value.record "text" "Is 10 less than 4?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v750
+@v752 kernel.seq.make item $v751
+@v753 kernel.value.record "id" "comparisons-08" "domain" "comparisons" "split" "eval" "expected" $v748 "contractMatch" false "passed" false "failures" $v749 "turns" $v752
+@v754 kernel.value.record "kind" "boolean" "status" "unknown"
+@v755 kernel.seq.make
+@v756 kernel.value.record "nodes" 28688 "steps" 3449 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 616.24
+@v757 kernel.value.record "text" "Mia is a child." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v756
+@v758 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v759 kernel.value.record "nodes" 30168 "steps" 3600 "tokens" 8 "terminalCacheHits" 9 "facts" 216 "matches" 28814 "milliseconds" 698.84
+@v760 kernel.value.record "text" "Is Mia happy?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v758 "metrics" $v759
+@v761 kernel.seq.make item $v757 item $v760
+@v762 kernel.value.record "id" "epistemic-01" "domain" "epistemic" "split" "dev" "expected" $v754 "contractMatch" true "passed" true "failures" $v755 "turns" $v761
+@v763 kernel.value.record "kind" "boolean" "status" "both"
+@v764 kernel.seq.make
+@v765 kernel.value.record "nodes" 28208 "steps" 3267 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 606.65
+@v766 kernel.value.record "text" "Ball is red." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v765
+@v767 kernel.value.record "nodes" 29431 "steps" 3689 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 638.38
+@v768 kernel.value.record "text" "Ball is not red." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v767
+@v769 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v770 kernel.value.record "nodes" 30535 "steps" 3626 "tokens" 8 "terminalCacheHits" 9 "facts" 217 "matches" 28816 "milliseconds" 739.01
+@v771 kernel.value.record "text" "Is Ball red?" "kind" "truth" "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "answer" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v769 "metrics" $v770
+@v772 kernel.seq.make item $v766 item $v768 item $v771
+@v773 kernel.value.record "id" "epistemic-02" "domain" "epistemic" "split" "dev" "expected" $v763 "contractMatch" true "passed" true "failures" $v764 "turns" $v772
+@v774 kernel.value.record "kind" "boolean" "status" "true"
+@v775 kernel.seq.make
+@v776 kernel.value.record "nodes" 28681 "steps" 3446 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 640.79
+@v777 kernel.value.record "text" "Aster is a dax." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v776
+@v778 kernel.value.record "nodes" 29280 "steps" 3674 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 654.46
+@v779 kernel.value.record "text" "Every dax is round." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 1 rules and 0 state events." "verification" null "metrics" $v778
+@v780 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v781 kernel.value.record "nodes" 30201 "steps" 3623 "tokens" 8 "terminalCacheHits" 9 "facts" 217 "matches" 28818 "milliseconds" 705.99
+@v782 kernel.value.record "text" "Is Aster round?" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Aster is round." "verification" $v780 "metrics" $v781
+@v783 kernel.seq.make item $v777 item $v779 item $v782
+@v784 kernel.value.record "id" "epistemic-03" "domain" "epistemic" "split" "dev" "expected" $v774 "contractMatch" true "passed" true "failures" $v775 "turns" $v783
+@v785 kernel.value.record "kind" "boolean" "status" "unknown"
+@v786 kernel.seq.make
+@v787 kernel.value.record "nodes" 29086 "steps" 3679 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 626.78
+@v788 kernel.value.record "text" "Every human is mortal." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 0 facts, 1 rules and 0 state events." "verification" null "metrics" $v787
+@v789 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v790 kernel.value.record "nodes" 29830 "steps" 3644 "tokens" 8 "terminalCacheHits" 9 "facts" 215 "matches" 28814 "milliseconds" 709.28
+@v791 kernel.value.record "text" "Is UnknownPerson mortal?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v789 "metrics" $v790
+@v792 kernel.seq.make item $v788 item $v791
+@v793 kernel.value.record "id" "epistemic-04" "domain" "epistemic" "split" "dev" "expected" $v785 "contractMatch" true "passed" true "failures" $v786 "turns" $v792
+@v794 kernel.value.record "kind" "boolean" "status" "true"
+@v795 kernel.seq.make
+@v796 kernel.value.record "nodes" 28206 "steps" 3278 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 601.53
+@v797 kernel.value.record "text" "Mara is human." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v796
+@v798 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v799 kernel.value.record "nodes" 30116 "steps" 3592 "tokens" 6 "terminalCacheHits" 9 "facts" 216 "matches" 28815 "milliseconds" 746.19
+@v800 kernel.value.record "text" "Is Mara human" "kind" "truth" "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "answer" "Yes. Mara is a human." "verification" $v798 "metrics" $v799
+@v801 kernel.seq.make item $v797 item $v800
+@v802 kernel.value.record "id" "epistemic-05" "domain" "epistemic" "split" "eval" "expected" $v794 "contractMatch" true "passed" true "failures" $v795 "turns" $v801
+@v803 kernel.value.record "kind" "boolean" "status" "true"
+@v804 kernel.seq.make item "Unsupported or ambiguous input: All humans die." item "Unsupported or ambiguous input: Is Scorate going to die?" item "Answer contract differs from the imported expectation"
+@v805 kernel.value.record "nodes" 28206 "steps" 3296 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 603.42
+@v806 kernel.value.record "text" "Socrate is human." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v805
+@v807 kernel.value.record "nodes" 25319 "steps" 2821 "tokens" 10 "terminalCacheHits" 9 "milliseconds" 566.7
+@v808 kernel.value.record "text" "All humans die." "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v807
+@v809 kernel.value.record "nodes" 21234 "steps" 2480 "tokens" 12 "terminalCacheHits" 9 "milliseconds" 719.41
+@v810 kernel.value.record "text" "Is Scorate going to die?" "kind" "acknowledgement" "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "answer" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null "metrics" $v809
+@v811 kernel.seq.make item $v806 item $v808 item $v810
+@v812 kernel.value.record "id" "epistemic-06" "domain" "epistemic" "split" "eval" "expected" $v803 "contractMatch" false "passed" false "failures" $v804 "turns" $v811
+@v813 kernel.value.record "kind" "boolean" "status" "unknown"
+@v814 kernel.seq.make
+@v815 kernel.value.record "nodes" 28679 "steps" 3463 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 588.89
+@v816 kernel.value.record "text" "Nori is a penguin." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v815
+@v817 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v818 kernel.value.record "nodes" 30634 "steps" 3893 "tokens" 10 "terminalCacheHits" 9 "facts" 224 "matches" 45740 "milliseconds" 747.73
+@v819 kernel.value.record "text" "Is Nori a mammal?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v817 "metrics" $v818
+@v820 kernel.seq.make item $v816 item $v819
+@v821 kernel.value.record "id" "epistemic-07" "domain" "epistemic" "split" "eval" "expected" $v813 "contractMatch" true "passed" true "failures" $v814 "turns" $v820
+@v822 kernel.value.record "kind" "boolean" "status" "unknown"
+@v823 kernel.seq.make
+@v824 kernel.value.record "nodes" 28651 "steps" 3474 "tokens" 13 "terminalCacheHits" 9 "milliseconds" 616.39
+@v825 kernel.value.record "text" "Ball is in Box." "kind" "acknowledgement" "status" "acknowledged" "truth" null "value" null "values" null "gaps" 0 "answer" "Recorded 1 facts, 0 rules and 0 state events." "verification" null "metrics" $v824
+@v826 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v827 kernel.value.record "nodes" 30565 "steps" 3812 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28831 "milliseconds" 726.35
+@v828 kernel.value.record "text" "Is Ball in Garden?" "kind" "truth" "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "answer" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v826 "metrics" $v827
+@v829 kernel.seq.make item $v825 item $v828
+@v830 kernel.value.record "id" "epistemic-08" "domain" "epistemic" "split" "eval" "expected" $v822 "contractMatch" true "passed" true "failures" $v823 "turns" $v829
+@v831 kernel.seq.make item $v58 item $v67 item $v76 item $v85 item $v94 item $v103 item $v112 item $v121 item $v130 item $v138 item $v147 item $v156 item $v165 item $v174 item $v183 item $v192 item $v199 item $v206 item $v213 item $v220 item $v227 item $v234 item $v241 item $v248 item $v254 item $v260 item $v266 item $v272 item $v278 item $v284 item $v290 item $v296 item $v306 item $v316 item $v326 item $v336 item $v348 item $v358 item $v368 item $v378 item $v389 item $v400 item $v413 item $v422 item $v435 item $v446 item $v455 item $v464 item $v473 item $v482 item $v493 item $v502 item $v511 item $v520 item $v531 item $v540 item $v549 item $v560 item $v569 item $v578 item $v587 item $v598 item $v607 item $v616 item $v627 item $v635 item $v646 item $v654 item $v662 item $v671 item $v684 item $v692 item $v698 item $v704 item $v715 item $v724 item $v730 item $v736 item $v747 item $v753 item $v762 item $v773 item $v784 item $v793 item $v802 item $v812 item $v821 item $v830
+@v832 kernel.seq.make item "Repository-owned runner over copied case data; no sibling code is imported or executed." item "Each case uses a fresh session and sequential, unchanged context statements followed by its question." item "Unknown counts only where expected and only with complete interpretation. Resource failure is never a logical negative." item "Passing requires exact typed answer agreement, zero interpretation gaps across all turns and checked logical certificates." item "Cases are public and development-visible. This is compatibility measurement, not blind educational validation." item "Original expectations include simplified world assumptions; disagreement may require explicit contract review." item "This runner covers one imported suite. Other inventoried experiments and the semantic review of ESLM cases remain outstanding."
+@v833 kernel.value.record "schema" "sxlm.compatibility-evaluation.v1" "generated" "2026-09-08T18:29:01.389Z" "source" $v0 "casesHash" "b382cd3a6fb6aa620e842f87317853544defaf2107f8dc22a72a78fc579d0c33" "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "manifests" $v37 "profile" "bootstrap-plus-constructions-plus-elementary" "total" 88 "passed" 56 "answerContractMatches" 57 "byDomain" $v49 "results" $v831 "qualifications" $v832
+@output result $v833

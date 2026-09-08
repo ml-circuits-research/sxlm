@@ -1,6 +1,7 @@
 @input children array
 @input scope string
-@phrase en.np.27.semantics children $children scope $scope
+@rawPhrase en.np.27.semantics children $children scope $scope
+@phrase data.object value $rawPhrase
 @determiner kernel.value.get value $children key 0 fallback null
 @category kernel.value.get value $children key 1 fallback null
 @reference kernel.value.record determiner $determiner category $category

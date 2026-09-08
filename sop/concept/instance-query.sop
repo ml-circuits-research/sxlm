@@ -3,5 +3,6 @@
 @children data.array value $rawChildren
 @rawScope kernel.value.get value $with key "scope" fallback null
 @scope data.string value $rawScope
-@result en.question.63.semantics children $children scope $scope
+@raw en.question.63.semantics children $children scope $scope
+@result data.object value $raw
 @output result $result

@@ -1,0 +1,7 @@
+@input value any
+@input forms array
+@fallback kernel.value.record plural $value
+@record kernel.seq.find items $forms key "id" value $value fallback $fallback
+@plural kernel.value.get value $record key "plural" fallback null
+@result data.string value $plural
+@output result $result

@@ -1,0 +1,53 @@
+@v0 kernel.value.record "name" "relation" "category" "Participle"
+@v1 kernel.value.record "name" "agent" "category" "NP"
+@v2 kernel.seq.make item $v0 item $v1
+@v3 kernel.value.record "start" 0 "end" 5
+@v4 kernel.value.record "start" 9 "end" 13
+@v5 kernel.value.record "relation" $v3 "agent" $v4
+@v6 kernel.seq.make item "mira" item "?subject"
+@v7 kernel.value.record "predicate" "own" "terms" $v6 "negative" false "context" "world"
+@v8 kernel.seq.make item $v7
+@v9 kernel.value.record "text" "owned by Mira" "spans" $v5 "meaning" $v8
+@v10 kernel.value.record "start" 0 "end" 6
+@v11 kernel.value.record "start" 10 "end" 14
+@v12 kernel.value.record "relation" $v10 "agent" $v11
+@v13 kernel.seq.make item "theo" item "?subject"
+@v14 kernel.value.record "predicate" "help" "terms" $v13 "negative" false "context" "world"
+@v15 kernel.seq.make item $v14
+@v16 kernel.value.record "text" "helped by Theo" "spans" $v12 "meaning" $v15
+@v17 kernel.value.record "start" 0 "end" 6
+@v18 kernel.value.record "start" 10 "end" 17
+@v19 kernel.value.record "relation" $v17 "agent" $v18
+@v20 kernel.seq.make item "_:bf4df9e109b62fa76c7823bd"
+@v21 kernel.value.record "predicate" "medic" "terms" $v20 "negative" false "context" "world"
+@v22 kernel.seq.make item "_:bf4df9e109b62fa76c7823bd" item "?subject"
+@v23 kernel.value.record "predicate" "help" "terms" $v22 "negative" false "context" "world"
+@v24 kernel.seq.make item $v21 item $v23
+@v25 kernel.value.record "text" "helped by a medic" "spans" $v19 "meaning" $v24
+@v26 kernel.value.record "start" 0 "end" 5
+@v27 kernel.value.record "start" 9 "end" 14
+@v28 kernel.value.record "relation" $v26 "agent" $v27
+@v29 kernel.seq.make item "rowan" item "?subject"
+@v30 kernel.value.record "predicate" "own" "terms" $v29 "negative" false "context" "world"
+@v31 kernel.seq.make item $v30
+@v32 kernel.value.record "text" "owned by Rowan" "spans" $v28 "meaning" $v31
+@v33 kernel.value.record "start" 0 "end" 5
+@v34 kernel.value.record "start" 9 "end" 16
+@v35 kernel.value.record "relation" $v33 "agent" $v34
+@v36 kernel.seq.make item "_:2c0df12a39ca4382c77c9de8"
+@v37 kernel.value.record "predicate" "pilot" "terms" $v36 "negative" false "context" "world"
+@v38 kernel.seq.make item "_:2c0df12a39ca4382c77c9de8" item "?subject"
+@v39 kernel.value.record "predicate" "own" "terms" $v38 "negative" false "context" "world"
+@v40 kernel.seq.make item $v37 item $v39
+@v41 kernel.value.record "text" "owned by a pilot" "spans" $v35 "meaning" $v40
+@v42 kernel.value.record "start" 0 "end" 6
+@v43 kernel.value.record "start" 10 "end" 14
+@v44 kernel.value.record "relation" $v42 "agent" $v43
+@v45 kernel.seq.make item "nora" item "?subject"
+@v46 kernel.value.record "predicate" "help" "terms" $v45 "negative" false "context" "world"
+@v47 kernel.seq.make item $v46
+@v48 kernel.value.record "text" "helped by Nora" "spans" $v44 "meaning" $v47
+@v49 kernel.seq.make item $v9 item $v16 item $v25 item $v32 item $v41 item $v48
+@v50 kernel.value.record "id" "learned-passive" "category" "Comp" "slots" $v2 "examples" $v49
+@output result $v50
+

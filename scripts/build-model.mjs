@@ -3,7 +3,9 @@ import {fileURLToPath} from 'node:url';
 
 // Lexical synthesis precedes sequence memory because its compiled policy
 // identity enters the frequency derivation. Linkage order is also observable.
-export const stages=Object.freeze(['build-concepts','learn-realization','build-semantics','build-sop','build-lexical','build-text','build-completion','build-document','build-knowledge','build-expressions','build-planning','build-elementary']);
+// Install concept dependencies before rebuilding callers. Each builder replaces
+// linkage descriptors in place, preserving the declared registry order.
+export const stages=Object.freeze(['build-concepts','learn-realization','build-semantics','build-sop','build-lexical','build-text','build-completion','build-document','build-knowledge','build-expressions','build-planning','build-elementary','build-constructions','build-everyday']);
 
 if(process.argv[1]===fileURLToPath(import.meta.url)){
   const root=fileURLToPath(new URL('../',import.meta.url));

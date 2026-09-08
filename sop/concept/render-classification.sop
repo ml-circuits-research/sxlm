@@ -1,0 +1,7 @@
+@input with object
+@raw kernel.value.get value $with key "rendered" fallback null
+@rendered data.object value $raw
+@truth kernel.value.get value $rendered key "truth" fallback null
+@positive kernel.value.equal left $truth right "true"
+@result kernel.flow.choose condition $positive then "concept.render-positive" else "concept.render-keep" with $with
+@output result $result

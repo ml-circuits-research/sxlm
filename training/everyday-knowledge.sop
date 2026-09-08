@@ -1,0 +1,97 @@
+@v0 kernel.value.record "url" "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work" "title" "How the Eyes Work" "accessed" "2026-09-08"
+@v1 kernel.value.record "id" "c86954ea4c3558153a4941af898b7d5e8f2a16d9ba0d49cc2f1017948ceb3bee" "text" "The human eye has a role in vision. A function of eyes is to help us see; the statement does not guarantee that every individual eye can see." "reference" $v0 "authorship" "Agent-authored paraphrase of the cited source."
+@v2 kernel.value.record "source" "c86954ea4c3558153a4941af898b7d5e8f2a16d9ba0d49cc2f1017948ceb3bee" "start" 0 "end" 141
+@v3 kernel.value.record "id" "eye" "singular" "eye" "plural" "eyes" "source" $v1 "evidence" $v2
+@v4 kernel.value.record "url" "https://www.nidcd.nih.gov/health/how-do-we-hear" "title" "How Do We Hear?" "accessed" "2026-09-08"
+@v5 kernel.value.record "id" "2bd0cf51352885a0d0b6320efba1388c569d50d54cbecc2392e40a2a8ac13b8a" "text" "The human ear participates in converting sound into signals used for hearing. Hearing is a function of ears, not a guarantee of every individual ear’s ability." "reference" $v4 "authorship" "Agent-authored paraphrase of the cited source."
+@v6 kernel.value.record "source" "2bd0cf51352885a0d0b6320efba1388c569d50d54cbecc2392e40a2a8ac13b8a" "start" 0 "end" 159
+@v7 kernel.value.record "id" "ear" "singular" "ear" "plural" "ears" "source" $v5 "evidence" $v6
+@v8 kernel.value.record "url" "https://www.nidcd.nih.gov/news/multimedia/journey-of-smell-to-brain-text-version" "title" "The Journey of Smell to the Brain" "accessed" "2026-09-08"
+@v9 kernel.value.record "id" "8bb6753d2c64ed33aff56294d70e3690706c920afbaadbbddb99b0138d0dc96c" "text" "Sensory cells in the nose detect odor molecules and contribute to smell. Smelling is a function of noses." "reference" $v8 "authorship" "Agent-authored paraphrase of the cited source."
+@v10 kernel.value.record "source" "8bb6753d2c64ed33aff56294d70e3690706c920afbaadbbddb99b0138d0dc96c" "start" 0 "end" 105
+@v11 kernel.value.record "id" "nose" "singular" "nose" "plural" "noses" "source" $v9 "evidence" $v10
+@v12 kernel.value.record "url" "https://www.nidcd.nih.gov/health/taste-disorders" "title" "Taste Disorders: How does your sense of taste work?" "accessed" "2026-09-08"
+@v13 kernel.value.record "id" "8549aca28b1c5e1914cdf220c307f9370a813096f09185a95362660672ce97e9" "text" "Taste buds on the tongue contribute to tasting. Taste receptors are not limited to the tongue, and not every person has unimpaired taste." "reference" $v12 "authorship" "Agent-authored paraphrase of the cited source."
+@v14 kernel.value.record "source" "8549aca28b1c5e1914cdf220c307f9370a813096f09185a95362660672ce97e9" "start" 0 "end" 137
+@v15 kernel.value.record "id" "tongue" "singular" "tongue" "plural" "tongues" "source" $v13 "evidence" $v14
+@v16 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/pencil" "title" "Pencil" "accessed" "2026-09-08"
+@v17 kernel.value.record "id" "557ca491f24944439955e7fac199d262055049771db184fc6b384f4cf00c9d35" "text" "Writing is one use of a pencil. This selected claim is not an exhaustive list of pencil uses." "reference" $v16 "authorship" "Agent-authored paraphrase of the cited source."
+@v18 kernel.value.record "source" "557ca491f24944439955e7fac199d262055049771db184fc6b384f4cf00c9d35" "start" 0 "end" 93
+@v19 kernel.value.record "id" "pencil" "singular" "pencil" "plural" "pencils" "source" $v17 "evidence" $v18
+@v20 kernel.value.record "url" "https://www.collinsdictionary.com/us/dictionary/english/key" "title" "Key" "accessed" "2026-09-08"
+@v21 kernel.value.record "id" "870ed3e8bfdaee50cd6df301dff29fcddc28ac9228ab776412d7791dd2c8a215" "text" "A lock key can be used to unlock its corresponding lock. This function does not imply that every key opens every lock." "reference" $v20 "authorship" "Agent-authored paraphrase of the cited source."
+@v22 kernel.value.record "source" "870ed3e8bfdaee50cd6df301dff29fcddc28ac9228ab776412d7791dd2c8a215" "start" 0 "end" 118
+@v23 kernel.value.record "id" "key" "singular" "key" "plural" "keys" "source" $v21 "evidence" $v22
+@v24 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/umbrella" "title" "Umbrella" "accessed" "2026-09-08"
+@v25 kernel.value.record "id" "6caf687ad966b9426859be988c777a61cbdf95a7a5b49298b11adb2ca273603a" "text" "An umbrella is a device used to shelter a person from rain or sun. This intended use does not guarantee dryness in every situation." "reference" $v24 "authorship" "Agent-authored paraphrase of the cited source."
+@v26 kernel.value.record "source" "6caf687ad966b9426859be988c777a61cbdf95a7a5b49298b11adb2ca273603a" "start" 0 "end" 131
+@v27 kernel.value.record "id" "umbrella" "singular" "umbrella" "plural" "umbrellas" "source" $v25 "evidence" $v26
+@v28 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/ruler" "title" "Ruler" "accessed" "2026-09-08"
+@v29 kernel.value.record "id" "6844d3c8209b4b0f36d2a44bacec98c8beda70faf2aa729776b234401ae57dc7" "text" "Measuring is one function of a ruler marked with a scale. This teaching uses the measuring-tool sense of ruler." "reference" $v28 "authorship" "Agent-authored paraphrase of the cited source."
+@v30 kernel.value.record "source" "6844d3c8209b4b0f36d2a44bacec98c8beda70faf2aa729776b234401ae57dc7" "start" 0 "end" 111
+@v31 kernel.value.record "id" "ruler" "singular" "ruler" "plural" "rulers" "source" $v29 "evidence" $v30
+@v32 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/scissor?topic=tools" "title" "Scissor" "accessed" "2026-09-08"
+@v33 kernel.value.record "id" "c00cf1fbb45d03b743ee9dcc6ed0aa4bec3d0463b41c02cad79ffdab5f75334d" "text" "A pair of scissors is a tool used for cutting." "reference" $v32 "authorship" "Agent-authored paraphrase of the cited source."
+@v34 kernel.value.record "source" "c00cf1fbb45d03b743ee9dcc6ed0aa4bec3d0463b41c02cad79ffdab5f75334d" "start" 0 "end" 46
+@v35 kernel.value.record "id" "scissors" "singular" "pair of scissors" "plural" "scissors" "source" $v33 "evidence" $v34
+@v36 kernel.seq.make item $v3 item $v7 item $v11 item $v15 item $v19 item $v23 item $v27 item $v31 item $v35
+@v37 kernel.seq.make
+@v38 kernel.seq.make item "see"
+@v39 kernel.value.record "url" "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work" "title" "How the Eyes Work" "accessed" "2026-09-08"
+@v40 kernel.value.record "id" "c86954ea4c3558153a4941af898b7d5e8f2a16d9ba0d49cc2f1017948ceb3bee" "text" "The human eye has a role in vision. A function of eyes is to help us see; the statement does not guarantee that every individual eye can see." "reference" $v39 "authorship" "Agent-authored paraphrase of the cited source."
+@v41 kernel.value.record "source" "c86954ea4c3558153a4941af898b7d5e8f2a16d9ba0d49cc2f1017948ceb3bee" "start" 0 "end" 141
+@v42 kernel.value.record "concept" "eye" "relation" "function" "values" $v38 "mode" "all-instances" "negative" false "source" $v40 "evidence" $v41
+@v43 kernel.seq.make item "hear"
+@v44 kernel.value.record "url" "https://www.nidcd.nih.gov/health/how-do-we-hear" "title" "How Do We Hear?" "accessed" "2026-09-08"
+@v45 kernel.value.record "id" "2bd0cf51352885a0d0b6320efba1388c569d50d54cbecc2392e40a2a8ac13b8a" "text" "The human ear participates in converting sound into signals used for hearing. Hearing is a function of ears, not a guarantee of every individual ear’s ability." "reference" $v44 "authorship" "Agent-authored paraphrase of the cited source."
+@v46 kernel.value.record "source" "2bd0cf51352885a0d0b6320efba1388c569d50d54cbecc2392e40a2a8ac13b8a" "start" 0 "end" 159
+@v47 kernel.value.record "concept" "ear" "relation" "function" "values" $v43 "mode" "all-instances" "negative" false "source" $v45 "evidence" $v46
+@v48 kernel.seq.make item "smell"
+@v49 kernel.value.record "url" "https://www.nidcd.nih.gov/news/multimedia/journey-of-smell-to-brain-text-version" "title" "The Journey of Smell to the Brain" "accessed" "2026-09-08"
+@v50 kernel.value.record "id" "8bb6753d2c64ed33aff56294d70e3690706c920afbaadbbddb99b0138d0dc96c" "text" "Sensory cells in the nose detect odor molecules and contribute to smell. Smelling is a function of noses." "reference" $v49 "authorship" "Agent-authored paraphrase of the cited source."
+@v51 kernel.value.record "source" "8bb6753d2c64ed33aff56294d70e3690706c920afbaadbbddb99b0138d0dc96c" "start" 0 "end" 105
+@v52 kernel.value.record "concept" "nose" "relation" "function" "values" $v48 "mode" "all-instances" "negative" false "source" $v50 "evidence" $v51
+@v53 kernel.seq.make item "taste"
+@v54 kernel.value.record "url" "https://www.nidcd.nih.gov/health/taste-disorders" "title" "Taste Disorders: How does your sense of taste work?" "accessed" "2026-09-08"
+@v55 kernel.value.record "id" "8549aca28b1c5e1914cdf220c307f9370a813096f09185a95362660672ce97e9" "text" "Taste buds on the tongue contribute to tasting. Taste receptors are not limited to the tongue, and not every person has unimpaired taste." "reference" $v54 "authorship" "Agent-authored paraphrase of the cited source."
+@v56 kernel.value.record "source" "8549aca28b1c5e1914cdf220c307f9370a813096f09185a95362660672ce97e9" "start" 0 "end" 137
+@v57 kernel.value.record "concept" "tongue" "relation" "function" "values" $v53 "mode" "all-instances" "negative" false "source" $v55 "evidence" $v56
+@v58 kernel.seq.make item "write"
+@v59 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/pencil" "title" "Pencil" "accessed" "2026-09-08"
+@v60 kernel.value.record "id" "557ca491f24944439955e7fac199d262055049771db184fc6b384f4cf00c9d35" "text" "Writing is one use of a pencil. This selected claim is not an exhaustive list of pencil uses." "reference" $v59 "authorship" "Agent-authored paraphrase of the cited source."
+@v61 kernel.value.record "source" "557ca491f24944439955e7fac199d262055049771db184fc6b384f4cf00c9d35" "start" 0 "end" 93
+@v62 kernel.value.record "concept" "pencil" "relation" "function" "values" $v58 "mode" "all-instances" "negative" false "source" $v60 "evidence" $v61
+@v63 kernel.seq.make item "unlock"
+@v64 kernel.value.record "url" "https://www.collinsdictionary.com/us/dictionary/english/key" "title" "Key" "accessed" "2026-09-08"
+@v65 kernel.value.record "id" "870ed3e8bfdaee50cd6df301dff29fcddc28ac9228ab776412d7791dd2c8a215" "text" "A lock key can be used to unlock its corresponding lock. This function does not imply that every key opens every lock." "reference" $v64 "authorship" "Agent-authored paraphrase of the cited source."
+@v66 kernel.value.record "source" "870ed3e8bfdaee50cd6df301dff29fcddc28ac9228ab776412d7791dd2c8a215" "start" 0 "end" 118
+@v67 kernel.value.record "concept" "key" "relation" "function" "values" $v63 "mode" "all-instances" "negative" false "source" $v65 "evidence" $v66
+@v68 kernel.seq.make item "shelter"
+@v69 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/umbrella" "title" "Umbrella" "accessed" "2026-09-08"
+@v70 kernel.value.record "id" "6caf687ad966b9426859be988c777a61cbdf95a7a5b49298b11adb2ca273603a" "text" "An umbrella is a device used to shelter a person from rain or sun. This intended use does not guarantee dryness in every situation." "reference" $v69 "authorship" "Agent-authored paraphrase of the cited source."
+@v71 kernel.value.record "source" "6caf687ad966b9426859be988c777a61cbdf95a7a5b49298b11adb2ca273603a" "start" 0 "end" 131
+@v72 kernel.value.record "concept" "umbrella" "relation" "function" "values" $v68 "mode" "all-instances" "negative" false "source" $v70 "evidence" $v71
+@v73 kernel.seq.make item "measure"
+@v74 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/ruler" "title" "Ruler" "accessed" "2026-09-08"
+@v75 kernel.value.record "id" "6844d3c8209b4b0f36d2a44bacec98c8beda70faf2aa729776b234401ae57dc7" "text" "Measuring is one function of a ruler marked with a scale. This teaching uses the measuring-tool sense of ruler." "reference" $v74 "authorship" "Agent-authored paraphrase of the cited source."
+@v76 kernel.value.record "source" "6844d3c8209b4b0f36d2a44bacec98c8beda70faf2aa729776b234401ae57dc7" "start" 0 "end" 111
+@v77 kernel.value.record "concept" "ruler" "relation" "function" "values" $v73 "mode" "all-instances" "negative" false "source" $v75 "evidence" $v76
+@v78 kernel.seq.make item "cut"
+@v79 kernel.value.record "url" "https://dictionary.cambridge.org/us/dictionary/english/scissor?topic=tools" "title" "Scissor" "accessed" "2026-09-08"
+@v80 kernel.value.record "id" "c00cf1fbb45d03b743ee9dcc6ed0aa4bec3d0463b41c02cad79ffdab5f75334d" "text" "A pair of scissors is a tool used for cutting." "reference" $v79 "authorship" "Agent-authored paraphrase of the cited source."
+@v81 kernel.value.record "source" "c00cf1fbb45d03b743ee9dcc6ed0aa4bec3d0463b41c02cad79ffdab5f75334d" "start" 0 "end" 46
+@v82 kernel.value.record "concept" "scissors" "relation" "function" "values" $v78 "mode" "all-instances" "negative" false "source" $v80 "evidence" $v81
+@v83 kernel.seq.make item "water"
+@v84 kernel.value.record "url" "https://www.nps.gov/teachers/classrooms/desert-adaptations.htm" "title" "Desert Adaptations" "accessed" "2026-09-08"
+@v85 kernel.value.record "id" "336cdd4c0a90e1939d851b1bdf75aa34df5626e18d4a4a3119ff1ff762976c38" "text" "Plants need water to survive. This claim concerns the water requirement, not a requirement for constant watering." "reference" $v84 "authorship" "Agent-authored paraphrase of the cited source."
+@v86 kernel.value.record "source" "336cdd4c0a90e1939d851b1bdf75aa34df5626e18d4a4a3119ff1ff762976c38" "start" 0 "end" 113
+@v87 kernel.value.record "concept" "plant" "relation" "need" "values" $v83 "mode" "all-instances" "negative" false "source" $v85 "evidence" $v86
+@v88 kernel.seq.make item "light"
+@v89 kernel.value.record "url" "https://home.nps.gov/articles/000/plants-climateimpact.htm" "title" "Plants and Climate Change" "accessed" "2026-09-08"
+@v90 kernel.value.record "id" "4baac425126d6ed3e8ddfc4ad9d7500a2b0dae286f080c47dd68e1aeaf2570f5" "text" "Photosynthetic plants use light, water and carbon dioxide. A light requirement is typical of plants; it is not asserted here as a universal rule for all parasitic and nonphotosynthetic plants." "reference" $v89 "authorship" "Agent-authored paraphrase of the cited source."
+@v91 kernel.value.record "source" "4baac425126d6ed3e8ddfc4ad9d7500a2b0dae286f080c47dd68e1aeaf2570f5" "start" 0 "end" 192
+@v92 kernel.value.record "concept" "plant" "relation" "need" "values" $v88 "mode" "typical" "negative" false "source" $v90 "evidence" $v91
+@v93 kernel.seq.make item $v42 item $v47 item $v52 item $v57 item $v62 item $v67 item $v72 item $v77 item $v82 item $v87 item $v92
+@v94 kernel.value.record "schema" "sxlm.everyday-teaching.v1" "concepts" $v36 "inclusions" $v37 "properties" $v93 "qualification" "Selected definitions and biological requirements. Functions do not entail actual ability. Typical claims do not yield universal instance facts."
+@output result $v94
+

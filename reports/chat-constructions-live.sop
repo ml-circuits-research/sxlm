@@ -1,0 +1,32 @@
+@v0 kernel.seq.make item "animal" item "mammal" item "vertebrate"
+@v1 kernel.value.record "valid" true "checkedNodes" 6 "format" "dag-certificate"
+@v2 kernel.value.record "nodes" 44780 "steps" 5402 "tokens" 10 "terminalCacheHits" 11 "facts" 215 "matches" 28933 "milliseconds" 1053.52
+@v3 kernel.value.record "input" "What is a cat?" "text" "Vertebrates are animals. Mammals are vertebrates. Cats are mammals." "truth" null "values" $v0 "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "verification" $v1 "metrics" $v2
+@v4 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v5 kernel.value.record "nodes" 40645 "steps" 5857 "tokens" 31 "terminalCacheHits" 18 "facts" 216 "matches" 28815 "milliseconds" 907.67
+@v6 kernel.value.record "input" "Pico is owned by Mira. Does Mira own Pico?" "text" "Yes. Mira owns Pico." "truth" "true" "values" null "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "verification" $v4 "metrics" $v5
+@v7 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v8 kernel.value.record "nodes" 31225 "steps" 4075 "tokens" 12 "terminalCacheHits" 9 "facts" 216 "matches" 28815 "milliseconds" 746.11
+@v9 kernel.value.record "input" "Is Pico owned by Mira?" "text" "Yes. Mira owns Pico." "truth" "true" "values" null "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "verification" $v7 "metrics" $v8
+@v10 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v11 kernel.value.record "nodes" 29673 "steps" 3403 "tokens" 10 "terminalCacheHits" 9 "facts" 216 "matches" 28815 "milliseconds" 702.25
+@v12 kernel.value.record "input" "Does Pico own Mira?" "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "truth" "unknown" "values" null "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "verification" $v10 "metrics" $v11
+@v13 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v14 kernel.value.record "nodes" 41911 "steps" 6315 "tokens" 34 "terminalCacheHits" 18 "facts" 217 "matches" 28815 "milliseconds" 951.15
+@v15 kernel.value.record "input" "Pico is not helped by Mira. Does Mira help Pico?" "text" "No. Mira does not help Pico." "truth" "false" "values" null "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "verification" $v13 "metrics" $v14
+@v16 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
+@v17 kernel.value.record "nodes" 31617 "steps" 3871 "tokens" 12 "terminalCacheHits" 9 "facts" 217 "matches" 28933 "milliseconds" 715.85
+@v18 kernel.value.record "input" "Is a cat an animal?" "text" "Yes. Cats are animals." "truth" "true" "values" null "model" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "verification" $v16 "metrics" $v17
+@v19 kernel.seq.make item $v3 item $v6 item $v9 item $v12 item $v15 item $v18
+@v20 kernel.value.record "id" "82343310-f3d8-498d-92cf-c296e2278c8a" "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0" "model" "f2a2634e43408789dee0161c817f81e4d083c0101689168949f0ba0971831d0a" "turns" 5 "documents" 1
+@v21 kernel.value.record "id" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "baseModel" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "turns" 4 "documents" 0
+@v22 kernel.value.record "id" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "baseModel" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "turns" 3 "documents" 0
+@v23 kernel.value.record "id" "87731dc0-bf47-4186-bdb0-486bfa2fbf40" "baseModel" "6c9a0161b1ce67e62c3176263cdfe5e37f4771ba5d4e25534cc96708539d0817" "model" "3054cfd1e0da041f20ebfa14aaabcb40b078bdf424b9a709f8e51c642f1b6fda" "turns" 9 "documents" 1
+@v24 kernel.value.record "id" "46b18bd7-70e3-4d84-a016-0974ac9205da" "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0" "model" "fded7a58f1df5f7cc54a42453a3234634ba18fb40d3e9e8ddf55e45025da5bdd" "turns" 3 "documents" 1
+@v25 kernel.value.record "id" "cafe2f76-4f84-4d83-9f16-f067b6d5ff9e" "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0" "model" "dfa2a1069c7a4d9edb3a327a10c47f92e2c1c3d941668e343c0efadc666623f7" "turns" 2 "documents" 2
+@v26 kernel.seq.make item $v20 item $v21 item $v22 item $v23 item $v24 item $v25
+@v27 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v28 kernel.value.record "chat" "82343310-f3d8-498d-92cf-c296e2278c8a" "model" "f2a2634e43408789dee0161c817f81e4d083c0101689168949f0ba0971831d0a" "truth" "true" "verification" $v27
+@v29 kernel.value.record "schema" "sxlm.chat-constructions-live.v1" "generated" "2026-09-08T18:33:13.337Z" "passed" true "chat" "58cd2cf5-cc94-49eb-976e-e54facb44f04" "probes" $v19 "preserved" $v26 "originalCatChatUnchanged" true "retainedDocument" $v28 "qualification" "Actual HTTP requests to the restarted workbench. The six prior conversations retained their base, model, turn count and documents before the explicit probe on the existing test document chat. No coding agent was invoked."
+@output result $v29
+

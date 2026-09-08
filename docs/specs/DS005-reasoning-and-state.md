@@ -17,6 +17,14 @@ A rule must contain a nonempty conjunction and one head, with every head variabl
 
 Positive and negative [atoms](../wiki.html#definition-atom) are separate supported facts. Contradiction must not derive unrelated conclusions. Absence of support must not become explicit negation, contraposition or a closed-world default. A ground atomic query must distinguish `true`, `false`, `both` and `unknown`. Existential conjunctions must preserve shared witness bindings; a negative instance alone must not refute the existential. Selection returns supported values, without a claim of real-world exhaustiveness.
 
+### Category and instance knowledge
+
+A source-supervised category declaration may supply both a `kind(subtype, supertype)` fact and the corresponding unary instance rule. The concept compiler must keep their explicit polarity and source attribution aligned. Positive category inheritance uses the existing transitive relation; it does not create an instance of any class. An explicit disjointness declaration permits a negative instance conclusion. Lack of a category edge does not permit either a negative classification or a negative instance conclusion.
+
+Descriptions and generic classifications must query that shared relation. The proof [certificate](../wiki.html#definition-certificate) verifies the resulting formal interpretation and its [source spans](../wiki.html#definition-source-span); it does not independently establish that the teacher correctly interpreted the original source. Teachers must preserve category and instance naming distinctions within the shared term representation. This contract does not establish a complete higher-order type logic, default reasoning or automatic projection of every newly asserted English rule into category knowledge.
+
+Category property facts must distinguish `property(concept, category, relation, values...)` from `property(instance, individual, relation, values...)`. `typical_property` retains qualified category information and must not be flattened into either a universal rule or an individual conclusion. Universal inheritance requires both a declared category and its positive inclusion edge; a named individual's classification must not turn that individual into a category. Missing properties remain unknown. Definitions, intended functions, typical features and observations are different supervision contracts under DS008.
+
 ### Context and interpretation
 
 Belief-attributed facts must not become world facts implicitly. Rule joins must preserve argument roles and [context](../wiki.html#definition-context) across each premise. Source-scoped existential witnesses must remain distinct unless the representation explicitly identifies them. Existential rule conclusions and negative existential assertions outside the supported formal profile must be refused.

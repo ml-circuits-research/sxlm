@@ -1,5 +1,5 @@
 @v0 kernel.seq.make item "ask" item "demo including induction" item "full capability evaluation"
 @v1 kernel.seq.make item "conformance: 28/28" item "composition: 12/12" item "metamorphic: 60/60" item "planning: 64/64" item "normalization: 16/16" item "challenges: 0/8" item "learning gates: 0 -> 5/5; regressions introduced: 0" item "Acceptance: PASS. Raw report: reports/latest-evaluation.sop" item "Challenge results are exploratory and are excluded from the acceptance gate; see report caveats."
-@v2 kernel.value.record "schema" "sxlm.independence.v1" "passed" true "moduleFiles" 126 "localReferences" 642 "externalRuntimeDependencies" 0 "symlinks" 0 "isolatedCommands" $v0 "answer" "Yes. Mira is careful." "evaluation" $v1 "note" "Executed from a temporary copy with no sibling project directories. The copy was removed after verification."
+@v2 kernel.value.record "schema" "sxlm.independence.v1" "passed" true "moduleFiles" 139 "localReferences" 714 "externalRuntimeDependencies" 0 "symlinks" 0 "isolatedCommands" $v0 "answer" "Yes. Mira is careful." "evaluation" $v1 "note" "Executed from a temporary copy with no sibling project directories. The copy was removed after verification."
 @output result $v2
 

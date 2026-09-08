@@ -12,6 +12,8 @@ export class ChatController {
     this.jobs = new DocumentJobs(this.store, { ...agent,
       onReady: (chat, job, checkActive) => this.activate(chat, job, checkActive) });
     this.elementary = elementary ? readPack(new URL('../../packs/elementary-knowledge.sop', import.meta.url)) : null;
+    this.constructions = elementary ? readPack(new URL('../../packs/english-constructions.sop', import.meta.url)) : null;
+    this.everyday = elementary ? readPack(new URL('../../packs/everyday-knowledge.sop', import.meta.url)) : null;
     this.models = new Map();
     this.archives = new ChatModels(this.store);
     for (const chat of this.store.list()) if (!chat.baseModel) {
@@ -21,9 +23,11 @@ export class ChatController {
   }
   base() {
     const current = this.current();
-    if (!this.elementary || current.packs.some(pack => pack.id === this.elementary.id)) return current;
+    const additions = [this.constructions, this.elementary, this.everyday]
+      .filter(pack => pack && !current.packs.some(installed => installed.id === pack.id));
+    if (!additions.length) return current;
     const key = current.resources.hash;
-    if (!this.models.has(key)) this.models.set(key, new SymbolicModel({ packs: [...current.packs, this.elementary] }));
+    if (!this.models.has(key)) this.models.set(key, new SymbolicModel({ packs: [...current.packs, ...additions] }));
     return this.models.get(key);
   }
   create() {

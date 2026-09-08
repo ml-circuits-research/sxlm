@@ -1,0 +1,35 @@
+@v0 kernel.value.record "path" "packs/english-constructions.sop" "hash" "ce2ff5875d5c3a6db835aff109579c719acf85ceddf25b3a15fd62d450962142" "modules" 5 "inducedModules" 1 "teachingExamples" 6
+@v1 kernel.seq.make item "Teacher-annotated variable-width spans with parent tokenization and parsing." item "Semantic field projection and complete sequence composition emitted directly as typed SOP." item "A learned Comp predicate reused by existing copula, negation, question and explanation circuits." item "Exact derivation replay distinguishes induced composition from authored vocabulary." item "New chat profiles include the construction pack; prior conversation bases and documents remain pinned."
+@v2 kernel.value.record "passed" 222 "total" 222 "log" "reports/current-tests.tap" "hash" "429f996e3cbdac259463b2627e4a08b27e206591ff2317b81502d6efe2c8e012"
+@v3 kernel.value.record "before" 0 "after" 16 "total" 16 "regressions" 0 "ablation" 0 "cacheDisabled" 16 "report" "reports/construction-transfer.sop"
+@v4 kernel.value.record "passed" 56 "total" 88 "report" "reports/compatibility-early-school-chat.sop" "improvementsOverArchivedProfile" 0 "regressionsOverArchivedProfile" 0
+@v5 kernel.value.record "passed" 1 "total" 8 "profile" "construction transfer profile; bootstrap-only remains 0/8"
+@v6 kernel.value.record "report" "reports/chat-constructions-live.sop" "probes" 6 "preservedChats" 6 "originalCatChatUnchanged" true
+@v7 kernel.value.record "stages" 13 "passed" true
+@v8 kernel.seq.make item "test"
+@v9 kernel.value.record "name" "tests" "command" "npm" "args" $v8 "log" "reports/current-tests.tap" "status" 0 "signal" null "error" null "milliseconds" 715597 "expectedExit" true "logHash" "429f996e3cbdac259463b2627e4a08b27e206591ff2317b81502d6efe2c8e012"
+@v10 kernel.seq.make item "run" item "eval"
+@v11 kernel.value.record "name" "evaluation" "command" "npm" "args" $v10 "log" "reports/current-evaluation.log" "status" 0 "signal" null "error" null "milliseconds" 81415 "expectedExit" true "logHash" "e54e248ed55a2113a42dc56b57e046ab1ecad0ad94d92aa3cbbc8c4fee60e97a"
+@v12 kernel.seq.make item "run" item "check:learning"
+@v13 kernel.value.record "name" "learning" "command" "npm" "args" $v12 "log" "reports/current-learning-check.log" "status" 0 "signal" null "error" null "milliseconds" 6451 "expectedExit" true "logHash" "22885853e6b5ce7ebd79779438750cf7107057bd5d5b64239962c1152ba08c71"
+@v14 kernel.seq.make item "run" item "test:rebuild"
+@v15 kernel.value.record "name" "rebuild" "command" "npm" "args" $v14 "log" "reports/current-rebuild-check.log" "status" 0 "signal" null "error" null "milliseconds" 12928 "expectedExit" true "logHash" "407b06081a55ea517e6d49b2473bc3e1040d6ffb8255a9ce715a62da53c61e9c"
+@v16 kernel.seq.make item "run" item "test:standalone"
+@v17 kernel.value.record "name" "standalone" "command" "npm" "args" $v16 "log" "reports/current-standalone-check.log" "status" 0 "signal" null "error" null "milliseconds" 86933 "expectedExit" true "logHash" "b07f79d7eceab5ee300d4256dc2d6369af1ffb8bcb4e78f44f6b6a242f185d5a"
+@v18 kernel.seq.make item "run" item "audit:vision"
+@v19 kernel.value.record "name" "vision" "command" "npm" "args" $v18 "log" "reports/current-vision-check.log" "status" 1 "signal" null "error" null "milliseconds" 2930 "expectedExit" true "logHash" "5745e9b6aa390652cae7d2f7cae224f98b9c29c830ed22f89d25b26c5f2d7a3e"
+@v20 kernel.seq.make item "eval/compatibility/run-early-school.mjs" item "--chat-profile"
+@v21 kernel.value.record "name" "school-chat" "command" "/home/salboaie/.nvm/versions/node/v24.9.0/bin/node" "args" $v20 "log" "reports/current-school-chat.log" "status" 1 "signal" null "error" null "milliseconds" 118983 "expectedExit" true "logHash" "09947f06609b74626651d3996ff3147670a0466b2a33f877d5f37df1059506d6"
+@v22 kernel.seq.make item "run" item "test:browser"
+@v23 kernel.value.record "name" "browser" "command" "npm" "args" $v22 "log" "reports/current-browser-check.log" "status" 0 "signal" null "error" null "milliseconds" 128093 "expectedExit" true "logHash" "2e6adc9dc713d36f53fe89a2335924a5a561ef4e6527215bf9db14a61517c706"
+@v24 kernel.seq.make item "run" item "docs:check"
+@v25 kernel.value.record "name" "docs" "command" "npm" "args" $v24 "log" "reports/current-docs-check.log" "status" 0 "signal" null "error" null "milliseconds" 371 "expectedExit" true "logHash" "832b27da86b2560bfbca2d36514c91a7447134d5d6cf0b64a9252fc89cf0c200"
+@v26 kernel.seq.make item "scripts/docs-browser-smoke.mjs"
+@v27 kernel.value.record "name" "docs-browser" "command" "/home/salboaie/.nvm/versions/node/v24.9.0/bin/node" "args" $v26 "log" "reports/current-docs-browser-check.log" "status" 0 "signal" null "error" null "milliseconds" 5959 "expectedExit" true "logHash" "3d9d56a55a3b9efaf56772c6c000796489657c0ce9d69ba15f9f4bf8e94d67eb"
+@v28 kernel.seq.make item $v9 item $v11 item $v13 item $v15 item $v17 item $v19 item $v21 item $v23 item $v25 item $v27
+@v29 kernel.value.record "schema" "sxlm.checks.v1" "generated" "2026-09-08T18:31:15.945Z" "results" $v28 "qualification" "Vision and school commands may return 1 to expose unmet requirements; that exit is not a capability pass."
+@v30 kernel.value.record "tests" $v2 "transfer" $v3 "school" $v4 "challenges" $v5 "live" $v6 "rebuild" $v7 "checks" $v29
+@v31 kernel.seq.make item "Ordinary child-level conversation is not achieved; school compatibility remains 56/88." item "Vocabulary and annotated meanings are supplied supervision. The learner does not discover arbitrary syntax, morphology, tense or quantifier scope." item "A bounded structural hypothesis with field-splicing preference is not a uniqueness or universal-generalization proof." item "The same project author owns teaching and development-visible evaluation cases." item "The architecture audit still reports three unmet requirements; this iteration does not establish a complete symbolic LLM."
+@v32 kernel.value.record "schema" "sxlm.construction-iteration.v1" "generated" "2026-09-08T18:33:41.159Z" "native" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "baseModel" "bcdc38021f8b611215d55e1a848f4e9b92679882d541a44443e33f4938a6a6f1" "chatModel" "c69d0ee1ff404099328f2056583b669d0f073442d494bfa5673f23e7e6278c9f" "artifact" $v0 "implemented" $v1 "evidence" $v30 "limitations" $v31 "nextEvidenceNeeded" "Use the same learner and existing kernel to teach additional reusable semantic constructions, and require a measured gain on unchanged broad language and school suites while preserving current certificates and counterexamples."
+@output result $v32
+

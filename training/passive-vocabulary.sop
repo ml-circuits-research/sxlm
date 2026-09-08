@@ -1,0 +1,13 @@
+@v0 kernel.value.record "lex" "PARTICIPLE"
+@v1 kernel.seq.make item $v0
+@v2 kernel.value.record "id" "passive.participle" "lhs" "Participle" "rhs" $v1 "action" "en.cop.0.semantics"
+@v3 kernel.seq.make item $v2
+@v4 kernel.value.record "category" "PARTICIPLE" "surface" "owned" "value" "own"
+@v5 kernel.value.record "category" "PARTICIPLE" "surface" "helped" "value" "help"
+@v6 kernel.seq.make item $v4 item $v5
+@v7 kernel.value.record
+@v8 kernel.value.record "productions" $v3 "lexicon" $v6 "classes" $v7
+@v9 kernel.seq.make
+@v10 kernel.value.record "grammar" $v8 "sop" $v9
+@output result $v10
+

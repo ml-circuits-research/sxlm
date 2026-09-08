@@ -1,0 +1,75 @@
+@v0 kernel.seq.make item "aerial_device" item "mechanism"
+@v1 kernel.value.record "values" $v0
+@v2 kernel.seq.make item "aerial_device" item "mechanism"
+@v3 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v4 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v5 kernel.value.record "input" "What is an amber glider?" "expect" $v1 "status" "answered" "truth" null "values" $v2 "text" "Aerial devices are mechanisms. Amber gliders are aerial devices." "coverage" $v3 "verification" $v4 "milliseconds" 963.27 "pass" true
+@v6 kernel.seq.make item "aerial_device" item "mechanism"
+@v7 kernel.value.record "values" $v6
+@v8 kernel.seq.make item "aerial_device" item "mechanism"
+@v9 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v10 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v11 kernel.value.record "input" "What are amber gliders?" "expect" $v7 "status" "answered" "truth" null "values" $v8 "text" "Aerial devices are mechanisms. Amber gliders are aerial devices." "coverage" $v9 "verification" $v10 "milliseconds" 945.99 "pass" true
+@v12 kernel.seq.make item "aerial_device" item "mechanism"
+@v13 kernel.value.record "values" $v12
+@v14 kernel.seq.make item "aerial_device" item "mechanism"
+@v15 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v16 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v17 kernel.value.record "input" "Tell me about amber gliders." "expect" $v13 "status" "answered" "truth" null "values" $v14 "text" "Aerial devices are mechanisms. Amber gliders are aerial devices." "coverage" $v15 "verification" $v16 "milliseconds" 865.2 "pass" true
+@v18 kernel.value.record "truth" "true"
+@v19 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v20 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v21 kernel.value.record "input" "Is an amber glider a mechanism?" "expect" $v18 "status" "answered" "truth" "true" "values" null "text" "Yes. Amber gliders are mechanisms." "coverage" $v19 "verification" $v20 "milliseconds" 792.92 "pass" true
+@v22 kernel.value.record "truth" "true"
+@v23 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v24 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v25 kernel.value.record "input" "Are amber gliders aerial devices and mechanisms?" "expect" $v22 "status" "answered" "truth" "true" "values" null "text" "Yes. Amber gliders are aerial devices. Amber gliders are mechanisms." "coverage" $v23 "verification" $v24 "milliseconds" 787.26 "pass" true
+@v26 kernel.value.record "truth" "true"
+@v27 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v28 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v29 kernel.value.record "input" "Why is an amber glider a mechanism?" "expect" $v26 "status" "answered" "truth" "true" "values" null "text" "These classification statements support the answer: Aerial devices are mechanisms. Amber gliders are aerial devices." "coverage" $v27 "verification" $v28 "milliseconds" 868.92 "pass" true
+@v30 kernel.value.record "truth" "true"
+@v31 kernel.value.record "sentences" 2 "parsed" 2 "gaps" 0
+@v32 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v33 kernel.value.record "input" "Rowan is an amber glider. Is Rowan a mechanism?" "expect" $v30 "status" "answered" "truth" "true" "values" null "text" "Yes. Rowan is mechanism." "coverage" $v31 "verification" $v32 "milliseconds" 980.57 "pass" true
+@v34 kernel.seq.make item "aerial_device" item "amber_glider" item "mechanism"
+@v35 kernel.value.record "values" $v34
+@v36 kernel.seq.make item "aerial_device" item "amber_glider" item "mechanism"
+@v37 kernel.value.record "sentences" 2 "parsed" 2 "gaps" 0
+@v38 kernel.value.record "valid" true "checkedNodes" 7 "format" "dag-certificate"
+@v39 kernel.value.record "input" "Rowan is an amber glider. What is Rowan?" "expect" $v35 "status" "answered" "truth" null "values" $v36 "text" "Here is what I know about rowan: it belongs to these categories: aerial_device, amber_glider, mechanism." "coverage" $v37 "verification" $v38 "milliseconds" 1258.76 "pass" true
+@v40 kernel.value.record "truth" "true"
+@v41 kernel.value.record "sentences" 4 "parsed" 4 "gaps" 0
+@v42 kernel.value.record "valid" true "checkedNodes" 6 "format" "dag-certificate"
+@v43 kernel.value.record "input" "Every mechanism who owns a bird is careful. Rowan is an amber glider. Rowan owns a bird. Is Rowan careful?" "expect" $v40 "status" "answered" "truth" "true" "values" null "text" "Yes. Rowan is careful." "coverage" $v41 "verification" $v42 "milliseconds" 2210.31 "pass" true
+@v44 kernel.value.record "truth" "false"
+@v45 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v46 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v47 kernel.value.record "input" "Are amber gliders ground devices?" "expect" $v44 "status" "answered" "truth" "false" "values" null "text" "No. amber_glider does not kind ground_device." "coverage" $v45 "verification" $v46 "milliseconds" 737.32 "pass" true
+@v48 kernel.value.record "truth" "false"
+@v49 kernel.value.record "sentences" 2 "parsed" 2 "gaps" 0
+@v50 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v51 kernel.value.record "input" "Rowan is an amber glider. Is Rowan a ground device?" "expect" $v48 "status" "answered" "truth" "false" "values" null "text" "No. Rowan is not ground device." "coverage" $v49 "verification" $v50 "milliseconds" 945.73 "pass" true
+@v52 kernel.value.record "truth" "unknown"
+@v53 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v54 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v55 kernel.value.record "input" "Is a mechanism an amber glider?" "expect" $v52 "status" "unknown" "truth" "unknown" "values" null "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "coverage" $v53 "verification" $v54 "milliseconds" 757.28 "pass" true
+@v56 kernel.value.record "truth" "unknown"
+@v57 kernel.value.record "sentences" 1 "parsed" 1 "gaps" 0
+@v58 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v59 kernel.value.record "input" "Is some amber glider a mechanism?" "expect" $v56 "status" "unknown" "truth" "unknown" "values" null "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "coverage" $v57 "verification" $v58 "milliseconds" 766.95 "pass" true
+@v60 kernel.value.record "truth" "true"
+@v61 kernel.value.record "sentences" 2 "parsed" 2 "gaps" 0
+@v62 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v63 kernel.value.record "input" "Rowan is an amber glider. Is some amber glider a mechanism?" "expect" $v60 "status" "answered" "truth" "true" "values" null "text" "Yes. Rowan is mechanism." "coverage" $v61 "verification" $v62 "milliseconds" 1019.5 "pass" true
+@v64 kernel.value.record "truth" "unknown"
+@v65 kernel.value.record "sentences" 2 "parsed" 2 "gaps" 0
+@v66 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v67 kernel.value.record "input" "Mira believes that Rowan is an amber glider. Is Rowan a mechanism?" "expect" $v64 "status" "unknown" "truth" "unknown" "values" null "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "coverage" $v65 "verification" $v66 "milliseconds" 1005.14 "pass" true
+@v68 kernel.value.record "truth" "unknown"
+@v69 kernel.value.record "sentences" 2 "parsed" 2 "gaps" 0
+@v70 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v71 kernel.value.record "input" "Rowan is a ground device. Is Rowan an amber glider?" "expect" $v68 "status" "unknown" "truth" "unknown" "values" null "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "coverage" $v69 "verification" $v70 "milliseconds" 954.06 "pass" true
+@v72 kernel.seq.make item $v5 item $v11 item $v17 item $v21 item $v25 item $v29 item $v33 item $v39 item $v43 item $v47 item $v51 item $v55 item $v59 item $v63 item $v67 item $v71
+@v73 kernel.value.record "schema" "sxlm.concept-transfer.v1" "model" "5d9062e9f9a0db377f8f5e00234550fe38ccb23b9f9d2f61eba7212dc10c4e7e" "parent" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "native" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "sourceHash" "7f55e49ff09158d7a6b4a32c5d09ac4714929472dc06e94ffaa83f51b3e51087" "total" 16 "passed" 16 "results" $v72 "qualification" "Same-author, development-visible structural transfer of authored concept semantics and compiled source knowledge. Neither blind evaluation nor autonomous concept induction."
+@output result $v73

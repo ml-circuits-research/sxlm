@@ -5,11 +5,13 @@ import { validateAtom, validateRule } from './reference/src/semantics/logic.mjs'
 import { compileKnowledge, compileTheoryKnowledge } from './reference/src/learning/knowledge.mjs';
 import { compileGrammarKnowledge } from './reference/src/learning/grammar.mjs';
 import { compilePhraseKnowledge } from './reference/src/learning/phrases.mjs';
+import { compileConceptKnowledge } from './reference/src/learning/concepts.mjs';
+import { compileConceptProperties } from './reference/src/learning/properties.mjs';
 import { SymbolicModel } from './reference/src/model.mjs';
 import { readPack } from './reference/src/learning/packs.mjs';
 
 // This file is copied into a coding-agent workspace. It is never imported by inference.
-export function compileDocument({ facts = [], rules = [], phrases = [], grammar, sop = [], limitations = [] }) {
+export function compileDocument({ facts = [], rules = [], phrases = [], concepts = [], inclusions = [], properties = [], grammar, sop = [], limitations = [] }) {
   const packet = decodeSOP(readFileSync('packet.sop'));
   const prefix = 'document.' + packet.job.replaceAll('-', '');
   const origin = { kind: 'agent-authored-document-interpretation', parentModel: packet.parentModel,
@@ -35,22 +37,34 @@ export function compileDocument({ facts = [], rules = [], phrases = [], grammar,
     return { ...item.rule, teaching: evidence(item) };
   }), { id: prefix + '.rules', origin, sourceName: packet.document.name });
   const language = grammar ? compileGrammarKnowledge(grammar, { id: prefix + '.grammar', origin }) : { sop: [], providers: {} };
-  let lexical = { sop: [], providers: {} };
-  if (phrases.length) {
+  const qualified = properties.length ? compileConceptProperties({
+    properties: properties.map(item => ({ ...item, ...evidence(item) }))
+  }, { id: prefix + '.properties', origin }) : { sop: [], providers: {} };
+  let lexical = { sop: [], providers: {} }, conceptual = { sop: [], providers: {} };
+  if (phrases.length || concepts.length) {
     const parent = new SymbolicModel({ packs: packet.manifests.map((_, index) => readPack(
       `reference/packs/${index === 0 ? 'english-bootstrap' : `extension-${index}`}.sop`)) });
     check(parent.resources.hash === packet.parentModel, 'Phrase tokenizer requires the exact parent model');
-    lexical = compilePhraseKnowledge(phrases, { id: prefix + '.phrases', origin,
-      tokenize: text => parent.grammar.tokenize(text) });
+    const tokenize = text => parent.grammar.tokenize(text);
+    if (phrases.length) lexical = compilePhraseKnowledge(phrases, { id: prefix + '.phrases', origin, tokenize });
+    if (concepts.length) {
+      check(parent.runtime.programs.has('knowledge.concepts'), 'This conversation needs a concept-aware base model');
+      conceptual = compileConceptKnowledge({
+        concepts: concepts.map(item => ({ ...item, ...(Number.isSafeInteger(item.chunk) ? evidence(item) : {}) })),
+        inclusions: inclusions.map(item => ({ ...item, ...evidence(item) }))
+      }, { id: prefix + '.categories', origin, tokenize });
+    }
   }
   const pack = { schema: 'sxlm.pack.v1', id: prefix, version: '1', provenance: origin,
     dependencies: packet.manifests.map(({ id, hash }) => ({ id, hash })),
-    sop: [...memory.sop, ...theory.sop, ...language.sop, ...lexical.sop, ...sop.map(module => ({ ...module, provenance: origin }))],
-    providers: { 'fact-fragments': [prefix + '.facts'], ...theory.providers,
+    sop: [...memory.sop, ...theory.sop, ...language.sop, ...lexical.sop, ...conceptual.sop, ...qualified.sop, ...sop.map(module => ({ ...module, provenance: origin }))],
+    providers: { 'fact-fragments': [prefix + '.facts', ...(conceptual.providers['fact-fragments'] ?? []), ...(qualified.providers['fact-fragments'] ?? [])],
+      'theory-fragments': [...theory.providers['theory-fragments'], ...(conceptual.providers['theory-fragments'] ?? []), ...(qualified.providers['theory-fragments'] ?? [])],
+      'concept-fragments': conceptual.providers['concept-fragments'] ?? [],
       'grammar-fragments': [...(language.providers['grammar-fragments'] ?? []),
-        ...(lexical.providers['grammar-fragments'] ?? [])] },
+        ...(lexical.providers['grammar-fragments'] ?? []), ...(conceptual.providers['grammar-fragments'] ?? [])] },
     training: { schema: 'sxlm.document-teaching.v1', document: packet.document,
-      facts, rules, phrases, ...(grammar ? { grammar } : {}), sop, limitations,
+      facts, rules, phrases, concepts, inclusions, properties, ...(grammar ? { grammar } : {}), sop, limitations,
       qualification: 'Authored supervision. No independent semantic validation or induction claim.' } };
   writeFileSync('candidate.sop', encodeSOP(pack));
   return pack;

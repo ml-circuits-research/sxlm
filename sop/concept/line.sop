@@ -1,0 +1,22 @@
+@input item any
+@input with object
+@rawForms kernel.value.get value $with key "forms" fallback null
+@forms data.array value $rawForms
+@terms kernel.value.get value $item key "terms" fallback null
+@left kernel.value.get value $terms key 0 fallback null
+@right kernel.value.get value $terms key 1 fallback null
+@subject concept.form value $left forms $forms
+@first kernel.text.slice text $subject start 0 end 1
+@upper kernel.text.case text $first mode "upper"
+@length kernel.seq.count items $subject
+@rest kernel.text.slice text $subject start 1 end $length
+@capitalized kernel.text.concat left $upper right $rest
+@object concept.form value $right forms $forms
+@negative kernel.value.get value $item key "negative" fallback false
+@sign data.boolean value $negative
+@key kernel.value.booleanLabel value $sign
+@copulas kernel.value.record "true" " are not " "false" " are "
+@copula kernel.value.get value $copulas key $key fallback null
+@parts kernel.seq.make item $capitalized item $copula item $object item "."
+@result kernel.text.join items $parts separator ""
+@output result $result

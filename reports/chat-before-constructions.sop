@@ -1,0 +1,43 @@
+@v0 kernel.seq.make item "62982e63-6f68-481c-a58e-d53fcbe2c01d"
+@v1 kernel.value.record "schema" "sxlm.chat.v1" "id" "82343310-f3d8-498d-92cf-c296e2278c8a" "model" "f2a2634e43408789dee0161c817f81e4d083c0101689168949f0ba0971831d0a" "title" "Is Rowan careful?" "created" "2026-09-08T14:42:40.573Z" "updated" "2026-09-08T17:50:54.400Z" "turns" 5 "activeJobs" $v0 "baseRecoveryError" null "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0"
+@v2 kernel.value.record "schema" "sxlm.chat-document.v1" "id" "c340e58d-c000-4971-9c10-4a316e1d9787" "chat" "82343310-f3d8-498d-92cf-c296e2278c8a" "name" "chat-field-notes.docx" "format" "docx" "chunks" 1 "bytes" 834 "status" "ready" "hash" "2e18f9eb7eaceebb9fe07ac20b191292bb68267ffe5610884366422eaa7899fa"
+@v3 kernel.seq.make item $v2
+@v4 kernel.value.record "id" "62982e63-6f68-481c-a58e-d53fcbe2c01d" "status" "ready"
+@v5 kernel.seq.make item $v4
+@v6 kernel.value.record "id" "82343310-f3d8-498d-92cf-c296e2278c8a" "record" $v1 "documents" $v3 "jobs" $v5
+@v7 kernel.value.record "schema" "sxlm.chat.v1" "id" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "title" "What are cats?" "created" "2026-09-08T17:49:11.470Z" "updated" "2026-09-08T17:49:14.785Z" "turns" 4 "baseModel" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9"
+@v8 kernel.seq.make
+@v9 kernel.seq.make
+@v10 kernel.value.record "id" "519162a4-15f7-40a5-9c3c-4f7e9d2eea11" "record" $v7 "documents" $v8 "jobs" $v9
+@v11 kernel.value.record "schema" "sxlm.chat.v1" "id" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "model" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "title" "What is a cat?" "created" "2026-09-08T15:31:37.839Z" "updated" "2026-09-08T17:49:09.626Z" "turns" 3 "baseModel" "6162e3b9d1e463836ecbb3246b7475b8fba379c2a16c1b94071be12975504ca9" "previousBaseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0" "baseMigration" "183328d2-567b-4a22-9543-b7105de9d301"
+@v12 kernel.seq.make
+@v13 kernel.seq.make
+@v14 kernel.value.record "id" "e4e5cebb-1e2c-4016-9e0f-75d99eb00c65" "record" $v11 "documents" $v12 "jobs" $v13
+@v15 kernel.seq.make item "203e85ac-0193-431c-a287-613d8be99d6a"
+@v16 kernel.value.record "schema" "sxlm.chat.v1" "id" "87731dc0-bf47-4186-bdb0-486bfa2fbf40" "model" "3054cfd1e0da041f20ebfa14aaabcb40b078bdf424b9a709f8e51c642f1b6fda" "title" "Is Harper careful?" "created" "2026-09-08T16:37:22.496Z" "updated" "2026-09-08T17:01:02.257Z" "turns" 9 "baseModel" "6c9a0161b1ce67e62c3176263cdfe5e37f4771ba5d4e25534cc96708539d0817" "activeJobs" $v15
+@v17 kernel.value.record "schema" "sxlm.chat-document.v1" "id" "e2b65e1e-1602-4bbd-8d72-320c68db0303" "chat" "87731dc0-bf47-4186-bdb0-486bfa2fbf40" "name" "Crew.xlsx" "format" "xlsx" "chunks" 1 "bytes" 1887 "status" "ready" "hash" "8f92f807e4f0593ae74625ec1965b5e6cf906bad6c1d49cce0da82bac7fbf4ea"
+@v18 kernel.seq.make item $v17
+@v19 kernel.value.record "id" "a122ff16-fccc-4615-902c-8a19f155780a" "status" "failed"
+@v20 kernel.value.record "id" "203e85ac-0193-431c-a287-613d8be99d6a" "status" "ready"
+@v21 kernel.seq.make item $v19 item $v20
+@v22 kernel.value.record "id" "87731dc0-bf47-4186-bdb0-486bfa2fbf40" "record" $v16 "documents" $v18 "jobs" $v21
+@v23 kernel.seq.make item "0d928fed-97c9-463d-b6b1-958f9670927a"
+@v24 kernel.value.record "schema" "sxlm.chat.v1" "id" "46b18bd7-70e3-4d84-a016-0974ac9205da" "model" "fded7a58f1df5f7cc54a42453a3234634ba18fb40d3e9e8ddf55e45025da5bdd" "title" "WHat is white?" "created" "2026-09-08T14:50:09.535Z" "updated" "2026-09-08T15:25:58.962Z" "turns" 3 "activeJobs" $v23 "baseRecoveryError" null "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0"
+@v25 kernel.value.record "schema" "sxlm.chat-document.v1" "id" "92ce84f1-4d4f-4ade-89cc-ffe9042afc39" "chat" "46b18bd7-70e3-4d84-a016-0974ac9205da" "name" "FUTURE_RESEARCH_INFRASTRUCTURE.pdf" "format" "pdf" "chunks" 39 "bytes" 2507884 "status" "ready" "hash" "d1c7c76a5a1f8cefdaa4bd5d7259b7fe1881c0bb430e59250ecf1124acc92014"
+@v26 kernel.seq.make item $v25
+@v27 kernel.value.record "id" "0d928fed-97c9-463d-b6b1-958f9670927a" "status" "ready"
+@v28 kernel.seq.make item $v27
+@v29 kernel.value.record "id" "46b18bd7-70e3-4d84-a016-0974ac9205da" "record" $v24 "documents" $v26 "jobs" $v28
+@v30 kernel.seq.make item "e66abbf5-4fb3-49e5-822c-3a4b5b4365e8"
+@v31 kernel.value.record "schema" "sxlm.chat.v1" "id" "cafe2f76-4f84-4d83-9f16-f067b6d5ff9e" "model" "dfa2a1069c7a4d9edb3a327a10c47f92e2c1c3d941668e343c0efadc666623f7" "title" "Is Cedar careful?" "created" "2026-09-08T14:21:34.711Z" "updated" "2026-09-08T15:25:58.960Z" "turns" 2 "activeJobs" $v30 "baseRecoveryError" null "baseModel" "d5727f6d7ce67ae3ad5ce2c4119add34745d2f917e6dbe2a02837cfae4c884d0"
+@v32 kernel.value.record "schema" "sxlm.chat-document.v1" "id" "1bc219ce-5e2f-4e8a-91bf-193ad05f1147" "chat" "cafe2f76-4f84-4d83-9f16-f067b6d5ff9e" "name" "Practical_Agentic_Desktop_and_Browser_Environments.docx" "format" "docx" "chunks" 1 "bytes" 48819 "status" "ready" "hash" "e1b0a9096a15b71e687e006e2fcb6856c51de83aaee7e5a1adb353acfe1d4504"
+@v33 kernel.value.record "schema" "sxlm.chat-document.v1" "id" "6d625f90-6646-4ac0-8d0b-a30c6dfaf031" "chat" "cafe2f76-4f84-4d83-9f16-f067b6d5ff9e" "name" "Cedar flight notes" "chunks" 1 "bytes" 60 "status" "ready" "hash" "6db81506b9f2ab465e0d1d2f73c620ca9b859816d9f57d0e64d6b181b5703ce8"
+@v34 kernel.seq.make item $v32 item $v33
+@v35 kernel.value.record "id" "e66abbf5-4fb3-49e5-822c-3a4b5b4365e8" "status" "ready"
+@v36 kernel.value.record "id" "c6849a10-86c6-4fc0-9f02-dcff5d573b31" "status" "failed"
+@v37 kernel.seq.make item $v35 item $v36
+@v38 kernel.value.record "id" "cafe2f76-4f84-4d83-9f16-f067b6d5ff9e" "record" $v31 "documents" $v34 "jobs" $v37
+@v39 kernel.seq.make item $v6 item $v10 item $v14 item $v22 item $v29 item $v38
+@v40 kernel.value.record "schema" "sxlm.chat-preservation.v1" "generated" "2026-09-08T18:32:14.742Z" "chats" $v39
+@output result $v40
+

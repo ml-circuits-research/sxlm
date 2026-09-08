@@ -177,7 +177,7 @@ export function validateDocumentCandidate(parent, candidate, document, store, ex
   check(candidate.provenance.parentModel === parent.resources.hash, 'Document candidate has a stale parent');
   check(candidate.provenance.documentHash === document.hash, 'Document source identity differs');
   check(Object.keys(candidate.entrypoints ?? {}).length === 0 && (candidate.linkages ?? []).length === 0, 'Document candidates cannot change task entrypoints or linkage definitions');
-  check(Object.keys(candidate.providers ?? {}).every(slot => ['fact-fragments', 'theory-fragments', 'grammar-fragments'].includes(slot)), 'Unsupported document provider');
+  check(Object.keys(candidate.providers ?? {}).every(slot => ['fact-fragments', 'theory-fragments', 'grammar-fragments', 'concept-fragments'].includes(slot)), 'Unsupported document provider');
   check(candidate.sop.every(module => !module.learning), 'Authored document interpretations cannot claim induced derivations');
   const model = new SymbolicModel({ packs: [...parent.packs, candidate] });
   if (extraction) {

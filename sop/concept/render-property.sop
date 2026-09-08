@@ -1,0 +1,8 @@
+@input with object
+@presentation kernel.value.get value $with key "presentation" fallback null
+@reference kernel.value.get value $presentation key "reference" fallback null
+@constraints kernel.value.get value $reference key "constraints" fallback null
+@empty kernel.seq.empty
+@named kernel.value.equal left $constraints right $empty
+@result kernel.flow.choose condition $named then "concept.render-property-text" else "concept.render-keep" with $with
+@output result $result

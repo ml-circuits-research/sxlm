@@ -1,0 +1,5 @@
+@input with object
+@presentation kernel.value.get value $with key "presentation" fallback null
+@mode kernel.value.get value $presentation key "mode" fallback null
+@result choose selector $mode otherwise "concept.render-keep" case "definition" "concept.render-description" case "classification" "concept.render-classification" case "property" "concept.render-property" bind with $with
+@output result $result

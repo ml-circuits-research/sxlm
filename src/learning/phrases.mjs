@@ -31,7 +31,11 @@ export function compilePhraseKnowledge(entries, { id, origin, tokenize }) {
     }
     current.values.push(entry.value);
   }
-  const grammar = { productions: [], lexicon: [] };
+  // Single-token meanings must also enter the destination lexical index. Its
+  // class-exclusion policy otherwise invents an open-class identity meaning
+  // alongside a supplied alias (for example a supplied irregular inflection).
+  const grammar = { productions: [], lexicon: observations.filter(item => item.symbols.length === 1)
+    .map(item => ({ category: item.category, surface: item.symbols[0], value: item.value })) };
   const provenance = { kind: 'compiled-phrase-proposal', origin, knowledgeHash: digest(observations),
     qualification: 'Explicit constant lexical meanings compiled with shared prefixes, not induced language.' };
   const action = (suffix, index) => ({ id: `${id}.${suffix}`, provenance,

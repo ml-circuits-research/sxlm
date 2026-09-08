@@ -1,0 +1,6 @@
+@input children array
+@input scope string
+@category kernel.value.get value $children key 0 fallback null
+@with kernel.value.record category $category
+@result everyday.reference-concept with $with
+@output result $result

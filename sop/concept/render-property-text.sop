@@ -1,0 +1,26 @@
+@input with object
+@raw kernel.value.get value $with key "rendered" fallback null
+@rendered data.object value $raw
+@presentation kernel.value.get value $with key "presentation" fallback null
+@reference kernel.value.get value $presentation key "reference" fallback null
+@domain kernel.value.get value $reference key "domain" fallback null
+@term kernel.value.get value $reference key "term" fallback null
+@forms knowledge.concepts with $with
+@plural concept.form value $term forms $forms
+@names kernel.value.record concept $plural instance $term
+@name0 kernel.value.get value $names key $domain fallback "the subject"
+@name data.string value $name0
+@first kernel.value.slice value $name start 0 end 1
+@firstText data.string value $first
+@upper kernel.text.case text $firstText mode "upper"
+@length kernel.seq.count items $name
+@rest kernel.value.slice value $name start 1 end $length
+@relation kernel.value.get value $presentation key "relation" fallback null
+@clauses kernel.value.get value $relation key "clauses" fallback null
+@clause kernel.value.get value $clauses key $domain fallback "relates to"
+@values kernel.value.get value $rendered key "values" fallback null
+@list kernel.text.join items $values separator ", "
+@pieces kernel.seq.make item $upper item $rest item " " item $clause item " " item $list item "."
+@text kernel.text.join items $pieces separator ""
+@result data.attach record $rendered key "text" value $text
+@output result $result

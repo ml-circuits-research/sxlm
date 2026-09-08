@@ -8,8 +8,12 @@ import { rational, format } from '../../src/kernel/rational.mjs';
 const dataset = decodeSOP(readFileSync(new URL('./sdlm-early-school.sop', import.meta.url), 'utf8'));
 check(new Set(dataset.cases.map(item => item.id)).size === dataset.cases.length, 'Duplicate imported case identity');
 const base = new SymbolicModel();
+const chatProfile = process.argv.includes('--chat-profile');
+check(process.argv.slice(2).every(argument => argument === '--chat-profile'), 'Unknown school evaluation option');
 const model = new SymbolicModel({ packs: [...base.packs,
-  readPack(new URL('../../packs/elementary-knowledge.sop', import.meta.url))] });
+  ...(chatProfile ? [readPack(new URL('../../packs/english-constructions.sop', import.meta.url))] : []),
+  readPack(new URL('../../packs/elementary-knowledge.sop', import.meta.url)),
+  ...(chatProfile ? [readPack(new URL('../../packs/everyday-knowledge.sop', import.meta.url))] : [])] });
 
 // Translate result contracts only. Input sentences and expected answers remain untouched.
 function matches(answer, expected) {
@@ -50,7 +54,7 @@ const byDomain = Object.fromEntries([...new Set(results.map(item => item.domain)
 }));
 const report = { schema: 'sxlm.compatibility-evaluation.v1', generated: new Date().toISOString(),
   source: dataset.source, casesHash: digest(dataset.cases), model: model.resources.hash,
-  manifests: model.resources.manifests, profile: 'bootstrap-plus-elementary',
+  manifests: model.resources.manifests, profile: chatProfile ? 'bootstrap-plus-constructions-plus-elementary-plus-everyday' : 'bootstrap-plus-elementary',
   total: results.length, passed: results.filter(item => item.passed).length,
   answerContractMatches: results.filter(item => item.contractMatch).length, byDomain, results,
   qualifications: [
@@ -62,6 +66,7 @@ const report = { schema: 'sxlm.compatibility-evaluation.v1', generated: new Date
     'Original expectations include simplified world assumptions; disagreement may require explicit contract review.',
     'This runner covers one imported suite. Other inventoried experiments and the semantic review of ESLM cases remain outstanding.'
   ] };
-writeFileSync(new URL('../../reports/compatibility-early-school.sop', import.meta.url), encodeSOP(report));
+writeFileSync(new URL(chatProfile ? '../../reports/compatibility-early-school-chat.sop' :
+  '../../reports/compatibility-early-school.sop', import.meta.url), encodeSOP(report));
 console.log(`Early-school compatibility: ${report.passed}/${report.total}; typed answer matches: ${report.answerContractMatches}`);
 if (report.passed !== report.total) process.exitCode = 1;

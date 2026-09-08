@@ -1,0 +1,6 @@
+@input with object
+@atom kernel.value.get value $with key "atom" fallback null
+@rawContext kernel.value.get value $with key "context" fallback null
+@context data.object value $rawContext
+@result concept.line item $atom with $context
+@output result $result

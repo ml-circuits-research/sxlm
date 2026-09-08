@@ -24,7 +24,7 @@
     "test:standalone": "node scripts/check-independence.mjs",
     "test:rebuild": "node scripts/check-rebuild.mjs",
     "learn:realization": "node scripts/learn-realization.mjs",
-    "check:learning": "node scripts/build-concepts.mjs --check && node scripts/learn-realization.mjs --check && node scripts/build-semantics.mjs --check && node scripts/build-sop.mjs --check && node scripts/build-completion.mjs --check && node scripts/build-document.mjs --check && node scripts/build-knowledge.mjs --check && node scripts/build-expressions.mjs --check && node scripts/build-planning.mjs --check && node scripts/build-lexical.mjs --check && node scripts/build-text.mjs --check && node scripts/build-elementary.mjs --check",
+    "check:learning": "node scripts/build-concepts.mjs --check && node scripts/learn-realization.mjs --check && node scripts/build-semantics.mjs --check && node scripts/build-sop.mjs --check && node scripts/build-completion.mjs --check && node scripts/build-document.mjs --check && node scripts/build-knowledge.mjs --check && node scripts/build-expressions.mjs --check && node scripts/build-planning.mjs --check && node scripts/build-lexical.mjs --check && node scripts/build-text.mjs --check && node scripts/build-elementary.mjs --check && node scripts/build-constructions.mjs --check && node scripts/build-everyday.mjs --check",
     "audit:vision": "node scripts/audit-vision.mjs",
     "build:sop": "node scripts/build-sop.mjs",
     "build:semantics": "node scripts/build-semantics.mjs",

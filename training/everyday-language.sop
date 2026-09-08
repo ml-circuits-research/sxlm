@@ -1,0 +1,245 @@
+@v0 kernel.seq.make item "NP"
+@v1 kernel.value.record "id" "everyday.reference.np" "lhs" "EverydayReference" "rhs" $v0 "action" "everyday.reference"
+@v2 kernel.seq.make item "ConceptPlural"
+@v3 kernel.value.record "id" "everyday.reference.plural" "lhs" "EverydayReference" "rhs" $v2 "action" "everyday.reference-plural"
+@v4 kernel.seq.make item "COP"
+@v5 kernel.value.record "id" "everyday.aux.cop" "lhs" "EverydayAux" "rhs" $v4 "action" "en.cop.0.semantics"
+@v6 kernel.seq.make item "AUX"
+@v7 kernel.value.record "id" "everyday.aux.verb" "lhs" "EverydayAux" "rhs" $v6 "action" "en.cop.0.semantics"
+@v8 kernel.value.record "lex" "MASS_NOUN"
+@v9 kernel.seq.make item $v8
+@v10 kernel.value.record "id" "everyday.mass.noun" "lhs" "MassN" "rhs" $v9 "action" "en.cop.0.semantics"
+@v11 kernel.seq.make item "MassN"
+@v12 kernel.value.record "id" "everyday.mass.reference" "lhs" "NP" "rhs" $v11 "action" "en.np.24.semantics"
+@v13 kernel.seq.make item $v1 item $v3 item $v5 item $v7 item $v10 item $v12
+@v14 kernel.value.record "category" "MASS_NOUN" "surface" "water" "value" "water"
+@v15 kernel.value.record "category" "MASS_NOUN" "surface" "light" "value" "light"
+@v16 kernel.value.record "category" "MASS_NOUN" "surface" "food" "value" "food"
+@v17 kernel.value.record "category" "MASS_NOUN" "surface" "rest" "value" "rest"
+@v18 kernel.value.record "category" "MASS_NOUN" "surface" "warmth" "value" "warmth"
+@v19 kernel.value.record "category" "MASS_NOUN" "surface" "rain" "value" "rain"
+@v20 kernel.value.record "category" "MASS_NOUN" "surface" "shelter" "value" "shelter"
+@v21 kernel.value.record "category" "MASS_NOUN" "surface" "glass" "value" "glass"
+@v22 kernel.value.record "category" "MASS_NOUN" "surface" "metal" "value" "metal"
+@v23 kernel.value.record "category" "MASS_NOUN" "surface" "cotton" "value" "cotton"
+@v24 kernel.value.record "category" "MASS_NOUN" "surface" "wood" "value" "wood"
+@v25 kernel.value.record "category" "MASS_NOUN" "surface" "steel" "value" "steel"
+@v26 kernel.value.record "category" "MASS_NOUN" "surface" "air" "value" "air"
+@v27 kernel.seq.make item $v14 item $v15 item $v16 item $v17 item $v18 item $v19 item $v20 item $v21 item $v22 item $v23 item $v24 item $v25 item $v26
+@v28 kernel.value.record
+@v29 kernel.value.record "productions" $v13 "lexicon" $v27 "classes" $v28
+@v30 kernel.value.record "concept" "help us" "instance" "helps us"
+@v31 kernel.value.record "predicate" "function" "kind" "property" "clauses" $v30
+@v32 kernel.value.record "category" "EverydayQuestionTail" "surface" "used for" "value" $v31
+@v33 kernel.value.record "concept" "help us" "instance" "helps us"
+@v34 kernel.value.record "predicate" "function" "kind" "property" "clauses" $v33
+@v35 kernel.value.record "category" "EverydayQuestionTail" "surface" "help us do" "value" $v34
+@v36 kernel.value.record "concept" "typically need" "instance" "typically needs"
+@v37 kernel.value.record "predicate" "need" "kind" "typical_property" "clauses" $v36
+@v38 kernel.value.record "category" "EverydayQuestionTail" "surface" "usually need" "value" $v37
+@v39 kernel.value.record "category" "Prep" "surface" "made of" "value" "made_of"
+@v40 kernel.seq.make item $v32 item $v35 item $v38 item $v39
+@v41 kernel.value.record "name" "auxiliary" "category" "EverydayAux" "semantic" false
+@v42 kernel.value.record "name" "reference" "category" "EverydayReference"
+@v43 kernel.value.record "name" "relation" "category" "EverydayQuestionTail"
+@v44 kernel.seq.make item $v41 item $v42 item $v43
+@v45 kernel.value.record "start" 5 "end" 7
+@v46 kernel.value.record "start" 8 "end" 15
+@v47 kernel.value.record "start" 16 "end" 24
+@v48 kernel.value.record "auxiliary" $v45 "reference" $v46 "relation" $v47
+@v49 kernel.seq.make item "concept" item "chair" item "function" item "?answer"
+@v50 kernel.value.record "predicate" "property" "terms" $v49 "negative" false "context" "world"
+@v51 kernel.seq.make item $v50
+@v52 kernel.seq.make
+@v53 kernel.value.record "term" "chair" "domain" "concept" "constraints" $v52
+@v54 kernel.value.record "concept" "help us" "instance" "helps us"
+@v55 kernel.value.record "predicate" "function" "kind" "property" "clauses" $v54
+@v56 kernel.value.record "mode" "property" "reference" $v53 "relation" $v55
+@v57 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v51 "presentation" $v56
+@v58 kernel.value.record "kind" "query" "query" $v57
+@v59 kernel.value.record "text" "What is a chair used for" "spans" $v48 "meaning" $v58
+@v60 kernel.value.record "start" 5 "end" 9
+@v61 kernel.value.record "start" 10 "end" 14
+@v62 kernel.value.record "start" 15 "end" 27
+@v63 kernel.value.record "auxiliary" $v60 "reference" $v61 "relation" $v62
+@v64 kernel.seq.make item "instance" item "leto" item "need" item "?answer"
+@v65 kernel.value.record "predicate" "typical_property" "terms" $v64 "negative" false "context" "world"
+@v66 kernel.seq.make item $v65
+@v67 kernel.seq.make
+@v68 kernel.value.record "term" "leto" "domain" "instance" "constraints" $v67
+@v69 kernel.value.record "concept" "typically need" "instance" "typically needs"
+@v70 kernel.value.record "predicate" "need" "kind" "typical_property" "clauses" $v69
+@v71 kernel.value.record "mode" "property" "reference" $v68 "relation" $v70
+@v72 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v66 "presentation" $v71
+@v73 kernel.value.record "kind" "query" "query" $v72
+@v74 kernel.value.record "text" "What does Leto usually need" "spans" $v63 "meaning" $v73
+@v75 kernel.value.record "start" 5 "end" 7
+@v76 kernel.value.record "start" 8 "end" 14
+@v77 kernel.value.record "start" 15 "end" 25
+@v78 kernel.value.record "auxiliary" $v75 "reference" $v76 "relation" $v77
+@v79 kernel.seq.make item "concept" item "spoon" item "function" item "?answer"
+@v80 kernel.value.record "predicate" "property" "terms" $v79 "negative" false "context" "world"
+@v81 kernel.seq.make item $v80
+@v82 kernel.seq.make
+@v83 kernel.value.record "term" "spoon" "domain" "concept" "constraints" $v82
+@v84 kernel.value.record "concept" "help us" "instance" "helps us"
+@v85 kernel.value.record "predicate" "function" "kind" "property" "clauses" $v84
+@v86 kernel.value.record "mode" "property" "reference" $v83 "relation" $v85
+@v87 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v81 "presentation" $v86
+@v88 kernel.value.record "kind" "query" "query" $v87
+@v89 kernel.value.record "text" "What do spoons help us do" "spans" $v78 "meaning" $v88
+@v90 kernel.value.record "start" 5 "end" 7
+@v91 kernel.value.record "start" 8 "end" 19
+@v92 kernel.value.record "start" 20 "end" 32
+@v93 kernel.value.record "auxiliary" $v90 "reference" $v91 "relation" $v92
+@v94 kernel.seq.make item "_:4e7d2564e464887933b2383e"
+@v95 kernel.value.record "predicate" "pilot" "terms" $v94 "negative" false "context" "world"
+@v96 kernel.seq.make item "instance" item "_:4e7d2564e464887933b2383e" item "need" item "?answer"
+@v97 kernel.value.record "predicate" "typical_property" "terms" $v96 "negative" false "context" "world"
+@v98 kernel.seq.make item $v95 item $v97
+@v99 kernel.seq.make item "_:4e7d2564e464887933b2383e"
+@v100 kernel.value.record "predicate" "pilot" "terms" $v99 "negative" false "context" "world"
+@v101 kernel.seq.make item $v100
+@v102 kernel.value.record "term" "_:4e7d2564e464887933b2383e" "domain" "instance" "constraints" $v101
+@v103 kernel.value.record "concept" "typically need" "instance" "typically needs"
+@v104 kernel.value.record "predicate" "need" "kind" "typical_property" "clauses" $v103
+@v105 kernel.value.record "mode" "property" "reference" $v102 "relation" $v104
+@v106 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v98 "presentation" $v105
+@v107 kernel.value.record "kind" "query" "query" $v106
+@v108 kernel.value.record "text" "What do some pilots usually need" "spans" $v93 "meaning" $v107
+@v109 kernel.value.record "start" 5 "end" 7
+@v110 kernel.value.record "start" 8 "end" 13
+@v111 kernel.value.record "start" 14 "end" 22
+@v112 kernel.value.record "auxiliary" $v109 "reference" $v110 "relation" $v111
+@v113 kernel.seq.make item "instance" item "rowan" item "function" item "?answer"
+@v114 kernel.value.record "predicate" "property" "terms" $v113 "negative" false "context" "world"
+@v115 kernel.seq.make item $v114
+@v116 kernel.seq.make
+@v117 kernel.value.record "term" "rowan" "domain" "instance" "constraints" $v116
+@v118 kernel.value.record "concept" "help us" "instance" "helps us"
+@v119 kernel.value.record "predicate" "function" "kind" "property" "clauses" $v118
+@v120 kernel.value.record "mode" "property" "reference" $v117 "relation" $v119
+@v121 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v115 "presentation" $v120
+@v122 kernel.value.record "kind" "query" "query" $v121
+@v123 kernel.value.record "text" "What is Rowan used for" "spans" $v112 "meaning" $v122
+@v124 kernel.value.record "start" 5 "end" 7
+@v125 kernel.value.record "start" 8 "end" 12
+@v126 kernel.value.record "start" 13 "end" 23
+@v127 kernel.value.record "auxiliary" $v124 "reference" $v125 "relation" $v126
+@v128 kernel.seq.make item "concept" item "dog" item "function" item "?answer"
+@v129 kernel.value.record "predicate" "property" "terms" $v128 "negative" false "context" "world"
+@v130 kernel.seq.make item $v129
+@v131 kernel.seq.make
+@v132 kernel.value.record "term" "dog" "domain" "concept" "constraints" $v131
+@v133 kernel.value.record "concept" "help us" "instance" "helps us"
+@v134 kernel.value.record "predicate" "function" "kind" "property" "clauses" $v133
+@v135 kernel.value.record "mode" "property" "reference" $v132 "relation" $v134
+@v136 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v130 "presentation" $v135
+@v137 kernel.value.record "kind" "query" "query" $v136
+@v138 kernel.value.record "text" "What do dogs help us do" "spans" $v127 "meaning" $v137
+@v139 kernel.value.record "start" 5 "end" 7
+@v140 kernel.value.record "start" 8 "end" 14
+@v141 kernel.value.record "start" 15 "end" 27
+@v142 kernel.value.record "auxiliary" $v139 "reference" $v140 "relation" $v141
+@v143 kernel.seq.make item "concept" item "plant" item "need" item "?answer"
+@v144 kernel.value.record "predicate" "typical_property" "terms" $v143 "negative" false "context" "world"
+@v145 kernel.seq.make item $v144
+@v146 kernel.seq.make
+@v147 kernel.value.record "term" "plant" "domain" "concept" "constraints" $v146
+@v148 kernel.value.record "concept" "typically need" "instance" "typically needs"
+@v149 kernel.value.record "predicate" "need" "kind" "typical_property" "clauses" $v148
+@v150 kernel.value.record "mode" "property" "reference" $v147 "relation" $v149
+@v151 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v145 "presentation" $v150
+@v152 kernel.value.record "kind" "query" "query" $v151
+@v153 kernel.value.record "text" "What do plants usually need" "spans" $v142 "meaning" $v152
+@v154 kernel.value.record "start" 5 "end" 9
+@v155 kernel.value.record "start" 10 "end" 20
+@v156 kernel.value.record "start" 21 "end" 33
+@v157 kernel.value.record "auxiliary" $v154 "reference" $v155 "relation" $v156
+@v158 kernel.seq.make item "_:a08e57de71c28334bedc21a8"
+@v159 kernel.value.record "predicate" "medic" "terms" $v158 "negative" false "context" "world"
+@v160 kernel.seq.make item "instance" item "_:a08e57de71c28334bedc21a8" item "need" item "?answer"
+@v161 kernel.value.record "predicate" "typical_property" "terms" $v160 "negative" false "context" "world"
+@v162 kernel.seq.make item $v159 item $v161
+@v163 kernel.seq.make item "_:a08e57de71c28334bedc21a8"
+@v164 kernel.value.record "predicate" "medic" "terms" $v163 "negative" false "context" "world"
+@v165 kernel.seq.make item $v164
+@v166 kernel.value.record "term" "_:a08e57de71c28334bedc21a8" "domain" "instance" "constraints" $v165
+@v167 kernel.value.record "concept" "typically need" "instance" "typically needs"
+@v168 kernel.value.record "predicate" "need" "kind" "typical_property" "clauses" $v167
+@v169 kernel.value.record "mode" "property" "reference" $v166 "relation" $v168
+@v170 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v162 "presentation" $v169
+@v171 kernel.value.record "kind" "query" "query" $v170
+@v172 kernel.value.record "text" "What does some medic usually need" "spans" $v157 "meaning" $v171
+@v173 kernel.seq.make item $v59 item $v74 item $v89 item $v108 item $v123 item $v138 item $v153 item $v172
+@v174 kernel.value.record "id" "learned-property-question" "category" "Question" "slots" $v44 "examples" $v173
+@v175 kernel.value.record "name" "auxiliary" "category" "EverydayAux" "semantic" false
+@v176 kernel.value.record "name" "subject" "category" "ConceptPlural"
+@v177 kernel.value.record "name" "relation" "category" "V"
+@v178 kernel.seq.make item $v175 item $v176 item $v177
+@v179 kernel.value.record "start" 5 "end" 7
+@v180 kernel.value.record "start" 8 "end" 12
+@v181 kernel.value.record "start" 13 "end" 17
+@v182 kernel.value.record "auxiliary" $v179 "subject" $v180 "relation" $v181
+@v183 kernel.seq.make item "concept" item "dog" item "need" item "?answer"
+@v184 kernel.value.record "predicate" "property" "terms" $v183 "negative" false "context" "world"
+@v185 kernel.seq.make item $v184
+@v186 kernel.seq.make
+@v187 kernel.value.record "term" "dog" "domain" "concept" "constraints" $v186
+@v188 kernel.value.record "concept" "need"
+@v189 kernel.value.record "predicate" "need" "kind" "property" "clauses" $v188
+@v190 kernel.value.record "mode" "property" "reference" $v187 "relation" $v189
+@v191 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v185 "presentation" $v190
+@v192 kernel.value.record "kind" "query" "query" $v191
+@v193 kernel.value.record "text" "What do dogs need" "spans" $v182 "meaning" $v192
+@v194 kernel.value.record "start" 5 "end" 7
+@v195 kernel.value.record "start" 8 "end" 13
+@v196 kernel.value.record "start" 14 "end" 17
+@v197 kernel.value.record "auxiliary" $v194 "subject" $v195 "relation" $v196
+@v198 kernel.seq.make item "concept" item "bird" item "eat" item "?answer"
+@v199 kernel.value.record "predicate" "property" "terms" $v198 "negative" false "context" "world"
+@v200 kernel.seq.make item $v199
+@v201 kernel.seq.make
+@v202 kernel.value.record "term" "bird" "domain" "concept" "constraints" $v201
+@v203 kernel.value.record "concept" "eat"
+@v204 kernel.value.record "predicate" "eat" "kind" "property" "clauses" $v203
+@v205 kernel.value.record "mode" "property" "reference" $v202 "relation" $v204
+@v206 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v200 "presentation" $v205
+@v207 kernel.value.record "kind" "query" "query" $v206
+@v208 kernel.value.record "text" "What do birds eat" "spans" $v197 "meaning" $v207
+@v209 kernel.value.record "start" 5 "end" 7
+@v210 kernel.value.record "start" 8 "end" 12
+@v211 kernel.value.record "start" 13 "end" 16
+@v212 kernel.value.record "auxiliary" $v209 "subject" $v210 "relation" $v211
+@v213 kernel.seq.make item "concept" item "cat" item "see" item "?answer"
+@v214 kernel.value.record "predicate" "property" "terms" $v213 "negative" false "context" "world"
+@v215 kernel.seq.make item $v214
+@v216 kernel.seq.make
+@v217 kernel.value.record "term" "cat" "domain" "concept" "constraints" $v216
+@v218 kernel.value.record "concept" "see"
+@v219 kernel.value.record "predicate" "see" "kind" "property" "clauses" $v218
+@v220 kernel.value.record "mode" "property" "reference" $v217 "relation" $v219
+@v221 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v215 "presentation" $v220
+@v222 kernel.value.record "kind" "query" "query" $v221
+@v223 kernel.value.record "text" "What do cats see" "spans" $v212 "meaning" $v222
+@v224 kernel.value.record "start" 5 "end" 7
+@v225 kernel.value.record "start" 8 "end" 14
+@v226 kernel.value.record "start" 15 "end" 19
+@v227 kernel.value.record "auxiliary" $v224 "subject" $v225 "relation" $v226
+@v228 kernel.seq.make item "concept" item "plant" item "help" item "?answer"
+@v229 kernel.value.record "predicate" "property" "terms" $v228 "negative" false "context" "world"
+@v230 kernel.seq.make item $v229
+@v231 kernel.seq.make
+@v232 kernel.value.record "term" "plant" "domain" "concept" "constraints" $v231
+@v233 kernel.value.record "concept" "help"
+@v234 kernel.value.record "predicate" "help" "kind" "property" "clauses" $v233
+@v235 kernel.value.record "mode" "property" "reference" $v232 "relation" $v234
+@v236 kernel.value.record "kind" "select" "variable" "?answer" "patterns" $v230 "presentation" $v235
+@v237 kernel.value.record "kind" "query" "query" $v236
+@v238 kernel.value.record "text" "What do plants help" "spans" $v227 "meaning" $v237
+@v239 kernel.seq.make item $v193 item $v208 item $v223 item $v238
+@v240 kernel.value.record "id" "learned-category-property-question" "category" "Question" "slots" $v178 "examples" $v239
+@v241 kernel.seq.make item $v174 item $v240
+@v242 kernel.value.record "grammar" $v29 "phrases" $v40 "constructions" $v241
+@output result $v242
+

@@ -1,0 +1,17 @@
+@input children array
+@input scope string
+@raw kernel.value.get value $children key 0 fallback null
+@phrase data.object value $raw
+@reference kernel.value.get value $phrase key "reference" fallback null
+@determiner kernel.value.get value $reference key "determiner" fallback null
+@category kernel.value.get value $reference key "category" fallback null
+@genericWords kernel.seq.make item "a" item "an"
+@generic kernel.seq.includes items $genericWords value $determiner
+@forms knowledge.concepts with $phrase
+@declared kernel.seq.find items $forms key "id" value $category fallback null
+@absent kernel.value.equal left $declared right null
+@known kernel.boolean.not value $absent
+@concept kernel.boolean.and left $generic right $known
+@args kernel.value.record phrase $phrase category $category
+@result kernel.flow.choose condition $concept then "everyday.reference-concept" else "everyday.reference-instance" with $args
+@output result $result

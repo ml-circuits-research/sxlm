@@ -2,6 +2,7 @@ import { modulesFromGraphs } from './sop-output.mjs';
 import { canonical, check, digest, Budget } from '../kernel/data.mjs';
 import { compileGrammarKnowledge } from './grammar.mjs';
 import { lowerPrograms } from './expressions.mjs';
+import { induceSpanConstruction } from './induce-spans.mjs';
 
 /** Supervised structural anti-unification. Learns reusable category productions, not answer lookups. */
 export function induceConstruction(model, specification) {
@@ -9,6 +10,7 @@ export function induceConstruction(model, specification) {
   check(/^[a-z][a-z0-9._-]+$/.test(id ?? ''), 'Invalid learned construction ID');
   check(model.grammar.productions.has(category), 'The target must be an existing compositional category');
   check(Array.isArray(examples) && examples.length >= 2 && examples.length <= 50, 'Induction needs 2–50 examples');
+  if (specification.slots !== undefined) return induceSpanConstruction(model, specification);
   const rows = examples.map(e => model.grammar.tokenize(e.text));
   check(rows.every(r => r.length === rows[0].length), 'This inducer requires token-aligned examples; author a grammar circuit for variable-width alignment');
   const varying = rows[0].map((_, index) => index).filter(i => new Set(rows.map(r => r[i].value)).size > 1);

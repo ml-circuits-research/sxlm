@@ -1,0 +1,6 @@
+@input with object
+@phrase kernel.value.get value $with key "phrase" fallback null
+@term kernel.value.get value $phrase key "term" fallback null
+@constraints kernel.value.get value $phrase key "constraints" fallback null
+@result kernel.value.record term $term domain "instance" constraints $constraints
+@output result $result

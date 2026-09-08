@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {compileSOP} from '../src/kernel/sop.mjs';
 import {compileGrammarKnowledge} from '../src/learning/grammar.mjs';
 import {canonical,digest} from '../src/kernel/data.mjs';
+import { replaceLinkages } from './support/linkages.mjs';
 
 export function synthesizeDocument(){
   const modules=[];
@@ -25,7 +26,7 @@ if(process.argv[1]===fileURLToPath(import.meta.url)){
     console.log(`Document replay: ${result.receipt.authoredPolicies} authored policies, ${result.receipt.compiledKnowledgeModules} compiled grammar modules. No grammar learning claim.`);
   }else{
     pack.sop=[...pack.sop.filter(m=>m.compilation?.printer||!['document.','grammar.','memory.bootstrap-grammar'].some(prefix=>m.id.startsWith(prefix))),...result.modules];
-    pack.providers={...pack.providers,...result.knowledge.providers};pack.linkages=[...pack.linkages.filter(l=>l.id!==result.linkage.id),result.linkage];
+    pack.providers={...pack.providers,...result.knowledge.providers};pack.linkages=replaceLinkages(pack.linkages,[result.linkage]);
     delete pack.grammar;pack.entrypoints.grammar='language.grammar';pack.entrypoints.document='document.parse';
     pack.provenance.documentMigration=result.receipt;
     pack.sop.sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);

@@ -4,12 +4,12 @@
 @parts kernel.value.get value $children key 2 fallback null
 @items data.array value $parts
 @empty kernel.value.empty
-@concepts knowledge.concepts with $empty
+@records knowledge.concepts with $empty
+@concepts kernel.seq.pluck items $records key "id"
 @args kernel.value.record concepts $concepts
 @checks kernel.flow.map items $items circuit "concept.class-predicate" with $args
 @invalid kernel.seq.includes items $checks value false
 @valid kernel.boolean.not value $invalid
-@checked kernel.value.require condition $valid message "A generic classification requires category predicates" value $category
-@context kernel.value.record category $checked parts $items
-@result concept.generic-query with $context
+@context kernel.value.record category $category parts $items
+@result kernel.flow.choose condition $valid then "concept.generic-query" else "concept.unsupported" with $context
 @output result $result

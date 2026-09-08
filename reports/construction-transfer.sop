@@ -1,0 +1,447 @@
+@v0 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v1 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v2 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v1
+@v3 kernel.value.record "id" "span-role-order" "pass" false "failures" $v0 "actual" $v2 "milliseconds" 278.83
+@v4 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v5 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v6 kernel.value.record "id" "span-passive-query" "pass" false "failures" $v4 "actual" $v5 "milliseconds" 244.61
+@v7 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"false\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v8 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v9 kernel.value.record "id" "span-passive-negative-query" "pass" false "failures" $v7 "actual" $v8 "milliseconds" 245.52
+@v10 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v11 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v12 kernel.value.record "id" "span-passive-why" "pass" false "failures" $v10 "actual" $v11 "milliseconds" 275.33
+@v13 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v14 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v15 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v14
+@v16 kernel.value.record "id" "span-role-reversal" "pass" false "failures" $v13 "actual" $v15 "milliseconds" 268.09
+@v17 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"false\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v18 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v19 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v18
+@v20 kernel.value.record "id" "span-negative" "pass" false "failures" $v17 "actual" $v19 "milliseconds" 270.51
+@v21 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v22 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v23 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v22
+@v24 kernel.value.record "id" "span-negative-role-reversal" "pass" false "failures" $v21 "actual" $v23 "milliseconds" 273.04
+@v25 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v26 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v27 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v26
+@v28 kernel.value.record "id" "span-new-noun-phrase" "pass" false "failures" $v25 "actual" $v27 "milliseconds" 269.76
+@v29 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v30 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v31 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v30
+@v32 kernel.value.record "id" "span-preserve-agent-type" "pass" false "failures" $v29 "actual" $v31 "milliseconds" 277.57
+@v33 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v34 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v35 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v34
+@v36 kernel.value.record "id" "span-rule-conclusion" "pass" false "failures" $v33 "actual" $v35 "milliseconds" 362.41
+@v37 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v38 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v39 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v38
+@v40 kernel.value.record "id" "span-rule-premise" "pass" false "failures" $v37 "actual" $v39 "milliseconds" 430.93
+@v41 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v42 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v43 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v42
+@v44 kernel.value.record "id" "span-join-guard" "pass" false "failures" $v41 "actual" $v43 "milliseconds" 465.88
+@v45 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v46 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v47 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v46
+@v48 kernel.value.record "id" "span-coordination" "pass" false "failures" $v45 "actual" $v47 "milliseconds" 264.99
+@v49 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v50 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v51 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v50
+@v52 kernel.value.record "id" "span-context-isolation" "pass" false "failures" $v49 "actual" $v51 "milliseconds" 272.59
+@v53 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v54 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v55 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v54
+@v56 kernel.value.record "id" "span-negative-context" "pass" false "failures" $v53 "actual" $v55 "milliseconds" 297.24
+@v57 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"both\"\n@output result $result\n" item "Coverage gaps: 2, expected 0" item "Missing/invalid formal proof"
+@v58 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v59 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 2 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v58
+@v60 kernel.value.record "id" "span-contradiction" "pass" false "failures" $v57 "actual" $v59 "milliseconds" 363.1
+@v61 kernel.seq.make item $v3 item $v6 item $v9 item $v12 item $v16 item $v20 item $v24 item $v28 item $v32 item $v36 item $v40 item $v44 item $v48 item $v52 item $v56 item $v60
+@v62 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "a731fb71d36f3600e6a216352f57f762fb365e506106e6a198444e865a2b5491" "casesHash" "188280f4dd96122be98619f9301a4ca1ca8f3ff232633cdd0fab107b30e6f046" "total" 16 "passed" 0 "failed" 16 "results" $v61
+@v63 kernel.seq.make
+@v64 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v65 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v64
+@v66 kernel.value.record "id" "span-role-order" "pass" true "failures" $v63 "actual" $v65 "milliseconds" 278.48
+@v67 kernel.seq.make
+@v68 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v69 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v68
+@v70 kernel.value.record "id" "span-passive-query" "pass" true "failures" $v67 "actual" $v69 "milliseconds" 271.06
+@v71 kernel.seq.make
+@v72 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v73 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Orin does not follow Sable." "verification" $v72
+@v74 kernel.value.record "id" "span-passive-negative-query" "pass" true "failures" $v71 "actual" $v73 "milliseconds" 280.25
+@v75 kernel.seq.make
+@v76 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v77 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v76
+@v78 kernel.value.record "id" "span-passive-why" "pass" true "failures" $v75 "actual" $v77 "milliseconds" 316.15
+@v79 kernel.seq.make
+@v80 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v81 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v80
+@v82 kernel.value.record "id" "span-role-reversal" "pass" true "failures" $v79 "actual" $v81 "milliseconds" 268.01
+@v83 kernel.seq.make
+@v84 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v85 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Orin does not follow Sable." "verification" $v84
+@v86 kernel.value.record "id" "span-negative" "pass" true "failures" $v83 "actual" $v85 "milliseconds" 323.38
+@v87 kernel.seq.make
+@v88 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v89 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v88
+@v90 kernel.value.record "id" "span-negative-role-reversal" "pass" true "failures" $v87 "actual" $v89 "milliseconds" 379.46
+@v91 kernel.seq.make
+@v92 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v93 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. an unnamed navigator follows Sable." "verification" $v92
+@v94 kernel.value.record "id" "span-new-noun-phrase" "pass" true "failures" $v91 "actual" $v93 "milliseconds" 364.9
+@v95 kernel.seq.make
+@v96 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v97 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v96
+@v98 kernel.value.record "id" "span-preserve-agent-type" "pass" true "failures" $v95 "actual" $v97 "milliseconds" 371.78
+@v99 kernel.seq.make
+@v100 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v101 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v100
+@v102 kernel.value.record "id" "span-rule-conclusion" "pass" true "failures" $v99 "actual" $v101 "milliseconds" 397.57
+@v103 kernel.seq.make
+@v104 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v105 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Sable is trusted." "verification" $v104
+@v106 kernel.value.record "id" "span-rule-premise" "pass" true "failures" $v103 "actual" $v105 "milliseconds" 515.82
+@v107 kernel.seq.make
+@v108 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v109 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v108
+@v110 kernel.value.record "id" "span-join-guard" "pass" true "failures" $v107 "actual" $v109 "milliseconds" 513.35
+@v111 kernel.seq.make
+@v112 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v113 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Sable is drone." "verification" $v112
+@v114 kernel.value.record "id" "span-coordination" "pass" true "failures" $v111 "actual" $v113 "milliseconds" 367.91
+@v115 kernel.seq.make
+@v116 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v117 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v116
+@v118 kernel.value.record "id" "span-context-isolation" "pass" true "failures" $v115 "actual" $v117 "milliseconds" 668.6
+@v119 kernel.seq.make
+@v120 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v121 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v120
+@v122 kernel.value.record "id" "span-negative-context" "pass" true "failures" $v119 "actual" $v121 "milliseconds" 311.94
+@v123 kernel.seq.make
+@v124 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v125 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v124
+@v126 kernel.value.record "id" "span-contradiction" "pass" true "failures" $v123 "actual" $v125 "milliseconds" 401.52
+@v127 kernel.seq.make item $v66 item $v70 item $v74 item $v78 item $v82 item $v86 item $v90 item $v94 item $v98 item $v102 item $v106 item $v110 item $v114 item $v118 item $v122 item $v126
+@v128 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "0f87ec1e538601ea3bec9f2e2dc6cd24570ced980d3306a22938837e7830fafd" "casesHash" "188280f4dd96122be98619f9301a4ca1ca8f3ff232633cdd0fab107b30e6f046" "total" 16 "passed" 16 "failed" 0 "results" $v127
+@v129 kernel.seq.make
+@v130 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v131 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is mortal." "verification" $v130
+@v132 kernel.value.record "id" "class-chain" "pass" true "failures" $v129 "actual" $v131 "milliseconds" 368.39
+@v133 kernel.seq.make
+@v134 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v135 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v134
+@v136 kernel.value.record "id" "open-world" "pass" true "failures" $v133 "actual" $v135 "milliseconds" 175.86
+@v137 kernel.seq.make
+@v138 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v139 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira is not careful." "verification" $v138
+@v140 kernel.value.record "id" "explicit-negative" "pass" true "failures" $v137 "actual" $v139 "milliseconds" 279.29
+@v141 kernel.seq.make
+@v142 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v143 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v142
+@v144 kernel.value.record "id" "conflict" "pass" true "failures" $v141 "actual" $v143 "milliseconds" 370.62
+@v145 kernel.seq.make
+@v146 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v147 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v146
+@v148 kernel.value.record "id" "no-explosion" "pass" true "failures" $v145 "actual" $v147 "milliseconds" 372.05
+@v149 kernel.seq.make
+@v150 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v151 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Pico is not a robot." "verification" $v150
+@v152 kernel.value.record "id" "negative-rule" "pass" true "failures" $v149 "actual" $v151 "milliseconds" 378.38
+@v153 kernel.seq.make
+@v154 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v155 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is careful." "verification" $v154
+@v156 kernel.value.record "id" "relative-existential" "pass" true "failures" $v153 "actual" $v155 "milliseconds" 513.88
+@v157 kernel.seq.make
+@v158 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v159 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v158
+@v160 kernel.value.record "id" "binding-separation" "pass" true "failures" $v157 "actual" $v159 "milliseconds" 513.67
+@v161 kernel.seq.make
+@v162 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v163 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v162
+@v164 kernel.value.record "id" "belief-isolation" "pass" true "failures" $v161 "actual" $v163 "milliseconds" 292.27
+@v165 kernel.seq.make
+@v166 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v167 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Within belief:mira: Theo is a pilot." "verification" $v166
+@v168 kernel.value.record "id" "belief-query" "pass" true "failures" $v165 "actual" $v167 "milliseconds" 349.63
+@v169 kernel.seq.make
+@v170 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v171 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira mentors Theo." "verification" $v170
+@v172 kernel.value.record "id" "ground-relation" "pass" true "failures" $v169 "actual" $v171 "milliseconds" 248.63
+@v173 kernel.seq.make
+@v174 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v175 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v174
+@v176 kernel.value.record "id" "role-reversal" "pass" true "failures" $v173 "actual" $v175 "milliseconds" 250.35
+@v177 kernel.seq.make
+@v178 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v179 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Mira does not own Pico." "verification" $v178
+@v180 kernel.value.record "id" "negative-relation" "pass" true "failures" $v177 "actual" $v179 "milliseconds" 263.71
+@v181 kernel.seq.make
+@v182 kernel.seq.make item "mira" item "theo"
+@v183 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v184 kernel.value.record "status" "answered" "truth" null "value" null "values" $v182 "gaps" 0 "text" "The supported answers are: Mira, Theo. This list is not certified exhaustive." "verification" $v183
+@v185 kernel.value.record "id" "wh-subject" "pass" true "failures" $v181 "actual" $v184 "milliseconds" 381.21
+@v186 kernel.seq.make
+@v187 kernel.seq.make item "pico"
+@v188 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v189 kernel.value.record "status" "answered" "truth" null "value" null "values" $v187 "gaps" 0 "text" "The supported answers are: Pico. This list is not certified exhaustive." "verification" $v188
+@v190 kernel.value.record "id" "wh-object" "pass" true "failures" $v186 "actual" $v189 "milliseconds" 271.47
+@v191 kernel.seq.make
+@v192 kernel.seq.make item "paris"
+@v193 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v194 kernel.value.record "status" "answered" "truth" null "value" null "values" $v192 "gaps" 0 "text" "The supported answers are: Paris. This list is not certified exhaustive." "verification" $v193
+@v195 kernel.value.record "id" "location" "pass" true "failures" $v191 "actual" $v194 "milliseconds" 295.1
+@v196 kernel.seq.make
+@v197 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v198 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira is north of Nara." "verification" $v197
+@v199 kernel.value.record "id" "relative-direction" "pass" true "failures" $v196 "actual" $v198 "milliseconds" 394.09
+@v200 kernel.seq.make
+@v201 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v202 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Theo is south of Mira." "verification" $v201
+@v203 kernel.value.record "id" "inverse-direction" "pass" true "failures" $v200 "actual" $v202 "milliseconds" 296.89
+@v204 kernel.seq.make
+@v205 kernel.value.record "status" "answered" "truth" null "value" "5" "values" null "gaps" 0 "text" "Mira has 5 apples." "verification" null
+@v206 kernel.value.record "id" "inventory-dependency" "pass" true "failures" $v204 "actual" $v205 "milliseconds" 696.18
+@v207 kernel.seq.make
+@v208 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 0 "text" "I cannot determine the exact quantity: an initial value is missing." "verification" null
+@v209 kernel.value.record "id" "recipient-unknown" "pass" true "failures" $v207 "actual" $v208 "milliseconds" 365.03
+@v210 kernel.seq.make
+@v211 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine the exact quantity: a relevant event is unsupported or inconsistent." "verification" null
+@v212 kernel.value.record "id" "no-stale-inventory" "pass" true "failures" $v210 "actual" $v211 "milliseconds" 325.77
+@v213 kernel.seq.make
+@v214 kernel.value.record "status" "answered" "truth" null "value" "1/5" "values" null "gaps" 0 "text" "Mira has 1/5 coins." "verification" null
+@v215 kernel.value.record "id" "decimal-inventory" "pass" true "failures" $v213 "actual" $v214 "milliseconds" 364.55
+@v216 kernel.seq.make
+@v217 kernel.value.record "status" "answered" "truth" null "value" "14" "values" null "gaps" 0 "text" "The result is 14." "verification" null
+@v218 kernel.value.record "id" "arithmetic-precedence" "pass" true "failures" $v216 "actual" $v217 "milliseconds" 196.59
+@v219 kernel.seq.make
+@v220 kernel.value.record "status" "answered" "truth" null "value" "3/10" "values" null "gaps" 0 "text" "The result is 3/10." "verification" null
+@v221 kernel.value.record "id" "arithmetic-exact" "pass" true "failures" $v219 "actual" $v220 "milliseconds" 153.27
+@v222 kernel.seq.make
+@v223 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v224 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v223
+@v225 kernel.value.record "id" "unsafe-scope-abstention" "pass" true "failures" $v222 "actual" $v224 "milliseconds" 323.51
+@v226 kernel.seq.make
+@v227 kernel.value.record "status" "answered" "truth" null "value" null "values" null "gaps" null "text" "The launch was not approved. The sensor failed during the test." "verification" null
+@v228 kernel.value.record "id" "source-summary" "pass" true "failures" $v226 "actual" $v227 "milliseconds" 25.26
+@v229 kernel.seq.make
+@v230 kernel.value.record "status" "answered" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "The cobalt robot inspects the reactor." "verification" null
+@v231 kernel.value.record "id" "context-completion" "pass" true "failures" $v229 "actual" $v230 "milliseconds" 103.15
+@v232 kernel.seq.make
+@v233 kernel.value.record "status" "unknown" "truth" "not-evaluated" "value" null "values" null "gaps" null "text" "I have no supported continuation for this prefix. Add relevant text to the sequence training data." "verification" null
+@v234 kernel.value.record "id" "untrained-completion" "pass" true "failures" $v232 "actual" $v233 "milliseconds" 102.82
+@v235 kernel.seq.make
+@v236 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v237 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin helps Cyra." "verification" $v236
+@v238 kernel.value.record "id" "join-three-variables" "pass" true "failures" $v235 "actual" $v237 "milliseconds" 485.15
+@v239 kernel.seq.make
+@v240 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v241 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v240
+@v242 kernel.value.record "id" "shared-variable-guard" "pass" true "failures" $v239 "actual" $v241 "milliseconds" 527.9
+@v243 kernel.seq.make
+@v244 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v245 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Nara is prepared." "verification" $v244
+@v246 kernel.value.record "id" "shared-variable-success" "pass" true "failures" $v243 "actual" $v245 "milliseconds" 555.63
+@v247 kernel.seq.make
+@v248 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
+@v249 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is eligible." "verification" $v248
+@v250 kernel.value.record "id" "relative-plus-chain" "pass" true "failures" $v247 "actual" $v249 "milliseconds" 630.1
+@v251 kernel.seq.make
+@v252 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v253 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Oren is ready." "verification" $v252
+@v254 kernel.value.record "id" "relative-negative-body" "pass" true "failures" $v251 "actual" $v253 "milliseconds" 519.13
+@v255 kernel.seq.make
+@v256 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v257 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Delta is calibrated." "verification" $v256
+@v258 kernel.value.record "id" "two-conclusions" "pass" true "failures" $v255 "actual" $v257 "milliseconds" 415.76
+@v259 kernel.seq.make
+@v260 kernel.value.record "valid" true "checkedNodes" 5 "format" "dag-certificate"
+@v261 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Arin follows Dora." "verification" $v260
+@v262 kernel.value.record "id" "recursive-join" "pass" true "failures" $v259 "actual" $v261 "milliseconds" 572.56
+@v263 kernel.seq.make
+@v264 kernel.seq.make item "mira"
+@v265 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v266 kernel.value.record "status" "answered" "truth" null "value" null "values" $v264 "gaps" 0 "text" "The supported answers are: Mira. This list is not certified exhaustive." "verification" $v265
+@v267 kernel.value.record "id" "typed-wh" "pass" true "failures" $v263 "actual" $v266 "milliseconds" 436.68
+@v268 kernel.seq.make
+@v269 kernel.value.record "valid" true "checkedNodes" 4 "format" "dag-certificate"
+@v270 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Zora is luminous." "verification" $v269
+@v271 kernel.value.record "id" "fresh-domain" "pass" true "failures" $v268 "actual" $v270 "milliseconds" 521.61
+@v272 kernel.seq.make
+@v273 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v274 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v273
+@v275 kernel.value.record "id" "negative-derived-conflict" "pass" true "failures" $v272 "actual" $v274 "milliseconds" 470.61
+@v276 kernel.seq.make
+@v277 kernel.value.record "status" "answered" "truth" null "value" "8" "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. Mira has 8 apples." "verification" null
+@v278 kernel.value.record "id" "dependency-locality" "pass" true "failures" $v276 "actual" $v277 "milliseconds" 416.63
+@v279 kernel.seq.make
+@v280 kernel.value.record "status" "answered" "truth" null "value" "12" "values" null "gaps" 0 "text" "Mira has 12 coins." "verification" null
+@v281 kernel.value.record "id" "multiple-events" "pass" true "failures" $v279 "actual" $v280 "milliseconds" 683.22
+@v282 kernel.seq.make item $v132 item $v136 item $v140 item $v144 item $v148 item $v152 item $v156 item $v160 item $v164 item $v168 item $v172 item $v176 item $v180 item $v185 item $v190 item $v195 item $v199 item $v203 item $v206 item $v209 item $v212 item $v215 item $v218 item $v221 item $v225 item $v228 item $v231 item $v234 item $v238 item $v242 item $v246 item $v250 item $v254 item $v258 item $v262 item $v267 item $v271 item $v275 item $v278 item $v281
+@v283 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "0f87ec1e538601ea3bec9f2e2dc6cd24570ced980d3306a22938837e7830fafd" "casesHash" "f16f2312b365395d64be84119b6c08037cb5f4affbfb0a77818eeb479ab1fa7e" "total" 40 "passed" 40 "failed" 0 "results" $v282
+@v284 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n"
+@v285 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v286 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v285
+@v287 kernel.value.record "id" "pronoun-resolution" "pass" false "failures" $v284 "actual" $v286 "milliseconds" 363.23
+@v288 kernel.seq.make
+@v289 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v290 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Mira owns Pico." "verification" $v289
+@v291 kernel.value.record "id" "passive-voice" "pass" true "failures" $v288 "actual" $v290 "milliseconds" 272.01
+@v292 kernel.seq.make item "value: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"6\"\n@output result $result\n"
+@v293 kernel.value.record "status" "unknown" "truth" null "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine the exact quantity: an initial value is missing." "verification" null
+@v294 kernel.value.record "id" "implicit-comparison" "pass" false "failures" $v292 "actual" $v293 "milliseconds" 327.4
+@v295 kernel.seq.make item "values: @v0 kernel.seq.make\n@output result $v0\n, expected @v0 kernel.seq.make item \"rome\"\n@output result $v0\n"
+@v296 kernel.seq.make
+@v297 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v298 kernel.value.record "status" "unknown" "truth" null "value" null "values" $v296 "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot identify a supported answer from the supplied information." "verification" $v297
+@v299 kernel.value.record "id" "temporal-location" "pass" false "failures" $v295 "actual" $v298 "milliseconds" 250.4
+@v300 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n"
+@v301 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v302 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v301
+@v303 kernel.value.record "id" "disjunctive-elimination" "pass" false "failures" $v300 "actual" $v302 "milliseconds" 385
+@v304 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n"
+@v305 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v306 kernel.value.record "id" "universal-query" "pass" false "failures" $v304 "actual" $v305 "milliseconds" 241.68
+@v307 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n"
+@v308 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 2 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v309 kernel.value.record "id" "causal-paraphrase" "pass" false "failures" $v307 "actual" $v308 "milliseconds" 256.51
+@v310 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n"
+@v311 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 2 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v312 kernel.value.record "id" "commonsense" "pass" false "failures" $v310 "actual" $v311 "milliseconds" 258.17
+@v313 kernel.seq.make item $v287 item $v291 item $v294 item $v299 item $v303 item $v306 item $v309 item $v312
+@v314 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "0f87ec1e538601ea3bec9f2e2dc6cd24570ced980d3306a22938837e7830fafd" "casesHash" "9350a2961e82605c80a26a46faa633f228920376922897b4445a076a1036b5ec" "total" 8 "passed" 1 "failed" 7 "results" $v313
+@v315 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v316 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v317 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v316
+@v318 kernel.value.record "id" "span-role-order" "pass" false "failures" $v315 "actual" $v317 "milliseconds" 767.21
+@v319 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v320 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v321 kernel.value.record "id" "span-passive-query" "pass" false "failures" $v319 "actual" $v320 "milliseconds" 237.11
+@v322 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"false\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v323 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v324 kernel.value.record "id" "span-passive-negative-query" "pass" false "failures" $v322 "actual" $v323 "milliseconds" 255.92
+@v325 kernel.seq.make item "truth: @result kernel.value.literal value null\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v326 kernel.value.record "status" "unsupported" "truth" null "value" null "values" null "gaps" 1 "text" "I could not interpret the entire request. Inspect the coverage gaps for the unsupported constructions." "verification" null
+@v327 kernel.value.record "id" "span-passive-why" "pass" false "failures" $v325 "actual" $v326 "milliseconds" 276.15
+@v328 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v329 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v330 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v329
+@v331 kernel.value.record "id" "span-role-reversal" "pass" false "failures" $v328 "actual" $v330 "milliseconds" 257.79
+@v332 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"false\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v333 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v334 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v333
+@v335 kernel.value.record "id" "span-negative" "pass" false "failures" $v332 "actual" $v334 "milliseconds" 282.56
+@v336 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v337 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v338 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v337
+@v339 kernel.value.record "id" "span-negative-role-reversal" "pass" false "failures" $v336 "actual" $v338 "milliseconds" 278.7
+@v340 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v341 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v342 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v341
+@v343 kernel.value.record "id" "span-new-noun-phrase" "pass" false "failures" $v340 "actual" $v342 "milliseconds" 266.26
+@v344 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v345 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v346 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v345
+@v347 kernel.value.record "id" "span-preserve-agent-type" "pass" false "failures" $v344 "actual" $v346 "milliseconds" 270.73
+@v348 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v349 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v350 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v349
+@v351 kernel.value.record "id" "span-rule-conclusion" "pass" false "failures" $v348 "actual" $v350 "milliseconds" 369.91
+@v352 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v353 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v354 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v353
+@v355 kernel.value.record "id" "span-rule-premise" "pass" false "failures" $v352 "actual" $v354 "milliseconds" 441.52
+@v356 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v357 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v358 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v357
+@v359 kernel.value.record "id" "span-join-guard" "pass" false "failures" $v356 "actual" $v358 "milliseconds" 460.62
+@v360 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"true\"\n@output result $result\n" item "Coverage gaps: 1, expected 0" item "Missing/invalid formal proof"
+@v361 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v362 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v361
+@v363 kernel.value.record "id" "span-coordination" "pass" false "failures" $v360 "actual" $v362 "milliseconds" 271.67
+@v364 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v365 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v366 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v365
+@v367 kernel.value.record "id" "span-context-isolation" "pass" false "failures" $v364 "actual" $v366 "milliseconds" 279.82
+@v368 kernel.seq.make item "Coverage gaps: 1, expected 0"
+@v369 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v370 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 1 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v369
+@v371 kernel.value.record "id" "span-negative-context" "pass" false "failures" $v368 "actual" $v370 "milliseconds" 291.57
+@v372 kernel.seq.make item "truth: @result kernel.value.literal value \"unknown\"\n@output result $result\n, expected @result kernel.value.literal value \"both\"\n@output result $result\n" item "Coverage gaps: 2, expected 0" item "Missing/invalid formal proof"
+@v373 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v374 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 2 "text" "Interpretation is incomplete; this answer is conditional on the statements that were understood. I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v373
+@v375 kernel.value.record "id" "span-contradiction" "pass" false "failures" $v372 "actual" $v374 "milliseconds" 355.52
+@v376 kernel.seq.make item $v318 item $v321 item $v324 item $v327 item $v331 item $v335 item $v339 item $v343 item $v347 item $v351 item $v355 item $v359 item $v363 item $v367 item $v371 item $v375
+@v377 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "e3f64ab655d9c0cc2db802189566180891013d2154336d5673f194b67d28cb18" "casesHash" "188280f4dd96122be98619f9301a4ca1ca8f3ff232633cdd0fab107b30e6f046" "total" 16 "passed" 0 "failed" 16 "results" $v376
+@v378 kernel.seq.make
+@v379 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v380 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v379
+@v381 kernel.value.record "id" "span-role-order" "pass" true "failures" $v378 "actual" $v380 "milliseconds" 68.43
+@v382 kernel.seq.make
+@v383 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v384 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v383
+@v385 kernel.value.record "id" "span-passive-query" "pass" true "failures" $v382 "actual" $v384 "milliseconds" 89.68
+@v386 kernel.seq.make
+@v387 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v388 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Orin does not follow Sable." "verification" $v387
+@v389 kernel.value.record "id" "span-passive-negative-query" "pass" true "failures" $v386 "actual" $v388 "milliseconds" 68.8
+@v390 kernel.seq.make
+@v391 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v392 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v391
+@v393 kernel.value.record "id" "span-passive-why" "pass" true "failures" $v390 "actual" $v392 "milliseconds" 92.02
+@v394 kernel.seq.make
+@v395 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v396 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v395
+@v397 kernel.value.record "id" "span-role-reversal" "pass" true "failures" $v394 "actual" $v396 "milliseconds" 65.23
+@v398 kernel.seq.make
+@v399 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v400 kernel.value.record "status" "answered" "truth" "false" "value" null "values" null "gaps" 0 "text" "No. Orin does not follow Sable." "verification" $v399
+@v401 kernel.value.record "id" "span-negative" "pass" true "failures" $v398 "actual" $v400 "milliseconds" 71.67
+@v402 kernel.seq.make
+@v403 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v404 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v403
+@v405 kernel.value.record "id" "span-negative-role-reversal" "pass" true "failures" $v402 "actual" $v404 "milliseconds" 343.26
+@v406 kernel.seq.make
+@v407 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v408 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. an unnamed navigator follows Sable." "verification" $v407
+@v409 kernel.value.record "id" "span-new-noun-phrase" "pass" true "failures" $v406 "actual" $v408 "milliseconds" 76.31
+@v410 kernel.seq.make
+@v411 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v412 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v411
+@v413 kernel.value.record "id" "span-preserve-agent-type" "pass" true "failures" $v410 "actual" $v412 "milliseconds" 91.73
+@v414 kernel.seq.make
+@v415 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v416 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Orin follows Sable." "verification" $v415
+@v417 kernel.value.record "id" "span-rule-conclusion" "pass" true "failures" $v414 "actual" $v416 "milliseconds" 90.68
+@v418 kernel.seq.make
+@v419 kernel.value.record "valid" true "checkedNodes" 3 "format" "dag-certificate"
+@v420 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Sable is trusted." "verification" $v419
+@v421 kernel.value.record "id" "span-rule-premise" "pass" true "failures" $v418 "actual" $v420 "milliseconds" 136.63
+@v422 kernel.seq.make
+@v423 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v424 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v423
+@v425 kernel.value.record "id" "span-join-guard" "pass" true "failures" $v422 "actual" $v424 "milliseconds" 136.03
+@v426 kernel.seq.make
+@v427 kernel.value.record "valid" true "checkedNodes" 1 "format" "dag-certificate"
+@v428 kernel.value.record "status" "answered" "truth" "true" "value" null "values" null "gaps" 0 "text" "Yes. Sable is drone." "verification" $v427
+@v429 kernel.value.record "id" "span-coordination" "pass" true "failures" $v426 "actual" $v428 "milliseconds" 104.36
+@v430 kernel.seq.make
+@v431 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v432 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v431
+@v433 kernel.value.record "id" "span-context-isolation" "pass" true "failures" $v430 "actual" $v432 "milliseconds" 69.34
+@v434 kernel.seq.make
+@v435 kernel.value.record "valid" true "checkedNodes" 0 "format" "dag-certificate"
+@v436 kernel.value.record "status" "unknown" "truth" "unknown" "value" null "values" null "gaps" 0 "text" "I cannot determine that from the supplied information. Missing evidence is not evidence of falsehood." "verification" $v435
+@v437 kernel.value.record "id" "span-negative-context" "pass" true "failures" $v434 "actual" $v436 "milliseconds" 96.81
+@v438 kernel.seq.make
+@v439 kernel.value.record "valid" true "checkedNodes" 2 "format" "dag-certificate"
+@v440 kernel.value.record "status" "answered" "truth" "both" "value" null "values" null "gaps" 0 "text" "The supplied information is inconsistent: there is evidence both for and against this claim." "verification" $v439
+@v441 kernel.value.record "id" "span-contradiction" "pass" true "failures" $v438 "actual" $v440 "milliseconds" 94.67
+@v442 kernel.seq.make item $v381 item $v385 item $v389 item $v393 item $v397 item $v401 item $v405 item $v409 item $v413 item $v417 item $v421 item $v425 item $v429 item $v433 item $v437 item $v441
+@v443 kernel.value.record "schema" "sxlm.evaluation.v1" "model" "0f87ec1e538601ea3bec9f2e2dc6cd24570ced980d3306a22938837e7830fafd" "casesHash" "e0f891c6237a5f19e297cc25d0787a368e6336f05e50ef4029914f6d124016f0" "total" 16 "passed" 16 "failed" 0 "results" $v442
+@v444 kernel.value.record "schema" "sxlm.construction-transfer.v1" "generated" "2026-09-08T18:18:12.355Z" "native" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "model" "0f87ec1e538601ea3bec9f2e2dc6cd24570ced980d3306a22938837e7830fafd" "parent" "bcdc38021f8b611215d55e1a848f4e9b92679882d541a44443e33f4938a6a6f1" "candidate" "ce2ff5875d5c3a6db835aff109579c719acf85ceddf25b3a15fd62d450962142" "teachingExamples" 6 "before" $v62 "after" $v128 "regression" $v283 "challenges" $v314 "ablation" $v377 "cacheDisabled" $v443 "qualification" "Development-visible, same-author gates outside the six teaching phrases. A supplied new participle tests semantic role transfer, not morphology induction. Vocabulary remains authored. These results do not establish general passive tense, quantifier scope or open-domain conversation."
+@output result $v444
+

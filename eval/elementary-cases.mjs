@@ -1,5 +1,6 @@
 /** Public, same-author transfer probes; these are not independent educational certification. */
 export const elementaryCases = [
+  { id: 'elementary-open-ordinary-definition', text: 'Tell me about dolphins.', expect: { values: ['animal', 'mammal', 'vertebrate'], proof: true, gaps: 0 } },
   { id: 'elementary-animal-chain', text: 'Dori is a dolphin. Is Dori an animal?', expect: { truth: 'true', proof: true, gaps: 0 } },
   { id: 'elementary-explicit-exclusion', text: 'Dori is a dolphin. Is Dori a fish?', expect: { truth: 'false', proof: true, gaps: 0 } },
   { id: 'elementary-invertebrate-chain', text: 'Silk is a spider. Is Silk an animal?', expect: { truth: 'true', proof: true, gaps: 0 } },
@@ -53,6 +54,5 @@ export const elementaryOpenQuestions = [
   { id: 'elementary-open-causal-explanation', text: 'Why do plants need sunlight?' },
   { id: 'elementary-open-pronoun', text: 'Dori is a dolphin. Is she a mammal?' },
   { id: 'elementary-open-conversion', text: 'How many seconds are in two hours?' },
-  { id: 'elementary-open-ordinary-definition', text: 'Tell me about dolphins.' },
   { id: 'elementary-open-physical-change', text: 'If I leave ice in a warm room, what happens?' }
 ];

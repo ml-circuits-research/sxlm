@@ -1,0 +1,12 @@
+@input with object
+@raw kernel.value.get value $with key "rendered" fallback null
+@rendered data.object value $raw
+@presentation kernel.value.get value $with key "presentation" fallback null
+@subject kernel.value.get value $presentation key "subject" fallback null
+@empty kernel.value.empty
+@forms knowledge.concepts with $empty
+@concepts kernel.seq.pluck items $forms key "id"
+@known kernel.seq.includes items $concepts value $subject
+@args data.attach record $with key "forms" value $forms
+@result kernel.flow.choose condition $known then "concept.render-proof" else "concept.render-definition" with $args
+@output result $result

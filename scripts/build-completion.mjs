@@ -1,4 +1,5 @@
 import { encodeSOP, decodeSOP } from '../src/kernel/sop-data.mjs';
+import { replaceLinkages } from './support/linkages.mjs';
 import {readFileSync,readdirSync,writeFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {canonical,digest} from '../src/kernel/data.mjs';
@@ -33,7 +34,7 @@ if(process.argv[1]===fileURLToPath(import.meta.url)){
     console.log(`Completion replay passed: ${result.receipt.learnedModules} learned/memorized SOP modules, ${result.receipt.authoredPolicies} authored policies.`);
   }else{
     pack.sop=[...(pack.sop??[]).filter(m=>m.compilation?.printer||!['completion.','sequence.','memory.bootstrap-sequence.'].some(prefix=>m.id.startsWith(prefix))),...result.modules];
-    pack.providers={...(pack.providers??{}),...result.learned.providers};pack.linkages=[...(pack.linkages??[]).filter(l=>!result.linkages.some(expected=>expected.id===l.id)),...result.linkages];pack.training={...result.learned.training,...(pack.training?.components?{components:pack.training.components}:{})};
+    pack.providers={...(pack.providers??{}),...result.learned.providers};pack.linkages=replaceLinkages(pack.linkages??[],result.linkages);pack.training={...result.learned.training,...(pack.training?.components?{components:pack.training.components}:{})};
     delete pack.corpus;
     pack.provenance.completionLearning={trainingHash:result.learned.provenance.trainingHash,learner:'sequence-pack-v1'};
     pack.sop.sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);

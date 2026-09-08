@@ -2,6 +2,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { encodeSOP, decodeSOP } from '../src/kernel/sop-data.mjs';
 import { canonical } from '../src/kernel/data.mjs';
+import { replaceLinkages } from './support/linkages.mjs';
 
 export function buildConcepts() {
   const directory = new URL('../sop/concept/', import.meta.url);
@@ -26,7 +27,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   } else {
     pack.sop = [...pack.sop.filter(module => !module.id.startsWith('concept.')), ...modules]
       .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
-    pack.linkages = [...pack.linkages.filter(item => item.id !== linkage.id), linkage];
+    pack.linkages = replaceLinkages(pack.linkages, [linkage]);
     writeFileSync(path, encodeSOP(pack) + '\n');
     console.log(`Installed ${modules.length} authored concept policies.`);
   }

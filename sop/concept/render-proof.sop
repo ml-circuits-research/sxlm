@@ -1,0 +1,20 @@
+@input with object
+@raw kernel.value.get value $with key "rendered" fallback null
+@rendered data.object value $raw
+@certificate kernel.value.get value $rendered key "certificate" fallback null
+@rawRecords kernel.value.get value $certificate key "records" fallback null
+@records data.array value $rawRecords
+@ordered kernel.seq.reverse items $records
+@lines kernel.flow.map items $ordered circuit "concept.proof-line" with $with
+@blank kernel.seq.make item ""
+@sentences kernel.seq.difference left $lines right $blank
+@unique kernel.seq.unique items $sentences
+@text kernel.text.join items $unique separator " "
+@missing kernel.value.equal left $text right ""
+@updated data.attach record $rendered key "text" value $text
+@fallback concept.render-keep with $with
+@key kernel.value.booleanLabel value $missing
+@options kernel.value.record "true" $fallback "false" $updated
+@chosen kernel.value.get value $options key $key fallback null
+@result data.object value $chosen
+@output result $result

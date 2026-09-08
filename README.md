@@ -86,7 +86,7 @@ npm run test:standalone
 npm run audit:vision
 ```
 
-The verified revision passes 211 implementation tests, 28/28 conformance, 12/12 composition, 60/60 renaming probes, 64/64 formal planning and 16/16 normalization transfers. Construction learning improves from 0/5 to 5/5 with no introduced regression. The eight open-language challenges remain 0/8. These are public same-project tests, not a blind external benchmark or an LLM accuracy score. See [evaluation](docs/evaluation.html) and [reports/latest-evaluation.sop](reports/latest-evaluation.sop).
+The verified revision passes 222 implementation tests, 28/28 conformance, 12/12 composition, 60/60 renaming probes, 64/64 formal planning and 16/16 normalization transfers. Construction learning improves from 0/5 to 5/5 with no introduced regression. The [bootstrap](docs/wiki.html#definition-bootstrap)-only open-language challenges remain 0/8; the optional construction profile scores 1/8 on the unchanged set. These are public same-project tests, not a blind external benchmark or an LLM accuracy score. See [evaluation](docs/evaluation.html) and [reports/latest-evaluation.sop](reports/latest-evaluation.sop).
 
 `npm run build:model` rebuilds all model sources in dependency order. Run it after native changes, then execute the verification commands. Lexical normalization must be rebuilt before the sequence memory that records its policy identity.
 

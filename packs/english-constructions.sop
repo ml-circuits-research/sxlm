@@ -1,0 +1,184 @@
+@module source0 chars 1204
+@v0 kernel.value.empty
+@v1 kernel.seq.empty
+@v2 kernel.value.empty
+@v3 data.attach record $v2 key "id" value "passive.participle"
+@v4 data.attach record $v3 key "lhs" value "Participle"
+@v5 kernel.seq.empty
+@v6 kernel.value.empty
+@v7 data.attach record $v6 key "lex" value "PARTICIPLE"
+@v8 kernel.seq.append items $v5 value $v7
+@v9 data.attach record $v4 key "rhs" value $v8
+@v10 data.attach record $v9 key "action" value "en.cop.0.semantics"
+@v11 kernel.seq.append items $v1 value $v10
+@v12 data.attach record $v0 key "productions" value $v11
+@v13 kernel.seq.empty
+@v14 kernel.value.empty
+@v15 data.attach record $v14 key "category" value "PARTICIPLE"
+@v16 data.attach record $v15 key "surface" value "owned"
+@v17 data.attach record $v16 key "value" value "own"
+@v18 kernel.seq.append items $v13 value $v17
+@v19 kernel.value.empty
+@v20 data.attach record $v19 key "category" value "PARTICIPLE"
+@v21 data.attach record $v20 key "surface" value "helped"
+@v22 data.attach record $v21 key "value" value "help"
+@v23 kernel.seq.append items $v18 value $v22
+@v24 data.attach record $v12 key "lexicon" value $v23
+@v25 kernel.value.empty
+@v26 data.attach record $v24 key "classes" value $v25
+@output result $v26
+
+@end
+
+@module source1 chars 94
+@input with object
+@result memory.passive-vocabulary.grammar.constant0
+@output result $result
+
+@end
+
+@module source2 chars 596
+@input children array
+@input scope string
+@n0 kernel.seq.empty
+@n1 kernel.seq.make item 2 item "constraints"
+@n2 data.get value $children path $n1
+@n3 kernel.seq.concat left $n0 right $n2
+@n4 kernel.seq.make item 0
+@n5 data.get value $children path $n4
+@n6 kernel.seq.empty
+@n7 kernel.seq.make item 2 item "term"
+@n8 data.get value $children path $n7
+@n9 kernel.seq.append items $n6 value $n8
+@n10 kernel.seq.append items $n9 value "?subject"
+@n11 kernel.value.record "predicate" $n5 "terms" $n10 "negative" false "context" "world"
+@n12 kernel.seq.append items $n3 value $n11
+@output result $n12
+
+@end
+
+@module source3 chars 819
+@v0 kernel.value.empty
+@v1 kernel.seq.empty
+@v2 kernel.value.empty
+@v3 data.attach record $v2 key "id" value "learned-passive.production"
+@v4 data.attach record $v3 key "lhs" value "Comp"
+@v5 kernel.seq.empty
+@v6 kernel.seq.append items $v5 value "Participle"
+@v7 kernel.value.empty
+@v8 data.attach record $v7 key "literal" value "by"
+@v9 kernel.seq.append items $v6 value $v8
+@v10 kernel.seq.append items $v9 value "NP"
+@v11 data.attach record $v4 key "rhs" value $v10
+@v12 data.attach record $v11 key "action" value "learned-passive.compose"
+@v13 kernel.seq.append items $v1 value $v12
+@v14 data.attach record $v0 key "productions" value $v13
+@v15 kernel.seq.empty
+@v16 data.attach record $v14 key "lexicon" value $v15
+@v17 kernel.value.empty
+@v18 data.attach record $v16 key "classes" value $v17
+@output result $v18
+
+@end
+
+@module source4 chars 91
+@input with object
+@result memory.learned-passive.grammar.constant0
+@output result $result
+
+@end
+@v0 kernel.value.record "kind" "authored-vocabulary-and-induced-construction" "parentModel" "12d2bf8b281b2e9044b6ea96c0ebc8d25a90089701e3ed79267cc79fd8e89a8c" "qualification" "Lexical categories and annotated phrase meanings are supervision. Span alignment and semantic composition are induced; no unlabelled grammar discovery is claimed."
+@v1 kernel.value.record "id" "english-bootstrap" "hash" "d2f6a2b2600fc21b89c2b736e21e0205b79ce12e78b7c89f3e8cb9e7cceb1db6"
+@v2 kernel.seq.make item $v1
+@v3 kernel.value.record "kind" "authored-lexical-supervision" "source" "training/passive-vocabulary.sop"
+@v4 kernel.value.record "kind" "compiled-grammar-proposal" "knowledgeHash" "7a115125f257a435e7611edccb02a26c03f4a62f6acd73450c6c9a0760f6b894" "origin" $v3 "qualification" "Constructor compilation preserves the supplied grammar proposal. Its creation or learning must be established separately."
+@v5 kernel.value.record "id" "memory.passive-vocabulary.grammar.constant0" "source" &source0 "provenance" $v4
+@v6 kernel.value.record "kind" "authored-lexical-supervision" "source" "training/passive-vocabulary.sop"
+@v7 kernel.value.record "kind" "compiled-grammar-proposal" "knowledgeHash" "7a115125f257a435e7611edccb02a26c03f4a62f6acd73450c6c9a0760f6b894" "origin" $v6 "qualification" "Constructor compilation preserves the supplied grammar proposal. Its creation or learning must be established separately."
+@v8 kernel.value.record "id" "memory.passive-vocabulary.grammar" "source" &source1 "provenance" $v7
+@v9 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-structural-induction" "algorithm" "typed-span-composition-v1" "learnerHash" "1909442bb8cb264831424024f1d1e3fbaf59663323800f778dd50bc52fd432b8" "parentModel" "6313dec688dcbae1ca2c61482acdc7da88cc2ae2119366bd20e996a24d66370e" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "671118f123692e0169c1171754e6261ee54d6b8f76fcd05fb6e5cff49342e941" "trainingCount" 6 "tokenPolicy" "127248393f8182c276c38b0aa4c4a79639c960d63b21a509a9fef6dafe416826" "hypothesisClass" "Teacher-supplied typed spans, inferred common delimiters, nested field projections, constants, records and sequence concatenation. Explicit semantic:false slots contribute syntax only and cannot supply semantic projections. Sequence fields take priority over reconstructing observed elements. No unique or universal solution is claimed."
+@v10 kernel.value.record "kind" "supervised-structural-induction"
+@v11 kernel.value.record "id" "learned-passive.compose" "source" &source2 "learning" $v9 "provenance" $v10
+@v12 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-structural-induction" "algorithm" "typed-span-composition-v1" "learnerHash" "1909442bb8cb264831424024f1d1e3fbaf59663323800f778dd50bc52fd432b8" "parentModel" "6313dec688dcbae1ca2c61482acdc7da88cc2ae2119366bd20e996a24d66370e" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "671118f123692e0169c1171754e6261ee54d6b8f76fcd05fb6e5cff49342e941" "trainingCount" 6 "tokenPolicy" "127248393f8182c276c38b0aa4c4a79639c960d63b21a509a9fef6dafe416826" "hypothesisClass" "Teacher-supplied typed spans, inferred common delimiters, nested field projections, constants, records and sequence concatenation. Explicit semantic:false slots contribute syntax only and cannot supply semantic projections. Sequence fields take priority over reconstructing observed elements. No unique or universal solution is claimed."
+@v13 kernel.value.record "kind" "compiled-grammar-proposal" "knowledgeHash" "a390b3c2a6e33b1db326d7019a5cc5c76aaafa48309913e048a7763010b90bee" "origin" $v12 "qualification" "Constructor compilation preserves the supplied grammar proposal. Its creation or learning must be established separately."
+@v14 kernel.value.record "id" "memory.learned-passive.grammar.constant0" "source" &source3 "provenance" $v13
+@v15 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-structural-induction" "algorithm" "typed-span-composition-v1" "learnerHash" "1909442bb8cb264831424024f1d1e3fbaf59663323800f778dd50bc52fd432b8" "parentModel" "6313dec688dcbae1ca2c61482acdc7da88cc2ae2119366bd20e996a24d66370e" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "671118f123692e0169c1171754e6261ee54d6b8f76fcd05fb6e5cff49342e941" "trainingCount" 6 "tokenPolicy" "127248393f8182c276c38b0aa4c4a79639c960d63b21a509a9fef6dafe416826" "hypothesisClass" "Teacher-supplied typed spans, inferred common delimiters, nested field projections, constants, records and sequence concatenation. Explicit semantic:false slots contribute syntax only and cannot supply semantic projections. Sequence fields take priority over reconstructing observed elements. No unique or universal solution is claimed."
+@v16 kernel.value.record "kind" "compiled-grammar-proposal" "knowledgeHash" "a390b3c2a6e33b1db326d7019a5cc5c76aaafa48309913e048a7763010b90bee" "origin" $v15 "qualification" "Constructor compilation preserves the supplied grammar proposal. Its creation or learning must be established separately."
+@v17 kernel.value.record "id" "memory.learned-passive.grammar" "source" &source4 "provenance" $v16
+@v18 kernel.seq.make item $v5 item $v8 item $v11 item $v14 item $v17
+@v19 kernel.seq.make item "memory.passive-vocabulary.grammar" item "memory.learned-passive.grammar"
+@v20 kernel.value.record "grammar-fragments" $v19
+@v21 kernel.value.record "name" "relation" "category" "Participle"
+@v22 kernel.value.record "name" "agent" "category" "NP"
+@v23 kernel.seq.make item $v21 item $v22
+@v24 kernel.value.record "start" 0 "end" 5
+@v25 kernel.value.record "start" 9 "end" 13
+@v26 kernel.value.record "relation" $v24 "agent" $v25
+@v27 kernel.seq.make item "mira" item "?subject"
+@v28 kernel.value.record "predicate" "own" "terms" $v27 "negative" false "context" "world"
+@v29 kernel.seq.make item $v28
+@v30 kernel.value.record "text" "owned by Mira" "spans" $v26 "meaning" $v29
+@v31 kernel.value.record "start" 0 "end" 6
+@v32 kernel.value.record "start" 10 "end" 14
+@v33 kernel.value.record "relation" $v31 "agent" $v32
+@v34 kernel.seq.make item "theo" item "?subject"
+@v35 kernel.value.record "predicate" "help" "terms" $v34 "negative" false "context" "world"
+@v36 kernel.seq.make item $v35
+@v37 kernel.value.record "text" "helped by Theo" "spans" $v33 "meaning" $v36
+@v38 kernel.value.record "start" 0 "end" 6
+@v39 kernel.value.record "start" 10 "end" 17
+@v40 kernel.value.record "relation" $v38 "agent" $v39
+@v41 kernel.seq.make item "_:bf4df9e109b62fa76c7823bd"
+@v42 kernel.value.record "predicate" "medic" "terms" $v41 "negative" false "context" "world"
+@v43 kernel.seq.make item "_:bf4df9e109b62fa76c7823bd" item "?subject"
+@v44 kernel.value.record "predicate" "help" "terms" $v43 "negative" false "context" "world"
+@v45 kernel.seq.make item $v42 item $v44
+@v46 kernel.value.record "text" "helped by a medic" "spans" $v40 "meaning" $v45
+@v47 kernel.value.record "start" 0 "end" 5
+@v48 kernel.value.record "start" 9 "end" 14
+@v49 kernel.value.record "relation" $v47 "agent" $v48
+@v50 kernel.seq.make item "rowan" item "?subject"
+@v51 kernel.value.record "predicate" "own" "terms" $v50 "negative" false "context" "world"
+@v52 kernel.seq.make item $v51
+@v53 kernel.value.record "text" "owned by Rowan" "spans" $v49 "meaning" $v52
+@v54 kernel.value.record "start" 0 "end" 5
+@v55 kernel.value.record "start" 9 "end" 16
+@v56 kernel.value.record "relation" $v54 "agent" $v55
+@v57 kernel.seq.make item "_:2c0df12a39ca4382c77c9de8"
+@v58 kernel.value.record "predicate" "pilot" "terms" $v57 "negative" false "context" "world"
+@v59 kernel.seq.make item "_:2c0df12a39ca4382c77c9de8" item "?subject"
+@v60 kernel.value.record "predicate" "own" "terms" $v59 "negative" false "context" "world"
+@v61 kernel.seq.make item $v58 item $v60
+@v62 kernel.value.record "text" "owned by a pilot" "spans" $v56 "meaning" $v61
+@v63 kernel.value.record "start" 0 "end" 6
+@v64 kernel.value.record "start" 10 "end" 14
+@v65 kernel.value.record "relation" $v63 "agent" $v64
+@v66 kernel.seq.make item "nora" item "?subject"
+@v67 kernel.value.record "predicate" "help" "terms" $v66 "negative" false "context" "world"
+@v68 kernel.seq.make item $v67
+@v69 kernel.value.record "text" "helped by Nora" "spans" $v65 "meaning" $v68
+@v70 kernel.seq.make item $v30 item $v37 item $v46 item $v53 item $v62 item $v69
+@v71 kernel.value.record "id" "learned-passive" "category" "Comp" "slots" $v23 "examples" $v70
+@v72 kernel.value.record "lex" "PARTICIPLE"
+@v73 kernel.seq.make item $v72
+@v74 kernel.value.record "id" "passive.participle" "lhs" "Participle" "rhs" $v73 "action" "en.cop.0.semantics"
+@v75 kernel.seq.make item $v74
+@v76 kernel.value.record "category" "PARTICIPLE" "surface" "owned" "value" "own"
+@v77 kernel.value.record "category" "PARTICIPLE" "surface" "helped" "value" "help"
+@v78 kernel.seq.make item $v76 item $v77
+@v79 kernel.value.record
+@v80 kernel.value.record "productions" $v75 "lexicon" $v78 "classes" $v79
+@v81 kernel.seq.make
+@v82 kernel.value.record "grammar" $v80 "sop" $v81
+@v83 kernel.value.record "schema" "sxlm.derivation.v1" "kind" "supervised-structural-induction" "algorithm" "typed-span-composition-v1" "learnerHash" "1909442bb8cb264831424024f1d1e3fbaf59663323800f778dd50bc52fd432b8" "parentModel" "6313dec688dcbae1ca2c61482acdc7da88cc2ae2119366bd20e996a24d66370e" "runtime" "5824ceb2ce265f7623ae66486d37e3f0ee8a3c2e0156b1ec786f6bfbb7394ded" "specificationHash" "671118f123692e0169c1171754e6261ee54d6b8f76fcd05fb6e5cff49342e941" "trainingCount" 6 "tokenPolicy" "127248393f8182c276c38b0aa4c4a79639c960d63b21a509a9fef6dafe416826" "hypothesisClass" "Teacher-supplied typed spans, inferred common delimiters, nested field projections, constants, records and sequence concatenation. Explicit semantic:false slots contribute syntax only and cannot supply semantic projections. Sequence fields take priority over reconstructing observed elements. No unique or universal solution is claimed." "examples" 6
+@v84 kernel.value.record "literal" "by"
+@v85 kernel.seq.make item "Participle" item $v84 item "NP"
+@v86 kernel.value.record "id" "learned-passive.production" "lhs" "Comp" "rhs" $v85 "action" "learned-passive.compose"
+@v87 kernel.seq.make item $v86
+@v88 kernel.seq.make
+@v89 kernel.value.record
+@v90 kernel.value.record "productions" $v87 "lexicon" $v88 "classes" $v89
+@v91 kernel.value.record "schema" "sxlm.training.v1" "algorithm" "typed-span-composition-v1" "specification" $v71 "vocabulary" $v82 "baseModel" "12d2bf8b281b2e9044b6ea96c0ebc8d25a90089701e3ed79267cc79fd8e89a8c" "teacherParent" "6313dec688dcbae1ca2c61482acdc7da88cc2ae2119366bd20e996a24d66370e" "derivation" $v83 "grammarProposal" $v90
+@v92 kernel.value.record "schema" "sxlm.pack.v1" "id" "english-constructions" "version" "1.0.0" "provenance" $v0 "dependencies" $v2 "sop" $v18 "providers" $v20 "training" $v91
+@output result $v92
+

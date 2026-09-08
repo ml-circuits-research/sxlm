@@ -1,0 +1,7 @@
+@input children array
+@input scope string
+@term kernel.value.get value $children key 3 fallback null
+@constraints kernel.seq.empty
+@args kernel.value.record term $term constraints $constraints
+@result concept.definition with $args
+@output result $result

@@ -1,0 +1,11 @@
+@input with object
+@term kernel.value.get value $with key "term" fallback null
+@rawConstraints kernel.value.get value $with key "constraints" fallback null
+@constraints data.array value $rawConstraints
+@terms kernel.seq.make item $term item "?answer"
+@atom kernel.value.record predicate "kind" terms $terms negative false context "world"
+@patterns kernel.seq.append items $constraints value $atom
+@presentation kernel.value.record mode "definition" subject $term
+@query kernel.value.record kind "select" variable "?answer" patterns $patterns presentation $presentation
+@result kernel.value.record kind "query" query $query
+@output result $result

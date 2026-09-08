@@ -1,0 +1,9 @@
+@input with object
+@parts kernel.value.get value $with key "parts" fallback null
+@items data.array value $parts
+@patterns kernel.flow.map items $items circuit "concept.class-atom" with $with
+@category kernel.value.get value $with key "category" fallback null
+@presentation kernel.value.record mode "classification" subject $category
+@query kernel.value.record kind "truth" patterns $patterns presentation $presentation
+@result kernel.value.record kind "query" query $query
+@output result $result

@@ -1,0 +1,22 @@
+@input children array
+@input scope string
+@subject kernel.value.get value $children key 1 fallback null
+@reference kernel.value.get value $subject key "reference" fallback null
+@determiner kernel.value.get value $reference key "determiner" fallback null
+@category kernel.value.get value $reference key "category" fallback null
+@articles kernel.seq.make item "a" item "an"
+@article kernel.seq.includes items $articles value $determiner
+@empty kernel.value.empty
+@concepts knowledge.concepts with $empty
+@known kernel.seq.includes items $concepts value $category
+@eligible kernel.boolean.and left $article right $known
+@complement kernel.value.get value $children key 2 fallback null
+@parts data.array value $complement
+@args kernel.value.record concepts $concepts
+@checks kernel.flow.map items $parts circuit "concept.class-predicate" with $args
+@invalid kernel.seq.includes items $checks value false
+@valid kernel.boolean.not value $invalid
+@generic kernel.boolean.and left $eligible right $valid
+@context kernel.value.record children $children scope $scope category $category parts $parts
+@result kernel.flow.choose condition $generic then "concept.generic-query" else "concept.instance-query" with $context
+@output result $result

@@ -23,16 +23,9 @@
 
 @end
 
-@module source2 chars 553
+@module source2 chars 80
 @input with object
-@term kernel.value.get value $with key "term" fallback null
-@rawConstraints kernel.value.get value $with key "constraints" fallback null
-@constraints data.array value $rawConstraints
-@terms kernel.seq.make item $term item "?answer"
-@atom kernel.value.record predicate "kind" terms $terms negative false context "world"
-@patterns kernel.seq.append items $constraints value $atom
-@query kernel.value.record kind "select" variable "?answer" patterns $patterns
-@result kernel.value.record kind "query" query $query
+@result concept.definition with $with
 @output result $result
 
 @end
@@ -130,7 +123,7 @@
 @output result $result
 
 @end
-@v0 kernel.value.record "kind" "agent-authored-source-supervision" "independent" false "qualification" "Curated and formalized by a coding agent. Compilation preserves this supervision; no autonomous induction or child-level conversation is claimed." "previousSourceHash" "f696d94d4f7535a5bcc207b48690e3419d94c1a1af5213359784c88ba1efb5b6" "developmentEvidence" "The imported 88-case suite was visible before this revision. Compatibility scores are development measurements, not held-out learning evidence."
+@v0 kernel.value.record "kind" "agent-authored-source-supervision" "independent" false "qualification" "Curated and formalized by a coding agent. Compilation preserves this supervision; no autonomous induction or child-level conversation is claimed." "previousSourceHash" "51bf6636d582c210ef3ec4992d4689d5c8f583199eb7701ef3d6afc7c7890efd" "developmentEvidence" "The imported 88-case suite was visible before this revision. Compatibility scores are development measurements, not held-out learning evidence."
 @v1 kernel.value.record "id" "vertebrates" "publisher" "National Park Service" "title" "Vertebrate Fossils" "url" "https://www.nps.gov/subjects/fossils/vertebrate-fossils.htm" "support" "Vertebrates are animals with backbones, including mammals, birds, reptiles, amphibians and fish." "accessed" "2026-09-08"
 @v2 kernel.value.record "id" "dolphins" "publisher" "NOAA" "title" "Are dolphins fish?" "url" "https://oceanservice.noaa.gov/facts/dolphin.html" "support" "Dolphins are mammals and are not fish." "accessed" "2026-09-08"
 @v3 kernel.value.record "id" "invertebrates" "publisher" "National Park Service" "title" "Invertebrates" "url" "https://www.nps.gov/grca/learn/nature/invertebrates.htm" "support" "Insects and spiders are invertebrates. Adult insects have six legs." "accessed" "2026-09-08"
@@ -160,7 +153,7 @@
 @v27 kernel.value.record "id" "temporal-order" "publisher" "World Wide Web Consortium" "title" "Time Ontology in OWL" "url" "https://www.w3.org/TR/owl-time/" "support" "Before and after express inverse temporal order. The teaching profile treats supplied events as ordered in one shared temporal frame; it does not parse dates or infer durations." "accessed" "2026-09-08"
 @v28 kernel.seq.make item $v1 item $v2 item $v3 item $v4 item $v5 item $v6 item $v7 item $v8 item $v9 item $v10 item $v11 item $v12 item $v13 item $v14 item $v15 item $v16 item $v17 item $v18 item $v19 item $v20 item $v21 item $v22 item $v23 item $v24 item $v25 item $v26 item $v27
 @v29 kernel.seq.make item "animal classification" item "plant classification" item "solar system" item "water states" item "plane shapes" item "duration and measurement" item "everyday object categories" item "countries and capitals" item "named calendar cycles" item "verbal arithmetic" item "family and other named relations" item "qualitative ordering" item "spatial containment"
-@v30 kernel.seq.make item "A finite introductory vocabulary, not a complete school curriculum." item "Rules describe explicit taxonomic categories, not default abilities or living status. No universal bird-flight or mammal-live-birth rule is supplied." item "General conversation, pronouns, flexible paraphrases, temporal change and unrestricted why/how explanations are not learned by these data." item "Unit counts are declared exact duration facts, not a general unit-conversion solver." item "What-is answers select supported category names. They are not free-form generated definitions." item "Category definitions and instance classification share an explicit kind relation. The vocabulary separates category constants from ordinary named examples by teaching convention, not a general higher-order type system." item "Source citations support the authored claims; the formal proof checker verifies entailment and spans, not external source truth." item "The optional initializer is explicit and must be used through a model-bound session snapshot until a shared fact-fragments bootstrap linkage is installed." item "Geography includes two countries and their capitals. It does not claim worldwide coverage or political-border reasoning." item "Calendar questions use adjacent successors and predecessors in named cycles. They do not establish general temporal reasoning." item "Biological flight claims include the penguin exclusion, without assuming that every member of a flying bird species can fly." item "The source-supervised revision was developed after the imported compatibility cases were visible. Its rules and language are authored, not induced from an independent curriculum."
+@v30 kernel.seq.make item "A finite introductory vocabulary, not a complete school curriculum." item "Rules describe explicit taxonomic categories, not default abilities or living status. No universal bird-flight or mammal-live-birth rule is supplied." item "General conversation, pronouns, flexible paraphrases, temporal change and unrestricted why/how explanations are not learned by these data." item "Unit counts are declared exact duration facts, not a general unit-conversion solver." item "What-is answers select supported category names. They are not free-form generated definitions." item "Category definitions and instance classification share an explicit kind relation. The vocabulary separates category constants from ordinary named examples by teaching convention, not a general higher-order type system." item "Source citations support the authored claims; the formal proof checker verifies entailment and spans, not external source truth." item "The optional initializer is explicit and must be used through a model-bound session snapshot until a shared fact-fragments bootstrap linkage is installed." item "Geography includes two countries and their capitals. It does not claim worldwide coverage or political-border reasoning." item "Calendar questions use adjacent successors and predecessors in named cycles. They do not establish general temporal reasoning." item "Biological flight claims include the penguin exclusion, without assuming that every member of a flying bird species can fly." item "The source-supervised revision was developed after the imported compatibility cases were visible. Its rules and language are authored, not induced from an independent curriculum." item "Known noun categories support generic copular classification through one shared concept relation. Singular indefinite questions about unknown categories retain the existing existential interpretation. Supplied plural forms are lexical supervision, not productive morphology."
 @v31 kernel.seq.make item "mammal" item "vertebrate"
 @v32 kernel.value.record "predicate" "kind" "terms" $v31 "negative" false "context" "world"
 @v33 kernel.seq.make item "vertebrates"
@@ -1882,111 +1875,192 @@
 @v1749 kernel.value.record "category" "N" "surface" "plates" "value" "plate"
 @v1750 kernel.value.record "category" "N" "surface" "ticket" "value" "ticket"
 @v1751 kernel.value.record "category" "N" "surface" "tickets" "value" "ticket"
-@v1752 kernel.seq.make item $v1553 item $v1554 item $v1555 item $v1556 item $v1557 item $v1558 item $v1559 item $v1560 item $v1561 item $v1562 item $v1563 item $v1564 item $v1565 item $v1566 item $v1567 item $v1568 item $v1569 item $v1570 item $v1571 item $v1572 item $v1573 item $v1574 item $v1575 item $v1576 item $v1577 item $v1578 item $v1579 item $v1580 item $v1581 item $v1582 item $v1583 item $v1584 item $v1585 item $v1586 item $v1587 item $v1588 item $v1589 item $v1590 item $v1591 item $v1592 item $v1593 item $v1594 item $v1595 item $v1596 item $v1597 item $v1598 item $v1599 item $v1600 item $v1601 item $v1602 item $v1603 item $v1604 item $v1605 item $v1606 item $v1607 item $v1608 item $v1609 item $v1610 item $v1611 item $v1612 item $v1613 item $v1614 item $v1615 item $v1616 item $v1617 item $v1618 item $v1619 item $v1620 item $v1621 item $v1622 item $v1623 item $v1624 item $v1625 item $v1626 item $v1627 item $v1628 item $v1629 item $v1630 item $v1631 item $v1632 item $v1633 item $v1634 item $v1635 item $v1636 item $v1637 item $v1638 item $v1639 item $v1640 item $v1641 item $v1642 item $v1643 item $v1644 item $v1645 item $v1646 item $v1647 item $v1648 item $v1649 item $v1650 item $v1651 item $v1652 item $v1653 item $v1654 item $v1655 item $v1656 item $v1657 item $v1658 item $v1659 item $v1660 item $v1661 item $v1662 item $v1663 item $v1664 item $v1665 item $v1666 item $v1667 item $v1668 item $v1669 item $v1670 item $v1671 item $v1672 item $v1673 item $v1674 item $v1675 item $v1676 item $v1677 item $v1678 item $v1679 item $v1680 item $v1681 item $v1682 item $v1683 item $v1684 item $v1685 item $v1686 item $v1687 item $v1688 item $v1689 item $v1690 item $v1691 item $v1692 item $v1693 item $v1694 item $v1695 item $v1696 item $v1697 item $v1698 item $v1699 item $v1700 item $v1701 item $v1702 item $v1703 item $v1704 item $v1705 item $v1706 item $v1707 item $v1708 item $v1709 item $v1710 item $v1711 item $v1712 item $v1713 item $v1714 item $v1715 item $v1716 item $v1717 item $v1718 item $v1719 item $v1720 item $v1721 item $v1722 item $v1723 item $v1724 item $v1725 item $v1726 item $v1727 item $v1728 item $v1729 item $v1730 item $v1731 item $v1732 item $v1733 item $v1734 item $v1735 item $v1736 item $v1737 item $v1738 item $v1739 item $v1740 item $v1741 item $v1742 item $v1743 item $v1744 item $v1745 item $v1746 item $v1747 item $v1748 item $v1749 item $v1750 item $v1751
-@v1753 kernel.value.record "lex" "ELEMENTARY_NAME"
-@v1754 kernel.seq.make item $v1753
-@v1755 kernel.value.record "id" "elementary.np.name" "lhs" "NP" "rhs" $v1754 "action" "en.np.24.semantics"
-@v1756 kernel.value.record "literal" "what"
-@v1757 kernel.seq.make item $v1756 item "COP" item "ElementaryReference"
-@v1758 kernel.value.record "id" "elementary.question.definition-name" "lhs" "Question" "rhs" $v1757 "action" "elementary.definition-name"
-@v1759 kernel.value.record "literal" "what"
-@v1760 kernel.seq.make item $v1759 item "COP" item "DET" item "N"
-@v1761 kernel.value.record "id" "elementary.question.definition-category" "lhs" "Question" "rhs" $v1760 "action" "elementary.definition-category"
-@v1762 kernel.value.record "literal" "how"
-@v1763 kernel.value.record "literal" "many"
-@v1764 kernel.value.record "literal" "in"
-@v1765 kernel.seq.make item $v1762 item $v1763 item "N" item "COP" item $v1764 item "ElementaryReference"
-@v1766 kernel.value.record "id" "elementary.question.measure-count" "lhs" "Question" "rhs" $v1765 "action" "elementary.measure-count"
-@v1767 kernel.value.record "class" "name"
-@v1768 kernel.seq.make item $v1767
-@v1769 kernel.value.record "id" "elementary.reference.name" "lhs" "ElementaryReference" "rhs" $v1768 "action" "en.np.24.semantics"
-@v1770 kernel.value.record "lex" "ELEMENTARY_NAME"
-@v1771 kernel.seq.make item $v1770
-@v1772 kernel.value.record "id" "elementary.reference.lexical-name" "lhs" "ElementaryReference" "rhs" $v1771 "action" "en.np.24.semantics"
-@v1773 kernel.seq.make item "DEF" item "N"
-@v1774 kernel.value.record "id" "elementary.reference.definite" "lhs" "ElementaryReference" "rhs" $v1773 "action" "en.np.26.semantics"
-@v1775 kernel.value.record "literal" "how"
-@v1776 kernel.value.record "literal" "many"
-@v1777 kernel.value.record "literal" "in"
-@v1778 kernel.seq.make item $v1775 item $v1776 item "N" item "COP" item $v1777 item "DET" item "N"
-@v1779 kernel.value.record "id" "elementary.question.measure-count-category" "lhs" "Question" "rhs" $v1778 "action" "elementary.measure-count-category"
-@v1780 kernel.value.record "literal" "capital"
-@v1781 kernel.value.record "literal" "of"
-@v1782 kernel.seq.make item $v1780 item $v1781
-@v1783 kernel.value.record "id" "elementary.prep.capital" "lhs" "Prep" "rhs" $v1782 "action" "elementary.capital-relation"
-@v1784 kernel.value.record "literal" "plus"
-@v1785 kernel.seq.make item "Math" item $v1784 item "Math"
-@v1786 kernel.value.record "id" "elementary.math.addition" "lhs" "Math" "rhs" $v1785 "action" "en.math.75.semantics"
-@v1787 kernel.value.record "literal" "minus"
-@v1788 kernel.seq.make item "Math" item $v1787 item "Math"
-@v1789 kernel.value.record "id" "elementary.math.subtraction" "lhs" "Math" "rhs" $v1788 "action" "en.math.76.semantics"
-@v1790 kernel.value.record "literal" "times"
-@v1791 kernel.seq.make item "Math" item $v1790 item "Math"
-@v1792 kernel.value.record "id" "elementary.math.multiplication" "lhs" "Math" "rhs" $v1791 "action" "en.math.77.semantics"
-@v1793 kernel.seq.make item "Math" item "ElementaryDivide" item "Math"
-@v1794 kernel.value.record "id" "elementary.math.division" "lhs" "Math" "rhs" $v1793 "action" "en.math.78.semantics"
-@v1795 kernel.value.record "literal" "divided"
-@v1796 kernel.value.record "literal" "by"
-@v1797 kernel.seq.make item $v1795 item $v1796
-@v1798 kernel.value.record "id" "elementary.math.divide-words" "lhs" "ElementaryDivide" "rhs" $v1797 "action" "en.cop.0.semantics"
-@v1799 kernel.seq.make item "Math" item "ElementaryMultiply" item "Math"
-@v1800 kernel.value.record "id" "elementary.math.multiply-words" "lhs" "Math" "rhs" $v1799 "action" "en.math.77.semantics"
-@v1801 kernel.value.record "literal" "multiplied"
-@v1802 kernel.value.record "literal" "by"
-@v1803 kernel.seq.make item $v1801 item $v1802
-@v1804 kernel.value.record "id" "elementary.math.multiply-operator" "lhs" "ElementaryMultiply" "rhs" $v1803 "action" "en.cop.0.semantics"
-@v1805 kernel.value.record "lex" "ELEMENTARY_CYCLE_DIRECTION"
-@v1806 kernel.seq.make item $v1805
-@v1807 kernel.value.record "id" "elementary.calendar.direction" "lhs" "ElementaryCycleDirection" "rhs" $v1806 "action" "en.cop.0.semantics"
-@v1808 kernel.value.record "literal" "what"
-@v1809 kernel.value.record "literal" "comes"
-@v1810 kernel.seq.make item $v1808 item $v1809 item "ElementaryCycleDirection" item "ElementaryReference"
-@v1811 kernel.value.record "id" "elementary.calendar.question" "lhs" "Question" "rhs" $v1810 "action" "elementary.cycle-query"
-@v1812 kernel.value.record "literal" "negative"
-@v1813 kernel.seq.make item $v1812 item "Math"
-@v1814 kernel.value.record "id" "elementary.math.unary.negative" "lhs" "Math" "rhs" $v1813 "action" "elementary.math.negate"
-@v1815 kernel.value.record "literal" "minus"
-@v1816 kernel.seq.make item $v1815 item "Math"
-@v1817 kernel.value.record "id" "elementary.math.unary.minus" "lhs" "Math" "rhs" $v1816 "action" "elementary.math.negate"
-@v1818 kernel.value.record "literal" "-"
-@v1819 kernel.seq.make item $v1818 item "Math"
-@v1820 kernel.value.record "id" "elementary.math.unary.symbol" "lhs" "Math" "rhs" $v1819 "action" "elementary.math.negate"
-@v1821 kernel.value.record "lex" "ELEMENTARY_RELATION_NOUN"
-@v1822 kernel.seq.make item $v1821
-@v1823 kernel.value.record "id" "elementary.relation.noun" "lhs" "ElementaryRelationNoun" "rhs" $v1822 "action" "en.cop.0.semantics"
-@v1824 kernel.value.record "literal" "of"
-@v1825 kernel.seq.make item "ElementaryRelationNoun" item $v1824
-@v1826 kernel.value.record "id" "elementary.relation.plain" "lhs" "Prep" "rhs" $v1825 "action" "en.cop.0.semantics"
-@v1827 kernel.value.record "literal" "of"
-@v1828 kernel.seq.make item "DET" item "ElementaryRelationNoun" item $v1827
-@v1829 kernel.value.record "id" "elementary.relation.article" "lhs" "Prep" "rhs" $v1828 "action" "elementary.relation-article"
-@v1830 kernel.value.record "lex" "ELEMENTARY_COMPARATIVE"
-@v1831 kernel.value.record "literal" "than"
-@v1832 kernel.seq.make item $v1830 item $v1831
-@v1833 kernel.value.record "id" "elementary.relation.comparative" "lhs" "Prep" "rhs" $v1832 "action" "en.cop.0.semantics"
-@v1834 kernel.value.record "lex" "ELEMENTARY_DIRECTION"
-@v1835 kernel.value.record "literal" "of"
-@v1836 kernel.seq.make item $v1834 item $v1835
-@v1837 kernel.value.record "id" "elementary.relation.direction" "lhs" "Prep" "rhs" $v1836 "action" "en.cop.0.semantics"
-@v1838 kernel.value.record "literal" "who"
-@v1839 kernel.seq.make item $v1838 item "COP" item "NP" item "Prep"
-@v1840 kernel.value.record "id" "elementary.relation.object-question.who" "lhs" "Question" "rhs" $v1839 "action" "elementary.relation-object"
-@v1841 kernel.value.record "literal" "what"
-@v1842 kernel.seq.make item $v1841 item "COP" item "NP" item "Prep"
-@v1843 kernel.value.record "id" "elementary.relation.object-question.what" "lhs" "Question" "rhs" $v1842 "action" "elementary.relation-object"
-@v1844 kernel.seq.make item $v1755 item $v1758 item $v1761 item $v1766 item $v1769 item $v1772 item $v1774 item $v1779 item $v1783 item $v1786 item $v1789 item $v1792 item $v1794 item $v1798 item $v1800 item $v1804 item $v1807 item $v1811 item $v1814 item $v1817 item $v1820 item $v1823 item $v1826 item $v1829 item $v1833 item $v1837 item $v1840 item $v1843
-@v1845 kernel.value.record "lexicon" $v1752 "productions" $v1844
-@v1846 kernel.value.record "id" "elementary.definition-name" "source" &source0
-@v1847 kernel.value.record "id" "elementary.definition-category" "source" &source1
-@v1848 kernel.value.record "id" "elementary.definition" "source" &source2
-@v1849 kernel.value.record "id" "elementary.measure-count" "source" &source3
-@v1850 kernel.value.record "id" "elementary.measure-count-category" "source" &source4
-@v1851 kernel.value.record "id" "elementary.capital-relation" "source" &source5
-@v1852 kernel.value.record "id" "elementary.cycle-query" "source" &source6
-@v1853 kernel.value.record "id" "elementary.math.negate" "source" &source7
-@v1854 kernel.value.record "id" "elementary.relation-article" "source" &source8
-@v1855 kernel.value.record "id" "elementary.relation-object" "source" &source9
-@v1856 kernel.seq.make item $v1846 item $v1847 item $v1848 item $v1849 item $v1850 item $v1851 item $v1852 item $v1853 item $v1854 item $v1855
-@v1857 kernel.value.record "schema" "sxlm.elementary-teaching.v1" "id" "elementary-knowledge" "version" "3" "origin" $v0 "sources" $v28 "domains" $v29 "limitations" $v30 "facts" $v487 "rules" $v1552 "grammar" $v1845 "policies" $v1856
-@output result $v1857
+@v1752 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "mammals" "value" "mammal"
+@v1753 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "vertebrates" "value" "vertebrate"
+@v1754 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "birds" "value" "bird"
+@v1755 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "reptiles" "value" "reptile"
+@v1756 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "amphibians" "value" "amphibian"
+@v1757 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "animals" "value" "animal"
+@v1758 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "dolphins" "value" "dolphin"
+@v1759 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "insects" "value" "insect"
+@v1760 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "invertebrates" "value" "invertebrate"
+@v1761 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "spiders" "value" "spider"
+@v1762 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "trees" "value" "tree"
+@v1763 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "plants" "value" "plant"
+@v1764 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "shrubs" "value" "shrub"
+@v1765 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "conifers" "value" "conifer"
+@v1766 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "squares" "value" "square"
+@v1767 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "rectangles" "value" "rectangle"
+@v1768 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "rhombuses" "value" "rhombus"
+@v1769 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "quadrilaterals" "value" "quadrilateral"
+@v1770 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "polygons" "value" "polygon"
+@v1771 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "triangles" "value" "triangle"
+@v1772 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "shapes" "value" "shape"
+@v1773 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "terrestrial-planets" "value" "terrestrial-planet"
+@v1774 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "planets" "value" "planet"
+@v1775 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "solar-planets" "value" "solar-planet"
+@v1776 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "chairs" "value" "chair"
+@v1777 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "spoons" "value" "spoon"
+@v1778 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "utensils" "value" "utensil"
+@v1779 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "stars" "value" "star"
+@v1780 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "satellites" "value" "satellite"
+@v1781 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "dwarf-planets" "value" "dwarf-planet"
+@v1782 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "solids" "value" "solid"
+@v1783 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "liquids" "value" "liquid"
+@v1784 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "gases" "value" "gas"
+@v1785 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "units" "value" "unit"
+@v1786 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "sides" "value" "side"
+@v1787 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "seconds" "value" "second"
+@v1788 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "minutes" "value" "minute"
+@v1789 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "hours" "value" "hour"
+@v1790 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "days" "value" "day"
+@v1791 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "metres" "value" "metre"
+@v1792 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "kilograms" "value" "kilogram"
+@v1793 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "cities" "value" "city"
+@v1794 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "countries" "value" "country"
+@v1795 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "dogs" "value" "dog"
+@v1796 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "cats" "value" "cat"
+@v1797 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "bees" "value" "bee"
+@v1798 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "ants" "value" "ant"
+@v1799 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "wasps" "value" "wasp"
+@v1800 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "penguins" "value" "penguin"
+@v1801 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "sparrows" "value" "sparrow"
+@v1802 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "ferns" "value" "fern"
+@v1803 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "pears" "value" "pear"
+@v1804 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "bananas" "value" "banana"
+@v1805 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "oranges" "value" "orange"
+@v1806 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "pens" "value" "pen"
+@v1807 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "pencils" "value" "pencil"
+@v1808 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "books" "value" "book"
+@v1809 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "toys" "value" "toy"
+@v1810 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "marbles" "value" "marble"
+@v1811 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "coins" "value" "coin"
+@v1812 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "bottles" "value" "bottle"
+@v1813 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "plates" "value" "plate"
+@v1814 kernel.value.record "category" "CONCEPT_PLURAL" "surface" "tickets" "value" "ticket"
+@v1815 kernel.seq.make item $v1553 item $v1554 item $v1555 item $v1556 item $v1557 item $v1558 item $v1559 item $v1560 item $v1561 item $v1562 item $v1563 item $v1564 item $v1565 item $v1566 item $v1567 item $v1568 item $v1569 item $v1570 item $v1571 item $v1572 item $v1573 item $v1574 item $v1575 item $v1576 item $v1577 item $v1578 item $v1579 item $v1580 item $v1581 item $v1582 item $v1583 item $v1584 item $v1585 item $v1586 item $v1587 item $v1588 item $v1589 item $v1590 item $v1591 item $v1592 item $v1593 item $v1594 item $v1595 item $v1596 item $v1597 item $v1598 item $v1599 item $v1600 item $v1601 item $v1602 item $v1603 item $v1604 item $v1605 item $v1606 item $v1607 item $v1608 item $v1609 item $v1610 item $v1611 item $v1612 item $v1613 item $v1614 item $v1615 item $v1616 item $v1617 item $v1618 item $v1619 item $v1620 item $v1621 item $v1622 item $v1623 item $v1624 item $v1625 item $v1626 item $v1627 item $v1628 item $v1629 item $v1630 item $v1631 item $v1632 item $v1633 item $v1634 item $v1635 item $v1636 item $v1637 item $v1638 item $v1639 item $v1640 item $v1641 item $v1642 item $v1643 item $v1644 item $v1645 item $v1646 item $v1647 item $v1648 item $v1649 item $v1650 item $v1651 item $v1652 item $v1653 item $v1654 item $v1655 item $v1656 item $v1657 item $v1658 item $v1659 item $v1660 item $v1661 item $v1662 item $v1663 item $v1664 item $v1665 item $v1666 item $v1667 item $v1668 item $v1669 item $v1670 item $v1671 item $v1672 item $v1673 item $v1674 item $v1675 item $v1676 item $v1677 item $v1678 item $v1679 item $v1680 item $v1681 item $v1682 item $v1683 item $v1684 item $v1685 item $v1686 item $v1687 item $v1688 item $v1689 item $v1690 item $v1691 item $v1692 item $v1693 item $v1694 item $v1695 item $v1696 item $v1697 item $v1698 item $v1699 item $v1700 item $v1701 item $v1702 item $v1703 item $v1704 item $v1705 item $v1706 item $v1707 item $v1708 item $v1709 item $v1710 item $v1711 item $v1712 item $v1713 item $v1714 item $v1715 item $v1716 item $v1717 item $v1718 item $v1719 item $v1720 item $v1721 item $v1722 item $v1723 item $v1724 item $v1725 item $v1726 item $v1727 item $v1728 item $v1729 item $v1730 item $v1731 item $v1732 item $v1733 item $v1734 item $v1735 item $v1736 item $v1737 item $v1738 item $v1739 item $v1740 item $v1741 item $v1742 item $v1743 item $v1744 item $v1745 item $v1746 item $v1747 item $v1748 item $v1749 item $v1750 item $v1751 item $v1752 item $v1753 item $v1754 item $v1755 item $v1756 item $v1757 item $v1758 item $v1759 item $v1760 item $v1761 item $v1762 item $v1763 item $v1764 item $v1765 item $v1766 item $v1767 item $v1768 item $v1769 item $v1770 item $v1771 item $v1772 item $v1773 item $v1774 item $v1775 item $v1776 item $v1777 item $v1778 item $v1779 item $v1780 item $v1781 item $v1782 item $v1783 item $v1784 item $v1785 item $v1786 item $v1787 item $v1788 item $v1789 item $v1790 item $v1791 item $v1792 item $v1793 item $v1794 item $v1795 item $v1796 item $v1797 item $v1798 item $v1799 item $v1800 item $v1801 item $v1802 item $v1803 item $v1804 item $v1805 item $v1806 item $v1807 item $v1808 item $v1809 item $v1810 item $v1811 item $v1812 item $v1813 item $v1814
+@v1816 kernel.value.record "lex" "ELEMENTARY_NAME"
+@v1817 kernel.seq.make item $v1816
+@v1818 kernel.value.record "id" "elementary.np.name" "lhs" "NP" "rhs" $v1817 "action" "en.np.24.semantics"
+@v1819 kernel.value.record "literal" "what"
+@v1820 kernel.seq.make item $v1819 item "COP" item "ElementaryReference"
+@v1821 kernel.value.record "id" "elementary.question.definition-name" "lhs" "Question" "rhs" $v1820 "action" "elementary.definition-name"
+@v1822 kernel.value.record "literal" "what"
+@v1823 kernel.seq.make item $v1822 item "COP" item "DET" item "N"
+@v1824 kernel.value.record "id" "elementary.question.definition-category" "lhs" "Question" "rhs" $v1823 "action" "elementary.definition-category"
+@v1825 kernel.value.record "literal" "how"
+@v1826 kernel.value.record "literal" "many"
+@v1827 kernel.value.record "literal" "in"
+@v1828 kernel.seq.make item $v1825 item $v1826 item "N" item "COP" item $v1827 item "ElementaryReference"
+@v1829 kernel.value.record "id" "elementary.question.measure-count" "lhs" "Question" "rhs" $v1828 "action" "elementary.measure-count"
+@v1830 kernel.value.record "class" "name"
+@v1831 kernel.seq.make item $v1830
+@v1832 kernel.value.record "id" "elementary.reference.name" "lhs" "ElementaryReference" "rhs" $v1831 "action" "en.np.24.semantics"
+@v1833 kernel.value.record "lex" "ELEMENTARY_NAME"
+@v1834 kernel.seq.make item $v1833
+@v1835 kernel.value.record "id" "elementary.reference.lexical-name" "lhs" "ElementaryReference" "rhs" $v1834 "action" "en.np.24.semantics"
+@v1836 kernel.seq.make item "DEF" item "N"
+@v1837 kernel.value.record "id" "elementary.reference.definite" "lhs" "ElementaryReference" "rhs" $v1836 "action" "en.np.26.semantics"
+@v1838 kernel.value.record "literal" "how"
+@v1839 kernel.value.record "literal" "many"
+@v1840 kernel.value.record "literal" "in"
+@v1841 kernel.seq.make item $v1838 item $v1839 item "N" item "COP" item $v1840 item "DET" item "N"
+@v1842 kernel.value.record "id" "elementary.question.measure-count-category" "lhs" "Question" "rhs" $v1841 "action" "elementary.measure-count-category"
+@v1843 kernel.value.record "literal" "capital"
+@v1844 kernel.value.record "literal" "of"
+@v1845 kernel.seq.make item $v1843 item $v1844
+@v1846 kernel.value.record "id" "elementary.prep.capital" "lhs" "Prep" "rhs" $v1845 "action" "elementary.capital-relation"
+@v1847 kernel.value.record "literal" "plus"
+@v1848 kernel.seq.make item "Math" item $v1847 item "Math"
+@v1849 kernel.value.record "id" "elementary.math.addition" "lhs" "Math" "rhs" $v1848 "action" "en.math.75.semantics"
+@v1850 kernel.value.record "literal" "minus"
+@v1851 kernel.seq.make item "Math" item $v1850 item "Math"
+@v1852 kernel.value.record "id" "elementary.math.subtraction" "lhs" "Math" "rhs" $v1851 "action" "en.math.76.semantics"
+@v1853 kernel.value.record "literal" "times"
+@v1854 kernel.seq.make item "Math" item $v1853 item "Math"
+@v1855 kernel.value.record "id" "elementary.math.multiplication" "lhs" "Math" "rhs" $v1854 "action" "en.math.77.semantics"
+@v1856 kernel.seq.make item "Math" item "ElementaryDivide" item "Math"
+@v1857 kernel.value.record "id" "elementary.math.division" "lhs" "Math" "rhs" $v1856 "action" "en.math.78.semantics"
+@v1858 kernel.value.record "literal" "divided"
+@v1859 kernel.value.record "literal" "by"
+@v1860 kernel.seq.make item $v1858 item $v1859
+@v1861 kernel.value.record "id" "elementary.math.divide-words" "lhs" "ElementaryDivide" "rhs" $v1860 "action" "en.cop.0.semantics"
+@v1862 kernel.seq.make item "Math" item "ElementaryMultiply" item "Math"
+@v1863 kernel.value.record "id" "elementary.math.multiply-words" "lhs" "Math" "rhs" $v1862 "action" "en.math.77.semantics"
+@v1864 kernel.value.record "literal" "multiplied"
+@v1865 kernel.value.record "literal" "by"
+@v1866 kernel.seq.make item $v1864 item $v1865
+@v1867 kernel.value.record "id" "elementary.math.multiply-operator" "lhs" "ElementaryMultiply" "rhs" $v1866 "action" "en.cop.0.semantics"
+@v1868 kernel.value.record "lex" "ELEMENTARY_CYCLE_DIRECTION"
+@v1869 kernel.seq.make item $v1868
+@v1870 kernel.value.record "id" "elementary.calendar.direction" "lhs" "ElementaryCycleDirection" "rhs" $v1869 "action" "en.cop.0.semantics"
+@v1871 kernel.value.record "literal" "what"
+@v1872 kernel.value.record "literal" "comes"
+@v1873 kernel.seq.make item $v1871 item $v1872 item "ElementaryCycleDirection" item "ElementaryReference"
+@v1874 kernel.value.record "id" "elementary.calendar.question" "lhs" "Question" "rhs" $v1873 "action" "elementary.cycle-query"
+@v1875 kernel.value.record "literal" "negative"
+@v1876 kernel.seq.make item $v1875 item "Math"
+@v1877 kernel.value.record "id" "elementary.math.unary.negative" "lhs" "Math" "rhs" $v1876 "action" "elementary.math.negate"
+@v1878 kernel.value.record "literal" "minus"
+@v1879 kernel.seq.make item $v1878 item "Math"
+@v1880 kernel.value.record "id" "elementary.math.unary.minus" "lhs" "Math" "rhs" $v1879 "action" "elementary.math.negate"
+@v1881 kernel.value.record "literal" "-"
+@v1882 kernel.seq.make item $v1881 item "Math"
+@v1883 kernel.value.record "id" "elementary.math.unary.symbol" "lhs" "Math" "rhs" $v1882 "action" "elementary.math.negate"
+@v1884 kernel.value.record "lex" "ELEMENTARY_RELATION_NOUN"
+@v1885 kernel.seq.make item $v1884
+@v1886 kernel.value.record "id" "elementary.relation.noun" "lhs" "ElementaryRelationNoun" "rhs" $v1885 "action" "en.cop.0.semantics"
+@v1887 kernel.value.record "literal" "of"
+@v1888 kernel.seq.make item "ElementaryRelationNoun" item $v1887
+@v1889 kernel.value.record "id" "elementary.relation.plain" "lhs" "Prep" "rhs" $v1888 "action" "en.cop.0.semantics"
+@v1890 kernel.value.record "literal" "of"
+@v1891 kernel.seq.make item "DET" item "ElementaryRelationNoun" item $v1890
+@v1892 kernel.value.record "id" "elementary.relation.article" "lhs" "Prep" "rhs" $v1891 "action" "elementary.relation-article"
+@v1893 kernel.value.record "lex" "ELEMENTARY_COMPARATIVE"
+@v1894 kernel.value.record "literal" "than"
+@v1895 kernel.seq.make item $v1893 item $v1894
+@v1896 kernel.value.record "id" "elementary.relation.comparative" "lhs" "Prep" "rhs" $v1895 "action" "en.cop.0.semantics"
+@v1897 kernel.value.record "lex" "ELEMENTARY_DIRECTION"
+@v1898 kernel.value.record "literal" "of"
+@v1899 kernel.seq.make item $v1897 item $v1898
+@v1900 kernel.value.record "id" "elementary.relation.direction" "lhs" "Prep" "rhs" $v1899 "action" "en.cop.0.semantics"
+@v1901 kernel.value.record "literal" "who"
+@v1902 kernel.seq.make item $v1901 item "COP" item "NP" item "Prep"
+@v1903 kernel.value.record "id" "elementary.relation.object-question.who" "lhs" "Question" "rhs" $v1902 "action" "elementary.relation-object"
+@v1904 kernel.value.record "literal" "what"
+@v1905 kernel.seq.make item $v1904 item "COP" item "NP" item "Prep"
+@v1906 kernel.value.record "id" "elementary.relation.object-question.what" "lhs" "Question" "rhs" $v1905 "action" "elementary.relation-object"
+@v1907 kernel.value.record "lex" "CONCEPT_PLURAL"
+@v1908 kernel.seq.make item $v1907
+@v1909 kernel.value.record "id" "concept.plural" "lhs" "ConceptPlural" "rhs" $v1908 "action" "en.cop.0.semantics"
+@v1910 kernel.seq.make item "ConceptPlural"
+@v1911 kernel.value.record "id" "concept.mention.plural" "lhs" "ConceptMention" "rhs" $v1910 "action" "en.cop.0.semantics"
+@v1912 kernel.seq.make item "DET" item "N"
+@v1913 kernel.value.record "id" "concept.mention.article" "lhs" "ConceptMention" "rhs" $v1912 "action" "concept.mention-article"
+@v1914 kernel.seq.make item "COP" item "ConceptPlural" item "Comp"
+@v1915 kernel.value.record "id" "concept.question.plural" "lhs" "Question" "rhs" $v1914 "action" "concept.plural-query"
+@v1916 kernel.value.record "literal" "what"
+@v1917 kernel.seq.make item $v1916 item "COP" item "ConceptPlural"
+@v1918 kernel.value.record "id" "concept.question.definition-plural" "lhs" "Question" "rhs" $v1917 "action" "concept.define-plural"
+@v1919 kernel.value.record "literal" "tell"
+@v1920 kernel.value.record "literal" "me"
+@v1921 kernel.value.record "literal" "about"
+@v1922 kernel.seq.make item $v1919 item $v1920 item $v1921 item "ConceptMention"
+@v1923 kernel.value.record "id" "concept.question.describe" "lhs" "Question" "rhs" $v1922 "action" "concept.describe"
+@v1924 kernel.seq.make item $v1818 item $v1821 item $v1824 item $v1829 item $v1832 item $v1835 item $v1837 item $v1842 item $v1846 item $v1849 item $v1852 item $v1855 item $v1857 item $v1861 item $v1863 item $v1867 item $v1870 item $v1874 item $v1877 item $v1880 item $v1883 item $v1886 item $v1889 item $v1892 item $v1896 item $v1900 item $v1903 item $v1906 item $v1909 item $v1911 item $v1913 item $v1915 item $v1918 item $v1923
+@v1925 kernel.value.record "lexicon" $v1815 "productions" $v1924
+@v1926 kernel.value.record "id" "elementary.definition-name" "source" &source0
+@v1927 kernel.value.record "id" "elementary.definition-category" "source" &source1
+@v1928 kernel.value.record "id" "elementary.definition" "source" &source2
+@v1929 kernel.value.record "id" "elementary.measure-count" "source" &source3
+@v1930 kernel.value.record "id" "elementary.measure-count-category" "source" &source4
+@v1931 kernel.value.record "id" "elementary.capital-relation" "source" &source5
+@v1932 kernel.value.record "id" "elementary.cycle-query" "source" &source6
+@v1933 kernel.value.record "id" "elementary.math.negate" "source" &source7
+@v1934 kernel.value.record "id" "elementary.relation-article" "source" &source8
+@v1935 kernel.value.record "id" "elementary.relation-object" "source" &source9
+@v1936 kernel.seq.make item $v1926 item $v1927 item $v1928 item $v1929 item $v1930 item $v1931 item $v1932 item $v1933 item $v1934 item $v1935
+@v1937 kernel.seq.make item "amphibian" item "animal" item "ant" item "banana" item "bee" item "bird" item "book" item "bottle" item "cat" item "chair" item "city" item "coin" item "conifer" item "country" item "day" item "dog" item "dolphin" item "dwarf-planet" item "fern" item "fish" item "furniture" item "gas" item "hour" item "insect" item "invertebrate" item "kilogram" item "liquid" item "mammal" item "marble" item "metre" item "minute" item "orange" item "pear" item "pen" item "pencil" item "penguin" item "planet" item "plant" item "plate" item "polygon" item "quadrilateral" item "rectangle" item "reptile" item "rhombus" item "satellite" item "second" item "shape" item "shrub" item "side" item "solar-planet" item "solid" item "sparrow" item "spider" item "spoon" item "square" item "star" item "terrestrial-planet" item "ticket" item "toy" item "tree" item "triangle" item "unit" item "utensil" item "vertebrate" item "wasp"
+@v1938 kernel.value.record "schema" "sxlm.elementary-teaching.v1" "id" "elementary-knowledge" "version" "4.0.0" "origin" $v0 "sources" $v28 "domains" $v29 "limitations" $v30 "facts" $v487 "rules" $v1552 "grammar" $v1925 "policies" $v1936 "concepts" $v1937
+@output result $v1938
 

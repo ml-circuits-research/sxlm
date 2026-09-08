@@ -599,7 +599,7 @@
 @v598 kernel.value.record "id" "items" "op" "data.template" "args" $v597
 @v599 kernel.value.record "ref" "items"
 @v600 kernel.value.record
-@v601 kernel.value.record "id" "rendered" "map" "render.answer" "item" "value" "items" $v599 "args" $v600
+@v601 kernel.value.record "id" "rendered" "map" "concept.render-answer" "item" "value" "items" $v599 "args" $v600
 @v602 kernel.seq.make
 @v603 kernel.value.record "$get" $v602
 @v604 kernel.value.record "ref" "$value"
@@ -687,3 +687,4 @@
 @v686 kernel.seq.make item $v99 item $v272 item $v576 item $v643 item $v685
 @v687 kernel.value.record "schema" "sxlm.circuit-proposal.v1" "provenance" $v0 "circuits" $v686
 @output result $v687
+

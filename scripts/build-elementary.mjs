@@ -39,6 +39,7 @@ export function buildElementary({ input = decodeSOP(readFileSync(trainingURL)), 
     id: 'memory.elementary-theory', origin: provenance, sourceName: input.id
   });
   const grammar = compileGrammarKnowledge(input.grammar, { id: 'memory.elementary-grammar', origin: provenance });
+  const concepts = compileKnowledge(input.concepts ?? [], { id: 'memory.elementary-concepts', origin: provenance });
   const policies = input.policies.map(module => ({ ...module, provenance: {
     kind: 'agent-authored-sop-policy', origin: provenance,
     qualification: 'Authored compositional language and initialization policies, not induced programs.'
@@ -46,8 +47,9 @@ export function buildElementary({ input = decodeSOP(readFileSync(trainingURL)), 
   const pack = {
     schema: 'sxlm.pack.v1', id: input.id, version: input.version, provenance,
     dependencies: [{ id: parent.id, hash: validatePack(parent).hash }],
-    sop: [...memory.sop, ...theory.sop, ...grammar.sop, ...policies].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
-    providers: { ...theory.providers, ...grammar.providers, 'fact-fragments': ['memory.elementary-facts'] },
+    sop: [...memory.sop, ...theory.sop, ...grammar.sop, ...concepts.sop, ...policies].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
+    providers: { ...theory.providers, ...grammar.providers, 'fact-fragments': ['memory.elementary-facts'],
+      'concept-fragments': ['memory.elementary-concepts'] },
     training: { schema: 'sxlm.training.v1', algorithm: 'source-knowledge-compilation-v1', specification: input }
   };
   validatePack(pack);

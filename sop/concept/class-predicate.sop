@@ -1,0 +1,13 @@
+@input item any
+@input with object
+@predicate kernel.value.get value $item key "predicate" fallback null
+@concepts kernel.value.get value $with key "concepts" fallback null
+@known kernel.seq.includes items $concepts value $predicate
+@terms kernel.value.get value $item key "terms" fallback null
+@expected kernel.seq.make item "?subject"
+@unary kernel.value.equal left $terms right $expected
+@context kernel.value.get value $item key "context" fallback null
+@world kernel.value.equal left $context right "world"
+@valid kernel.boolean.and left $known right $unary
+@result kernel.boolean.and left $valid right $world
+@output result $result

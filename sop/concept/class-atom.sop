@@ -1,0 +1,9 @@
+@input item any
+@input with object
+@category kernel.value.get value $with key "category" fallback null
+@predicate kernel.value.get value $item key "predicate" fallback null
+@negative kernel.value.get value $item key "negative" fallback false
+@context kernel.value.get value $item key "context" fallback "world"
+@terms kernel.seq.make item $category item $predicate
+@result kernel.value.record predicate "kind" terms $terms negative $negative context $context
+@output result $result

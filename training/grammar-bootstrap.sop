@@ -222,7 +222,7 @@
 @v221 kernel.seq.make item "DEF" item "N"
 @v222 kernel.value.record "id" "en.np.26" "lhs" "NP" "rhs" $v221 "action" "en.np.26.semantics"
 @v223 kernel.seq.make item "DET" item "N"
-@v224 kernel.value.record "id" "en.np.27" "lhs" "NP" "rhs" $v223 "action" "en.np.27.semantics"
+@v224 kernel.value.record "id" "en.np.27" "lhs" "NP" "rhs" $v223 "action" "concept.noun-phrase"
 @v225 kernel.seq.make item "DET" item "N"
 @v226 kernel.value.record "id" "en.comp.28" "lhs" "Comp" "rhs" $v225 "action" "en.comp.28.semantics"
 @v227 kernel.seq.make item "N"
@@ -317,7 +317,7 @@
 @v316 kernel.seq.make item "NP" item "TRANSFER" item "Number" item "N" item "TO" item "NP"
 @v317 kernel.value.record "id" "en.statement.62" "lhs" "Statement" "rhs" $v316 "action" "en.statement.62.semantics"
 @v318 kernel.seq.make item "COP" item "NP" item "Comp"
-@v319 kernel.value.record "id" "en.question.63" "lhs" "Question" "rhs" $v318 "action" "en.question.63.semantics"
+@v319 kernel.value.record "id" "en.question.63" "lhs" "Question" "rhs" $v318 "action" "concept.copular"
 @v320 kernel.seq.make item "AUX" item "NP" item "V" item "NP"
 @v321 kernel.value.record "id" "en.question.64" "lhs" "Question" "rhs" $v320 "action" "en.question.64.semantics"
 @v322 kernel.value.record "literal" "believe"
@@ -380,3 +380,4 @@
 @v379 kernel.value.record "schema" "sxlm.grammar.v1" "start" "Root" "segmentation" $v4 "classes" $v12 "lexicon" $v142 "productions" $v378
 @v380 kernel.value.record "origin" $v0 "grammar" $v379
 @output result $v380
+

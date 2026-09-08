@@ -1,0 +1,4 @@
+@input children array
+@input scope string
+@result kernel.value.get value $children key 1 fallback null
+@output result $result

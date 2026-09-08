@@ -1,0 +1,16 @@
+@input value object
+@rendered render.answer value $value
+@task kernel.value.get value $rendered key "task" fallback null
+@presentation kernel.value.get value $task key "presentation" fallback null
+@mode kernel.value.get value $presentation key "mode" fallback null
+@definition kernel.value.equal left $mode right "definition"
+@status kernel.value.get value $rendered key "status" fallback null
+@answered kernel.value.equal left $status right "answered"
+@coverage kernel.value.get value $rendered key "coverage" fallback null
+@gaps kernel.value.get value $coverage key "gaps" fallback 1
+@complete kernel.value.equal left $gaps right 0
+@eligible kernel.boolean.and left $definition right $answered
+@safe kernel.boolean.and left $eligible right $complete
+@args kernel.value.record rendered $rendered presentation $presentation
+@result kernel.flow.choose condition $safe then "concept.render-definition" else "concept.render-keep" with $args
+@output result $result

@@ -1,0 +1,12 @@
+@input with object
+@raw kernel.value.get value $with key "rendered" fallback null
+@rendered data.object value $raw
+@presentation kernel.value.get value $with key "presentation" fallback null
+@rawSubject kernel.value.get value $presentation key "subject" fallback null
+@subject data.string value $rawSubject
+@values kernel.value.get value $rendered key "values" fallback null
+@list kernel.text.join items $values separator ", "
+@parts kernel.seq.make item "Here is what I know about " item $subject item ": it belongs to these categories: " item $list item "."
+@text kernel.text.join items $parts separator ""
+@result data.attach record $rendered key "text" value $text
+@output result $result
